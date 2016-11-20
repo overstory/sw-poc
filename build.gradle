@@ -1,7 +1,19 @@
 apply plugin: 'idea'
 apply plugin: 'distribution'
 apply plugin: "maven-publish"
+apply plugin: 'nebula.ospackage'
+apply plugin: 'io.ratpack.ratpack-groovy'
 
+buildscript {
+	repositories {
+		jcenter()
+		mavenCentral()
+	}
+	dependencies {
+		classpath 'io.ratpack:ratpack-gradle:1.4.2'
+		classpath 'com.netflix.nebula:gradle-ospackage-plugin:3.5.0'
+	}
+}
 
 task wrapper(type: Wrapper) {
 	gradleVersion = '3.2'

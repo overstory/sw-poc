@@ -19,3 +19,16 @@ apply plugin: "maven-publish"
 // Closure 'mavenRepos' is in root build.gradle
 repositories mavenRepos
 
+dependencies {
+	// We use the latest groovy 2.x version for building this library
+	compile 'org.codehaus.groovy:groovy-all:2.4+'
+	compile 'com.jayway.restassured:rest-assured:2.4.1'
+	compile 'com.github.docker-java:docker-java:3.0.+'
+	compile 'junit:junit:4.12'
+	compile 'org.json:json:20140107'
+	compile 'ch.qos.logback:logback-classic:1.0.13'
+	compile 'org.slf4j:slf4j-api:1.7.12'
+	compile 'org.slf4j:log4j-over-slf4j:1.7.12'
+}
+
+
