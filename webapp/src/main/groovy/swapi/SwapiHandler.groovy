@@ -39,11 +39,18 @@ class SwapiHandler implements Handler
 	void handle (Context context) throws Exception
 	{
 		aggregateSwapiData (baseUri).then { String swapiData ->
-			storeSwapiData (swapiData, jsonDataPath).onError {
-				context.response.status (500)
-				context.render (it.toString())
-			} then {
-				context.render ("SWAPI Data aggregated OK, written to ${jsonDataPath}")
+			if (context.request.headers.get ("accept").contains ('application/json')) {
+				context.response.contentType ('application/json')
+				context.render (swapiData)
+			} else {
+				storeSwapiData (swapiData, jsonDataPath).onError {
+					context.response.status (500)
+					context.response.contentType ('text/plain')
+					context.render (it.toString())
+				} then {
+					context.response.contentType ('text/plain')
+					context.render ("SWAPI Data aggregated OK, written to ${jsonDataPath}")
+				}
 			}
 		}
 	}
