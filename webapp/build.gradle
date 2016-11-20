@@ -1,0 +1,21 @@
+buildscript {
+	repositories {
+		jcenter()
+		mavenCentral()
+	}
+	dependencies {
+		classpath 'io.ratpack:ratpack-gradle:1.4.2'
+		classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.3'
+		classpath 'com.netflix.nebula:gradle-ospackage-plugin:3.5.0'
+	}
+}
+
+apply plugin: 'io.ratpack.ratpack-groovy'
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'idea'
+apply plugin: 'nebula.ospackage'
+apply plugin: "maven-publish"
+
+// Closure 'mavenRepos' is in root build.gradle
+repositories mavenRepos
+

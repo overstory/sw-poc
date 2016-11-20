@@ -1,0 +1,24 @@
+apply plugin: 'idea'
+apply plugin: 'distribution'
+apply plugin: "maven-publish"
+
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '3.2'
+}
+
+ext.mavenRepos = {
+	jcenter()
+	mavenCentral()
+}
+
+repositories mavenRepos
+
+ext.nexusPublishRepo = {
+	url "http://repository.aop.cambridge.org/nexus/content/repositories/snapshots/"
+	credentials {
+		username = 'admin'
+		password = 'dXUciNUJTf6i3nkxxYHV'
+	}
+}
+
