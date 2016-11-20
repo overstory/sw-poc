@@ -1,0 +1,16 @@
+*.ipr
+*.iml
+*.iws
+.idea
+z
+zz
+z.xml
+zz.xml
+.DS_Store
+build
+CUP-Content-Platform
+.gradle
+Backup*
+target
+out
+atlassian-ide-plugin.xml
