@@ -1,107 +1,185 @@
 
 // Loads the merged SWAPI JSON data into Neo4J
 
-//WITH {json} AS document
-//UNWIND document.categories AS category
-//RETURN category.name
+CREATE CONSTRAINT ON (f:Film) ASSERT f.url IS UNIQUE
+// TX-SPLIT ---------------------------------
+CREATE CONSTRAINT ON (c:Character) ASSERT c.url IS UNIQUE
+// TX-SPLIT ---------------------------------
+CREATE CONSTRAINT ON (p:Planet) ASSERT p.url IS UNIQUE
+// TX-SPLIT ---------------------------------
+CREATE CONSTRAINT ON (s:Species) ASSERT s.url IS UNIQUE
+// TX-SPLIT ---------------------------------
+CREATE CONSTRAINT ON (sh:Starship) ASSERT sh.url IS UNIQUE
+// TX-SPLIT ---------------------------------
+CREATE CONSTRAINT ON (v:Vehicle) ASSERT v.url IS UNIQUE
 
-//CREATE CONSTRAINT ON (f:Film) ASSERT f.url IS UNIQUE
-//CREATE CONSTRAINT ON (c:Character) ASSERT c.url IS UNIQUE
-//CREATE CONSTRAINT ON (p:Planet) ASSERT p.url IS UNIQUE
+// TX-SPLIT ---------------------------------
 
+// Removed Category from the graph, un-necessarily cluttered, label serve the same purpose
+//MERGE (swapi:Swapi)
+//  ON CREATE SET swapi.name = 'Star Wars API', swapi.downloaded = {json}.downloaded
 
-MERGE (swapi:Swapi)
-  ON CREATE SET swapi.name = 'Star Wars API', swapi.downloaded = {json}.downloaded
-
-WITH swapi, {json} AS swapidata
+//WITH swapi, {json} AS swapidata
+WITH {json} AS swapidata
 UNWIND swapidata.categories AS cat
-MERGE (category:Category { name: cat.name, uri: cat.uri })
-MERGE (category) -[:CATEGORY_OF]-> (swapi)
+//MERGE (category:Category { name: cat.name, uri: cat.uri })
+//MERGE (category) -[:CATEGORY_OF]-> (swapi)
 
 WITH {json}.categories[0] AS filmcat
-MATCH (category:Category { name: filmcat.name })
+//MATCH (category:Category { name: filmcat.name })
 UNWIND filmcat.members AS f
-MERGE (film:Film { name: f.title })
-SET film.url = f.url, film.episode_id = f.episode_id, film.edited = f.edited, film.created = f.created, film.director = f.director,
+MERGE (film:Film { url: f.url })
+SET film.name = f.title, film.edited = f.edited, film.created = f.created,
+	film.director = f.director, film.episode_id = f.episode_id,
 	film.producer = f.producer, film.opening_crawl = f.opening_crawl, film.release_date = f.release.date
-MERGE (category) <-[:IN_CATEGORY]- (film)
+//MERGE (category) <-[:IN_CATEGORY]- (film)
 MERGE (director:Director { name: f.director} )
 MERGE (director) -[:DIRECTED]-> (film)
 MERGE (producer:Producer { name: f.producer} )
 MERGE (producer) -[:PRODUCED]-> (film)
 
-// ---------------------------------
+FOREACH (furl IN f.characters |
+	MERGE (character:Character { url: furl })
+	MERGE (film) <-[:IN_FILM]- (character)
+)
+FOREACH (furl IN f.planets |
+	MERGE (planet:Planet { url: furl })
+	MERGE (film) <-[:IN_FILM]- (planet)
+)
+FOREACH (furl IN f.species |
+	MERGE (species:Species { url: furl })
+	MERGE (film) <-[:IN_FILM]- (species)
+)
+FOREACH (furl IN f.starships |
+	MERGE (starship:Starship { url: furl })
+	MERGE (film) <-[:IN_FILM]- (starship)
+)
+FOREACH (furl IN f.vehicles |
+	MERGE (vehicle:Vehicle { url: furl })
+	MERGE (film) <-[:IN_FILM]- (vehicle)
+)
+
+
+// TX-SPLIT ---------------------------------
 
 WITH {json}.categories[1] AS peoplecat
-MATCH (category:Category { name: peoplecat.name })
+//MATCH (category:Category { name: peoplecat.name })
 UNWIND peoplecat.members AS c
 MERGE (character:Character { url: c.url })
 SET character.name = c.name, character.edited = c.edited, character.created = c.created, character.birth_year = c.birth_year,
 	character.eye_color = c.eye_color, character.hair_color = c.hair_color, character.gender = c.gender, character.height = c.height,
 	character.mass = c.mass, character.skin_color = c.skin_color
-MERGE (category) <-[:IN_CATEGORY]- (character)
+//MERGE (category) <-[:IN_CATEGORY]- (character)
+
+MERGE (homeworld:Planet { url: c.homeworld })
+MERGE (homeworld) <-[:HOME_WORLD]- (character)
 
 FOREACH (furl IN c.films |
 	MERGE (film:Film { url: furl })
 	MERGE (film) <-[:IN_FILM]- (character)
 )
+FOREACH (furl IN c.species |
+	MERGE (species:Species { url: furl })
+	MERGE (species) <-[:IS_SPECIES]- (character)
+)
+FOREACH (furl IN c.starships |
+	MERGE (starship:Starship { url: furl })
+	MERGE (starship) <-[:KNOWS_STARSHIP]- (character)
+)
+FOREACH (furl IN c.vehicles |
+	MERGE (vehicle:Vehicle { url: furl })
+	MERGE (vehicle) <-[:KNOWS_VEHICLE]- (character)
+)
 
-// ---------------------------------
+// TX-SPLIT ---------------------------------
 
 WITH {json}.categories[2] AS planetcat
-MATCH (category:Category { name: planetcat.name })
+//MATCH (category:Category { name: planetcat.name })
 UNWIND planetcat.members AS p
 MERGE (planet:Planet { url: p.url })
-SET planet.name = p.name, planet.edited = p.edited, planet.created = p.created, planet.url = p.url,
+SET planet.name = p.name, planet.edited = p.edited, planet.created = p.created,
 	planet.climate = p.climate, planet.gravity = p.gravity, planet.orbital_period = p.orbital_period,
 	planet.population = p.population, planet.rotation_period = p.rotation_period, planet.surface_water = p.surface_water,
-	planet.terrain = p.terrain
-MERGE (category) <-[:IN_CATEGORY]- (planet)
+	planet.terrain = p.terrain, planet.diameter = p.diameter
+//MERGE (category) <-[:IN_CATEGORY]- (planet)
 
 FOREACH (furl IN p.films |
 	MERGE (film:Film { url: furl })
 	MERGE (film) <-[:IN_FILM]- (planet)
 )
-//FOREACH (furl IN p.residents |
-//	MERGE (character:Character { url: furl })
-//	MERGE (planet) <-[:RESIDES_ON]- (character)
-//)
+FOREACH (furl IN p.residents |
+	MERGE (character:Character { url: furl })
+	MERGE (planet) <-[:RESIDENT_OF]- (character)
+)
 
-// ---------------------------------
+// TX-SPLIT ---------------------------------
+
+WITH {json}.categories[3] AS speciescat
+//MATCH (category:Category { name: speciescat.name })
+UNWIND speciescat.members AS x
+MERGE (species:Species { url: x.url })
+SET species.name = x.name, species.edited = x.edited, species.created = x.created,
+	species.average_height = x.average_height, species.average_lifespan = x.average_lifespan,
+	species.classification = x.classification, species.eye_colors = x.eye_colors, species.hair_colors = x.hair_colors,
+	species.language = x.language, species.skin_colors = x.skin_colors, species.designation = x.designation
+//MERGE (category) <-[:IN_CATEGORY]- (species)
+
+FOREACH (furl IN x.films |
+	MERGE (film:Film { url: furl })
+	MERGE (film) <-[:IN_FILM]- (species)
+)
+FOREACH (furl IN x.people |
+	MERGE (character:Character { url: furl })
+	MERGE (species) <-[:IS_SPECIES]- (character)
+)
+
+// There is a null homeworld in the data (for Wookiee)
+WITH species, x
+WHERE x.homeworld IS NOT NULL
+MERGE (homeworld:Planet { url: x.homeworld })
+MERGE (homeworld) <-[:HOME_WORLD]- (species)
 
 
+// TX-SPLIT ---------------------------------
 
+WITH {json}.categories[4] AS shipcat
+//MATCH (category:Category { name: shipcat.name })
+UNWIND shipcat.members AS x
+MERGE (starship:Starship { url: x.url })
+SET starship.name = x.name, starship.edited = x.edited, starship.created = x.created,
+	starship.MGLT = x.MGLT, starship.cargo_capacity = x.cargo_capacity, starship.consumables = x.consumables,
+	starship.cost_in_credits = x.cost_in_credits, starship.crew = x.crew, starship.hyperdrive_rating = x.hyperdrive_rating,
+	starship.length = x.length, starship.manufacturer = x.manufacturer, starship.max_atmosphering_speed = x.max_atmosphering_speed,
+	starship.model = x.model, starship.passengers = x.passengers, starship.starship_class = x.starship_class
+//MERGE (category) <-[:IN_CATEGORY]- (starship)
 
-//WITH {json} AS swapidata
-//UNWIND swapidata.categories[0].members AS f
-//MERGE (film:Film { id: f.url })
-//SET film.name = film.title, film.episode_id = f.episode_id, film.edited = f.edited, film.created = f.created, film.director = f.director,
-//	film.producer = f.producer, film.opening_crawl = f.opening_crawl, film.release_date = f.release.date
+FOREACH (furl IN x.films |
+	MERGE (film:Film { url: furl })
+	MERGE (film) <-[:IN_FILM]- (starship)
+)
+FOREACH (furl IN x.pilots |
+	MERGE (character:Character { url: furl })
+	MERGE (starship) <-[:CAN_PILOT]- (character)
+)
 
+// TX-SPLIT ---------------------------------
 
+WITH {json}.categories[5] AS vehiclecat
+//MATCH (category:Category { name: vehiclecat.name })
+UNWIND vehiclecat.members AS x
+MERGE (vehicle:Vehicle { url: x.url })
+SET vehicle.name = x.name, vehicle.edited = x.edited, vehicle.created = x.created,
+	vehicle.cargo_capacity = x.cargo_capacity, vehicle.consumables = x.consumables, vehicle.cost_in_credits = x.cost_in_credits,
+	vehicle.crew = x.crew, vehicle.length = x.length, vehicle.manufacturer = x.manufacturer, vehicle.max_atmosphering_speed = x.max_atmosphering_speed,
+	vehicle.model = x.model, vehicle.passengers = x.passengers, vehicle.vehicle_class = x.vehicle_class
+//MERGE (category) <-[:IN_CATEGORY]- (vehicle)
 
+FOREACH (furl IN x.films |
+	MERGE (film:Film { url: furl })
+	MERGE (film) <-[:IN_FILM]- (vehicle)
+)
+FOREACH (furl IN x.pilots |
+	MERGE (character:Character { url: furl })
+	MERGE (vehicle) <-[:CAN_PILOT]- (character)
+)
 
-
-
-
-
-
-
-
-//
-//FOREACH (tagName IN q.tags | MERGE (tag:Tag {name:tagName}) MERGE (question)-[:TAGGED]->(tag))
-//
-//
-//
-//MERGE (question:Question {id:q.question_id}) ON CREATE
-//  SET question.title = q.title, question.share_link = q.share_link, question.favorite_count = q.favorite_count
-//
-//MERGE (owner:User {id:q.owner.user_id}) ON CREATE SET owner.display_name = q.owner.display_name
-//MERGE (owner)-[:ASKED]->(question)
-//
-//FOREACH (tagName IN q.tags | MERGE (tag:Tag {name:tagName}) MERGE (question)-[:TAGGED]->(tag))
-//FOREACH (a IN q.answers |
-//   MERGE (question)<-[:ANSWERS]-(answer:Answer {id:a.answer_id})
-//   MERGE (answerer:User {id:a.owner.user_id}) ON CREATE SET answerer.display_name = a.owner.display_name
-//   MERGE (answer)<-[:PROVIDED]-(answerer)
-//)

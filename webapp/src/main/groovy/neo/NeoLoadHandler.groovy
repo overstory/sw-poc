@@ -44,19 +44,54 @@ class NeoLoadHandler implements Handler
 		runJsonLoadRequest (cypher, json).onError {
 			context.response.status (500)
 			context.render (it.toString())
-		} then { ReceivedResponse resp ->
-			context.response.status (resp.statusCode)
-			context.response.contentType (resp.headers.get ('Content-Type'))
-			context.response.send (resp.body.text)
+		} then { List<ReceivedResponse> errList ->
+			if (errList.size() == 0) {
+				context.response.status (200)
+				context.response.contentType ('text/plain')
+				context.response.send ("OK")
+			} else {
+				StringBuffer sb = new StringBuffer()
+
+				errList.eachWithIndex { ReceivedResponse resp, int index ->
+					sb.append ("\nResult ${index}, code=${resp.statusCode}, content-type=${resp.headers.get ("content-type")}\n")
+					sb.append ('------------------------------------------------------------------------\n')
+					sb.append (resp.body.text)
+					sb.append ('\n------------------------------------------------------------------------\n')
+				}
+
+				context.response.send (sb.toString())
+			}
 		}
 	}
 
 	// --------------------------------------------------------------
 
-	private Promise<ReceivedResponse> runJsonLoadRequest (String cypher, String json)
+	private static final String TX_SPLIT_PATTERN = '\\/\\/ TX-SPLIT -+\\n'
+
+	private Promise<List<ReceivedResponse>> runJsonLoadRequest (String cypher, String json)
 	{
-		String postBody =
-			"""
+		List<ReceivedResponse> errorResponses = []
+
+		cypher.split (TX_SPLIT_PATTERN).each { String statement ->
+			httpClient.post (hostDetails.uri()) {
+				it.readTimeoutSeconds (hostDetails.readTimeout)
+				it.headers.set ("Content-Type", 'application/json')
+				it.headers.set ("Accept", 'application/json')
+				it.basicAuth (hostDetails.user, hostDetails.pass)
+				it.body.text (postBody (statement, json))
+			} then { resp ->
+//				if (resp.statusCode != 200) {
+					errorResponses << resp
+//				}
+			}
+		}
+
+		Promise.value (errorResponses)
+	}
+
+	private static String postBody (String cypher, String json)
+	{
+		"""
 			{
 				"statements": [
 					{
@@ -68,21 +103,9 @@ class NeoLoadHandler implements Handler
 				]
 			}
 		"""
-
-log.info ("CYPHER: ${escapeCypher (cypher)}")
-		httpClient.post (hostDetails.uri()) {
-			it.readTimeoutSeconds (hostDetails.readTimeout)
-			it.headers.set ("Content-Type", 'application/json')
-			it.headers.set ("Accept", 'application/json')
-			it.basicAuth (hostDetails.user, hostDetails.pass)
-			it.body.text (postBody)
-		} map {
-			log.info ("RESP: ${it}")
-			it
-		}
 	}
 
-	private String escapeCypher (String cypher)
+	private static String escapeCypher (String cypher)
 	{
 		cypher.replaceAll ('\\/\\/.*\\n', ' ').replaceAll ('\n|\r|\t', ' ').replaceAll ('"', '\\"')
 	}
