@@ -1,6 +1,7 @@
 import ch.qos.logback.core.util.StatusPrinter
 import config.AppConfig
 import groovy.util.logging.Slf4j
+import neo.NeoLoadHandler
 import org.slf4j.LoggerFactory
 import swapi.SwapiHandler
 
@@ -35,6 +36,17 @@ ratpack
 		path ('swapi/download') { Context c ->
 			byMethod {
 				get { insert c.get (SwapiHandler) }
+			}
+		}
+		path ('swapi/cached') { Context c ->
+			byMethod {
+				get { insert c.get (SwapiHandler) }
+			}
+		}
+
+		path ('neo/load') { Context c ->
+			byMethod {
+				get { insert c.get (NeoLoadHandler) }
 			}
 		}
 

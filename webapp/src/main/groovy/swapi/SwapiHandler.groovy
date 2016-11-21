@@ -25,34 +25,45 @@ class SwapiHandler implements Handler
 {
 	private final String baseUri
 	private final String jsonDataPath
+	private final String jsonDataResource
 	private final HttpClient httpClient
 
 	@Inject
-	SwapiHandler (@Named('SWAPI_BASE_URL') String baseUri, @Named('SWAPI_JSON_PATH') String jsonDataPath, HttpClient httpClient)
+	SwapiHandler (@Named('SWAPI_BASE_URL') String baseUri, @Named('SWAPI_JSON_PATH') String jsonDataPath,
+		@Named('SWAPI_DATA_RESOURCE') String jsonDataResource, HttpClient httpClient)
 	{
 		this.baseUri = baseUri
 		this.jsonDataPath = jsonDataPath
+		this.jsonDataResource = jsonDataResource
 		this.httpClient = httpClient
 	}
 
 	@Override
 	void handle (Context context) throws Exception
 	{
-		aggregateSwapiData (baseUri).then { String swapiData ->
-			if (context.request.headers.get ("accept").contains ('application/json')) {
-				context.response.contentType ('application/json')
-				context.render (swapiData)
-			} else {
-				storeSwapiData (swapiData, jsonDataPath).onError {
-					context.response.status (500)
-					context.response.contentType ('text/plain')
-					context.render (it.toString())
-				} then {
-					context.response.contentType ('text/plain')
-					context.render ("SWAPI Data aggregated OK, written to ${jsonDataPath}")
+		if (context.request.path.endsWith ('cached')) {
+			InputStream jsonData = getClass().classLoader.getResourceAsStream (jsonDataResource)
+
+			context.response.contentType ('application/json')
+			context.response.send (jsonData.text)
+		} else {
+			aggregateSwapiData (baseUri).then { String swapiData ->
+				if (context.request.headers.get ("accept").contains ('application/json')) {
+					context.response.contentType ('application/json')
+					context.render (swapiData)
+				} else {
+					storeSwapiData (swapiData, jsonDataPath).onError {
+						context.response.status (500)
+						context.response.contentType ('text/plain')
+						context.render (it.toString())
+					} then {
+						context.response.contentType ('text/plain')
+						context.render ("SWAPI Data aggregated OK, written to ${jsonDataPath}")
+					}
 				}
 			}
 		}
+
 	}
 
 	// -------------------------------------------------
@@ -68,7 +79,7 @@ class SwapiHandler implements Handler
 			Promise.value (null).then {
 				sb.append ('{\n')
 				sb.append ('"downloaded": "').append (now).append ('",\n')
-				sb.append ('"categories": [ {\n')
+				sb.append ('"categories": [\n')
 			}
 
 			rootCollection.eachWithIndex { String key, String value, int index ->
@@ -79,7 +90,7 @@ class SwapiHandler implements Handler
 			}
 
 			Promise.value (null).map {
-				sb.append ('}\n]\n}\n')
+				sb.append ('\n]\n}\n')
 				sb.toString()
 			}
 		}
@@ -90,9 +101,9 @@ class SwapiHandler implements Handler
 		StringBuilder sb = new StringBuilder()
 
 		Promise.value (null).then {
-			sb.append ('"').append (collectionName).append ('": {')
+			sb.append ('{')
+			sb.append ('"name": "').append (collectionName).append ('",\n')
 			sb.append ('"uri": "').append (collectionUri).append ('",\n')
-			sb.append ('"category": "').append (collectionName).append ('",\n')
 			sb.append ('"').append ('members').append ('": [')
 		}
 
