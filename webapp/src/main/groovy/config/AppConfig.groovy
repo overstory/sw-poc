@@ -3,11 +3,13 @@ package config
 import com.google.inject.AbstractModule
 import com.google.inject.Scopes
 import com.google.inject.name.Names
-import neo.NeoLoadHandler
+import handlers.NeoLoadHandler
+import neo4j.Neo4JServer
+import neo4j.impl.Neo4JServerImpl
 import org.neo4j.driver.v1.AuthTokens
 import org.neo4j.driver.v1.Driver
 import org.neo4j.driver.v1.GraphDatabase
-import swapi.SwapiHandler
+import handlers.SwapiHandler
 
 /**
  * Created by IntelliJ IDEA.
@@ -17,14 +19,15 @@ import swapi.SwapiHandler
  */
 class AppConfig extends AbstractModule
 {
-	final String SWAPI_BASE_URL = "http://swapi.co/api"
-	final String SWAPI_ALL_OUTPUT_PATH = "/tmp/swapi.json"
-	final String SWAPI_DATA_RESOURCE = "json/swapi.json"
-	final String SWAPI_LOAD_CYPHER = "cypher/load-swapi.cypher"
+	final static String SWAPI_BASE_URL = "http://swapi.co/api"
+	final static String SWAPI_ALL_OUTPUT_PATH = "/tmp/swapi.json"
+	final static String SWAPI_DATA_RESOURCE = "json/swapi.json"
+	final static String SWAPI_LOAD_CYPHER = "cypher/load-swapi.cypher"
 
-	final String SWSOCIAL_CHARMAP_PATH = "json/character-resource-map.json"
-	final String SWSOCIAL_INTERACTIONS_PATH = "json/starwars-full-interactions-allCharacters-merged.json"
-	final String SWSOCIAL_LOAD_CYPHER = "cypher/load-swsocial.cypher"
+	final static String SWSOCIAL_CHARMAP_PATH = "json/character-resource-map.json"
+	final static String SWSOCIAL_INTERACTIONS_PATH = "json/starwars-full-interactions-allCharacters-merged.json"
+	final static String SWSOCIAL_LOAD_CYPHER = "cypher/load-swsocial.cypher"
+	final static String TX_SPLIT_PATTERN = '\\/\\/ TX-SPLIT -+\\n'
 
 
 	final String NEO_HOST = "192.168.99.100"
@@ -56,6 +59,7 @@ class AppConfig extends AbstractModule
 		Driver neoDriver = GraphDatabase.driver (NEO_HOST, AuthTokens.basic (NEO_USER, NEO_PASSWD))
 		bind (Driver).toInstance (neoDriver)
 
+		bind (Neo4JServer).to (Neo4JServerImpl).in (Scopes.SINGLETON)
 		bind (SwapiHandler).in (Scopes.SINGLETON)
 		bind (NeoLoadHandler).in (Scopes.SINGLETON)
 	}
@@ -68,6 +72,7 @@ class AppConfig extends AbstractModule
 		String pass
 		int readTimeout = 120
 		String defaultPath = NEO_TX_COMMIT_PATH
+		String txSplitRegex = TX_SPLIT_PATTERN
 
 		URI uri()
 		{

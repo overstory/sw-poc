@@ -1,9 +1,9 @@
 import ch.qos.logback.core.util.StatusPrinter
 import config.AppConfig
 import groovy.util.logging.Slf4j
-import neo.NeoLoadHandler
+import handlers.NeoLoadHandler
 import org.slf4j.LoggerFactory
-import swapi.SwapiHandler
+import handlers.SwapiHandler
 
 import ch.qos.logback.classic.LoggerContext
 import ch.qos.logback.classic.gaffer.GafferConfigurator

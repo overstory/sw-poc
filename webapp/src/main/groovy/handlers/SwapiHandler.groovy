@@ -1,4 +1,4 @@
-package swapi
+package handlers
 
 import com.google.inject.Inject
 import com.google.inject.name.Named
