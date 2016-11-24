@@ -8,6 +8,7 @@ import handlers.SwapiHandler
 import ch.qos.logback.classic.LoggerContext
 import ch.qos.logback.classic.gaffer.GafferConfigurator
 
+import java.nio.file.Path
 
 import static ratpack.groovy.Groovy.ratpack
 import ratpack.handling.Context
@@ -49,6 +50,18 @@ ratpack
 				get { insert c.get (NeoLoadHandler) }
 			}
 		}
+
+		path ("::(css|fonts|images|js).*") {
+			Path asset = file ("public/${request.path}")
+
+			if (asset.toFile().exists()) render asset else next()
+		}
+		path ("::.*\\.html") {
+			Path asset = file ("public/${request.path}")
+
+			if (asset.toFile().exists()) render asset else next()
+		}
+
 
 		all { Context c ->
 			render "Missed it by THAT much"

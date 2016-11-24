@@ -30,35 +30,40 @@ WITH {json}.categories[0] AS filmcat
 UNWIND filmcat.members AS f
 MERGE (film:Film { url: f.url })
 SET film.name = f.title, film.edited = f.edited, film.created = f.created,
-	film.director = f.director, film.episode_id = f.episode_id,
-	film.producer = f.producer, film.opening_crawl = f.opening_crawl, film.release_date = f.release.date
+	film.episode_id = f.episode_id,
+	film.opening_crawl = f.opening_crawl, film.release_date = f.release.date
 //MERGE (category) <-[:IN_CATEGORY]- (film)
-MERGE (director:Director { name: f.director} )
-MERGE (director) -[:DIRECTED]-> (film)
-MERGE (producer:Producer { name: f.producer} )
-MERGE (producer) -[:PRODUCED]-> (film)
 
 FOREACH (furl IN f.characters |
 	MERGE (character:Character { url: furl })
-	MERGE (film) <-[:IN_FILM]- (character)
+	MERGE (film) <-[:APPEARS_IN]- (character)
 )
 FOREACH (furl IN f.planets |
 	MERGE (planet:Planet { url: furl })
-	MERGE (film) <-[:IN_FILM]- (planet)
+	MERGE (film) <-[:APPEARS_IN]- (planet)
 )
 FOREACH (furl IN f.species |
 	MERGE (species:Species { url: furl })
-	MERGE (film) <-[:IN_FILM]- (species)
+	MERGE (film) <-[:APPEARS_IN]- (species)
 )
 FOREACH (furl IN f.starships |
 	MERGE (starship:Starship { url: furl })
-	MERGE (film) <-[:IN_FILM]- (starship)
+	MERGE (film) <-[:APPEARS_IN]- (starship)
 )
 FOREACH (furl IN f.vehicles |
 	MERGE (vehicle:Vehicle { url: furl })
-	MERGE (film) <-[:IN_FILM]- (vehicle)
+	MERGE (film) <-[:APPEARS_IN]- (vehicle)
 )
 
+WITH film, f
+UNWIND split (f.director, ",") AS d
+MERGE (dir:Director { name: d } )
+MERGE (dir) <-[:DIRECTED_BY]- (film)
+
+WITH film, f
+UNWIND split (f.producer, ",") AS p
+MERGE (prod:Producer { name: p } )
+MERGE (prod) <-[:PRODUCED_BY]- (film)
 
 // TX-SPLIT ---------------------------------
 
@@ -76,7 +81,7 @@ MERGE (homeworld) <-[:HOME_WORLD]- (character)
 
 FOREACH (furl IN c.films |
 	MERGE (film:Film { url: furl })
-	MERGE (film) <-[:IN_FILM]- (character)
+	MERGE (film) <-[:APPEARS_IN]- (character)
 )
 FOREACH (furl IN c.species |
 	MERGE (species:Species { url: furl })
@@ -98,19 +103,29 @@ WITH {json}.categories[2] AS planetcat
 UNWIND planetcat.members AS p
 MERGE (planet:Planet { url: p.url })
 SET planet.name = p.name, planet.edited = p.edited, planet.created = p.created,
-	planet.climate = p.climate, planet.gravity = p.gravity, planet.orbital_period = p.orbital_period,
+	planet.gravity = p.gravity, planet.orbital_period = p.orbital_period,
 	planet.population = p.population, planet.rotation_period = p.rotation_period, planet.surface_water = p.surface_water,
-	planet.terrain = p.terrain, planet.diameter = p.diameter
+	planet.diameter = p.diameter
 //MERGE (category) <-[:IN_CATEGORY]- (planet)
 
 FOREACH (furl IN p.films |
 	MERGE (film:Film { url: furl })
-	MERGE (film) <-[:IN_FILM]- (planet)
+	MERGE (film) <-[:APPEARS_IN]- (planet)
 )
 FOREACH (furl IN p.residents |
 	MERGE (character:Character { url: furl })
 	MERGE (planet) <-[:RESIDENT_OF]- (character)
 )
+
+WITH planet, p
+UNWIND split (p.climate, ",") AS c
+MERGE (climate:Climate { type: c })
+MERGE (climate) <-[:HAS_CLIMATE]- (planet)
+
+WITH planet, p
+UNWIND split (p.terrain, ",") AS t
+MERGE (terrain:Terrain { type: t })
+MERGE (terrain) <-[:HAS_TERRAIN]- (planet)
 
 // TX-SPLIT ---------------------------------
 
@@ -126,7 +141,7 @@ SET species.name = x.name, species.edited = x.edited, species.created = x.create
 
 FOREACH (furl IN x.films |
 	MERGE (film:Film { url: furl })
-	MERGE (film) <-[:IN_FILM]- (species)
+	MERGE (film) <-[:APPEARS_IN]- (species)
 )
 FOREACH (furl IN x.people |
 	MERGE (character:Character { url: furl })
@@ -149,13 +164,19 @@ MERGE (starship:Starship { url: x.url })
 SET starship.name = x.name, starship.edited = x.edited, starship.created = x.created,
 	starship.MGLT = x.MGLT, starship.cargo_capacity = x.cargo_capacity, starship.consumables = x.consumables,
 	starship.cost_in_credits = x.cost_in_credits, starship.crew = x.crew, starship.hyperdrive_rating = x.hyperdrive_rating,
-	starship.length = x.length, starship.manufacturer = x.manufacturer, starship.max_atmosphering_speed = x.max_atmosphering_speed,
-	starship.model = x.model, starship.passengers = x.passengers, starship.starship_class = x.starship_class
+	starship.length = x.length, starship.max_atmosphering_speed = x.max_atmosphering_speed,
+	starship.model = x.model, starship.passengers = x.passengers
 //MERGE (category) <-[:IN_CATEGORY]- (starship)
+
+MERGE (m:Manufacturer { name: x.manufacturer})
+MERGE (starship) -[:MANUFACTURED_BY]-> (m)
+
+MERGE (c:StarshipClass { name: x.starship_class})
+MERGE (starship) -[:IS_CLASS]-> (c)
 
 FOREACH (furl IN x.films |
 	MERGE (film:Film { url: furl })
-	MERGE (film) <-[:IN_FILM]- (starship)
+	MERGE (film) <-[:APPEARS_IN]- (starship)
 )
 FOREACH (furl IN x.pilots |
 	MERGE (character:Character { url: furl })
@@ -174,9 +195,15 @@ SET vehicle.name = x.name, vehicle.edited = x.edited, vehicle.created = x.create
 	vehicle.model = x.model, vehicle.passengers = x.passengers, vehicle.vehicle_class = x.vehicle_class
 //MERGE (category) <-[:IN_CATEGORY]- (vehicle)
 
+MERGE (m:Manufacturer { name: x.name})
+MERGE (vehicle) -[:MANUFACTURED_BY]-> (m)
+
+MERGE (v:VehicleClass { name: x.name})
+MERGE (vehicle) -[:IS_CLASS]-> (v)
+
 FOREACH (furl IN x.films |
 	MERGE (film:Film { url: furl })
-	MERGE (film) <-[:IN_FILM]- (vehicle)
+	MERGE (film) <-[:APPEARS_IN]- (vehicle)
 )
 FOREACH (furl IN x.pilots |
 	MERGE (character:Character { url: furl })

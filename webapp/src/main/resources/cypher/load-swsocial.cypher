@@ -7,7 +7,7 @@ UNWIND inter.links AS link
 MERGE (src:Character { url: link.`from` })
 MERGE (tgt:Character { url: link.`to` })
 // Setting link weight value from swsocial data.  Should re-calculate
-MERGE (src) -[:INTERACTS_WITH { interact_weight: link.weight }]-> (tgt)
+MERGE (src) -[:SPEAKS_WITH { interact_weight: link.weight }]-> (tgt)
 
 // Setting betweenness value from swsocial data.  Should re-calculate
 WITH inter

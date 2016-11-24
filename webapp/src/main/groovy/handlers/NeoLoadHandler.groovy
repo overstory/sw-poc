@@ -53,12 +53,14 @@ class NeoLoadHandler implements Handler
 			} else {
 				StringBuffer sb = new StringBuffer()
 
+				sb.append ('{ "combined-results":\n[\n')
+
 				responses.eachWithIndex { ReceivedResponse resp, int index ->
-					sb.append ("\nResult ${index}, code=${resp.statusCode}, content-type=${resp.headers.get ("content-type")}\n")
-					sb.append ('------------------------------------------------------------------------\n')
-					sb.append (resp.body.text)
-					sb.append ('\n------------------------------------------------------------------------\n')
+					if (index != 0) sb.append (",\n")
+					sb.append ('\t').append (resp.body.text)
 				}
+
+				sb.append ('\n]\n}\n')
 
 				context.response.send (sb.toString())
 			}
