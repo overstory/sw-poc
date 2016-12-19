@@ -3,6 +3,7 @@ package config
 import com.google.inject.AbstractModule
 import com.google.inject.Scopes
 import com.google.inject.name.Names
+import handlers.GraphQueryHandler
 import handlers.NeoLoadHandler
 import neo4j.Neo4JServer
 import neo4j.impl.Neo4JServerImpl
@@ -62,6 +63,7 @@ class AppConfig extends AbstractModule
 		bind (Neo4JServer).to (Neo4JServerImpl).in (Scopes.SINGLETON)
 		bind (SwapiHandler).in (Scopes.SINGLETON)
 		bind (NeoLoadHandler).in (Scopes.SINGLETON)
+		bind (GraphQueryHandler).in (Scopes.SINGLETON)
 	}
 
 	class HostDetails
