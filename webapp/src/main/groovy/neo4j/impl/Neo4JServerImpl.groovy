@@ -34,12 +34,11 @@ class Neo4JServerImpl implements Neo4JServer
 	}
 
 	@Override
-	Promise<List<ReceivedResponse>> runRequest (String cypher, Map<String,Object> params)
+	Promise<List<ReceivedResponse>> runRequest (String cypher, Map<String,Object> params = [:])
 	{
 		List<ReceivedResponse> errorResponses = []
 
 		cypher.split (txSplitRegex).each { String statement ->
-
 			httpClient.post (hostDetails.uri()) {
 				it.connectTimeout (Duration.ofSeconds (hostDetails.readTimeout))
 				it.headers.set ("Content-Type", 'application/json')
@@ -65,7 +64,11 @@ class Neo4JServerImpl implements Neo4JServer
 						"statement": "${escapeCypher (cypher)}",
 						"parameters": {
 							${formatParams (params)}
-						}
+						},
+						"resultDataContents": [
+							"row",
+							"graph"
+						]
 					}
 				]
 			}
