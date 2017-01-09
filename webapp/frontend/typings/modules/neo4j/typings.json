@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/839078e2402f80431417a00128b4a82f762b8c01/neo4j/index.d.ts",
+    "raw": "registry:dt/neo4j#2.0.0+20161115190604",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/839078e2402f80431417a00128b4a82f762b8c01/neo4j/index.d.ts"
+  }
+}
