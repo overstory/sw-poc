@@ -8,14 +8,11 @@ import handlers.SwapiHandler
 
 import ch.qos.logback.classic.LoggerContext
 import ch.qos.logback.classic.gaffer.GafferConfigurator
-import ratpack.groovy.template.internal.TextTemplateRenderer
 
 import java.nio.file.Path
 
 import static ratpack.groovy.Groovy.ratpack
 import ratpack.handling.Context
-import static ratpack.groovy.Groovy.groovyTemplate
-import ratpack.groovy.template.TextTemplateModule
 
 ratpack
 {
@@ -32,7 +29,6 @@ ratpack
 	bindings
 	{
 		module AppConfig
-		module TextTemplateModule
 	}
 
 	handlers
@@ -60,29 +56,10 @@ ratpack
 			}
 		}
 
-		path ('') { Context c ->
-			Path asset = file ("public/index.html")
-
-			get (TextTemplateRenderer)
-
-			if (asset.toFile().exists()) render asset else next()
-		}
-
-		path ("query") {
-			Path asset = file ("public/index.html")
-
-			if (asset.toFile().exists()) render asset else next()
-		}
-
 		path ("::(css|fonts|images|js).*") {
 			Path asset = file ("public/${request.path}")
 
 			if (asset.toFile().exists()) render asset else next()
-		}
-		path ("::.*\\.html") {
-			Path asset = file ("public/${request.path}")
-
-			if (asset.toFile().exists()) render groovyTemplate (request.path) else next()
 		}
 
 		path ("::.*\\.(css|js|jpg|jpeg|png|gif|ico|map)") {
@@ -92,7 +69,9 @@ ratpack
 		}
 
 		all { Context c ->
-			render "Missed it by THAT much"
+			Path asset = file ("public/index.html")
+
+			if (asset.toFile().exists()) render asset else next()
 		}
 	}
 

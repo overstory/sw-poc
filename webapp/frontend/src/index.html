@@ -16,13 +16,28 @@
     <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
     <!--  Scripts-->
-    <script type="text/javascript" src="visjs/vis.min.js"></script>
+    <script type="text/javascript" src="assets/visjs/vis.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="assets/js/materialize.js"></script>
     <script src="assets/js/init.js"></script>
+
+    <script type="text/javascript">
+		function renderStoredQuery (queryid, canvas)
+		{
+			$.ajax({
+				url: "/graph/query/id/" + queryid
+			}).done (function (json) {
+				drawGraph (json, canvas)
+			})
+		}
+		function drawGraph (network, canvas) {
+			var container = document.getElementById (canvas);
+			new vis.Network (container, network.data, network.options);
+		}
+	</script>
 </head>
 
-<body>
+<body onload='renderStoredQuery ("root", "network_canvas")'>
 <app-navbar>Loading navbar...</app-navbar>
 <app-root>Loading root...</app-root>
 
