@@ -9,6 +9,7 @@ import { routing, appRoutingProviders } from './app.routes';
 
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { QueryComponent } from './pages/query/query.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FooterComponent } from './core/footer/footer.component';
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    QueryComponent
   ],
   imports: [
     BrowserModule,

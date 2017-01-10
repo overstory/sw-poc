@@ -6,8 +6,8 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "../src/ratpack",
-      "assets": "public",
+      "outDir": "../src/ratpack/public",
+      "assets": "assets",
       "index": "index.html",
       "main": "main.ts",
       "test": "test.ts",

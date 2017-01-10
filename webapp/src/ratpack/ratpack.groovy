@@ -61,12 +61,17 @@ ratpack
 		}
 
 		path ('') { Context c ->
-			Path asset = file ("templates/index.html")
+			Path asset = file ("public/index.html")
 
 			get (TextTemplateRenderer)
 
-			if (asset.toFile().exists()) render groovyTemplate ('index.html') else next()
-//			if (asset.toFile().exists()) render asset else next()
+			if (asset.toFile().exists()) render asset else next()
+		}
+
+		path ("query") {
+			Path asset = file ("public/index.html")
+
+			if (asset.toFile().exists()) render asset else next()
 		}
 
 		path ("::(css|fonts|images|js).*") {
@@ -75,7 +80,7 @@ ratpack
 			if (asset.toFile().exists()) render asset else next()
 		}
 		path ("::.*\\.html") {
-			Path asset = file ("templates/${request.path}")
+			Path asset = file ("public/${request.path}")
 
 			if (asset.toFile().exists()) render groovyTemplate (request.path) else next()
 		}
