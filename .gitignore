@@ -15,3 +15,5 @@ Backup*
 target
 out
 atlassian-ide-plugin.xml
+node_modules
+logs
