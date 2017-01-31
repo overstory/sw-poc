@@ -1,0 +1,11 @@
+{
+  "movies": [
+    { "swapiUrl": "http://swapi.co/api/films/1/", "movieDbId": "11" },
+    { "swapiUrl": "http://swapi.co/api/films/2/", "movieDbId": "1891" },
+    { "swapiUrl": "http://swapi.co/api/films/3/", "movieDbId": "1892" },
+    { "swapiUrl": "http://swapi.co/api/films/4/", "movieDbId": "1893" },
+    { "swapiUrl": "http://swapi.co/api/films/5/", "movieDbId": "1894" },
+    { "swapiUrl": "http://swapi.co/api/films/6/", "movieDbId": "1895" },
+    { "swapiUrl": "http://swapi.co/api/films/7/", "movieDbId": "140607" }
+  ]
+}
