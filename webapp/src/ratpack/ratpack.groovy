@@ -5,6 +5,7 @@ import handlers.GraphQueryHandler
 import handlers.NeoLoadHandler
 import org.slf4j.LoggerFactory
 import handlers.SwapiHandler
+import handlers.MovieDbHandler
 
 import ch.qos.logback.classic.LoggerContext
 import ch.qos.logback.classic.gaffer.GafferConfigurator
@@ -41,6 +42,17 @@ ratpack
 		path ('swapi/cached') { Context c ->
 			byMethod {
 				get { insert c.get (SwapiHandler) }
+			}
+		}
+
+		path ('moviedb/download') { Context c ->
+			byMethod {
+				get { insert c.get (MovieDbHandler) }
+			}
+		}
+		path ('moviedb/cached') { Context c ->
+			byMethod {
+				get { insert c.get (MovieDbHandler) }
 			}
 		}
 

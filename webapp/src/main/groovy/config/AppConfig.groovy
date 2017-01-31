@@ -4,6 +4,7 @@ import com.google.inject.AbstractModule
 import com.google.inject.Scopes
 import com.google.inject.name.Names
 import handlers.GraphQueryHandler
+import handlers.MovieDbHandler
 import handlers.NeoLoadHandler
 import neo4j.Neo4JServer
 import neo4j.impl.Neo4JServerImpl
@@ -20,10 +21,17 @@ import handlers.SwapiHandler
  */
 class AppConfig extends AbstractModule
 {
+	// FixMe: these values should be in an external config file
 	final static String SWAPI_BASE_URL = "http://swapi.co/api"
 	final static String SWAPI_ALL_OUTPUT_PATH = "/tmp/swapi.json"
 	final static String SWAPI_DATA_RESOURCE = "json/swapi.json"
 	final static String SWAPI_LOAD_CYPHER = "cypher/load-swapi.cypher"
+
+	final static String MOVIEDB_BASE_URL = "https://api.themoviedb.org/3/person"
+	final static String MOVIEDB_API_KEY = "52201713fb76d70a41d93c1cefe0ae03"
+	final static String MOVIEDB_DATA_RESOURCE = "json/moviedb-actors.json"
+	final static String MOVIEDB_LOAD_CYPHER = "cypher/load-moviedb.cypher"
+	final static String CHARACTER_MAP = "json/character-resource-map.json"
 
 	final static String SWSOCIAL_CHARMAP_PATH = "json/character-resource-map.json"
 	final static String SWSOCIAL_INTERACTIONS_PATH = "json/starwars-full-interactions-allCharacters-merged.json"
@@ -46,6 +54,8 @@ class AppConfig extends AbstractModule
 	@Override
 	protected void configure()
 	{
+		bind (String).annotatedWith (Names.named ("CHARACTER_MAP")).toInstance (CHARACTER_MAP)
+
 		bind (String).annotatedWith (Names.named ("SWAPI_DATA_RESOURCE")).toInstance (SWAPI_DATA_RESOURCE)
 		bind (String).annotatedWith (Names.named ("SWAPI_LOAD_CYPHER")).toInstance (SWAPI_LOAD_CYPHER)
 
@@ -53,6 +63,11 @@ class AppConfig extends AbstractModule
 
 		bind (String).annotatedWith (Names.named ("SWAPI_BASE_URL")).toInstance (SWAPI_BASE_URL)
 		bind (String).annotatedWith (Names.named ("SWAPI_JSON_PATH")).toInstance (SWAPI_ALL_OUTPUT_PATH)
+
+		bind (String).annotatedWith (Names.named ("MOVIEDB_BASE_URL")).toInstance (MOVIEDB_BASE_URL)
+		bind (String).annotatedWith (Names.named ("MOVIEDB_API_KEY")).toInstance (MOVIEDB_API_KEY)
+		bind (String).annotatedWith (Names.named ("MOVIEDB_DATA_RESOURCE")).toInstance (MOVIEDB_DATA_RESOURCE)
+		bind (String).annotatedWith (Names.named ("MOVIEDB_LOAD_CYPHER")).toInstance (MOVIEDB_LOAD_CYPHER)
 
 		bind (String).annotatedWith (Names.named ("NEO_HOST")).toInstance (NEO_HOST)
 		bind (HostDetails).annotatedWith (Names.named ("NEO_SERVER")).toInstance (new HostDetails (hostName: NEO_HOST, port: NEO_PORT, user: NEO_USER, pass: NEO_PASSWD))
@@ -62,6 +77,7 @@ class AppConfig extends AbstractModule
 
 		bind (Neo4JServer).to (Neo4JServerImpl).in (Scopes.SINGLETON)
 		bind (SwapiHandler).in (Scopes.SINGLETON)
+		bind (MovieDbHandler).in (Scopes.SINGLETON)
 		bind (NeoLoadHandler).in (Scopes.SINGLETON)
 		bind (GraphQueryHandler).in (Scopes.SINGLETON)
 	}
