@@ -56,27 +56,42 @@ ratpack
 			}
 		}
 
-		path ("::(css|fonts|images|js).*") {
-			Path asset = file ("public/${request.path}")
 
-			if (asset.toFile().exists()) render asset else next()
+		// Catch the empty patch and match it to index.html
+		path ("") {
+			mapPath (context, [ 'public' ], 'index.html')
 		}
 
-		path ("::.*\\.(css|js|jpg|jpeg|png|gif|ico|map)") {
-			Path asset = file ("public/${request.path}")
-
-			if (asset.toFile().exists()) render asset else next()
+		// If a static file exists with the requested name, serve it out
+		path ("::(.*)") { Context context ->
+			mapPath (context, [ 'public', 'public/assets' ], request.path)
 		}
 
-		all { Context c ->
-			Path asset = file ("public/index.html")
+		// if it look like a simple path identifier, assume it's an Angular page name
+		path ("::([-a-zA-Z0-9]*)") {
+			mapPath (context, [ 'public' ], 'index.html')
+		}
 
-			if (asset.toFile().exists()) render asset else next()
+		all {
+			response.status (404)
+			render "No such resoource: ${request.path}"
+		}
+	}
+}
+
+static void mapPath (Context context, List<String> prefixes, String path)
+{
+	for (String prefix : prefixes) {
+		Path asset = context.file ("${prefix}/${path}")
+
+		if (asset.toFile().exists()) {
+			context.render asset
+			return
 		}
 	}
 
+	context.next()
 }
-
 
 @Slf4j
 class LogHelper

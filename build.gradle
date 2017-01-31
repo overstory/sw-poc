@@ -26,11 +26,3 @@ ext.mavenRepos = {
 
 repositories mavenRepos
 
-ext.nexusPublishRepo = {
-	url "http://repository.aop.cambridge.org/nexus/content/repositories/snapshots/"
-	credentials {
-		username = 'admin'
-		password = 'dXUciNUJTf6i3nkxxYHV'
-	}
-}
-

@@ -1,13 +1,13 @@
 {
   "project": {
     "version": "1.0.0-beta.17",
-    "name": "overstory-ld"
+    "name": "overstory-ltd"
   },
   "apps": [
     {
-      "root": "src",
-      "outDir": "../src/ratpack/public",
-      "assets": "assets",
+      "root": "frontend/src",
+      "outDir": "build/resources/main/public",
+      "assets": ["assets"],
       "index": "index.html",
       "main": "main.ts",
       "test": "test.ts",
