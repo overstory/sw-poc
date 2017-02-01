@@ -6,6 +6,7 @@ import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
 import groovy.util.logging.Slf4j
 import neo4j.Neo4JServer
+import ratpack.exec.Promise
 import ratpack.handling.Context
 import ratpack.handling.Handler
 import ratpack.http.client.HttpClient
@@ -35,34 +36,38 @@ class NeoLoadHandler implements Handler
 	@Override
 	void handle (Context context) throws Exception
 	{
+		Map<String,Map> scripts = [
+			'swapi-load-cypher': ['json': getResourceAsJson ('swapi-json')],
+			'swsocial-load-cypher': ['interactions': buildInteractions (getResourceAsJson ('swsocial-char-map'), getResourceAsJson ('swsocial-interactions'))],
+			'moviedb-load-cypher': ['json': getResourceAsJson ('moviedb-json')]
+		]
+
 		List<ReceivedResponse> responses = []
 
-		neo4JServer.runRequest (getResourceAsText ('swapi-load-cypher'), ['json': getResourceAsJson ('swapi-json')]).flatMap { responseList ->
-			responses.addAll (responseList)
 
-			JsonBuilder interactionsJson = buildInteractions (getResourceAsJson ('swsocial-char-map'), getResourceAsJson ('swsocial-interactions'))
+		scripts.each { String key, Map value ->
+			neo4JServer.runRequest (getResourceAsText (key), value).then { responseList ->
+				responses.addAll (responseList)
+			}
+		}
 
-			neo4JServer.runRequest (getResourceAsText ('swsocial-load-cypher'), ['interactions': interactionsJson])
-		} then { List<ReceivedResponse> responseList ->
-			responses.addAll (responseList)
-
-			if (responses.size() == 0) {
+		Promise.value (responses).then { List<ReceivedResponse> resps ->
+			if (resps.size() == 0) {
 				context.response.status (200)
 				context.response.contentType ('text/plain')
 				context.response.send ("OK")
 			} else {
-				StringBuffer sb = new StringBuffer()
+				def respJson = new JsonSlurper().parseText ('{ "combined-results": [] }')
+				def resultsArray = respJson.'combined-results'
 
-				sb.append ('{ "combined-results":\n[\n')
-
-				responses.eachWithIndex { ReceivedResponse resp, int index ->
-					if (index != 0) sb.append (",\n")
-					sb.append ('\t').append (resp.body.text)
+				resps.eachWithIndex { ReceivedResponse resp, int index ->
+					resultsArray << new JsonSlurper().parseText (resp.body.text)
 				}
 
-				sb.append ('\n]\n}\n')
+				new JsonBuilder (respJson).toPrettyString()
 
-				context.response.send (sb.toString())
+				context.response.contentType ('application/json')
+				context.response.send (new JsonBuilder (respJson).toPrettyString())
 			}
 		}
 	}

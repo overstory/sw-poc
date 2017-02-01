@@ -32,12 +32,8 @@ class AppConfig extends AbstractModule
 	final static String MOVIEDB_API_KEY = "52201713fb76d70a41d93c1cefe0ae03"
 	final static String MOVIEDB_MOVIES_RESOURCE = "json/resource-map.json"
 	final static String MOVIEDB_ACTORS_RESOURCE = "json/moviedb-actors.json"
-	final static String MOVIEDB_LOAD_CYPHER = "cypher/load-moviedb.cypher"
 	final static String CHARACTER_MAP = "json/character-resource-map.json"
 
-	final static String SWSOCIAL_CHARMAP_PATH = "json/character-resource-map.json"
-	final static String SWSOCIAL_INTERACTIONS_PATH = "json/starwars-full-interactions-allCharacters-merged.json"
-	final static String SWSOCIAL_LOAD_CYPHER = "cypher/load-swsocial.cypher"
 	final static String TX_SPLIT_PATTERN = '\\/\\/ TX-SPLIT -+\\n'
 
 
@@ -48,9 +44,13 @@ class AppConfig extends AbstractModule
 	final String NEO_TX_COMMIT_PATH = '/db/data/transaction/commit'
 
 	final Map<String,String> neoDataMap = [
-	        'swapi-json': SWAPI_DATA_RESOURCE, 'swapi-load-cypher': SWAPI_LOAD_CYPHER,
-		'swsocial-char-map': SWSOCIAL_CHARMAP_PATH, 'swsocial-interactions': SWSOCIAL_INTERACTIONS_PATH,
-		'swsocial-load-cypher': SWSOCIAL_LOAD_CYPHER
+	        'swapi-json': SWAPI_DATA_RESOURCE,
+		'swapi-load-cypher': SWAPI_LOAD_CYPHER,
+		'swsocial-char-map': "json/character-resource-map.json",
+		'swsocial-interactions': "json/starwars-full-interactions-allCharacters-merged.json",
+		'swsocial-load-cypher': "cypher/load-swsocial.cypher",
+		'moviedb-json': MOVIEDB_ACTORS_RESOURCE,
+		'moviedb-load-cypher': "cypher/load-moviedb.cypher"
 	]
 
 	@Override
@@ -71,7 +71,6 @@ class AppConfig extends AbstractModule
 		bind (String).annotatedWith (Names.named ("MOVIEDB_API_KEY")).toInstance (MOVIEDB_API_KEY)
 		bind (String).annotatedWith (Names.named ("MOVIEDB_ACTORS_RESOURCE")).toInstance (MOVIEDB_ACTORS_RESOURCE)
 		bind (String).annotatedWith (Names.named ("MOVIEDB_MOVIES_RESOURCE")).toInstance (MOVIEDB_MOVIES_RESOURCE)
-		bind (String).annotatedWith (Names.named ("MOVIEDB_LOAD_CYPHER")).toInstance (MOVIEDB_LOAD_CYPHER)
 
 		bind (String).annotatedWith (Names.named ("NEO_HOST")).toInstance (NEO_HOST)
 		bind (HostDetails).annotatedWith (Names.named ("NEO_SERVER")).toInstance (new HostDetails (hostName: NEO_HOST, port: NEO_PORT, user: NEO_USER, pass: NEO_PASSWD))

@@ -1,7 +1,8 @@
 CREATE CONSTRAINT ON (act:Actor) ASSERT act.id IS UNIQUE;
 // TX-SPLIT ---------------------------------
 //CREATE CONSTRAINT ON (als:Alias) ASSERT als.name IS UNIQUE;
-// TX-SPLIT ---------------------------------
+//XXXX TX-SPLIT ---------------------------------
+// The comment prefix '// TX-SPLIT ' is magic to create multiple transaction calls.  You can leave an empty transaction, it will cause an error
 
 
 WITH {movieDbJson} AS moviedb
