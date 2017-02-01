@@ -12,6 +12,8 @@ CREATE CONSTRAINT ON (s:Species) ASSERT s.url IS UNIQUE
 CREATE CONSTRAINT ON (sh:Starship) ASSERT sh.url IS UNIQUE
 // TX-SPLIT ---------------------------------
 CREATE CONSTRAINT ON (v:Vehicle) ASSERT v.url IS UNIQUE
+// TX-SPLIT ---------------------------------
+CREATE CONSTRAINT ON (a:Actor) ASSERT a.movieDbId IS UNIQUE
 
 // TX-SPLIT ---------------------------------
 

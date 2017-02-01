@@ -1,9 +1,3 @@
-CREATE CONSTRAINT ON (act:Actor) ASSERT act.id IS UNIQUE;
-// TX-SPLIT ---------------------------------
-//CREATE CONSTRAINT ON (als:Alias) ASSERT als.name IS UNIQUE;
-//XXXX TX-SPLIT ---------------------------------
-// The comment prefix '// TX-SPLIT ' is magic to create multiple transaction calls.  You can leave an empty transaction, it will cause an error
-
 
 WITH {json} AS moviedb
 UNWIND moviedb.actors AS a
@@ -11,24 +5,25 @@ UNWIND moviedb.actors AS a
 // Actor <-[:PORTRAYED_BY]- Character
 // Actor -[:APPEARS_IN]-> Film
 // Actor -[:ALSO_KNOWN_AS]-> (Alias)
-MERGE (actor:Actor { id: a.`id` })
-	SET actor.biography = a.`biography`,
+MERGE (actor:Actor { movieDbId: a.`id` })
+	SET actor.movieDbId = a.`id`,
+		actor.name = a.`name`,
+		actor.imdbId = a.`imdb_id`,
+		actor.biography = a.`biography`,
 		actor.birthday = a.`birthday`,
 		actor.deathday = a.`deathday`,
-		actor.gender = a.`gender`,
+		actor.gender = CASE WHEN a.`gender` = 1 THEN 'female' WHEN a.`gender` = 2 THEN 'male' ELSE 'unknown' END,
 		actor.homepage = a.`homepage`,
-		actor.imdbId = a.`imdb_id`,
-		actor.name = a.`name`,
 		actor.placeOfBirth = a.`place_of_birth`,
 		actor.popularity = a.`popularity`,
-		actor.profileImg = a.`profile_path`
+		actor.movieDbImage = a.`profile_path`
 
 // Catch the cases where swapiId is empty. If empty do nothing, if exists, create PORTRAYED_BY relationship
 FOREACH (foo IN
     CASE WHEN a.`swapiId` IS NOT NULL THEN [a] ELSE []
     END |
-MERGE (c:Character { url: a.`swapiId` })
-MERGE (c)-[:PORTRAYED_BY]-> (actor)
+	MERGE (c:Character { url: a.`swapiId` })
+	MERGE (c)-[:PORTRAYED_BY]-> (actor)
 )
 
 // Match actors with films that they appeared in
