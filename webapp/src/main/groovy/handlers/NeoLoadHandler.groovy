@@ -61,7 +61,11 @@ class NeoLoadHandler implements Handler
 				def resultsArray = respJson.'combined-results'
 
 				resps.eachWithIndex { ReceivedResponse resp, int index ->
-					resultsArray << new JsonSlurper().parseText (resp.body.text)
+					def body = new JsonSlurper().parseText (resp.body.text)
+
+					if (body.errors.size() != 0) {
+						resultsArray << body
+					}
 				}
 
 				new JsonBuilder (respJson).toPrettyString()
