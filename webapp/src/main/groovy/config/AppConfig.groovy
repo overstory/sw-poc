@@ -26,10 +26,12 @@ class AppConfig extends AbstractModule
 	final static String SWAPI_ALL_OUTPUT_PATH = "/tmp/swapi.json"
 	final static String SWAPI_DATA_RESOURCE = "json/swapi.json"
 	final static String SWAPI_LOAD_CYPHER = "cypher/load-swapi.cypher"
+	final static String SWAPI_RESOURCE_MAP = "json/resource-map.json"
 
-	final static String MOVIEDB_BASE_URL = "https://api.themoviedb.org/3/person"
+	final static String MOVIEDB_BASE_URL = "http://api.themoviedb.org/3"
 	final static String MOVIEDB_API_KEY = "52201713fb76d70a41d93c1cefe0ae03"
-	final static String MOVIEDB_DATA_RESOURCE = "json/moviedb-actors.json"
+	final static String MOVIEDB_MOVIES_RESOURCE = "json/resource-map.json"
+	final static String MOVIEDB_ACTORS_RESOURCE = "json/moviedb-actors.json"
 	final static String MOVIEDB_LOAD_CYPHER = "cypher/load-moviedb.cypher"
 	final static String CHARACTER_MAP = "json/character-resource-map.json"
 
@@ -55,6 +57,7 @@ class AppConfig extends AbstractModule
 	protected void configure()
 	{
 		bind (String).annotatedWith (Names.named ("CHARACTER_MAP")).toInstance (CHARACTER_MAP)
+		bind (String).annotatedWith (Names.named ("SWAPI_RESOURCE_MAP")).toInstance (SWAPI_RESOURCE_MAP)
 
 		bind (String).annotatedWith (Names.named ("SWAPI_DATA_RESOURCE")).toInstance (SWAPI_DATA_RESOURCE)
 		bind (String).annotatedWith (Names.named ("SWAPI_LOAD_CYPHER")).toInstance (SWAPI_LOAD_CYPHER)
@@ -66,7 +69,8 @@ class AppConfig extends AbstractModule
 
 		bind (String).annotatedWith (Names.named ("MOVIEDB_BASE_URL")).toInstance (MOVIEDB_BASE_URL)
 		bind (String).annotatedWith (Names.named ("MOVIEDB_API_KEY")).toInstance (MOVIEDB_API_KEY)
-		bind (String).annotatedWith (Names.named ("MOVIEDB_DATA_RESOURCE")).toInstance (MOVIEDB_DATA_RESOURCE)
+		bind (String).annotatedWith (Names.named ("MOVIEDB_ACTORS_RESOURCE")).toInstance (MOVIEDB_ACTORS_RESOURCE)
+		bind (String).annotatedWith (Names.named ("MOVIEDB_MOVIES_RESOURCE")).toInstance (MOVIEDB_MOVIES_RESOURCE)
 		bind (String).annotatedWith (Names.named ("MOVIEDB_LOAD_CYPHER")).toInstance (MOVIEDB_LOAD_CYPHER)
 
 		bind (String).annotatedWith (Names.named ("NEO_HOST")).toInstance (NEO_HOST)

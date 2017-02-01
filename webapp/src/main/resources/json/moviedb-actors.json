@@ -1,0 +1,3446 @@
+{
+  "timestamp": "2017-02-01T02:46:17.000Z",
+  "actors": [
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia\n\nDavid Prowse, MBE (born 1 July 1935) is an English former bodybuilder, weightlifter and actor, most widely known for playing the role of Darth Vader in physical form. In Britain, he is also remembered as having played the Green Cross Code man. Prowse is a native of Bristol, where he attended Bristol Grammar School.\n\nDescription above from the Wikipedia article David Prowse, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1935-07-01",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 24342,
+      "imdb_id": "nm0001190",
+      "name": "David Prowse",
+      "place_of_birth": "Bristol, England",
+      "popularity": 0.540648,
+      "profile_path": "/cJtmBVrjYwawh2cCiAfZkEjPeqc.jpg",
+      "swapiId": "http://swapi.co/api/people/4/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "James Earl Boggins Jones",
+        "Todd Jones"
+      ],
+      "biography": "James Earl Jones (born January 17, 1931) is a multi-award-winning American actor of theater and film, well known for his distinctive bass voice and for his portrayal of characters of substance, gravitas and leadership. He is known for providing the voice of Darth Vader in the Star Wars franchise and the tagline for CNN.  James Earl Jones was born in Arkabutla, Mississippi, the son of Ruth (n\u00e9e Connolly) and Robert Earl Jones. At the age of five, he moved to Jackson, Michigan, to be raised by his maternal grandparents, but the adoption was traumatic and he developed a stutter so severe he refused to speak aloud. When he moved to Brethren, Michigan in later years a teacher at the Brethren schools started to help him with his stutter. He remained functionally mute for eight years until he reached high school. He credits his high school teacher, Donald Crouch, who discovered he had a gift for writing poetry, with helping him out of his silence.  Jones attended the University of Michigan where he was a pre-med major. While there, he joined the Reserve Officer Training Corps, and excelled. During the course of his studies, Jones discovered he was not cut out to be a doctor. Instead he focused himself on drama, with the thought of doing something he enjoyed, before, he assumed, he would have to go off to fight in the Korean War. After four years of college, Jones left without his degree. In 1953 he found a part-time stage crew job at the Ramsdell Theatre in Manistee, Michigan, which marked the beginning of his acting career. During the 1955\u20131957 seasons he was an actor and stage manager. He performed his first portrayal of Shakespeare\u2019s Othello in this theater in 1955. After his discharge from the Military, Jones moved to New York, where he attended the American Theatre Wing to further his training and worked as a janitor to earn a living. His first film role was as a young and trim Lt. Lothar Zogg, the B-52 bombardier in Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb in 1964. His first big role came with his portrayal of boxer Jack Jefferson in the film version of the Broadway play The Great White Hope, which was based on the life of boxer Jack Johnson. For his role, Jones was nominated Best Actor by the Academy of Motion Picture Arts and Sciences, making him the second African-American male performer (following Sidney Poitier) to receive a nomination. In 1969, Jones participated in making test films for a proposed children's television series; these shorts, combined with animated segments were the beginnings of the Sesame Street format. The next year, in the early 1970s, James appeared with Diahann Carroll in the film called Claudine.  While he has appeared in many roles, he is well known as the voice of Darth Vader in the original Star Wars trilogy. Darth Vader was portrayed in costume by David Prowse in the original trilogy, with Jones dubbing Vader's dialogue in postproduction due to Prowse's strong West Country accent being unsuitable for the role. At his own request, he was originally uncredited for the release of the first two films (he would later be credited for the two in the 1997 re-release). \u00a0His other voice roles include Mufasa in the 1994 film Disney animated blockbuster The Lion King, and its direct-to-video sequel, The Lion King II: Simba's Pride. He also has done the CNN tagline, \"This is CNN\", as well as \"This is CNN International\", and the Bell Atlantic tagline, \"Bell Atlantic: The heart of communication\". When Bell Atlantic became Verizon, Jones used the tagline greeting of \"Welcome to Verizon\" or \"Verizon 411\" right before a phone call would go through. The opening for NBC's coverage of the 2000 and 2004 Summer Olympics; \"the Big PI in the Sky\" (God) in the computer game Under a Killing Moon; a Claymation film about The Creation; and several guest spots on The Simpsons.  In addition to his film and voice over work, Jones is an accomplished stage actor as well; he has won Tony awards in 1969 for The Great White Hope and in 1987 for Fences. Othello, King Lear, Oberon in A Midsummer Night's Dream, Abhorson in Measure for Measure, and Claudius in Hamlet are Shakespearean roles he has played. He received Kennedy Center Honors in 2002.  Jones has been married to actress Cecilia Hart since 1982. They have one child, Flynn Earl Jones. He was previously married to American actress/singer Julienne Marie (born March 21, 1933, Toledo, Ohio); they had no children. Jones is a registered Republican.",
+      "birthday": "1931-01-17",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 15152,
+      "imdb_id": "nm0000469",
+      "name": "James Earl Jones",
+      "place_of_birth": "Arkabutla, Mississippi, USA",
+      "popularity": 5.739472,
+      "profile_path": "/2ZuBf3ip2RXhkiQqGUjbUzAf4Nx.jpg",
+      "swapiId": "http://swapi.co/api/people/4/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/1/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Spencer Lee Wilding"
+      ],
+      "biography": "Spencer Lee Wilding, is a Welsh actor and stuntman based in the UK. He is from St Asaph in North Wales.",
+      "birthday": "1972-07-26",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://www.spencerwilding.com/",
+      "id": 25451,
+      "imdb_id": "nm1872855",
+      "name": "Spencer Wilding",
+      "place_of_birth": "St. Asaph - Wales - UK",
+      "popularity": 0.296537,
+      "profile_path": "/g3FJIpQZri7gG515rLehuo81T6W.jpg",
+      "swapiId": "http://swapi.co/api/people/4/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1728954,
+      "imdb_id": null,
+      "name": "Daniel Naprous",
+      "place_of_birth": null,
+      "popularity": 0.001255,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/4/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Ken Baker",
+        "Kenneth George Baker"
+      ],
+      "biography": "From Wikipedia, the free encyclopedia Kenneth George \"Kenny\" Baker (born 24 August 1934) was a British actor and musician, best known as the man inside R2-D2 in the popular Star Wars film series. Description above from the Wikipedia article Kenny Baker, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1934-08-24",
+      "deathday": "2016-08-13",
+      "gender": 2,
+      "homepage": "http://www.kennybaker.co.uk",
+      "id": 130,
+      "imdb_id": "nm0048652",
+      "name": "Kenny Baker",
+      "place_of_birth": "Birmingham, England, UK",
+      "popularity": 1.087079,
+      "profile_path": "/sdd9rgifNF9C51RejG7sUGU8Bka.jpg",
+      "swapiId": "http://swapi.co/api/people/3/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/1/",
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1214513,
+      "imdb_id": "nm1835544",
+      "name": "Jimmy Vee",
+      "place_of_birth": null,
+      "popularity": 0.000003,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/3/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Peter Mayhew\u00a0(born 19 May 1944)\u00a0is a British-American actor. He is best known for playing\u00a0Chewbacca\u00a0in the\u00a0Star Wars\u00a0films.\n\nMayhew was born on 19 May 1944 in\u00a0Barnes,\u00a0Surrey, where he was also raised.\u00a0His height is a product not of\u00a0gigantism\u00a0\u2014 \"I don't have the big head\" \u2014 but of an overactive pituitary gland secondary to a genetic disease called\u00a0Marfan Syndrome. The overactive pituitary gland was treated successfully in his mid-teens.\u00a0His peak height was 7\u00a0feet 3\u00a0inches (2.21\u00a0m)",
+      "birthday": "1944-05-19",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "http://www.petermayhew.com/",
+      "id": 24343,
+      "imdb_id": "nm0562679",
+      "name": "Peter Mayhew",
+      "place_of_birth": "Barnes - London - England - UK",
+      "popularity": 0.987429,
+      "profile_path": "/din1s5H4C4CfcnkHfEeRcdFlsVj.jpg",
+      "swapiId": "http://swapi.co/api/people/13/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/",
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/7/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nWilliam \"Bill\" Hader (born June 7, 1978 height 6' 1\" (1,85 m)) is an American actor, comedian, producer and writer. He is best known as a cast member on Saturday Night Live and for his supporting roles in comedy films such as Superbad, Hot Rod, Tropic Thunder and Adventureland.\n\nDescription above from the Wikipedia article Bill Hader, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1978-06-07",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 19278,
+      "imdb_id": "nm0352778",
+      "name": "Bill Hader",
+      "place_of_birth": "Tulsa - Oklahoma - USA",
+      "popularity": 4.671517,
+      "profile_path": "/3Z5JsyLw7YTLZgpA3FAlLmFSN9F.jpg",
+      "swapiId": "http://swapi.co/api/people/87/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "\u8fde\u59c6\u00b7\u5c3c\u68ee",
+        "\u041b\u0438\u0430\u043c \u041d\u0438\u0441\u043e\u043d"
+      ],
+      "biography": "William John \"Liam\" Neeson OBE (born 7 June 1952) is an Irish actor who has been nominated for an Oscar, a BAFTA and three Golden Globe Awards.\n\nHe has starred in a number of notable roles including Oskar Schindler in Schindler's List, Michael Collins in Michael Collins, Peyton Westlake in Darkman, Jean Valjean in Les Mis\u00e9rables, Qui-Gon Jinn in Star Wars Episode I: The Phantom Menace, Alfred Kinsey in Kinsey, Ras Al Ghul in Batman Begins and the voice of Aslan in The Chronicles of Narnia film series. He has also starred in several other notable films, from major Hollywood studio releases (ie. Excalibur, The Dead Pool, Nell, Rob Roy, The Haunting, Love Actually, Kingdom of Heaven, Taken, Clash of the Titans, The A-Team, Unknown) to smaller arthouse films (ie. Deception, Breakfast on Pluto, Chloe).\n\nHe was born in Ballymena, County Antrim, Northern Ireland and educated at Saint Patrick's College, Ballymena Technical College and Queen's University Belfast. He moved to Dublin after university to further his acting career, joining the renowned Abbey Theatre. In the early 1990s, he moved again to the United States, where the wide acclaim for his performance in Schindler's List led to more high-profile work. He is widowed and lives in New York with his two sons.\n\nDescription above from the Wikipedia article Liam Neeson, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1952-06-07",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 3896,
+      "imdb_id": "nm0000553",
+      "name": "Liam Neeson",
+      "place_of_birth": "Ballymena, County Antrim, Northern Ireland",
+      "popularity": 10.351397,
+      "profile_path": "/9mdAohLsDu36WaXV2N3SQ388bvz.jpg",
+      "swapiId": "http://swapi.co/api/people/32/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia\n\nSilas Carson (born 1965) is an English actor, mostly known for playing Jedi Master Ki-Adi-Mundi and Viceroy Nute Gunray in all three of the Star Wars prequels and providing the voice of the Ood in Doctor Who.\n\nIn Star Wars Episode I: The Phantom Menace, Carson also plays two other speaking parts, the Senator of the Trade Federation, Lott Dod (although his voice was replaced with that of actor Toby Longworth) and the co-pilot of the ship which Qui-Gon Jinn and Obi-Wan Kenobi are on in the first scene.\n\nHe also made a guest appearance on the BBC series Hustle, as Bollywood film fan and perfectionist Kulvinder Samar (whose correct name in the show is actually Kulvinda, but was written as Kulvinder in the credits), and in Spooks and The IT Crowd. He provided alien voices for the Doctor Who episodes \"The End of the World\", \"The Impossible Planet\", \"The Satan Pit\", \"Planet of the Ood\" and \"The End of Time\". In the latter four he voiced the Ood, a race once enslaved by humanity.\n\nSince late 2007 he has appeared in several episodes of BBC's school drama Waterloo Road as blackmailer Stuart Hordley.\n\nCarson also had a minor role in Series one of BBC sit-com Outnumbered as a character named Ravi when Sue and Pete had a dinner party.\n\nHe also starred in the third series of BBC3 comedy How Not to Live Your Life, alongside Dan Clark and David Armand. He plays Samantha's university professor/love interest Brian.\n\nDescription above from the Wikipedia article Silas Carson,licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1965",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 20806,
+      "imdb_id": "nm0141324",
+      "name": "Silas Carson",
+      "place_of_birth": "England, UK",
+      "popularity": 0.02187,
+      "profile_path": "/cT7Qyu8Zl8IDsgYzduzuCm1zxpt.jpg",
+      "swapiId": "http://swapi.co/api/people/33/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Ewan Gordon McGregor was born 31 March 1971 in Crieff, Scotland. At 16, he left Crieff and Morrison Academy to join the Perth Repertory Theatre. His parents encouraged him to leave school and pursue his acting goals rather than be unhappy. McGregor studied drama for a year at Kirkcaldly in Fife, then enrolled at London's Guildhall School of Music and Drama for a three-year course. He studied alongside Daniel Craig and Alistair McGowan among others, and left right before graduating after snagging the role of Private Mick Hopper in Dennis Potter's 1993 six-part Channel 4 series \"Lipstick on Your Collar\" (1993).\n\nHis first notable role was that of Alex Law in Shallow Grave (1994), directed by Danny Boyle, written by John Hodge and produced by Andrew MacDonald. This was followed by The Pillow Book (1996) and Trainspotting (1996), the latter of which brought him to the public's attention.\n\nHe is now one of the most critically acclaimed actors of his generation, and portrays Obi-wan Kenobi in the first three Star Wars episodes. McGregor is married to French production designer Eve Mavrakis, whom he met while working on the TV show \"Kavanagh QC\" (1995). They married in France in the summer of 1995 and have two daughters, Clara Mathilde and Esther Rose. McGregor has formed a production company with friends Jonny Lee Miller, Sean Pertwee, Jude Law and Sadie Frost. Called Natural Nylon, they hope it will make innovative films that do not conform to Hollywood standards.",
+      "birthday": "1971-03-31",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "http://ewanmcgregor.net/",
+      "id": 3061,
+      "imdb_id": "nm0000191",
+      "name": "Ewan McGregor",
+      "place_of_birth": "Perth, Scotland, UK",
+      "popularity": 7.15081,
+      "profile_path": "/lVjs6E3vriUXhHrAx0mSzyOVts2.jpg",
+      "swapiId": "http://swapi.co/api/people/10/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1969-07-22",
+      "deathday": "",
+      "gender": 0,
+      "homepage": null,
+      "id": 19506,
+      "imdb_id": "nm0852517",
+      "name": "James Arnold Taylor",
+      "place_of_birth": "",
+      "popularity": 2.95949,
+      "profile_path": "/y8SCPH3ackhej26YH5sKps0g7Ch.jpg",
+      "swapiId": "http://swapi.co/api/people/10/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Alec Guinness de Cuffe",
+        "Sir Alec Guinness"
+      ],
+      "biography": "From Wikipedia, the free encyclopedia\n\nSir Alec Guinness, CH, CBE (2 April 1914 \u2013 5 August 2000) was an English actor. He was featured in several of the Ealing Comedies, including Kind Hearts and Coronets in which he played eight different characters. He later won the Academy Award for Best Actor for his role as Colonel Nicholson in The Bridge on the River Kwai. His is known for playing Obi-Wan Kenobi in the original Star Wars trilogy. He also played Prince Feisal in Lawrence of Arabia and George Smiley in the TV adaptation of Tinker, Tailor, Soldier, Spy. \u00a0 Description above from the Wikipedia article Alec Guinness, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1914-04-02",
+      "deathday": "2000-08-05",
+      "gender": 2,
+      "homepage": "",
+      "id": 12248,
+      "imdb_id": "nm0000027",
+      "name": "Alec Guinness",
+      "place_of_birth": "Marylebone, London, England, UK",
+      "popularity": 3.30535,
+      "profile_path": "/89QNJ7u1hNaCglkotmZEbwCNp1M.jpg",
+      "swapiId": "http://swapi.co/api/people/10/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/1/",
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1901-02-05",
+      "deathday": "1986-04-21",
+      "gender": 0,
+      "homepage": null,
+      "id": 117714,
+      "imdb_id": "nm0247856",
+      "name": "Marjorie Eaton",
+      "place_of_birth": null,
+      "popularity": 0.000002,
+      "profile_path": "/mwJVP4W18Rpbi8qn0a2nVyE7fdO.jpg",
+      "swapiId": "http://swapi.co/api/people/21/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Ahmed A. Best"
+      ],
+      "biography": "Ahmed Best\u00a0(born August 19, 1973) is an American\u00a0voice actor\u00a0and musician. He rose to prominence in the 2000s for providing the voice of\u00a0Jar Jar Binks\u00a0in the\u00a0Star Wars\u00a0franchise. He later turned to television, where he reprises his role as Jar Jar Binks in the\u00a0Robot Chicken\u00a0Star Wars\u00a0special. He also created, wrote, directed and produced his own TV show called\u00a0This Can't Be My Life. He has collaborated with director\u00a0George Lucas\u00a0in three films and five episodes of the cartoon show,\u00a0Star Wars: The Clone Wars. He has won the\u00a0Annie Award\u00a0for Best Voice Acting in an Animated Television Production.",
+      "birthday": "1973-08-19",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://www.ahmedbest.com/",
+      "id": 33197,
+      "imdb_id": "nm0078886",
+      "name": "Ahmed Best",
+      "place_of_birth": "New York City - New York - USA",
+      "popularity": 0.000023,
+      "profile_path": "/kBblb0GZjqN3W1VcJ2J5IkC7Qg3.jpg",
+      "swapiId": "http://swapi.co/api/people/36/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Steve Spiers",
+        "Steven Roberts",
+        "Stephen Speirs",
+        "Steven Speirs",
+        "Steven Spiers"
+      ],
+      "biography": "Steven Roberts, better known as\u00a0Steve Speirs\u00a0(born 22 February 1965), is a\u00a0Welsh\u00a0actor.\n\n Since graduating from university, Speirs has played\u00a0Sloan\u00a0in\u00a0Eragon, Andy Fellows in\u00a0Making Waves\u00a0and the \"pathetic loser\" Dullard alongside\u00a0Ricky Gervais\u00a0in\u00a0Extras, as well as having small parts in\u00a0Star Wars Episode I: The Phantom Menace\u00a0(Captain Tarpals) and\u00a0Pirates of the Caribbean: Dead Man's Chest.  He appears in\u00a0Kr\u00f6d M\u00e4ndoon and the Flaming Sword of Fire, a comedy fantasy series in which he plays Loquasto, an oafish servant, \"who belongs to a race of pig-like creatures known as Grobble\".[1]  Speirs often goes by the name of \"Dullard\" in honour of his role in\u00a0Extras, as he considers the character a mirror of himself. Speirs also appeared in the Gervais and\u00a0Stephen Merchant\u00a0film\u00a0Cemetery Junction, released in 2010,[2]\u00a0a part which was written particularly for Speirs.[3]\u00a0Speirs also starred as the bouncer at Mother McOakley's Tavern in\u00a0Burke and Hare, a\u00a0British\u00a0black comedy\u00a0directed by\u00a0John Landis\u00a0and released (in the\u00a0United Kingdom) in October 2010.  Other roles which Spiers is known for include his portrayal of\u00a0Bernard Bresslaw\u00a0in\u00a0Cor, Blimey!, Big Alan Williams in\u00a0Stellaand Colour Sergeant Wormwood in\u00a0Sharpe's Peril.  Speirs played depressed geography teacher and caretaker Mr Gareth Barber in the\u00a0BBC One\u00a0sitcom\u00a0Big School\u00a0for two series in 2013 and 2014.  In 2013, Steve played PC McClintock in the Christmas TV film\u00a0Gangsta Granny, an adaptation of the book written byDavid Walliams. He played the role of Dad in the 2014 TV film\u00a0The Boy in the Dress, also written by Walliams.",
+      "birthday": "1965-02-22",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 25441,
+      "imdb_id": "nm0818648",
+      "name": "Steve Speirs",
+      "place_of_birth": "Troedyrhiw - near Merthyr Tydfil - Wales - UK",
+      "popularity": 0.945,
+      "profile_path": "/cCNJouXVxnXJv9j26PaEWJxIkOE.jpg",
+      "swapiId": "http://swapi.co/api/people/37/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        " \tFrederick Tatasciore"
+      ],
+      "biography": "Frederick \"Fred\" Tatasciore is an American voice actor.\n\nTatasciore was born in New York City, New York in 1967. He was a stand-up comedian before turning over to voice acting.\n\nTatasciore has portrayed mostly secondary characters as well as monstrous-looking types. He is best known for voicing the Hulk in countless animated roles, including Ultimate Avengers, Next Avengers, Hulk Vs, Marvel Ultimate Alliance 2 and Avengers: Earth's Mightiest Heroes. In video games, he is known for voicing Saren Arterius from the critically acclaimed series Mass Effect and Damon Baird in the Gears of War video game series, and Zeratul from the game StarCraft II: Wings of Liberty. He also voices the character \"8\" in the Tim Burton-produced film 9 that was released September 9, 2009. His most recent roles are of that as Neftin Prog in Ratchet &amp; Clank: Into the Nexus, Russian Nikolai Belinski in Call of Duty: World at War and Call of Duty: Black Ops, Tookit in Thundercats, and the Business Cat in the webseries \"Our New Electrical Morals\", with episodes posted in the Cartoon Hangover YouTube page, administered by Frederator Studios.",
+      "birthday": "",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 60279,
+      "imdb_id": "nm0851317",
+      "name": "Fred Tatasciore",
+      "place_of_birth": "New York City - New York - USA",
+      "popularity": 2.77012,
+      "profile_path": "/lNe4zn9fJ302GehQVaFk5BNcGGM.jpg",
+      "swapiId": "http://swapi.co/api/people/37/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "B. Blessed"
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nBrian Blessed (born 9 October 1936) is an English actor. He is known for his sonorous voice and \"hearty, king-sized portrayals\". He has also distinguished himself as an author and adventurer.\n\nDescription above from the Wikipedia article Brian Blessed, licensed under CC-BY-SA, full list of contributors on Wikipedia.\u200b",
+      "birthday": "1937-10-09",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "http://brianblessed.com/",
+      "id": 8318,
+      "imdb_id": "nm0000306",
+      "name": "Brian Blessed",
+      "place_of_birth": "Mexborough, Yorkshire, England, UK",
+      "popularity": 1.422893,
+      "profile_path": "/azFYGqcDS1Oo8skhbHzGPZSICTU.jpg",
+      "swapiId": "http://swapi.co/api/people/38/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "\ub098\ud0c8\ub9ac \ud3ec\ud2b8\ub9cc",
+        "\u041d\u0430\u0442\u0430\u043b\u0456 \u041f\u043e\u0440\u0442\u043c\u0430\u043d"
+      ],
+      "biography": "Natalie Portman is an actress with dual American and Israeli citizenship. Her first role was as an orphan taken in by a hitman in the 1994 action film L\u00e9on: The Professional, but mainstream success came when she was cast as Padm\u00e9 Amidala in the Star Wars prequel trilogy (released in 1999, 2002 and 2005). In 1999, she enrolled at Harvard University to study psychology while still working as an actress. She completed her bachelor's degree in 2003.\n\nIn 2001, Portman opened in New York City's Public Theater production of Anton Chekhov's The Seagull. In 2005, Portman won a Golden Globe Award and received an Academy Award nomination for Best Supporting Actress for her performance in the drama Closer. She won a Constellation Award for Best Female Performance and a Saturn Award for Best Actress for her starring role in V for Vendetta (2006). She played leading roles in the historical dramas Goya's Ghosts (2006) and The Other Boleyn Girl (2008). In May 2008, she served as the youngest member of the 61st Annual Cannes Film Festival jury. Portman's directorial debut, Eve, opened the 65th Venice International Film Festival's shorts competition in 2008. Portman directed a segment of the collective film New York, I Love You. Portman is also known for her portrayal as Jane Foster, the love interest of Marvel superhero Thor, in the film adaptation Thor (2011), and its sequel, Thor: The Dark World (2013).\n\nIn 2010, Portman starred in the psychological thriller Black Swan. Her performance received critical praise and earned her a second Golden Globe Award, the Screen Actors Guild Award, the BAFTA Award, the Broadcast Film Critics Association Award and the Academy Award for Best Actress in 2011.",
+      "birthday": "1981-06-09",
+      "deathday": "",
+      "gender": 1,
+      "homepage": "http://www.natalieportman.com",
+      "id": 524,
+      "imdb_id": "nm0000204",
+      "name": "Natalie Portman",
+      "place_of_birth": "Jerusalem, Israel",
+      "popularity": 20.158397,
+      "profile_path": "/jJcRWku3e9OHrmRqytn6WcBjhvh.jpg",
+      "swapiId": "http://swapi.co/api/people/35/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1979-12-30",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 283842,
+      "imdb_id": "nm0845941",
+      "name": "Catherine Taber",
+      "place_of_birth": null,
+      "popularity": 1.015,
+      "profile_path": "/3xCtIwBDiQe9smigTQXA2UUvuxy.jpg",
+      "swapiId": "http://swapi.co/api/people/35/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Ralph Brown was born on June 18, 1957. He is an actor and writer.",
+      "birthday": "1957-06-18",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 53916,
+      "imdb_id": "nm0114460",
+      "name": "Ralph Brown",
+      "place_of_birth": "Cambridge - Cambridgeshire - UK",
+      "popularity": 1.770012,
+      "profile_path": "/ksIVhmaAB5oRiOkm9mDKALVkaJk.jpg",
+      "swapiId": "http://swapi.co/api/people/39/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Andy Secombe",
+        "Andrew J. Secombe"
+      ],
+      "biography": "Andrew Secombe\u00a0(born 26 April 1953 in\u00a0Mumbles, south\u00a0Wales), better known as\u00a0Andy Secombe, is a\u00a0Welsh\u00a0actor, voice actor, and author.  Son of comedian/singer\u00a0Harry Secombe\u00a0(whom he later impersonated in a\u00a0Goon Show\u00a0special), the younger Secombe is probably best known for providing the voice of\u00a0Watto\u00a0in the\u00a0Star Wars\u00a0prequels. Andy provided the voice of anotherToydarian\u00a0in\u00a0Star Wars: Knights of the Old Republic II: The Sith Lords. He subsequently shifted to writing, penning fourfantasy\u00a0novels to date:\u00a0Limbo;\u00a0Limbo Two: The Final Chapter;\u00a0The Last House in the Galaxy; and\u00a0Endgame. Earlier in his career, he played Rover the Dog in the Channel 4 children's series\u00a0Chips Comic\u00a0(1983) and appeared as a regular in the BBC TV children's sketch show \"Fast Forward\".  In 2005, he returned to acting, becoming part of another science fiction franchise by playing\u00a0Colin the Security Robot\u00a0inThe Hitchhiker's Guide to the Galaxy: Quintessential Phase.  He published the book\u00a0Growing Up with the Goons\u00a0in 2010.",
+      "birthday": "1953-04-26",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 33198,
+      "imdb_id": "nm0781181",
+      "name": "Andrew Secombe",
+      "place_of_birth": "Mumbles Head - South Wales - UK",
+      "popularity": 0.012758,
+      "profile_path": "/oKLhyJo4doxuPBpuGzLQ3WGGu9f.jpg",
+      "swapiId": "http://swapi.co/api/people/40/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/5/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Euan Lewis MacLeod",
+        "Euan Macleod",
+        "Lewis McCleod"
+      ],
+      "biography": "Euan Lewis MacLeod\u00a0(born 6 December 1970) is a Scottish character actor, who can be heard as the voice of many television commercials, film trailers and cartoons in his native UK.",
+      "birthday": "1970-12-06",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://lewismacleod.com/",
+      "id": 1074722,
+      "imdb_id": "nm0533914",
+      "name": "Lewis Macleod",
+      "place_of_birth": "Glasgow - Scotland - UK",
+      "popularity": 0.000002,
+      "profile_path": "/mv3TTVkxdDn11Gs2AWKvFzAuW7Y.jpg",
+      "swapiId": "http://swapi.co/api/people/41/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Pernilla \u00d6stergren",
+        "Mia Pernilla Hertzman-Ericson",
+        "Pernilla Wallgren"
+      ],
+      "biography": "Pernilla August is a Swedish actress, director and screenwriter. Being one of Sweden's leading actresses and a longtime collaborator with director Ingmar Bergman, she won the Best Actress Award at the 1992 Cannes Film Festival for her role in his The Best Intentions.",
+      "birthday": "1958-02-13",
+      "deathday": "",
+      "gender": 1,
+      "homepage": "",
+      "id": 33190,
+      "imdb_id": "nm0000278",
+      "name": "Pernilla August",
+      "place_of_birth": "Stockholm, Stockholms lan, Sweden",
+      "popularity": 0.063998,
+      "profile_path": "/zDMvEQCCUcjJeDWEstDBjoK8kA4.jpg",
+      "swapiId": "http://swapi.co/api/people/43/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/5/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Anthony Kingsley Daniels"
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nAnthony Daniels (born 21 February 1946) is an English actor. He is best known for his role as the droid C-3PO in the Star Wars series of films made between 1977 and 2005.\n\nDescription above from the Wikipedia article Anthony Daniels, licensed under CC-BY-SA, full list of contributors on Wikipedia.\u200b",
+      "birthday": "1946-02-21",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "http://www.anthonydaniels.com/",
+      "id": 6,
+      "imdb_id": "nm0000355",
+      "name": "Anthony Daniels",
+      "place_of_birth": "Salisbury, Wiltshire, England, UK",
+      "popularity": 3.172059,
+      "profile_path": "/cljvryjb3VwTsNR7fjQKjNPMaBB.jpg",
+      "swapiId": "http://swapi.co/api/people/2/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/7/",
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Raymond Park "
+      ],
+      "biography": "From Wikipedia, the free encyclopedia\n\nRaymond Park (born 23 August 1974) is a British actor, stuntman and martial artist, best known for his playing the physical part of Darth Maul in Star Wars Episode I: The Phantom Menace, Toad in X-Men, Snake-Eyes in G.I. Joe: The Rise of Cobra, and Edgar on Heroes.\n\nDescription above from the Wikipedia article Ray Park, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1974-08-23",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://www.raypark.com/",
+      "id": 11007,
+      "imdb_id": "nm0661917",
+      "name": "Ray Park",
+      "place_of_birth": "Glasgow, Scotland, UK",
+      "popularity": 0.000333,
+      "profile_path": "/3qB3uEjTOIkVy1cBAfCntGMRGDT.jpg",
+      "swapiId": "http://swapi.co/api/people/44/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "\u200bFrom Wikipedia, the free encyclopedia\n\nPeter Szymon Serafinowicz (born 10 July 1972) is an English actor, comedian, writer, composer, voice artist and occasional director.\n\nDescription above from the Wikipedia article Peter Serafinowicz, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1972-07-10",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "http://peterserafinowicz.com/",
+      "id": 11115,
+      "imdb_id": "nm0784818",
+      "name": "Peter Serafinowicz",
+      "place_of_birth": "Liverpool - England - UK",
+      "popularity": 2.656809,
+      "profile_path": "/6bWPwi6HLej1gGObTjIzyLcxsYS.jpg",
+      "swapiId": "http://swapi.co/api/people/44/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Sam Witwer"
+      ],
+      "biography": null,
+      "birthday": "1977-10-20",
+      "deathday": "",
+      "gender": 0,
+      "homepage": null,
+      "id": 46362,
+      "imdb_id": "nm1022429",
+      "name": "Samuel Witwer",
+      "place_of_birth": "",
+      "popularity": 0.000187,
+      "profile_path": "/fJiYTRHIBP2gUxoM6QPBMCA6FVT.jpg",
+      "swapiId": "http://swapi.co/api/people/44/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1947-02-14",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 1590529,
+      "imdb_id": "nm0680975",
+      "name": "Toby Philpott",
+      "place_of_birth": "London, UK",
+      "popularity": 0.0,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/16/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/3/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Mike Edmunds"
+      ],
+      "biography": "Mike Edmonds is an English actor with dwarfism, known for his role as Little Ron in the children's television show Maid Marian and Her Merry Men. Edmonds can also be seen dancing in the Men Without Hats music video \"The Safety Dance\" as a dwarf jester, his shirt reads \"rhythm of youth\". Edmonds has also appeared in several films, including Flash Gordon, The Dark Crystal, and Who Framed Roger Rabbit. Edmonds played the role of Og in the Terry Gilliam film Time Bandits. In Return of the Jedi, he performed as the Ewok Logray as well as the operator for Jabba the Hutt's tail.",
+      "birthday": "1944-01-13",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://mikeedmonds.winnsworld.co.uk/",
+      "id": 1220451,
+      "imdb_id": "nm0249507",
+      "name": "Mike Edmonds",
+      "place_of_birth": "Chelmsford, Essex, UK",
+      "popularity": 0.42,
+      "profile_path": "/2sjtnY8P7OZF5L9smPK1grhZmCy.jpg",
+      "swapiId": "http://swapi.co/api/people/16/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/3/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1521791,
+      "imdb_id": "nm5601053",
+      "name": "Dave Barclay",
+      "place_of_birth": null,
+      "popularity": 0.0,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/16/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1947-07-13",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 1590523,
+      "imdb_id": "nm0178846",
+      "name": "John Coppinger",
+      "place_of_birth": "England, UK",
+      "popularity": 0.0,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/16/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1924-10-03",
+      "deathday": "1985-02-16",
+      "gender": 0,
+      "homepage": null,
+      "id": 159108,
+      "imdb_id": "nm5925474",
+      "name": "Larry Ward",
+      "place_of_birth": null,
+      "popularity": 0.001686,
+      "profile_path": "/zRqHcr0ySV1IJiDVmpciCokzn3h.jpg",
+      "swapiId": "http://swapi.co/api/people/16/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/",
+        "http://swapi.co/api/films/3/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nKevin Michael Richardson (born October 25, 1964) is an American actor and voice artist who currently stars in The Cleveland Show. He is also well known for being the voice of Tartarus in the video game Halo 2.\n\nDescription above from the Wikipedia article Kevin Michael Richardson, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1964-10-25",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 24362,
+      "imdb_id": "nm0724656",
+      "name": "Kevin Michael Richardson",
+      "place_of_birth": "The Bronx, New York, USA",
+      "popularity": 1.779448,
+      "profile_path": "/9dMOW2CFRrlDkNzeXVGMJfASupM.jpg",
+      "swapiId": "http://swapi.co/api/people/16/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 199356,
+      "imdb_id": "nm0086685",
+      "name": "Paul Blake",
+      "place_of_birth": null,
+      "popularity": 0.7,
+      "profile_path": "/WSO4C7YdURE1thtj2MPkWSKD6o.jpg",
+      "swapiId": "http://swapi.co/api/people/15/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "",
+      "deathday": "",
+      "gender": 1,
+      "homepage": "",
+      "id": 104149,
+      "imdb_id": "nm0207117",
+      "name": "Maria De Aragon",
+      "place_of_birth": null,
+      "popularity": 0.4725,
+      "profile_path": "/rnaslrjV5ui6cKphksSni3K0TVQ.jpg",
+      "swapiId": "http://swapi.co/api/people/15/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1924-10-03",
+      "deathday": "1985-02-16",
+      "gender": 0,
+      "homepage": null,
+      "id": 159108,
+      "imdb_id": "nm5925474",
+      "name": "Larry Ward",
+      "place_of_birth": null,
+      "popularity": 0.001686,
+      "profile_path": "/zRqHcr0ySV1IJiDVmpciCokzn3h.jpg",
+      "swapiId": "http://swapi.co/api/people/15/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/",
+        "http://swapi.co/api/films/3/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "\u200bFrom Wikipedia, the free encyclopedia. \u00a0\n\nTerence Henry Stamp (born 22 July 1938) is an award-winning English actor. Since starting his career in 1962 he has appeared in over 60 films. His title role as Billy Budd in his film debut earned Stamp an Academy Award nomination for Best Supporting Actor and a BAFTA nomination for Best Newcomer. His other major roles include butterfly collector Freddie Clegg in The Collector, arch-villain General Zod in Superman and Superman II, transwoman Bernadette in The Adventures of Priscilla, Queen of the Desert, tough guy Wilson in The Limey, the Supreme Chancellor Valorum in Star Wars Episode I: The Phantom Menace, ghost antagonist Ramsley in The Haunted Mansion, Elektra's master Stick in Elektra, Pekwarsky in Wanted, Maxwell Smart's arch-villain Siegfried in Get Smart, council of high help Terrence Bundley in Yes Man and the 20 July plot General Ludwig Beck in Valkyrie. Stamp has won a Golden Globe, a Cannes Film Festival Award, a Seattle International Film Festival Award, a Satellite Award and a Silver Bear.\n\nDescription above from the Wikipedia article Terence Stamp, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1938-07-22",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 28641,
+      "imdb_id": "nm0000654",
+      "name": "Terence Stamp",
+      "place_of_birth": "Stepney, London, England, UK",
+      "popularity": 6.690503,
+      "profile_path": "/fyGkLjgVfyKIPBaMQs5Df3gMuOV.jpg",
+      "swapiId": "http://swapi.co/api/people/34/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": "",
+      "gender": 0,
+      "homepage": null,
+      "id": 59062,
+      "imdb_id": "nm0750823",
+      "name": "Ian Ruskin",
+      "place_of_birth": "",
+      "popularity": 0.006123,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/34/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Sam Jackson",
+        "Samuel Leroy Jackson",
+        "Samuel Jackson"
+      ],
+      "biography": "Samuel Leroy Jackson (born December 21, 1948) is an American film and television actor and film producer. After Jackson became involved with the Civil Rights Movement, he moved on to acting in theater at Morehouse College, and then films. He had several small roles such as in the film Goodfellas, Def by Temptation, before meeting his mentor, Morgan Freeman, and the director Spike Lee. After gaining critical acclaim for his role in Jungle Fever in 1991, he appeared in films such as Patriot Games, Amos &amp; Andrew, True Romance and Jurassic Park. In 1994 he was cast as Jules Winnfield in Pulp Fiction, and his performance received several award nominations and critical acclaim.\n\nJackson has since appeared in over 100 films including Die Hard with a Vengeance, The 51st State, Jackie Brown, Unbreakable, The Incredibles, Black Snake Moan, Shaft, Snakes on a Plane, as well as the Star Wars prequel trilogy and small roles in Quentin Tarantino's Kill Bill Vol. 2 and Inglourious Basterds. He played Nick Fury in Iron Man and Iron Man 2, Thor, the first two of a nine-film commitment as the character for the Marvel Cinematic Universe franchise. Jackson's many roles have made him one of the highest grossing actors at the box office. Jackson has won multiple awards throughout his career and has been portrayed in various forms of media including films, television series, and songs. In 1980, Jackson married LaTanya Richardson, with whom he has one daughter, Zoe.\n\nDescription above from the Wikipedia article Samuel L. Jackson, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1948-12-21",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "http://samuelljackson.com/",
+      "id": 2231,
+      "imdb_id": "nm0000168",
+      "name": "Samuel L. Jackson",
+      "place_of_birth": "Washington - D.C. - USA",
+      "popularity": 13.915725,
+      "profile_path": "/dlW6prW9HwYDsIRXNoFYtyHpSny.jpg",
+      "swapiId": "http://swapi.co/api/people/51/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Terrence Carson",
+        "T.C. Carson",
+        "TC Carson",
+        "Terrance Carson",
+        "Terrence 'TC' Carson",
+        "Terrence A. Carson"
+      ],
+      "biography": "Terrence 'T.C.' Carson, is an American singer and stage, film, and television actor.",
+      "birthday": "1958-11-19",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 233191,
+      "imdb_id": "nm0141333",
+      "name": "Terrence 'T.C.' Carson",
+      "place_of_birth": "Chicago, Illinois, USA",
+      "popularity": 0.000004,
+      "profile_path": "/eto2MDC4VXLGiPOXNqSdlWJ5yxL.jpg",
+      "swapiId": "http://swapi.co/api/people/51/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia\n\nSilas Carson (born 1965) is an English actor, mostly known for playing Jedi Master Ki-Adi-Mundi and Viceroy Nute Gunray in all three of the Star Wars prequels and providing the voice of the Ood in Doctor Who.\n\nIn Star Wars Episode I: The Phantom Menace, Carson also plays two other speaking parts, the Senator of the Trade Federation, Lott Dod (although his voice was replaced with that of actor Toby Longworth) and the co-pilot of the ship which Qui-Gon Jinn and Obi-Wan Kenobi are on in the first scene.\n\nHe also made a guest appearance on the BBC series Hustle, as Bollywood film fan and perfectionist Kulvinder Samar (whose correct name in the show is actually Kulvinda, but was written as Kulvinder in the credits), and in Spooks and The IT Crowd. He provided alien voices for the Doctor Who episodes \"The End of the World\", \"The Impossible Planet\", \"The Satan Pit\", \"Planet of the Ood\" and \"The End of Time\". In the latter four he voiced the Ood, a race once enslaved by humanity.\n\nSince late 2007 he has appeared in several episodes of BBC's school drama Waterloo Road as blackmailer Stuart Hordley.\n\nCarson also had a minor role in Series one of BBC sit-com Outnumbered as a character named Ravi when Sue and Pete had a dinner party.\n\nHe also starred in the third series of BBC3 comedy How Not to Live Your Life, alongside Dan Clark and David Armand. He plays Samantha's university professor/love interest Brian.\n\nDescription above from the Wikipedia article Silas Carson,licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1965",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 20806,
+      "imdb_id": "nm0141324",
+      "name": "Silas Carson",
+      "place_of_birth": "England, UK",
+      "popularity": 0.02187,
+      "profile_path": "/cT7Qyu8Zl8IDsgYzduzuCm1zxpt.jpg",
+      "swapiId": "http://swapi.co/api/people/52/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nFrank Oz (born Richard Frank Oznowicz; May 25, 1944) is a British-born American film director, actor, voice actor and puppeteer who is known for creating and performing the characters Miss Piggy and Fozzie Bear in The Muppet Show and for directing films, including the 1986 Little Shop Of Horrors remake and Dirty Rotten Scoundrels. He is also the operator and voice of Yoda in the Star Wars series.\n\nDescription above from the Wikipedia article Frank Oz, licensed under CC-BY-SA, full list of contributors on Wikipedia .",
+      "birthday": "1944-05-25",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 7908,
+      "imdb_id": "nm0000568",
+      "name": "Frank Oz",
+      "place_of_birth": "Hereford, Herefordshire, England, United Kingdom ",
+      "popularity": 2.196552,
+      "profile_path": "/aLH5bYwMIlVxCe4rIDaEsVJqDKn.jpg",
+      "swapiId": "http://swapi.co/api/people/20/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1962-04-15",
+      "deathday": "",
+      "gender": 0,
+      "homepage": null,
+      "id": 71535,
+      "imdb_id": "nm0437454",
+      "name": "Tom Kane",
+      "place_of_birth": "",
+      "popularity": 0.000328,
+      "profile_path": "/9X8liJ9UfiRNQVhjYc8XdbZl3v7.jpg",
+      "swapiId": "http://swapi.co/api/people/20/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nJimmy Smits (born July 9, 1955) is an American actor. Smits is perhaps best known for his roles as attorney Victor Sifuentes on the 1980s legal drama L.A. Law, as NYPD Detective Bobby Simone on the 1990s police drama NYPD Blue, and as U.S. Congressman (and later President of the United States) Matt Santos on The West Wing. He is also notable for his portrayal of Bail Organa in the Star Wars prequel trilogy, and Miguel Prado in Dexter. In the fall of 2010, he starred in NBC's short-lived series Outlaw, about a U.S. Supreme Court justice who leaves the bench to return to practicing law.\n\nDescription above from the Wikipedia article Jimmy Smits, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1955-07-09",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 33181,
+      "imdb_id": "nm0001751",
+      "name": "Jimmy Smits",
+      "place_of_birth": "Brooklyn, New York, USA",
+      "popularity": 0.315138,
+      "profile_path": "/8ZDeoaJbyIY52dJ6sEJNNytCfNC.jpg",
+      "swapiId": "http://swapi.co/api/people/68/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Phil La Mar",
+        "Phil La Marr",
+        "Phil LaMaar",
+        "Phil LaMar",
+        "Phil Lamarr",
+        "Phillip La Marr",
+        "Phillip LaMarr"
+      ],
+      "biography": "Phillip \"Phil\" LaMarr (born January 24, 1967) is an American actor, comedian and voice actor. One of the original cast members on the sketch comedy series MADtv, he is also known for his voice acting on the animated series Futurama, Static Shock, Samurai Jack, Justice League, Justice League Unlimited, Star Wars: Knights of the Old Republic II The Sith Lords, Star Wars: The Clone Wars, Metal Gear Solid 2: Sons of Liberty, Metal Gear Solid 4: Guns of the Patriots, and inFAMOUS.",
+      "birthday": "1967-01-24",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 31549,
+      "imdb_id": "nm0482851",
+      "name": "Phil LaMarr",
+      "place_of_birth": "Los Angeles, California, USA",
+      "popularity": 0.388344,
+      "profile_path": "/2rYa0M1bOSAATGbF5oe5pmoNeDn.jpg",
+      "swapiId": "http://swapi.co/api/people/68/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/3/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Jay Lavea Laga'aia",
+        "Jay Laga'Aia"
+      ],
+      "biography": "Jay Laga'aia is a New Zealand-Australian actor and singer. He is best known internationally for his role as Captain Typho in the films Star Wars Episode II: Attack of the Clones and Star Wars Episode III: Revenge of the Sith.",
+      "birthday": "1963-09-10",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 33182,
+      "imdb_id": "nm0481092",
+      "name": "Jay Laga'aia",
+      "place_of_birth": "Auckland - New Zealand",
+      "popularity": 0.000008,
+      "profile_path": "/nvcGMAYvHkbEo8VmdDvIJlohVjn.jpg",
+      "swapiId": "http://swapi.co/api/people/60/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 157024,
+      "imdb_id": null,
+      "name": "James C. Mathis III",
+      "place_of_birth": null,
+      "popularity": 0.000027,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/60/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nRena Owen is a New Zealand actress in film, theatre and television. She is of Maori and Pakeha (European) descent. Owen is most well known in the lead role of Beth in the cult classic movie Once Were Warriors (1994) directed by Lee Tamahori. The role earned Owen a number of awards including Best Actress at the Montreal World Film Festival and San Diego International Film Festival. Owen has also worked with arthouse director Rolf de Heer, one of Australia's most well known directors, in the film Dance Me to My Song (1998). Owen played the role of Rix in the movie which earned her a nomination for Best Supporting Actress at the AFI Awards.\n\nDescription above from the Wikipedia article Rena Owen, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1962-07-22",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 7241,
+      "imdb_id": "nm0654240",
+      "name": "Rena Owen",
+      "place_of_birth": "Bay of Islands, New Zealand",
+      "popularity": 0.001386,
+      "profile_path": "/gH41kolbpQswwqYomRiicZMOOXj.jpg",
+      "swapiId": "http://swapi.co/api/people/73/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Anthony Phelan is an actor.",
+      "birthday": "1954-06-19",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 75742,
+      "imdb_id": "nm0679715",
+      "name": "Anthony Phelan",
+      "place_of_birth": "",
+      "popularity": 0.000002,
+      "profile_path": "/81fH305g9TTVvRj6xYO73bdS8X1.jpg",
+      "swapiId": "http://swapi.co/api/people/72/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Daniel Logan\u00a0(born 6 June 1987) is a\u00a0New Zealand\u00a0actor\u00a0known to\u00a0Star Wars\u00a0fans as young\u00a0Boba Fett\u00a0from the film\u00a0Star Wars Episode II: Attack of the Clones\u00a0and the animated series\u00a0Star Wars: The Clone Wars. He is of\u00a0Maori\u00a0descent.",
+      "birthday": "1987-06-06",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 33189,
+      "imdb_id": "nm0517535",
+      "name": "Daniel Logan",
+      "place_of_birth": "Auckland - New Zealand",
+      "popularity": 0.430568,
+      "profile_path": "/oZ4tJ2qszpK8goamVxYCCMo2QTD.jpg",
+      "swapiId": "http://swapi.co/api/people/22/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Jeremy Bullock"
+      ],
+      "biography": "Jeremy Bulloch\u00a0(born 16 February 1945) is an English actor best known for the role of the bounty hunter\u00a0Boba Fett\u00a0in the original\u00a0Star Warstrilogy,.\u00a0He has appeared in numerous British television and film productions, including\u00a0Doctor Who\u00a0and\u00a0Robin of Sherwood.",
+      "birthday": "1945-02-16",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://www.jeremybulloch.com/",
+      "id": 33185,
+      "imdb_id": "nm0120116",
+      "name": "Jeremy Bulloch",
+      "place_of_birth": "Market Harborough - Leicestershire - England - UK",
+      "popularity": 0.000027,
+      "profile_path": "/yRnHoDmmWKdoLdiscCFfRpzzqMa.jpg",
+      "swapiId": "http://swapi.co/api/people/22/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/3/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1920-10-09",
+      "deathday": "2015-12-25",
+      "gender": 2,
+      "homepage": "",
+      "id": 151529,
+      "imdb_id": "nm0935067",
+      "name": "Jason Wingreen",
+      "place_of_birth": "Brooklyn, New York, USA",
+      "popularity": 0.42,
+      "profile_path": "/mUodFFjIp374CmUDLW2Lu39MYf2.jpg",
+      "swapiId": "http://swapi.co/api/people/22/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia\n\nTemuera Derek Morrison (born December 26, 1960) is a New Zealand actor. He has become one of the country's most famous stars for his roles as the abusive Jake \"the Muss\" Heke in 1994's Once Were Warriors and as bounty hunter Jango Fett and the Clone Troopers in the Star Wars series. He also voiced Boba Fett in the 2004 special edition of Star Wars Episode V: The Empire Strikes Back.\n\nDescription above from the Wikipedia article Temuera Morrison, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1960-12-26",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 7242,
+      "imdb_id": "nm0607325",
+      "name": "Temuera Morrison",
+      "place_of_birth": "Rotorua, North Island, New Zealand",
+      "popularity": 13.2177,
+      "profile_path": "/A1nD5J5uRwJM4hnpXd3DdmwZGjP.jpg",
+      "swapiId": "http://swapi.co/api/people/22/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/2/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia\n\nTemuera Derek Morrison (born December 26, 1960) is a New Zealand actor. He has become one of the country's most famous stars for his roles as the abusive Jake \"the Muss\" Heke in 1994's Once Were Warriors and as bounty hunter Jango Fett and the Clone Troopers in the Star Wars series. He also voiced Boba Fett in the 2004 special edition of Star Wars Episode V: The Empire Strikes Back.\n\nDescription above from the Wikipedia article Temuera Morrison, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1960-12-26",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 7242,
+      "imdb_id": "nm0607325",
+      "name": "Temuera Morrison",
+      "place_of_birth": "Rotorua, North Island, New Zealand",
+      "popularity": 13.2177,
+      "profile_path": "/A1nD5J5uRwJM4hnpXd3DdmwZGjP.jpg",
+      "swapiId": "http://swapi.co/api/people/69/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/2/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "\u200bFrom Wikipedia, the free encyclopedia. \u00a0\n\nPhilip Brown (April 30, 1916 - February 9, 2006) was an American actor. Brown was born in Cambridge, Massachusetts. After majoring in dramatics at Stanford University where he was a Brother of Beta Theta Pi Fraternity, Brown played some of his earliest stage roles as part of New York's Group Theater. When it folded, he and other Group Theatre veterans headed to Hollywood, where Brown worked in motion pictures and helped found the fabled Actors' Laboratory. In 1946, he played Ernest Hemingway's famous protagonist Nick Adams in Robert Siodmak's version of The Killers, alongside William Conrad and Charles McGraw as the titular \"killers\". His association with the Lab came back to haunt him later in the decade, when its members fell under the scrutiny of the House Un-American Activities Committee. Although he was not a communist, Brown was blacklisted in 1952, and was eventually compelled to relocate with his family to England between 1953 and 1993. Overseas he was able to resume acting on stage, TV and films; he also directed for the stage and TV. He was best known for his role as Luke Skywalker's uncle, Owen Lars, in Star Wars Episode IV: A New Hope (1977). He returned to the United States in the 1990s and in later years made the rounds of autograph shows. Phil Brown died of pneumonia on February 9, 2006 at the age of 89.\n\nDescription above from the Wikipedia article Phil Brown (actor), licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1916-04-30",
+      "deathday": "2006-02-09",
+      "gender": 2,
+      "homepage": "",
+      "id": 33032,
+      "imdb_id": "nm0114436",
+      "name": "Phil Brown",
+      "place_of_birth": "Cambridge, Massachusetts",
+      "popularity": 0.14175,
+      "profile_path": "/exkyN66HiZWJDmpcOza2hWoswOo.jpg",
+      "swapiId": "http://swapi.co/api/people/6/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "\u200bFrom Wikipedia, the free encyclopedia. \u00a0\n\nJoel Edgerton (born 23 June 1974) is an Australian film and television actor.\n\nDescription above from the Wikipedia article\u00a0Joel Edgerton, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1974-06-23",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 33192,
+      "imdb_id": "nm0249291",
+      "name": "Joel Edgerton",
+      "place_of_birth": "Blacktown, New South Wales, Australia",
+      "popularity": 4.128592,
+      "profile_path": "/lkOkaMKSRRGLMgkLaCzR9sYgTgx.jpg",
+      "swapiId": "http://swapi.co/api/people/6/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia\n\nShelagh Fraser (25 November 1920 \u2013 29 August 2000) was a British actress. She was best-known for her role as Luke Skywalker's ill-fated aunt, Beru Lars in Star Wars (though Fraser's voice was dubbed in some prints of the film). She appeared in more than 50 films and TV shows during her career, including Z-Cars and Softly, Softly, A Family at War and Heartbeat on television, and such films as The Witches, Till Death Us Do Part, Doomwatch, and Hope and Glory. She was married and divorced from Anthony Squire. She was the sister of ballerina/actress Moyra Fraser.\n\nDescription above from the Wikipedia article Shelagh Fraser, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1920-11-25",
+      "deathday": "2000-08-29",
+      "gender": 1,
+      "homepage": "",
+      "id": 131625,
+      "imdb_id": "nm0292235",
+      "name": "Shelagh Fraser",
+      "place_of_birth": "Surrey, England",
+      "popularity": 0.000081,
+      "profile_path": "/xNfiibBvknHztEnL0g7dcdrxOKq.jpg",
+      "swapiId": "http://swapi.co/api/people/7/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Bonnie Maree Piesse",
+        "Bonnie Marie Piesse"
+      ],
+      "biography": "Bonnie Piesse is an Australian actress and singer/songwriter. She got her break playing a trapeze artist in the Australian children's television series High Flyers at the age of 15 and not long after that was scouted by George Lucas to play the role of Beru Lars in Star Wars Episode II: Attack of the Clones and Star Wars Episode III: Revenge of the Sith. She also had recurring roles on Blue Heelers, Horace and Tina, Stingers and Last Man Standing.",
+      "birthday": "1983",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://bonniepiesse.com/",
+      "id": 131634,
+      "imdb_id": "nm0682837",
+      "name": "Bonnie Piesse",
+      "place_of_birth": "Melbourne - Australia",
+      "popularity": 0.00045,
+      "profile_path": "/xM4s2HYCmSunDpExLnllYCp8rjZ.jpg",
+      "swapiId": "http://swapi.co/api/people/7/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "\u200bFrom Wikipedia, the free encyclopedia.\n\nJack Thompson, AM (born 31 August 1940) is an Australian actor and one of the major figures of Australian cinema. He was educated at the University of Queensland, before embarking on his acting career. In 2002, he was made an honorary member of the Australian Cinematographers Society (ACS). He is best known as a lead actor in several acclaimed Australian films including such classics as Wake in Fright (1971), Sunday Too Far Away (1975), The Man from Snowy River (1982) and Breaker Morant (1980). He won Cannes and AFI acting awards for the latter film. He was the recipient of a Living Legend Award at the 2005 Inside Film Awards.\n\nDescription above from the Wikipedia article Jack Thompson, licensed under CC-BY-SA, full list of contributors on Wikipedia",
+      "birthday": "1940-08-31",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 12536,
+      "imdb_id": "nm0860233",
+      "name": "Jack Thompson",
+      "place_of_birth": "Sydney, New South Wales, Australia",
+      "popularity": 1.012385,
+      "profile_path": "/l2NNfs9bd6qxqzIOahcz2hErrq8.jpg",
+      "swapiId": "http://swapi.co/api/people/62/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Sir Christopher Lee",
+        "Christopher Frank Carandini Lee",
+        "Chris Lee",
+        "Cristopher Lee"
+      ],
+      "biography": "Sir Christopher Frank Carandini Lee, CBE, CStJ (born May 27, 1922, died June 7, 2015) was an English actor and musician. Lee initially portrayed villains and became famous for his role as Count Dracula in a string of Hammer Horror films. Other notable roles include Lord Summerisle in The Wicker Man (1973), Francisco Scaramanga in The Man with the Golden Gun (1974), Count Dooku in Star Wars episodes II and III (2002, 2005) and Saruman in The Lord of the Rings film trilogy (2001\u20132003). Lee considers his most important role to have been his portrayal of Pakistan's founder Muhammad Ali Jinnah in the biopic Jinnah (1998). He is well known for his deep, strong voice. Lee has performed roles in 266 films since 1948 making him the Guinness book world record holder for most film acting roles ever. He was knighted in 2009 and received the BAFTA Fellowship in 2011.",
+      "birthday": "1922-05-27",
+      "deathday": "2015-06-07",
+      "gender": 2,
+      "homepage": "http://christopherleeweb.com/",
+      "id": 113,
+      "imdb_id": "nm0000489",
+      "name": "Christopher Lee",
+      "place_of_birth": "Belgravia, Westminster, England",
+      "popularity": 5.672952,
+      "profile_path": "/aVzp6zflzedmdKPLxaPqcZ05PDK.jpg",
+      "swapiId": "http://swapi.co/api/people/67/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Corey Gregg Weinberg"
+      ],
+      "biography": "Corey Burton ist ein US-amerikanischer Synchronsprecher. Er besuchte einen Synchronsprechkurs bei Daws Butler um sein Talent zu zeigen. Butler erkannte sein Talent und besorgte ihm einige Rollen in H\u00f6rspielen und eine Rolle in einem Unterrichtsfilm der von Walt Disney Studios produziert wurde.",
+      "birthday": "1955-08-03",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 35219,
+      "imdb_id": "nm0123553",
+      "name": "Corey Burton",
+      "place_of_birth": "Los Angeles - California - USA",
+      "popularity": 0.942726,
+      "profile_path": "/2YzqhrgSpWqm8lxZoyIR4F0nusM.jpg",
+      "swapiId": "http://swapi.co/api/people/67/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Matthew Russell Wood"
+      ],
+      "biography": "Matthew Russell Wood\u00a0(born August 15, 1972) is an American sound engineer and employee of\u00a0Skywalker Sound. For the last 15 years, he has worked on numerous film projects, his work being credited as sound editing and sound design. He has been an innovative force within the industry, pioneering new technologies for motion picture sound.\u00a0He is currently a Supervising Sound Editor employed at\u00a0Skywalker Sound\u00a0in Marin County, California.",
+      "birthday": "1972-08-15",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 71536,
+      "imdb_id": "nm0003214",
+      "name": "Matthew Wood",
+      "place_of_birth": "Walnut Creek - California - USA",
+      "popularity": 0.019886,
+      "profile_path": "/oB9wVbEIg8fjY3ulDKjKsGn2A55.jpg",
+      "swapiId": "http://swapi.co/api/people/63/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Marton Csokas (born 30 June 1966) is a New Zealand film and television actor.\n\nDescription above from the Wikipedia article Marton Csokas, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1966-06-30",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 20982,
+      "imdb_id": "nm0190744",
+      "name": "Marton Csokas",
+      "place_of_birth": "Invercargill, New Zealand",
+      "popularity": 4.416336,
+      "profile_path": "/g36Ydyv0YbwXLOQ2KzGjFfkCDo1.jpg",
+      "swapiId": "http://swapi.co/api/people/63/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Matthew Sloan"
+      ],
+      "biography": "Matt Sloan is an Ex- New Zealand, Australian ex special effects and animatronics technician. He now works in Visual Effects. He has worked on such features as Chronicles of Narnia: The Lion, the Witch and the Wardrobe, Superman Returns, Charlottes Web and the Matrix trilogy. He also played Jedi Master Plo Koon in the Star Wars movies Attack of the Clones and Revenge of the Sith.",
+      "birthday": "",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 1427911,
+      "imdb_id": "nm0805992",
+      "name": "Matt Sloan",
+      "place_of_birth": null,
+      "popularity": 0.000021,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/58/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Alan Ruscoe\u00a0is a British actor who is best known for his work as various aliens, monsters and androids in the\u00a0Star Wars\u00a0films and the television series\u00a0Doctor Who.  On television, he has played Baraquel, Sariel and Araquiel in Sky One's\u00a0Hex\u00a0season 2, as well as a number of characters in the\u00a02005 series\u00a0of\u00a0Doctor Who:\u00a0Blon Fel-Fotch Passameer-Day Slitheen\u00a0in \"Aliens of London\" and \"World War Three\" (and briefly in \"Boom Town\"), lead\u00a0Auton\u00a0in \"Rose\", the Anne Droid in \"Bad Wolf\" and \"The Parting of the Ways\", Trine-E in \"Bad Wolf\", and Lute of the Forest of Cheem in \"The End of the World\". Ruscoe has also appeared in the\u00a0Doctor Whoaudio dramas\u00a0The Veiled Leopard,\u00a0The Settling,\u00a0Gallifrey: Annihilation\u00a0and\u00a0Bernice Summerfield: Paradise Frost\u00a0Big Finish Productions. He also played Andrew Stone, a Mars colonist later taken over by an alien lifeform in the November 2009\u00a0Doctor Who\u00a0special \"The Waters of Mars\".  In films, Ruscoe has played\u00a0Daultay Dofine,\u00a0Lott Dod\u00a0and\u00a0Plo Koon\u00a0in\u00a0Star Wars Episode I: The Phantom Menace, and the Mangalore Kino in\u00a0The Fifth Element. He also played \"the Poulterer\" in a 2004 television adaptation of\u00a0A Christmas Carol. He appears alongside Terence Stamp, Vanessa Redgrave and Gemma Arterton in \"Song For Marion\" released this year.  In theatre, he has played Deputy and Snake Preacher in\u00a0Whistle Down the Wind, Riff Raff in\u00a0The Rocky Horror Show\u00a0in the English Theatre Frankfurt, Bob Cratchit in the 2004 touring version of\u00a0Scrooge\u00a0and Gussie Fink-Nottle in the 2007 UK tour of\u00a0By Jeeves. In Germany, he played \"Bob\" the pizza-boy-eating alien for the\u00a0T-Online\u00a0television and poster campaign.",
+      "birthday": "1972-04-14",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 33186,
+      "imdb_id": "nm0750603",
+      "name": "Alan Ruscoe",
+      "place_of_birth": "",
+      "popularity": 0.000021,
+      "profile_path": "/cQ7Dc4vZGzSmjxuLtJ9ZkOVsHZK.jpg",
+      "swapiId": "http://swapi.co/api/people/58/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Matthew Russell Wood"
+      ],
+      "biography": "Matthew Russell Wood\u00a0(born August 15, 1972) is an American sound engineer and employee of\u00a0Skywalker Sound. For the last 15 years, he has worked on numerous film projects, his work being credited as sound editing and sound design. He has been an innovative force within the industry, pioneering new technologies for motion picture sound.\u00a0He is currently a Supervising Sound Editor employed at\u00a0Skywalker Sound\u00a0in Marin County, California.",
+      "birthday": "1972-08-15",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 71536,
+      "imdb_id": "nm0003214",
+      "name": "Matthew Wood",
+      "place_of_birth": "Walnut Creek - California - USA",
+      "popularity": 0.019886,
+      "profile_path": "/oB9wVbEIg8fjY3ulDKjKsGn2A55.jpg",
+      "swapiId": "http://swapi.co/api/people/79/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Genevieve O'Reilly\u00a0(born January 6, 1977) is an Irish actress who has worked in both the United Kingdom and Australia. O'Reilly was cast as the\u00a0understudy\u00a0in director\u00a0Gale Edwards' production of\u00a0The White Devil\u00a0a week after graduating from drama school. She went on to appear in Edwards'\u00a0Sydney Theatre Company\u00a0production of\u00a0The Way of the World.Other theatre credits include\u00a0The Weir\u00a0by\u00a0Conor McPherson, at the\u00a0Gate Theatre, Dublin, and\u00a0Richard II\u00a0at the\u00a0Old Vic.Recent parts at the\u00a0Royal National Theatre\u00a0have been in new play,\u00a0Mike Bartlett's 13 and as Helena, wife to\u00a0Andrew Scott's emperor Julian in the 2011 production of\u00a0Ibsen's epic\u00a0Emperor and Galilean. O'Reilly is due to perform in\u00a0George Bernard Shaw's\u00a0The Doctor's Dilemma\u00a0from July 2012. O'Reilly has appeared in several productions filmed in Australia, including both\u00a0The Matrix\u00a0sequels. She also played the young\u00a0Mon Mothma\u00a0in\u00a0Star Wars Episode III: Revenge of the Sith, and starred as Leanne Curtis in the medical drama\u00a0All Saints. Since moving to the UK, O'Reilly has starred in the political mini-series\u00a0The State Within, played\u00a0Princess Diana\u00a0in the 2007 television\u00a0docudrama\u00a0Diana: Last Days of a Princess, and taken the lead role in\u00a0The Time of Your Life. She played\u00a0CIA\u00a0liaison officer Sarah Caulfield in the eighth series of\u00a0BBC\u00a0drama\u00a0Spooks.\u00a0O'Reilly also played the character of Michelle Beadley in the remake of\u00a0The Day of the Triffids\u00a0that aired on BBC One in December 2009. In 2011 she appeared in the\u00a0BBC/Showtime\u00a0comedy\u00a0Episodes\u00a0playing Jamie Lapidus, the blind wife of a TV executive, Merc Lapidus. She reprised the role in the second and third series, broadcast in 2012 and 2014. O'Reilly's film credits include\u00a0Right Here Right Now\u00a0(2004),\u00a0The Young Victoria\u00a0(2009) and the 2004 science fiction filmAvatar, playing the lead role of Dash MacKenzie. In June 2013, O'Reilly appeared in the pilot episode of the international crime drama \"Crossing Lines\" cast as Detective and Interrogation Specialist Sienna Pride,\u00a0attached to the ICC team from Britain's Scotland Yard. In the final minutes of this pilot episode, her character was stabbed and killed with a knife used by an American State Department employee, Gerald Wilhoit (Eddie Jemison) who enjoyed Diplomatic Immunity, while the ICC team was chasing him (and searching for their abducted police colleague) in the Tiergarten Park in Berlin, Germany.",
+      "birthday": "1977-01-06",
+      "deathday": "",
+      "gender": 1,
+      "homepage": "",
+      "id": 139654,
+      "imdb_id": "nm0642444",
+      "name": "Genevieve O'Reilly",
+      "place_of_birth": "Dublin, Ireland",
+      "popularity": 2.261547,
+      "profile_path": "/8NrrFxrGng88GU7lxwOyK3PZv05.jpg",
+      "swapiId": "http://swapi.co/api/people/28/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Caroline G. Blakiston"
+      ],
+      "biography": "Caroline Blakiston\u00a0(born 13 February 1933) is an English actress.  Best known for her role in the television\u00a0comedy series\u00a0Brass, she has also appeared as\u00a0Mon Mothma\u00a0in the\u00a0science-fiction\u00a0film\u00a0Star Wars Episode VI: Return of the Jedi. In the 1960s she appeared in three episodes of\u00a0The Avengers\u00a0as well a number of\u00a0ITC\u00a0productions such as\u00a0The Saint\u00a0and the 1969\u00a0Randall and Hopkirk (Deceased)\u00a0episode \"Never Trust a Ghost\". She appeared to great acclaim as Marjorie Ferrar in the BBC Television adaptation of Galsworthy's\u00a0The Forsyte Saga\u00a0in 1967. In 1977 she appeared in\u00a0Raffles\u00a0as Lady Paulton, and also in\u00a0Murder Most English\u00a0as Helen Carobleat.  In 1986 Blakiston played the villain Bess Sedgwick, opposite Joan Hickson's Miss Marple, in \"At Bertram's Hotel\", made by the\u00a0BBC\u00a0and shown on the\u00a0PBS\u00a0series\u00a0Mystery\u00a0in the U.S. She also appeared as Lionel Hardcastle's ex-wife in an episode of\u00a0As Time Goes By. She and\u00a0Geoffrey Palmer\u00a0(Lionel) had previously played estranged spouses a decade earlier in\u00a0Carla Lane's series\u00a0The Last Song.",
+      "birthday": "1933-02-13",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 37442,
+      "imdb_id": "nm0086860",
+      "name": "Caroline Blakiston",
+      "place_of_birth": "Chelsea, London, England, UK",
+      "popularity": 0.000017,
+      "profile_path": "/tbABMp1c3zgiJKOoRaIkw9XWQ2Y.jpg",
+      "swapiId": "http://swapi.co/api/people/28/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/3/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "\u200bFrom Wikipedia, the free encyclopedia.\n\nBruce Spence \u00a0(born 17 September 1945 in Auckland, New Zealand) is an actor, having spent most of his career performing in Australia. Bruce attended Henderson High School in West Auckland. Spence is most known for his roles as the Gyro Captain in Mad Max 2 and as Jedediah the pilot in Mad Max Beyond Thunderdome, and as \"Zedd\" (Zeddicus Zu'l Zorander) in Legend of the Seeker. He also performed the voice of Chum in Finding Nemo, the Mouth of Sauron in The Lord of the Rings: The Return of the King, the Trainman in The Matrix Revolutions, and Tion Medon in Star Wars: Episode III - Revenge of the Sith.\n\nDescription above from the Wikipedia article Bruce Spence, licensed under CC-BY-SA, full list of contributors on Wikipedia",
+      "birthday": "1945-09-17",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 27752,
+      "imdb_id": "nm0817748",
+      "name": "Bruce Spence",
+      "place_of_birth": " Auckland, North Island, New Zealand",
+      "popularity": 1.294365,
+      "profile_path": "/pwJJBmO9MG3OxVX9efGrB6BTFyw.jpg",
+      "swapiId": "http://swapi.co/api/people/83/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Rohan Nicol"
+      ],
+      "biography": "Rohan Nichol  is an actor and composer",
+      "birthday": "1976-07-04",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 33184,
+      "imdb_id": "nm1404216",
+      "name": "Rohan Nichol",
+      "place_of_birth": "Geraldton - Western Australia - Australia",
+      "popularity": 0.126,
+      "profile_path": "/nzvL3MRpADYWlH4ppyYgmCnM1kZ.jpg",
+      "swapiId": "http://swapi.co/api/people/81/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Mark Hamil",
+        "Mark Richard Hamill"
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nMark Richard Hamill (born September 25, 1951) is an American actor, voice artist, producer, director, and writer. Hamill is best known for his role as Luke Skywalker in the original Star Wars trilogy and also well known for voice-acting characters such as the Joker in various animated series, animated films and video games, beginning with Batman: The Animated Series, the Skeleton king in Super Robot Monkey Team Hyperforce Go!, Fire Lord Ozai in Avatar: The Last Airbender, Master Eraqus in Kingdom Hearts: Birth by Sleep, Skips in Regular Show, and Senator Stampington on Metalocalypse.\n\nDescription above from the Wikipedia article Mark Hamill, licensed under CC-BY-SA, full list of contributors on Wikipedia .",
+      "birthday": "1951-09-25",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 2,
+      "imdb_id": "nm0000434",
+      "name": "Mark Hamill",
+      "place_of_birth": "Concord, California, USA",
+      "popularity": 10.688312,
+      "profile_path": "/ws544EgE5POxGJqq9LUfhnDrHtV.jpg",
+      "swapiId": "http://swapi.co/api/people/1/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/7/",
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1445414,
+      "imdb_id": null,
+      "name": "Aidan Barton",
+      "place_of_birth": null,
+      "popularity": 0.315,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/1/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia\n\nGarrick Hagon (born September 27, 1939) is an English film, stage and television actor, who was raised in Toronto, Canada.\n\nDescription above from the Wikipedia article Garrick Hagon, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1939-09-27",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 17356,
+      "imdb_id": "nm0353796",
+      "name": "Garrick Hagon",
+      "place_of_birth": "London, England",
+      "popularity": 0.000589,
+      "profile_path": "/lZYitsCPzlwevNuHzqaSZMQiuUa.jpg",
+      "swapiId": "http://swapi.co/api/people/9/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Carrie Frances Fisher "
+      ],
+      "biography": "Carrie Frances Fisher (21 October 1956 - 27 December 2016) was an American actress, novelist, screenwriter, and lecturer. She is most famous for her portrayal of Princess Leia Organa in the original Star Wars trilogy, her bestselling novel Postcards from the Edge, for which she wrote the screenplay to the film of the same name, and her autobiography Wishful Drinking.\n\nDescription above from the Wikipedia article Carrie Fisher, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1956-10-21",
+      "deathday": "2016-12-27",
+      "gender": 1,
+      "homepage": "http://www.carriefisher.com/",
+      "id": 4,
+      "imdb_id": "nm0000402",
+      "name": "Carrie Fisher",
+      "place_of_birth": "Beverly Hills, Los Angeles, California, USA",
+      "popularity": 8.794601,
+      "profile_path": "/pbleNurCYdrLFQMEnlQB2nkOR1O.jpg",
+      "swapiId": "http://swapi.co/api/people/5/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/1/",
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1583054,
+      "imdb_id": null,
+      "name": "Ingvild Deila",
+      "place_of_birth": null,
+      "popularity": 0.000005,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/5/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1445414,
+      "imdb_id": null,
+      "name": "Aidan Barton",
+      "place_of_birth": null,
+      "popularity": 0.315,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/5/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Peter Wilton Cushing, OBE \u00a0(26 May 1913 \u2013 11 August 1994) was an English actor, known for his many appearances in Hammer Films, in which he played Baron Frankenstein and Dr. Van Helsing, amongst many other roles, often appearing opposite Christopher Lee, and occasionally Vincent Price. A familiar face on both sides of the Atlantic, his most famous roles outside of \"Hammer Horror\" include his many appearances as Sherlock Holmes, as Grand Moff Tarkin in Star Wars (1977) and as the mysterious Doctor Who in Doctor Who and the Daleks and Daleks - Invasion Earth 2150 AD in 1965 and 1966, two cinema films based on the television series Doctor Who.\n\nDescription above from the Wikipedia article Peter Cushing, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1913-05-26",
+      "deathday": "1994-08-11",
+      "gender": 2,
+      "homepage": "",
+      "id": 5,
+      "imdb_id": "nm0001088",
+      "name": "Peter Cushing",
+      "place_of_birth": "Kenley, Surrey, England, UK",
+      "popularity": 10.780737,
+      "profile_path": "/fg7ufC0IMr6VasQzzdmTtX5ycQF.jpg",
+      "swapiId": "http://swapi.co/api/people/12/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Wayne Pygrim",
+        "Ian Pygrim"
+      ],
+      "biography": "Wayne Pigram\u00a0(born 13 October 1959), better known by his stage name\u00a0Wayne Pygram, is an Australian actor, known for his role as\u00a0Scorpius\u00a0in the science fiction series\u00a0Farscape\u00a0(2000\u20132003) and the miniseries that followed,\u00a0Farscape: The Peacekeeper Wars\u00a0(2004).  Pygram was born in\u00a0Cootamundra, New South Wales and raised in\u00a0Wagga Wagga, where, as a teen, he was a drummer in a dance group. He initially studied art at\u00a0Riverina College of Advanced Education, but later changed majors to primary school education.[1]\u00a0While in college, he became a member of a theatre troupe known as the\u00a0Riverina Trucking Company.[1]Before acting in films and television, he was a regular on the Australian theatre circuit. In 2005, he made a brief cameo in\u00a0Star Wars Episode III: Revenge of the Sith\u00a0as a young\u00a0Grand Moff Tarkin, because of his resemblance to the late\u00a0Peter Cushing, who portrayed the same character 28 years previously in\u00a0Star Wars Episode IV: A New Hope.  Due to the brevity of his\u00a0Star Wars\u00a0cameo, and the makeup he wore onFarscape, Pygram's real face may now be known best for his appearance on the TV show\u00a0Lost, as a\u00a0faith healer\u00a0named Isaac of Uluru.  Pygram has also played the drums in numerous bands over the past 20 years, the most recent being a band named Signal Room (formerly called Number 96)[2]\u00a0along with his co-star in\u00a0Farscape,\u00a0Anthony Simcoe. He also teaches the drums at\u00a0Kildare Catholic College, an Australian Catholic school based in Wagga Wagga.",
+      "birthday": "1959-10-13",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 82434,
+      "imdb_id": "nm0701460",
+      "name": "Wayne Pygram",
+      "place_of_birth": "Cootamundra - New South Wales - Australia",
+      "popularity": 0.000104,
+      "profile_path": "/5mRDyCp2wIEqn3lFaAZFdnwMMLe.jpg",
+      "swapiId": "http://swapi.co/api/people/12/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1213640,
+      "imdb_id": "nm0822812",
+      "name": "Stephen Stanton",
+      "place_of_birth": null,
+      "popularity": 0.016586,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/12/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nLee Unkrich (born August 8, 1967) is an American director and film editor. He is a longtime member of the creative team at Pixar, where he started in 1994 as a film editor. He later began directing, first as co-director of Toy Story 2. After co-directing Monsters, Inc., and Finding Nemo, Unkrich made his solo directorial debut with Toy Story 3, for which he won the Academy Award for Best Animated Feature in 2011. Unkrich is the 2011 recipient of University of Southern California's Mary Pickford Distinguished Alumni Award recognizing alumni contributions to the cinematic arts. With the award, Unkrich joins a list of distinguished USC alumni including Robert Zemeckis, Walter Murch, Jon Landau, Gary Rydstrom and Jay Roach.\n\nA native of Chagrin Falls, Ohio, Unkrich spent his youth acting at the Cleveland Playhouse. Unkrich graduated from the University of Southern California School of Cinematic Arts in 1990. Before joining Pixar in 1994, Unkrich worked for several years in television as an editor and director.\n\nDescription above from the Wikipedia article Lee Unkrich, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1967-08-08",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 8,
+      "imdb_id": "nm0881279",
+      "name": "Lee Unkrich",
+      "place_of_birth": "Cleveland, Ohio, USA",
+      "popularity": 0.457906,
+      "profile_path": "/bdTCCXjgOV3YyaNmLGYGOxFQMOc.jpg",
+      "swapiId": "http://swapi.co/api/people/14/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia\n\nAlden Caleb Ehrenreich (born November 22, 1989) is an American actor.\n\nDescription above from the Wikipedia article Alden Ehrenreich, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1989-11-22",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 71375,
+      "imdb_id": "nm2403277",
+      "name": "Alden Ehrenreich",
+      "place_of_birth": "Los Angeles, California, U.S.",
+      "popularity": 3.521772,
+      "profile_path": "/pXVMYy0pzpNoLl4C26IHFExrzvA.jpg",
+      "swapiId": "http://swapi.co/api/people/14/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "\u200bFrom Wikipedia, the free encyclopedia\n\nDenis Stamper Lawson (born 27 September 1947) is a Scottish actor and director. He is perhaps best known for his roles as John Jarndyce in the BBC's adaptation of Bleak House and as Gordon Urquhart in the film Local Hero.\n\nDescription above from the Wikipedia article Denis Lawson, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1947-09-27",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 47698,
+      "imdb_id": "nm0493200",
+      "name": "Denis Lawson",
+      "place_of_birth": "Perthshire, Scotland, UK",
+      "popularity": 0.008432,
+      "profile_path": "/nxPR7KIlJ4CPPI2hniTUk6bu9fA.jpg",
+      "swapiId": "http://swapi.co/api/people/18/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/",
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/3/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nColin Higgins (July 28, 1941 \u2013 August 5, 1988) was an American screenwriter, actor, director, and producer. He was best known for writing the screenplay for the 1971 film Harold and Maude.\n\nDescription above from the Wikipedia article Colin Higgins, licensed under CC-BY-SA, full list of contributors on Wikipedia",
+      "birthday": "1941-07-28",
+      "deathday": "1988-08-05",
+      "gender": 0,
+      "homepage": "",
+      "id": 4967,
+      "imdb_id": "nm0383359",
+      "name": "Colin Higgins",
+      "place_of_birth": "Noum\u00e9a, New Caledonia, France",
+      "popularity": 0.000002,
+      "profile_path": "/3JErvVcldUos3wrQeuAizrDlAkZ.jpg",
+      "swapiId": "http://swapi.co/api/people/18/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1947-05-02",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 1216947,
+      "imdb_id": "nm0030193",
+      "name": "David Ankrum",
+      "place_of_birth": "Santa Clara County, California, USA",
+      "popularity": 0.546,
+      "profile_path": "/vo6JMA38exMSSbyQ3K0YCBwBrWT.jpg",
+      "swapiId": "http://swapi.co/api/people/18/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Billy Dee Williams was born in New York, the son of Loretta Anne (1915-2016), a West Indian-born elevator operator from Montserrat, and William December Williams, Sr. (1910-2007), an African-American caretaker from Texas. He has a twin sister, Loretta, and grew up in Harlem, where he was raised by his maternal grandmother while his parents worked at several jobs. Williams graduated from The High School of Music &amp; Art (later merged with the High School of Performing Arts to become the Fiorello H. LaGuardia High School of Music &amp; Art) in Manhattan, where he was a classmate of Diahann Carroll, who would later play the wife of his character Brady Lloyd on the 1980s prime-time soap opera Dynasty.",
+      "birthday": "1937-04-06",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 3799,
+      "imdb_id": "nm0001850",
+      "name": "Billy Dee Williams",
+      "place_of_birth": "New York City - New York - USA",
+      "popularity": 2.812343,
+      "profile_path": "/sDuo82Mb5o3ZGt4SuV9dR0lAh8P.jpg",
+      "swapiId": "http://swapi.co/api/people/25/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/3/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Childish Gambino"
+      ],
+      "biography": "Donald McKinley Glover (born September 25, 1983) is an American actor, writer, comedian, musician and rapper. Glover first came to attention for his work in the sketch group Derrick Comedy and is best known for his role as community college student Troy Barnes on the NBC comedy series Community. Contrary to a persistent rumor, he is not related to actor Danny Glover.",
+      "birthday": "1983-09-25",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "http://iamdonald.com/",
+      "id": 119589,
+      "imdb_id": "nm2255973",
+      "name": "Donald Glover",
+      "place_of_birth": "Stone Mountain - Georgia - USA",
+      "popularity": 0.346551,
+      "profile_path": "/dHQ9gpLg2fGUUHNy5zVQ4zNgcYC.jpg",
+      "swapiId": "http://swapi.co/api/people/25/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Alan Ruscoe\u00a0is a British actor who is best known for his work as various aliens, monsters and androids in the\u00a0Star Wars\u00a0films and the television series\u00a0Doctor Who.  On television, he has played Baraquel, Sariel and Araquiel in Sky One's\u00a0Hex\u00a0season 2, as well as a number of characters in the\u00a02005 series\u00a0of\u00a0Doctor Who:\u00a0Blon Fel-Fotch Passameer-Day Slitheen\u00a0in \"Aliens of London\" and \"World War Three\" (and briefly in \"Boom Town\"), lead\u00a0Auton\u00a0in \"Rose\", the Anne Droid in \"Bad Wolf\" and \"The Parting of the Ways\", Trine-E in \"Bad Wolf\", and Lute of the Forest of Cheem in \"The End of the World\". Ruscoe has also appeared in the\u00a0Doctor Whoaudio dramas\u00a0The Veiled Leopard,\u00a0The Settling,\u00a0Gallifrey: Annihilation\u00a0and\u00a0Bernice Summerfield: Paradise Frost\u00a0Big Finish Productions. He also played Andrew Stone, a Mars colonist later taken over by an alien lifeform in the November 2009\u00a0Doctor Who\u00a0special \"The Waters of Mars\".  In films, Ruscoe has played\u00a0Daultay Dofine,\u00a0Lott Dod\u00a0and\u00a0Plo Koon\u00a0in\u00a0Star Wars Episode I: The Phantom Menace, and the Mangalore Kino in\u00a0The Fifth Element. He also played \"the Poulterer\" in a 2004 television adaptation of\u00a0A Christmas Carol. He appears alongside Terence Stamp, Vanessa Redgrave and Gemma Arterton in \"Song For Marion\" released this year.  In theatre, he has played Deputy and Snake Preacher in\u00a0Whistle Down the Wind, Riff Raff in\u00a0The Rocky Horror Show\u00a0in the English Theatre Frankfurt, Bob Cratchit in the 2004 touring version of\u00a0Scrooge\u00a0and Gussie Fink-Nottle in the 2007 UK tour of\u00a0By Jeeves. In Germany, he played \"Bob\" the pizza-boy-eating alien for the\u00a0T-Online\u00a0television and poster campaign.",
+      "birthday": "1972-04-14",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 33186,
+      "imdb_id": "nm0750603",
+      "name": "Alan Ruscoe",
+      "place_of_birth": "",
+      "popularity": 0.000021,
+      "profile_path": "/cQ7Dc4vZGzSmjxuLtJ9ZkOVsHZK.jpg",
+      "swapiId": "http://swapi.co/api/people/45/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Mike Carter"
+      ],
+      "biography": "Michael Carter\u00a0(born 29 June 1947) is a Scottish\u00a0actor\u00a0of\u00a0film,\u00a0stage\u00a0andtelevision.",
+      "birthday": "1947-06-29",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 199055,
+      "imdb_id": "nm0141816",
+      "name": "Michael Carter",
+      "place_of_birth": "Dumfries - Scotland - UK",
+      "popularity": 0.0,
+      "profile_path": "/rYVKZQ4uYLf7cpAGfdFzDcRNJXw.jpg",
+      "swapiId": "http://swapi.co/api/people/45/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/3/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1729665,
+      "imdb_id": null,
+      "name": "Erik Bauersfeld",
+      "place_of_birth": null,
+      "popularity": 0.000001,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/45/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Timothy Rose",
+        "Timothy M. Rose"
+      ],
+      "biography": "Timothy M. Rose\u00a0(born July 17, 1956) is an actor and puppeteer.\n\n Rose is best known for playing the role of\u00a0Admiral Ackbar, the supreme commander of all space forces for the\u00a0Rebel Alliance, in the sequel\u00a0Star Wars Episode VI: Return of the Jedi\u00a0(1983). In addition, Rose also puppeteered the characters of\u00a0Sy Snootles\u00a0and\u00a0Salacious Crumb\u00a0in that film, and has been involved with other\u00a0Lucasfilm\u00a0and\u00a0Jim Henson Studiosmovies, including\u00a0The Dark Crystal\u00a0and\u00a0Howard the Duck.  He also helped in puppeteering the character of\u00a0Tik-Tok\u00a0in\u00a0Disney's\u00a0Return to Oz.",
+      "birthday": "1956-07-17",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 114761,
+      "imdb_id": "nm0741714",
+      "name": "Tim Rose",
+      "place_of_birth": "Pittsfield - Illinois - USA",
+      "popularity": 0.21,
+      "profile_path": "/sYuRCsvqAvYBiqlY8xCCGv28kNs.jpg",
+      "swapiId": "http://swapi.co/api/people/27/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1729665,
+      "imdb_id": null,
+      "name": "Erik Bauersfeld",
+      "place_of_birth": null,
+      "popularity": 0.000001,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/27/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1509454,
+      "imdb_id": "nm2995162",
+      "name": "Artt Butler",
+      "place_of_birth": null,
+      "popularity": 0.002552,
+      "profile_path": null,
+      "swapiId": "http://swapi.co/api/people/27/",
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Oscar Isaac Hern\u00e1ndez"
+      ],
+      "biography": "Oscar Isaac was born \u00d3scar Isaac Hern\u00e1ndez in Guatemala, to a Guatemalan mother, Maria, and a Cuban father, \u00d3scar Gonzalo Hern\u00e1ndez-Cano, a pulmonologist. His maternal grandfather was of French origin. Oscar was raised in Miami, Florida. Before he became an actor, he played lead guitar and sang vocals in his band the Blinking Underdogs. He graduated from the Juilliard School in 2005. Isaac's first major film role was Joseph in the film The Nativity Story\u00a0(2006). He also had a small role in\u00a0All About the Benjamins\u00a0(2002) and the Ch\u00e9 Guevara biopic Che: Part One (2008). In addition to movie appearances, he made an appearance in the television series Law &amp; Order: Criminal Intent\u00a0(2001). He also had a part in the movies\u00a0The Life Before Her Eyes\u00a0(2007);\u00a0Body of Lies\u00a0(2008), alongside\u00a0Leonardo DiCaprio\u00a0and\u00a0Russell Crowe;\u00a0Agora (2009), alongside\u00a0Rachel Weisz; and\u00a0Balibo\u00a0(2009), set amid the Indonesian invasion of East Timor in 1975. In 2013, Oscar starred in the Coen Brothers' folk music-themed drama, Inside Llewyn Davis\u00a0(2013).",
+      "birthday": "1979-03-09",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 25072,
+      "imdb_id": "nm1209966",
+      "name": "Oscar Isaac",
+      "place_of_birth": "Guatemala",
+      "popularity": 4.380381,
+      "profile_path": "/i8LGOkTaR5g6vh81dic7nfM975t.jpg",
+      "swapiId": "http://swapi.co/api/people/86/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\u00a0\n\nGwendoline Christie\u00a0(born 28 October 1978) is an English actress and\u00a0model. She is known for portraying the warrior\u00a0Brienne of Tarth\u00a0in the\u00a0HBO\u00a0fantasy-drama series\u00a0Game of Thrones. In film, Christie started with minor roles in the\u00a0Terry Gilliam\u00a0films\u00a0The Imaginarium of Doctor Parnassus\u00a0and\u00a0The Zero Theorem, and played\u00a0Captain Phasma\u00a0in\u00a0Star Wars: The Force Awakens.",
+      "birthday": "1978-10-28",
+      "deathday": "",
+      "gender": 1,
+      "homepage": "",
+      "id": 1011904,
+      "imdb_id": "nm3729225",
+      "name": "Gwendoline Christie",
+      "place_of_birth": "Worthing, West Sussex, England",
+      "popularity": 5.393423,
+      "profile_path": "/dTkS6VhTGjnFluTGf0PjNy9shkx.jpg",
+      "swapiId": "http://swapi.co/api/people/88/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "John Boyega\u00a0(born 17 March 1992) is a British actor, best known for playing Moses in his 2011 film debut\u00a0Attack the Block.\n\nBoyega was born in\u00a0Peckham, London,\u00a0to Nigerian parents.\u00a0His first role was that of a leopard in a play at his primary school at the age of five.\u00a0He attended\u00a0Westminster City School\u00a0as a teenager. He later took part in various school productions and attended classes at Theatre Peckham. He was a performing arts student at\u00a0South Thames College\u00a0in\u00a0Wandsworth\u00a0and was active in theatre productions there, including the lead inOthello\u00a0in 2010.",
+      "birthday": "1992-03-17",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 236695,
+      "imdb_id": "nm3915784",
+      "name": "John Boyega",
+      "place_of_birth": "Peckham, London, England, UK",
+      "popularity": 6.243731,
+      "profile_path": "/idr2vphzhidyMGOp0ky6RqUMah8.jpg",
+      "swapiId": "http://swapi.co/api/people/84/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Daisy Jazz Isobel Ridley (born 10 April 1992) is an English actress. Ridley was born in Westminster, London.\n\nHer great-uncle was actor and playwright Arnold Ridley, of Dad's Army fame. She attended Tring Park School for the Performing Arts in Hertfordshire, graduating in 2010 at the age of 18.\n\nRidley has appeared in the television programmes Youngers, Silent Witness, Mr Selfridge and Casualty. She also appeared in the short film Blue Season, which was entered into the Sci-Fi-London 48-Hour Film Challenge. She played the lead in film three of Lifesaver, an interactive film which was nominated for a BAFTA British Academy Award. She has also appeared in the music video for Wiley's song \"Lights On\".\n\nIn April 2014, it was announced that she will play Rey, one of the lead characters in Star Wars: The Force Awakens. She was chosen for the film in February 2014. The casting of Ridley has generally been seen as a deliberate move from director J. J. Abrams, as he wishes to repeat the casting of relatively unknown actors for the lead roles like George Lucas did with the first Star Wars film in 1977.\n\nAfter receiving several competing offers, Ridley switched from her original talent agency Jonathan Arun to the United Talent Agency in August 2014. Following a two-month stint with UTA, Ridley signed on with the Creative Artists Agency in October 2014.",
+      "birthday": "1992-04-10",
+      "deathday": "",
+      "gender": 1,
+      "homepage": "",
+      "id": 1315036,
+      "imdb_id": "nm5397459",
+      "name": "Daisy Ridley",
+      "place_of_birth": "Westminster, London, England",
+      "popularity": 7.132748,
+      "profile_path": "/iiBJCkVVLHAUBW6vbUhJ3RtxlXv.jpg",
+      "swapiId": "http://swapi.co/api/people/85/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Hugh Anthony Quarshie\u00a0(born 22 December 1954) is a\u00a0Ghanaian-bornBritish\u00a0actor of stage, television and film. Some of his best-known roles include his appearances in the films\u00a0Highlander\u00a0(1986) and\u00a0Star Wars Episode I: The Phantom Menace\u00a0(1999), and his long-running role as\u00a0Ric Griffin\u00a0in the\u00a0BBC\u00a0medical drama\u00a0Holby City\u00a0(2001\u2013present).",
+      "birthday": "1954-12-22",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 31925,
+      "imdb_id": "nm0702934",
+      "name": "Hugh Quarshie",
+      "place_of_birth": "Accra - Ghana",
+      "popularity": 0.000007,
+      "profile_path": "/b6RSuGFTvpDe3WIdWglzfs0kyES.jpg",
+      "swapiId": "http://swapi.co/api/people/42/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Dhruv Chanchani\u00a0is an actor.",
+      "birthday": "1988-07-11",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 1427806,
+      "imdb_id": "nm0151268",
+      "name": "Dhruv Chanchani",
+      "place_of_birth": "Edison - New Jersey - USA",
+      "popularity": 0.000068,
+      "profile_path": "/wHMU3yngBSH98EHgtPT0r4G6LcM.jpg",
+      "swapiId": "http://swapi.co/api/people/53/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Lindsay Vere Duncan"
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nLindsay Vere Duncan, CBE (born 7 November 1950) is a Scottish stage and television actress, and winner of a Tony Award for Private Lives.\n\nDescription above from the Wikipedia article Lindsay Duncan, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1950-11-07",
+      "deathday": "",
+      "gender": 1,
+      "homepage": "",
+      "id": 30083,
+      "imdb_id": "nm0242026",
+      "name": "Lindsay Duncan",
+      "place_of_birth": "Edinburgh, Scotland, UK",
+      "popularity": 2.718408,
+      "profile_path": "/ddjjwMEHLBvzkZzZ5frEvJyWnZ6.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/2/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Sander's career begins in the 1970s with main characters in series\u00a0The Siege of Golden Hill\u00a0(1975) and\u00a0A Bunch of Fives\u00a0(1977). During the first half of the 1980s, he only could work as a recurring character in another TV series,\u00a0Angels\u00a0(1982), and then work in a minor role in TV movie\u00a0Monsignor Quixote, starring\u00a0Alec Guinness. Sanders acted then in guest appearances for the rest of the 1980s, and in minor roles in movies like\u00a0Dead Lucky\u00a0and\u00a0Bellman and True. Sanders worked on non-blockbuster movies, including TV\u00a0Witchcraft, and making guest appearances in different TV series, of which is of notice\u00a0Merry Christmas, Mr. Bean.  In 1999, Sanders voiced\u00a0Neimoidian\u00a0lieutenant\u00a0Daultay Dofine\u00a0for\u00a0The Phantom Menace; however, Dofine's character would be played by a different actor on-screen,Alan Ruscoe\u00a0who also played\u00a0Bib Fortuna\u00a0and\u00a0Plo Koon. On the same year, Sanders played another voice for Disney's TV movie\u00a0Tarzan\u00a0(also featuring\u00a0Brian Blessed). For\u00a0Tarzan, Sanders voiced a baby baboon. Since then, Sanders seems to have returned to his usual guest appearances for TV, as he did in\u00a0Two Thousand Acres of Sky.",
+      "birthday": "",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 1427858,
+      "imdb_id": "nm0761497",
+      "name": "Chris Sanders",
+      "place_of_birth": null,
+      "popularity": 0.21,
+      "profile_path": null,
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Alan Ruscoe\u00a0is a British actor who is best known for his work as various aliens, monsters and androids in the\u00a0Star Wars\u00a0films and the television series\u00a0Doctor Who.  On television, he has played Baraquel, Sariel and Araquiel in Sky One's\u00a0Hex\u00a0season 2, as well as a number of characters in the\u00a02005 series\u00a0of\u00a0Doctor Who:\u00a0Blon Fel-Fotch Passameer-Day Slitheen\u00a0in \"Aliens of London\" and \"World War Three\" (and briefly in \"Boom Town\"), lead\u00a0Auton\u00a0in \"Rose\", the Anne Droid in \"Bad Wolf\" and \"The Parting of the Ways\", Trine-E in \"Bad Wolf\", and Lute of the Forest of Cheem in \"The End of the World\". Ruscoe has also appeared in the\u00a0Doctor Whoaudio dramas\u00a0The Veiled Leopard,\u00a0The Settling,\u00a0Gallifrey: Annihilation\u00a0and\u00a0Bernice Summerfield: Paradise Frost\u00a0Big Finish Productions. He also played Andrew Stone, a Mars colonist later taken over by an alien lifeform in the November 2009\u00a0Doctor Who\u00a0special \"The Waters of Mars\".  In films, Ruscoe has played\u00a0Daultay Dofine,\u00a0Lott Dod\u00a0and\u00a0Plo Koon\u00a0in\u00a0Star Wars Episode I: The Phantom Menace, and the Mangalore Kino in\u00a0The Fifth Element. He also played \"the Poulterer\" in a 2004 television adaptation of\u00a0A Christmas Carol. He appears alongside Terence Stamp, Vanessa Redgrave and Gemma Arterton in \"Song For Marion\" released this year.  In theatre, he has played Deputy and Snake Preacher in\u00a0Whistle Down the Wind, Riff Raff in\u00a0The Rocky Horror Show\u00a0in the English Theatre Frankfurt, Bob Cratchit in the 2004 touring version of\u00a0Scrooge\u00a0and Gussie Fink-Nottle in the 2007 UK tour of\u00a0By Jeeves. In Germany, he played \"Bob\" the pizza-boy-eating alien for the\u00a0T-Online\u00a0television and poster campaign.",
+      "birthday": "1972-04-14",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 33186,
+      "imdb_id": "nm0750603",
+      "name": "Alan Ruscoe",
+      "place_of_birth": "",
+      "popularity": 0.000021,
+      "profile_path": "/cQ7Dc4vZGzSmjxuLtJ9ZkOVsHZK.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "James K. Taylor"
+      ],
+      "biography": "James K. Taylor is a film actor.",
+      "birthday": "",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 1427852,
+      "imdb_id": "nm0852511",
+      "name": "James Taylor",
+      "place_of_birth": null,
+      "popularity": 0.21,
+      "profile_path": null,
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Jerome Blake debuted as an actor with a part as one of the knights guarding\u00a0Sean Connery\u00a0in\u00a0Lancelot\u00a0(1995). After playing a succession of roles,\u00a0Nick Dudman\u00a0Creature effects supremo called him to say: \"I'm doing Star Wars now\". After Jerome congratulated him, Nick simply said \"Do you want to be in it?\" Blake - a Star Wars fan since he saw the first movie on its opening day back in 1977- immediately said yes. A year later he had Seven different characters in \"Episode 1 - The Phantom Menace\". And reprised several of those roles in \"Episode 2 - Attack of the Clones\" and \"Episode 3 - Revenge of the Sith\"  - IMDb Mini Biography",
+      "birthday": "1956",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://www.jeromeblake.co.uk/",
+      "id": 589398,
+      "imdb_id": "nm0086592",
+      "name": "Jerome Blake",
+      "place_of_birth": "England - UK",
+      "popularity": 0.002552,
+      "profile_path": "/tUJwV5OUV4P8zrlfkMtp1vU47Ot.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Alan Ruscoe\u00a0is a British actor who is best known for his work as various aliens, monsters and androids in the\u00a0Star Wars\u00a0films and the television series\u00a0Doctor Who.  On television, he has played Baraquel, Sariel and Araquiel in Sky One's\u00a0Hex\u00a0season 2, as well as a number of characters in the\u00a02005 series\u00a0of\u00a0Doctor Who:\u00a0Blon Fel-Fotch Passameer-Day Slitheen\u00a0in \"Aliens of London\" and \"World War Three\" (and briefly in \"Boom Town\"), lead\u00a0Auton\u00a0in \"Rose\", the Anne Droid in \"Bad Wolf\" and \"The Parting of the Ways\", Trine-E in \"Bad Wolf\", and Lute of the Forest of Cheem in \"The End of the World\". Ruscoe has also appeared in the\u00a0Doctor Whoaudio dramas\u00a0The Veiled Leopard,\u00a0The Settling,\u00a0Gallifrey: Annihilation\u00a0and\u00a0Bernice Summerfield: Paradise Frost\u00a0Big Finish Productions. He also played Andrew Stone, a Mars colonist later taken over by an alien lifeform in the November 2009\u00a0Doctor Who\u00a0special \"The Waters of Mars\".  In films, Ruscoe has played\u00a0Daultay Dofine,\u00a0Lott Dod\u00a0and\u00a0Plo Koon\u00a0in\u00a0Star Wars Episode I: The Phantom Menace, and the Mangalore Kino in\u00a0The Fifth Element. He also played \"the Poulterer\" in a 2004 television adaptation of\u00a0A Christmas Carol. He appears alongside Terence Stamp, Vanessa Redgrave and Gemma Arterton in \"Song For Marion\" released this year.  In theatre, he has played Deputy and Snake Preacher in\u00a0Whistle Down the Wind, Riff Raff in\u00a0The Rocky Horror Show\u00a0in the English Theatre Frankfurt, Bob Cratchit in the 2004 touring version of\u00a0Scrooge\u00a0and Gussie Fink-Nottle in the 2007 UK tour of\u00a0By Jeeves. In Germany, he played \"Bob\" the pizza-boy-eating alien for the\u00a0T-Online\u00a0television and poster campaign.",
+      "birthday": "1972-04-14",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 33186,
+      "imdb_id": "nm0750603",
+      "name": "Alan Ruscoe",
+      "place_of_birth": "",
+      "popularity": 0.000021,
+      "profile_path": "/cQ7Dc4vZGzSmjxuLtJ9ZkOVsHZK.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1969-07-22",
+      "deathday": "",
+      "gender": 0,
+      "homepage": null,
+      "id": 19506,
+      "imdb_id": "nm0852517",
+      "name": "James Arnold Taylor",
+      "place_of_birth": "",
+      "popularity": 2.95949,
+      "profile_path": "/y8SCPH3ackhej26YH5sKps0g7Ch.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1966-01-31",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 1230837,
+      "imdb_id": "nm0874455",
+      "name": "Christopher Truswell",
+      "place_of_birth": null,
+      "popularity": 0.000229,
+      "profile_path": null,
+      "swapiId": null,
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Tyger"
+      ],
+      "biography": "Amanda Lucas\u00a0is the eldest adopted daughter of\u00a0George Lucas. She has played a minor role in all three prequel films. In the animated television series\u00a0Star Wars: The Clone Wars, the character\u00a0Che Amanwe Papanoida\u00a0is based on her.  She has since gone on to participate in\u00a0mixed martial arts, debuting on 31 May 2008 in a fight against\u00a0New Zealandkickboxing\u00a0champion Nicole Kavanah.\u00a0She is married to\u00a0Jason Hallikainen\u00a0who played an extra alongside her character during the opera house scene in\u00a0Revenge of the Sith.",
+      "birthday": "1981",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 1427863,
+      "imdb_id": "nm0878741",
+      "name": "Amanda Lucas",
+      "place_of_birth": null,
+      "popularity": 1.82,
+      "profile_path": "/orl2zrSpf4WQUd268DsP7EspUCo.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Oliver Ford Davis",
+        "Oliver Robert Ford Davies"
+      ],
+      "biography": "Oliver Robert Ford Davies\u00a0(born 12 August 1939) is an English actor and writer.",
+      "birthday": "1939-08-12",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 31923,
+      "imdb_id": "nm0203882",
+      "name": "Oliver Ford Davies",
+      "place_of_birth": "Ealing - London - England - UK",
+      "popularity": 0.000129,
+      "profile_path": "/7fpNxQYZ85oRdnKWxPzQfURFkFT.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Margaret Towner\u00a0(born in 1920) is one of the actresses in\u00a0Star Wars: Episode I\u00a0The Phantom Menace.  She was married to actor Raymond Francis, of\u00a0Carrington V.C.\u00a0fame, and had three children with him, being one of them another actor, Clive Francis (A Clockwork Orange), who gave her two grandchildren, Harry and Lucinda.  She began acting in 1938, at 18 years of age, making guest appearances in different TV series. She acted in one chapter of crime series\u00a0The Bill, and also in\u00a0Keeping Up Appearances\u00a0and\u00a0Casualty, from 1993 to 1997.  She gained a role in the cult horror comedy film,\u00a0The Wolves of Kromer\u00a0(1998).",
+      "birthday": "1920",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 1427805,
+      "imdb_id": "nm0870026",
+      "name": "Margaret Towner",
+      "place_of_birth": null,
+      "popularity": 0.001148,
+      "profile_path": "/wNWY8JXwlGzNVcY7JdMKCjRZHj5.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Warwick Davies",
+        "Warwick Ashley Davis"
+      ],
+      "biography": "From Wikipedia, the free encyclopedia. Warwick Ashley Davis (born 3 February 1970) is an English actor. Davis is known for playing the title characters in Willow and the Leprechaun series of films; other prominent roles include Wicket W. Warrick in Star Wars Episode VI: Return of the Jedi, Professor Filius Flitwick and Griphook in the Harry Potter movies, Marvin the Paranoid Android in The Hitchhiker's Guide to the Galaxy, as well as Nikabrik in the Walden Media version of Prince Caspian and Reepicheep in the BBC television versions of Prince Caspian and Voyage of the Dawn Treader and Mr Glimfeather the owl in The Silver Chair. Davis has a condition resulting in dwarfism, and stands at 3 ft 6 in (1.07 m) tall.\n\nDescription above from the Wikipedia article Warwick Davis, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1970-02-03",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "http://www.warwickdavis.co.uk/",
+      "id": 11184,
+      "imdb_id": "nm0001116",
+      "name": "Warwick Davis",
+      "place_of_birth": "Epsom - Surrey - England - UK",
+      "popularity": 1.336452,
+      "profile_path": "/5xBunTQJexQOuCmtlh8MNJerbaM.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/7/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Gregory Everett \"Greg\" Proops\u00a0(born October 3, 1959)[1]\u00a0is an\u00a0Americanactor, stand-up comedian and television host. He is widely known for his work as an\u00a0improvisational\u00a0comedian on the\u00a0UK\u00a0and\u00a0U.S.\u00a0versions of\u00a0Whose Line Is It Anyway?. He also performed on\u00a0Drew Carey's Green Screen Show\u00a0and played Max Madigan on the\u00a0Nickelodeon\u00a0sitcom\u00a0True Jackson, VP.",
+      "birthday": "1959-10-03",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://www.gregproops.com/blog/",
+      "id": 61965,
+      "imdb_id": "nm0698681",
+      "name": "Greg Proops",
+      "place_of_birth": "",
+      "popularity": 0.000001,
+      "profile_path": "/6kzCvX6bxXYq1fxueHtmplctQ03.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Cristina da Silva"
+      ],
+      "biography": "Cristina da Silva\u00a0is a Brazilian actress and model.",
+      "birthday": "1975",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 1427789,
+      "imdb_id": "nm0196263",
+      "name": "Karol Cristina da Silva",
+      "place_of_birth": null,
+      "popularity": 0.000104,
+      "profile_path": "/2YpNv0In4HZHByd6vSPbMSoKDFL.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Ben Taylor",
+        "Benedict Sean Taylor"
+      ],
+      "biography": "\u200bFrom Wikipedia, the free encyclopedia. \u00a0\n\nBenedict Sean Taylor (born 18 April 1960) is a British actor. His adoptive sister is Femi Taylor (who played Oola in Star Wars Episode VI: Return of the Jedi). His grandfather was writer Camille Honig.\n\nDescription above from the Wikipedia article Benedict Taylor, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1960-04-18",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 37055,
+      "imdb_id": "nm0852028",
+      "name": "Benedict Taylor",
+      "place_of_birth": "Hampstead - London - England - UK",
+      "popularity": 0.000701,
+      "profile_path": "/tyZAHcq5IfK7rco9JptkRh4oNGS.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Clarence Smith\u00a0is an actor.",
+      "birthday": "",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://www.clarence-smith.com/",
+      "id": 1198147,
+      "imdb_id": "nm0807734",
+      "name": "Clarence Smith",
+      "place_of_birth": "London - England - UK",
+      "popularity": 0.000002,
+      "profile_path": "/zKvjmgqf08T3Xz7uwTrEvxB7qqZ.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": "",
+      "gender": 0,
+      "homepage": null,
+      "id": 56504,
+      "imdb_id": "nm1239340",
+      "name": "Steven Boyle",
+      "place_of_birth": "",
+      "popularity": 0.14175,
+      "profile_path": null,
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 147967,
+      "imdb_id": "nm1091328",
+      "name": "Paul Spence",
+      "place_of_birth": null,
+      "popularity": 0.273,
+      "profile_path": null,
+      "swapiId": null,
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Matthew Rowan"
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1427941,
+      "imdb_id": "nm0746419",
+      "name": "Matt Rowan",
+      "place_of_birth": null,
+      "popularity": 0.042525,
+      "profile_path": null,
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Jerome Blake debuted as an actor with a part as one of the knights guarding\u00a0Sean Connery\u00a0in\u00a0Lancelot\u00a0(1995). After playing a succession of roles,\u00a0Nick Dudman\u00a0Creature effects supremo called him to say: \"I'm doing Star Wars now\". After Jerome congratulated him, Nick simply said \"Do you want to be in it?\" Blake - a Star Wars fan since he saw the first movie on its opening day back in 1977- immediately said yes. A year later he had Seven different characters in \"Episode 1 - The Phantom Menace\". And reprised several of those roles in \"Episode 2 - Attack of the Clones\" and \"Episode 3 - Revenge of the Sith\"  - IMDb Mini Biography",
+      "birthday": "1956",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://www.jeromeblake.co.uk/",
+      "id": 589398,
+      "imdb_id": "nm0086592",
+      "name": "Jerome Blake",
+      "place_of_birth": "England - UK",
+      "popularity": 0.002552,
+      "profile_path": "/tUJwV5OUV4P8zrlfkMtp1vU47Ot.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Phil La Mar",
+        "Phil La Marr",
+        "Phil LaMaar",
+        "Phil LaMar",
+        "Phil Lamarr",
+        "Phillip La Marr",
+        "Phillip LaMarr"
+      ],
+      "biography": "Phillip \"Phil\" LaMarr (born January 24, 1967) is an American actor, comedian and voice actor. One of the original cast members on the sketch comedy series MADtv, he is also known for his voice acting on the animated series Futurama, Static Shock, Samurai Jack, Justice League, Justice League Unlimited, Star Wars: Knights of the Old Republic II The Sith Lords, Star Wars: The Clone Wars, Metal Gear Solid 2: Sons of Liberty, Metal Gear Solid 4: Guns of the Patriots, and inFAMOUS.",
+      "birthday": "1967-01-24",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 31549,
+      "imdb_id": "nm0482851",
+      "name": "Phil LaMarr",
+      "place_of_birth": "Los Angeles, California, USA",
+      "popularity": 0.388344,
+      "profile_path": "/2rYa0M1bOSAATGbF5oe5pmoNeDn.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/3/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nClaudia Karvan (born 19 May 1972) is an Australian actress popular for her roles in the television series The Secret Life of Us and Love My Way. She is also a producer and writer on Love My Way and played in the 2010 film Daybreakers as Audrey Bennett. She currently stars in the drama series Spirited.\n\nDescription above from the Wikipedia article Claudia Karvan licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1972-05-19",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://www.claudiakarvan.net",
+      "id": 79966,
+      "imdb_id": "nm0440286",
+      "name": "Claudia Karvan",
+      "place_of_birth": "Sydney, New South Wales, Australia",
+      "popularity": 0.135669,
+      "profile_path": "/4M0Z25W9hI2ihSa6xBrdFxmBdTD.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Patsy Ann Noble",
+        "Patricia Ann Ruth Noble"
+      ],
+      "biography": "Patricia \"Trisha\" Ann Ruth Noble\u00a0(born 3 February 1944) is an Australian singer and actress. Initially performing as\u00a0Patsy Ann Noble, she was a teenage pop singer in the early 1960s, with regular appearances on the music and variety television series\u00a0Bandstand. In November 1961, she released her biggest hit single, \"Good Looking Boy\", which reached the Top\u00a010 in Melbourne and Top\u00a020 in Sydney. At the\u00a0Logie Awards\u00a0for 1961, she won the 'Best Female Singer' from\u00a0TV Week. By 1962, she had transferred to the United Kingdom and continued her singing career by releasing singles there. In 1965, Noble started her television acting career, and by 1967, she was using Trisha Noble as her stage name. By the 1970s, she had relocated to the United States and had guest roles in various television series including\u00a0Columbo: Playback,\u00a0Baretta\u00a0and\u00a0Buck Rogers in the 25th Century. In 1983, Noble returned to Australia where she also pursued a career as a theatrical actress. In 2005, Noble had a minor role inStar Wars Episode III: Revenge of the Sith\u00a0as Jobal Naberrie \u2013 mother of lead character\u00a0Padm\u00e9 Amidala.",
+      "birthday": "1944-02-03",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 117451,
+      "imdb_id": "nm0633682",
+      "name": "Trisha Noble",
+      "place_of_birth": "Marrickville - New South Wales - Australia",
+      "popularity": 0.000092,
+      "profile_path": "/zDlrzpJUyVqynhH5hzZK9v4urS8.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "\u200bFrom Wikipedia, the free encyclopedia\n\nGraeme Blundell (born 1945) is an Australian actor, director, producer, writer and biographer. Blundell was born in Melbourne; he grew up in Clifton Hill, a suburb of Melbourne. He was educated at University High School and the University of Melbourne. In his early years, Blundell worked at La Mama Theatre, the Pram Factory, Hoopla, the Playbox Theatre Company, and the Melbourne Theatre Company. He directed and acted in the premiere performance of Jack Hibberd's play Dimboola at La Mama. His first television appearance was as an uncredited extra in the debut episode of Homicide (1964). He is best known as playing the title character in the 70's sex-comedy film Alvin Purple. He has written extensively in The Australian newspaper as well as writing biographies of Brett Whiteley (Brett Whiteley: An Unauthorised Life, 1996, with his then wife Margot Hilton), and Graham Kennedy (King, 2003).\n\nDescription above from the Wikipedia article Graeme Blundell, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1945-07-08",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 85351,
+      "imdb_id": "nm0089882",
+      "name": "Graeme Blundell",
+      "place_of_birth": "Melbourne - Victoria - Australia",
+      "popularity": 0.276413,
+      "profile_path": "/gVV7qhA0bXBUa0XmVHUnOJH3u2k.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Warren Owens is an actor.",
+      "birthday": "1945",
+      "deathday": "2009",
+      "gender": 0,
+      "homepage": "",
+      "id": 1322179,
+      "imdb_id": "nm0654481",
+      "name": "Warren Owens",
+      "place_of_birth": null,
+      "popularity": 0.000039,
+      "profile_path": null,
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Chris Kirby"
+      ],
+      "biography": "Christopher Kirby is an American actor.",
+      "birthday": "",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 75175,
+      "imdb_id": "nm0456130",
+      "name": "Christopher Kirby",
+      "place_of_birth": "",
+      "popularity": 0.000029,
+      "profile_path": "/so9OxqBJDfCUp84Ja4PEMnWECAP.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/3/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Dee Baker",
+        "Bradley Dee Baker",
+        "D. Bradley Baker",
+        "D. Baker",
+        "Dee B. Baker",
+        "Dee Bradly Baker"
+      ],
+      "biography": "\u200bFrom Wikipedia, the free encyclopedia. \u00a0\n\nDee Bradley Baker (born August 31, 1962) is an American voice actor. Noted as his long-running-role as Squilliam Fancyson and other various characters in the hit TV series SpongeBob SquarePants. He is best known for his voice-work on Avatar: The Last Airbender, Codename: Kids Next Door, Phineas and Ferb, Adventure Time with Finn and Jake, American Dad!, Ben 10, Star Wars: The Clone Wars, Halo, Gears of War, Portal 2, and Left 4 Dead.\n\nDescription above from the Wikipedia article Dee Bradley Baker, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1962-08-31",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://www.deebaker.com/",
+      "id": 23680,
+      "imdb_id": "nm0048389",
+      "name": "Dee Bradley Baker",
+      "place_of_birth": "Bloomington - Indiana - USA",
+      "popularity": 0.958722,
+      "profile_path": "/zFXwtsdvUCeNkzCzYpYZdAmTkJY.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia\n\nTemuera Derek Morrison (born December 26, 1960) is a New Zealand actor. He has become one of the country's most famous stars for his roles as the abusive Jake \"the Muss\" Heke in 1994's Once Were Warriors and as bounty hunter Jango Fett and the Clone Troopers in the Star Wars series. He also voiced Boba Fett in the 2004 special edition of Star Wars Episode V: The Empire Strikes Back.\n\nDescription above from the Wikipedia article Temuera Morrison, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1960-12-26",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 7242,
+      "imdb_id": "nm0607325",
+      "name": "Temuera Morrison",
+      "place_of_birth": "Rotorua, North Island, New Zealand",
+      "popularity": 13.2177,
+      "profile_path": "/A1nD5J5uRwJM4hnpXd3DdmwZGjP.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/2/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1946-07-16",
+      "deathday": "2013-04-15",
+      "gender": 2,
+      "homepage": "",
+      "id": 12829,
+      "imdb_id": "nm0503236",
+      "name": "Richard LeParmentier",
+      "place_of_birth": null,
+      "popularity": 0.001742,
+      "profile_path": "/eyQiSGCHIcmdU2gqKWZbneQEvFj.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1911-08-03",
+      "deathday": "1990-04-20",
+      "gender": 2,
+      "homepage": "",
+      "id": 216087,
+      "imdb_id": "nm0567018",
+      "name": "Alex McCrindle",
+      "place_of_birth": " Glasgow, Scotland, UK",
+      "popularity": 0.000001,
+      "profile_path": "/6Q1m79FMq444Q6VpmdERSqvwxpX.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "\u200bFrom Wikipedia, the free encyclopedia\n\nAngus MacInnes (born 27 October 1947) is a Canadian actor. He is most famous for his role as Gold Leader in Star Wars Episode IV: A New Hope, and as former hockey great Jean \"Rosey\" LaRose in the comedy Strange Brew. He also appeared in Witness, as a corrupt policeman, and he is currently starring in BBC Scotland soap River City as Sonny.\n\nDescription above from the Wikipedia article Angus MacInnes, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1947-10-27",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 58475,
+      "imdb_id": "nm0532815",
+      "name": "Angus MacInnes",
+      "place_of_birth": "Windsor, Ontario, Canada",
+      "popularity": 0.005576,
+      "profile_path": "/qftkol8hj7yBBP3KCxRWYkhRyLC.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 47401,
+      "imdb_id": "nm0377120",
+      "name": "Drewe Henley",
+      "place_of_birth": "",
+      "popularity": 0.000306,
+      "profile_path": "/C28FmnpDyhI9BwD6YjagAe1U53.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1947-05-02",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 1216947,
+      "imdb_id": "nm0030193",
+      "name": "David Ankrum",
+      "place_of_birth": "Santa Clara County, California, USA",
+      "popularity": 0.546,
+      "profile_path": "/vo6JMA38exMSSbyQ3K0YCBwBrWT.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 202276,
+      "imdb_id": "nm0039061",
+      "name": "Graham Ashley",
+      "place_of_birth": null,
+      "popularity": 0.000002,
+      "profile_path": "/wp02ruOjX8AiGMrRD8QEBljgnlA.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Andrew Bruce Boa"
+      ],
+      "biography": "Bruce Boa was a Canadian actor, who found success playing the token North American in British films and television.",
+      "birthday": "1930-07-10",
+      "deathday": "2004-04-17",
+      "gender": 0,
+      "homepage": "",
+      "id": 8664,
+      "imdb_id": "nm0090124",
+      "name": "Bruce Boa",
+      "place_of_birth": "Calgary - Alberta - Canada",
+      "popularity": 0.000019,
+      "profile_path": "/nPCLZTuTfOzSN5CvMnocX3hS92P.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "John Deszo Ratzenberger is an American actor, voice actor, and entrepreneur. He is best known for his role as Cliff Clavin in Cheers and his recurring supporting/minor cast roles in Pixar films.",
+      "birthday": "1947-04-06",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://ratzenberger.com/",
+      "id": 7907,
+      "imdb_id": "nm0001652",
+      "name": "John Ratzenberger",
+      "place_of_birth": "Bridgeport - Connecticut - USA",
+      "popularity": 3.487299,
+      "profile_path": "/yGechiKWL6TJDfVE2KPSJYqdMsY.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Chris Malcolm"
+      ],
+      "biography": "Christopher \"Chris\" Malcolm was a Scottish television and film actor, director and producer. He first achieved notability for his role as Brad Majors in the original stage production of The Rocky Horror Show.",
+      "birthday": "1946-08-19",
+      "deathday": "2014-02-15",
+      "gender": 0,
+      "homepage": "",
+      "id": 47808,
+      "imdb_id": "nm0539095",
+      "name": "Christopher Malcolm",
+      "place_of_birth": "Aberdeen, Aberdeenshire, Scotland, UK",
+      "popularity": 0.000004,
+      "profile_path": "/9Ua0yZoI6dZQ5VDqfU096dAM1Un.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Kenneth Cooley",
+        "Ken Colley"
+      ],
+      "biography": "Kenneth Colley (born 7 December 1937) is an English actor. A long-time character actor, he came to wider prominence through his role as Admiral Piett in Star Wars Episode V: The Empire Strikes Back and Star Wars Episode VI: Return of the Jedi.\n\nColley was born in Manchester. He played Jesus (very briefly indeed) in The Life of Brian, having also appeared in the earlier Monty Python-related production Ripping Yarns episode \"The Testing of Eric Olthwaite\" alongside Michael Palin. As a Shakespearean actor he played the Duke of Vienna in the BBC Television Shakespeare production of Measure for Measure in 1979.\n\nColley also held an important role in the Clint Eastwood movie Firefox, where he played a Soviet Colonel tasked with the protection of the Firefox and its secrets.\n\nColley went on to play SS-Standartenf\u00fchrer Paul Blobel in the World War II drama War and Remembrance. His character was charged with hiding the evidence of the Holocaust, and putting dead victims through \"Economic Processing\".\n\nAccording to comments Terry Gilliam (who directed him in Jabberwocky and co-starred with him in Life of Brian) made in the DVD audio commentaries for both films, Colley is a terrible stutterer in real life. When he had a role in a film, however, he could recite the lines perfectly. Stuttering is a character trait, however, in his role as the \"Accordion Man\" in the 1978 BBC television drama, Pennies from Heaven. He has also recently starred in BBC's HolbyBlue as a drunk and violent father, grandfather and father-in-law.\n\nHe currently lives at Hythe in Kent.\n\nDescription above from the Wikipedia article Kenneth Colley, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1937-12-07",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 10734,
+      "imdb_id": "nm0171829",
+      "name": "Kenneth Colley",
+      "place_of_birth": "Manchester, England",
+      "popularity": 0.00009,
+      "profile_path": "/yNZF27tBauzUcg6Fw7M2xsRD8IC.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/3/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Michael Sheard\u00a0(18 June 1938 \u2013 31 August 2005)\u00a0was a\u00a0Scottish\u00a0actorwho featured in a large number of\u00a0films\u00a0and\u00a0television programmes\u00a0and was best known for playing villains. His most prominent television role was as strict deputy headmaster Maurice Bronson in the British children's series\u00a0Grange Hill\u00a0which he played from 1985-89. His most prominent film role was that of\u00a0Admiral Ozzel\u00a0in\u00a0The Empire Strikes Back\u00a0(1980).",
+      "birthday": "1938-06-18",
+      "deathday": "2005-08-31",
+      "gender": 2,
+      "homepage": "",
+      "id": 70417,
+      "imdb_id": "nm0790410",
+      "name": "Michael Sheard",
+      "place_of_birth": "Aberdeenshire, Scotland, UK",
+      "popularity": 0.889,
+      "profile_path": "/a29SbacT0kV8WWuoAMp2FHI5Y7I.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "John Fass Morton"
+      ],
+      "biography": "John Morton is an American movie actor and stuntman from Annapolis, Maryland. John appeared in the 1980 hit sequel film Superman II as an astronaut named Nate, also that year he appeared in Flash Gordon. After appearing in Star Wars Episode V: The Empire Strikes Back as Dak Ralter, and as the body double for Boba Fett, he left Hollywood and eventually settled in public relations work back in Annapolis. He is also an accomplished musician and guitar player.",
+      "birthday": "1947",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 1430007,
+      "imdb_id": "nm0608014",
+      "name": "John Morton",
+      "place_of_birth": null,
+      "popularity": 0.2835,
+      "profile_path": "/dizbXcyBZr1BKdjYlWpjy64FJcV.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Ian Liston is an Actor.",
+      "birthday": "1948-08-04",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 79957,
+      "imdb_id": "nm0514282",
+      "name": "Ian Liston",
+      "place_of_birth": "Crosby - Merseyside - England - UK",
+      "popularity": 0.005742,
+      "profile_path": "/k6jCo3N5kFJ7PBybJRRR4b0ngKV.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1520024,
+      "imdb_id": "nm0135633",
+      "name": "Mark Capri",
+      "place_of_birth": null,
+      "popularity": 0.0,
+      "profile_path": null,
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/2/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Michael Vivian Fyfe Pennington is a British director and actor who, together with director Michael Bogdanov, founded the English Shakespeare Company. Although primarily a stage actor, he is best known to wider audiences for his role as Moff Jerjerrod, commanding officer of the Death Star in the film Star Wars Episode VI: Return of the Jedi and as Michael Foot in The Iron Lady, opposite Meryl Streep.",
+      "birthday": "1943-06-07",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "http://www.michaelpennington.me.uk/",
+      "id": 1230989,
+      "imdb_id": "nm0672190",
+      "name": "Michael Pennington",
+      "place_of_birth": "Cambridge - Cambridgeshire - England - UK",
+      "popularity": 0.000158,
+      "profile_path": "/jreFHCg8golvAEbcwzKtPoqg6YZ.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/3/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Max Carl Adolf von Sydow",
+        "Max Von Sydow"
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nMax von Sydow ( born 10 April 1929) is a Swedish actor. He has also held French citizenship since 2002. He has starred in many films and had supporting roles in dozens more. He has performed in films filmed in many languages, including Swedish, Norwegian, English, Italian, German, Danish, French and Spanish.\n\nSome of his most memorable film roles include knight Antonius Block in Ingmar Bergman's The Seventh Seal (the first of his eleven films with Bergman and the film that includes the iconic shot of his career in the scene where he plays chess with Death), Jesus in George Stevens's The Greatest Story Ever Told, Father Merrin in Friedkin's The Exorcist, Joubert the assassin in Three Days of the Condor, and Ming the Merciless in the 1980 version of Flash Gordon.\n\nDescription above from the Wikipedia article Max von Sydow, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1929-04-10",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 2201,
+      "imdb_id": "nm0001884",
+      "name": "Max von Sydow",
+      "place_of_birth": "Lund, Sk\u00e5ne l\u00e4n, Sweden",
+      "popularity": 6.213328,
+      "profile_path": "/nwRB1DDylWFC4120kfbtPq2pZzA.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Adam Douglas Driver"
+      ],
+      "biography": "Adam Douglas Driver, best known for his portrayal of Adam Sackler on the HBO series, Girls, is an Academy Award-nominated American television, cinema and stage actor. \u00a0\n\nDriver was born in San Diego, California before moving to Mishawaka, Indiana at the age of seven. \u00a0The son of a Baptist Minister, Driver performed regularly with both his church and school choirs. \u00a0After graduating high school in 2001, Driver enlisted in the United States Marine Corp, serving four years before accepting an honorable discharge due to injury. \u00a0Following his service, Driver attended the University of Indianapolis, before applying to, and being accepted by, Juilliard School\u2019s drama department. \u00a0 After graduating with a degree in drama studies in 2009, Driver moved to New York City to pursue acting. \u00a0There he found success both on and off-Broadway, appearing in numerous plays before landing progressively significant roles in both television and film. \u00a0\n\nDriver currently works on the HBO dramedy \u2018Girls\u2019 as the complicated and oft-misundertood Adam Sackler, opposite creator Lena Dunham. \u00a0\u00a0In 2014, Driver was confirmed to cast a yet unnamed villain in 2015\u2019s Star Wars: Episode VII. \u00a0He remains an active supporter of military service, creating and running Arts in the Armed Forces with his wife, Joanne Tucker. \u00a0\u00a0",
+      "birthday": "1983-11-19",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 1023139,
+      "imdb_id": "nm3485845",
+      "name": "Adam Driver",
+      "place_of_birth": "San Diego,CA, USA",
+      "popularity": 10.456681,
+      "profile_path": "/p0uafqSJrpjat0BacU7nDhhiNIS.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Simon Pegg (born Simon John Beckingham) is an English comedic actor, writer, producer and director.\n\nHe is best known for his TV show Spaced, about two roommates, as well as his film Shaun of the Dead, which he described as a 'Romantic Zombie Comedy'. \u00a0In 2009 he played Montgomery \"Scotty\" Scott in the Star Trek Reboot, taking over the iconic role previously played by James Doohan, In 2005 he married Maureen McCann in Glasgow, Scotland. \u00a0In 2009 the pair had their first child. \u00a0He has stated that his favorite film is Raising Arizona and his favorite TV shows The X-FIles and Arrested Development. \u00a0",
+      "birthday": "1970-02-14",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "http://www.peggster.net",
+      "id": 11108,
+      "imdb_id": "nm0670408",
+      "name": "Simon Pegg",
+      "place_of_birth": "Brockworth, Gloucestershire, England, UK",
+      "popularity": 6.837795,
+      "profile_path": "/23e2uoNlpDvLumNic16fS2YjZjL.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Domhnall Gleeson (born May 12, 1983) is an Irish actor, director and writer from Dublin. He has acted on both stage and screen, picking up a Tony Award nomination in 2006 for his part in the Broadway production The Lieutenant of Inishmore. He has performed in several shows at Dublin's Gate Theatre, including adaptations of American Buffalo and Great Expectations.\n\nGleeson's work on-screen includes the television series The Last Furlong, the comedy sketch show Your Bad Self and the films Six Shooter, Studs and Boy Eats Girl. He played Bill Weasley in the film Harry Potter and the Deathly Hallows, released in 2010/2011. He is the son of actor Brendan Gleeson, who plays Alastor Moody in the series.\n\nDescription above from the Wikipedia article Domhnall Gleeson, licensed under CC-BY-SA, full list of contributors on Wikipedia",
+      "birthday": "1983-05-12",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 93210,
+      "imdb_id": "nm1727304",
+      "name": "Domhnall Gleeson",
+      "place_of_birth": "Dublin, Ireland",
+      "popularity": 4.687426,
+      "profile_path": "/vAvZLGZb6eik0DuIbLgqcSu9gRS.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1982-06-03",
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 229634,
+      "imdb_id": "nm0273797",
+      "name": "Sebastian Armesto",
+      "place_of_birth": null,
+      "popularity": 0.000002,
+      "profile_path": "/AhYOTKn1UgC0SveUfBsE54C3Vj5.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1446565,
+      "imdb_id": "nm4451290",
+      "name": "Brian Vernel",
+      "place_of_birth": null,
+      "popularity": 0.000001,
+      "profile_path": "/xvC5diN35LZrF1Q4uIpaZYGTpiO.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Andrew C. G. \"Andy\" Serkis (born 20 April 1964) is an English actor, director and author. He is popularly known for playing Gollum in The Lord of the Rings film trilogy, for which he earned several nominations and the Saturn Award for Best Supporting Actor for his performance in The Lord of the Rings: The Two Towers. He also earned a Golden Globe Award nomination for his portrayal of Ian Brady in the British television film Longford. In 2011, Serkis will reprise his role as Gollum in The Hobbit. Also in 2011, Serkis will play Caesar in the new Planet of the Apes film, Rise of the Planet of the Apes. Serkis will also co-star as Captain Haddock in the upcoming The Adventures of Tintin: Secret of the Unicorn film.\n\nDescription above from the Wikipedia article Andy Serkis, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1964-04-20",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "http://www.serkis.com/",
+      "id": 1333,
+      "imdb_id": "nm0785227",
+      "name": "Andy Serkis",
+      "place_of_birth": "Ruislip, Middlesex, UK",
+      "popularity": 7.706871,
+      "profile_path": "/nQRsxFveJaUIlZ4GYWDe9uJ6u2f.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Lupita Nyong'o is an actress, film and music video director of dual Kenyan and Mexican citizenship. After graduating from Hampshire College with a bachelor's degree in film and theatre studies, Nyong'o worked as a production assistant on several Hollywood films. In 2008 she made her acting debut with the short film East River and subsequently starred in the Kenyan television series Shuga (2009). Also in 2009, she wrote, produced and directed the documentary film In My Genes. Nyong'o later completed a master's degree in acting from the Yale School of Drama, followed by her first feature film role in Steve McQueen's historical drama 12 Years a Slave (2013). Her role in the film was widely acclaimed, earning her the Academy Award for Best Supporting Actress, among numerous other awards and nominations. In 2014, she was named \"The Most Beautiful Woman\" by People.",
+      "birthday": "1983-03-01",
+      "deathday": "",
+      "gender": 1,
+      "homepage": "",
+      "id": 1267329,
+      "imdb_id": "nm2143282",
+      "name": "Lupita Nyong'o",
+      "place_of_birth": "Mexico City - Mexico",
+      "popularity": 4.931406,
+      "profile_path": "/y3p0OMzIuAmcNt700RayK5A0k6t.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Gregory Phillip \"Greg\" Grunberg (born July 11, 1966) is an American television actor. He is best known from starring as Matt Parkman on the NBC television series Heroes. Other notable roles included the characters Sean Blumberg on Felicity (1998\u20132002) and Eric Weiss on Alias (2001\u20132006), both created and produced by childhood friend J. J. Abrams.\n\nDescription above from the Wikipedia article Greg Grunberg, licensed under CC-BY-SA, full list of contributors on Wikipedia.\u200b",
+      "birthday": "1966-07-11",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 17305,
+      "imdb_id": "nm0342399",
+      "name": "Greg Grunberg",
+      "place_of_birth": "Los Angeles - California - USA",
+      "popularity": 0.332244,
+      "profile_path": "/kFK6AaPoUlLJArwLuHetUav8q19.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Kenneth \"Ken\" Leung (born January 21, 1970) is an American actor best known for his role as Miles Straume in the ABC television series Lost and roles in such films as Shanghai Kiss, Rush Hour, X-Men: The Last Stand, and Saw.\n\nDescription above from the Wikipedia article Ken Leung, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1970-01-21",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 2131,
+      "imdb_id": "nm0504962",
+      "name": "Ken Leung",
+      "place_of_birth": "New York City - New York - USA",
+      "popularity": 0.383322,
+      "profile_path": "/kftJqCNab1x5W29b46rLUeXkwZi.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1636658,
+      "imdb_id": null,
+      "name": "Stefan Grube",
+      "place_of_birth": null,
+      "popularity": 0.000014,
+      "profile_path": null,
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1211865,
+      "imdb_id": "nm0551136",
+      "name": "Rocky Marshall",
+      "place_of_birth": null,
+      "popularity": 0.000001,
+      "profile_path": "/vIjpzunxC3M5CL1A6zp6RUJVSVn.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "Matthew Russell Wood"
+      ],
+      "biography": "Matthew Russell Wood\u00a0(born August 15, 1972) is an American sound engineer and employee of\u00a0Skywalker Sound. For the last 15 years, he has worked on numerous film projects, his work being credited as sound editing and sound design. He has been an innovative force within the industry, pioneering new technologies for motion picture sound.\u00a0He is currently a Supervising Sound Editor employed at\u00a0Skywalker Sound\u00a0in Marin County, California.",
+      "birthday": "1972-08-15",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 71536,
+      "imdb_id": "nm0003214",
+      "name": "Matthew Wood",
+      "place_of_birth": "Walnut Creek - California - USA",
+      "popularity": 0.019886,
+      "profile_path": "/oB9wVbEIg8fjY3ulDKjKsGn2A55.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/",
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Born in England.",
+      "birthday": "1992-08-30",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 1202689,
+      "imdb_id": "nm3725055",
+      "name": "Jessica Henwick",
+      "place_of_birth": null,
+      "popularity": 1.063125,
+      "profile_path": "/hgGpPBqZ9nXJkjPzle8iACIuXnP.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 1256215,
+      "imdb_id": null,
+      "name": "James McArdle",
+      "place_of_birth": null,
+      "popularity": 0.001723,
+      "profile_path": null,
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/7/"
+      ]
+    }
+  ]
+}
