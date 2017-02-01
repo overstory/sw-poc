@@ -5,9 +5,8 @@ CREATE CONSTRAINT ON (act:Actor) ASSERT act.id IS UNIQUE;
 // The comment prefix '// TX-SPLIT ' is magic to create multiple transaction calls.  You can leave an empty transaction, it will cause an error
 
 
-WITH {movieDbJson} AS moviedb
+WITH {json} AS moviedb
 UNWIND moviedb.actors AS a
-
 // Actor (NODE {id: int})
 // Actor <-[:PORTRAYED_BY]- Character
 // Actor -[:APPEARS_IN]-> Film
@@ -24,24 +23,17 @@ MERGE (actor:Actor { id: a.`id` })
 		actor.popularity = a.`popularity`,
 		actor.profileImg = a.`profile_path`
 
-MERGE (c:Character { url: a.`swapiId` }) -[:PORTRAYED_BY]-> (actor)
+// Catch the cases where swapiId is empty. If empty do nothing, if exists, create PORTRAYED_BY relationship
+FOREACH (foo IN
+    CASE WHEN a.`swapiId` IS NOT NULL THEN [a] ELSE []
+    END |
+MERGE (c:Character { url: a.`swapiId` })
+MERGE (c)-[:PORTRAYED_BY]-> (actor)
+)
 
-UNWIND a.swapiMovies AS movies
-WITH movies
-WHERE movies IS NOT NULL
-FOREACH (movie IN movies |
+// Match actors with films that they appeared in
+FOREACH (movie IN a.swapiMovies |
 	MERGE (film:Film { url: movie })
 	MERGE (film) <-[:APPEARS_IN]- (actor)
 )
-
-/*
-UNWIND a.also_known_as AS aliases
-WITH aliases
-WHERE aliases IS NOT NULL
-FOREACH (alias IN aliases |
-	MERGE (alias:Alias { name: alias })
-	MERGE (alias) <-[:ALSO_KNOWN_AS]- (actor)
-)
-*/
-
 
