@@ -16,7 +16,7 @@
 		{ "name": "WATTO", "url": "http://swapi.co/api/people/40/", "movieDbId": [ "33198" ] },
 		{ "name": "SEBULBA", "url": "http://swapi.co/api/people/41/", "movieDbId": [ "1074722" ] },
 		{ "name": "SHMI", "url": "http://swapi.co/api/people/43/", "movieDbId": [ "33190" ] },
-		{ "name": "C-3PO", "url": "http://swapi.co/api/people/2/", "movieDbId": [ "6", "300580" ] },
+		{ "name": "C-3PO", "url": "http://swapi.co/api/people/2/", "movieDbId": [ "6" ] },
 		{ "name": "DARTH MAUL", "url": "http://swapi.co/api/people/44/", "movieDbId": [ "11007", "11115", "46362" ] },
 		{ "name": "JABBA", "url": "http://swapi.co/api/people/16/", "movieDbId": [ "1590529", "1220451", "1521791", "1590523", "159108", "24362" ] },
 		{ "name": "GREEDO", "url": "http://swapi.co/api/people/15/", "movieDbId": [ "199356", "104149", "159108" ] },
