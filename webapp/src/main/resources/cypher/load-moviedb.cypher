@@ -37,13 +37,11 @@ FOREACH (movie IN a.swapiMovies |
 	MERGE (film) <-[:APPEARS_IN]- (actor)
 )
 
-/*
-UNWIND a.also_known_as AS aliases
-WITH aliases
-WHERE aliases IS NOT NULL
-FOREACH (alias IN aliases |
-	MERGE (alias:Alias { name: alias })
-	MERGE (alias) <-[:ALSO_KNOWN_AS]- (actor)
-)
-*/
+//UNWIND a.also_known_as AS aliases
+//WITH aliases
+//WHERE aliases IS NOT NULL
+//FOREACH (alias IN aliases |
+//	MERGE (alias:Alias { name: alias })
+//	MERGE (alias) <-[:ALSO_KNOWN_AS]- (actor)
+//)
 
