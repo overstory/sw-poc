@@ -4,7 +4,7 @@ import com.google.inject.Inject
 import com.google.inject.name.Named
 import config.AppConfig
 import groovy.json.JsonBuilder
-import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
 import groovy.util.logging.Slf4j
 import neo4j.Neo4JServer
 import ratpack.exec.Promise
@@ -36,73 +36,58 @@ class Neo4JServerImpl implements Neo4JServer
 	@Override
 	Promise<List<ReceivedResponse>> runRequest (String cypher, Map<String,Object> params = [:])
 	{
-		List<ReceivedResponse> errorResponses = []
+		List<Map<String,Object>> statements = []
 
 		cypher.split (txSplitRegex).each { String statement ->
-			httpClient.post (hostDetails.uri()) {
-				it.connectTimeout (Duration.ofSeconds (hostDetails.readTimeout))
-				it.headers.set ("Content-Type", 'application/json')
-				it.headers.set ("Accept", 'application/json')
-				it.basicAuth (hostDetails.user, hostDetails.pass)
-				it.body.text (postBody (statement, params))
-			} then { resp ->
-				errorResponses << resp
+			Map<String,Object> stmtObj = [:]
+
+			stmtObj ['statement'] = escapeCypher (statement)
+			stmtObj ['parameters'] = params
+			stmtObj ['resultDataContents'] = [ 'row', 'graph' ]
+
+			statements << stmtObj
+		}
+
+		List<ReceivedResponse> responses = []
+
+		if (params.size() == 0) {
+			// If no params, bundle all parts into a single call
+			def reqJson = new JsonSlurper().parseText ('{ "statements": [] }')
+
+			reqJson.statements = statements
+
+			issueRequest (new JsonBuilder (reqJson).toPrettyString(), responses)
+		} else {
+			// If params, issue a separate REST call for each statement to avoid blowing limits
+			statements.each { Map<String,Object> statement ->
+				def reqJson = new JsonSlurper().parseText ('{ "statements": [] }')
+
+				reqJson.statements << statement
+
+				issueRequest (new JsonBuilder (reqJson).toPrettyString(), responses)
 			}
 		}
 
-		Promise.value (errorResponses)
+		Promise.value (responses)
+	}
+
+	private void issueRequest (String body, List<ReceivedResponse> responses)
+	{
+		httpClient.post (hostDetails.uri()) {
+			it.connectTimeout (Duration.ofSeconds (hostDetails.readTimeout))
+			it.headers.set ("Content-Type", 'application/json')
+			it.headers.set ("Accept", 'application/json')
+			it.basicAuth (hostDetails.user, hostDetails.pass)
+			it.body.text (body)
+		} then { resp ->
+			responses << resp
+		}
 	}
 
 	// ----------------------------------------------------------
 
-	private static String postBody (String cypher, Map<String,Object> params)
-	{
-		"""
-			{
-				"statements": [
-					{
-						"statement": "${escapeCypher (cypher)}",
-						"parameters": {
-							${formatParams (params)}
-						},
-						"resultDataContents": [
-							"row",
-							"graph"
-						]
-					}
-				]
-			}
-		"""
-	}
-
-	private static String formatParams (Map<String,Object> params)
-	{
-		StringBuilder sb = new StringBuilder()
-
-		params.eachWithIndex { String key, Object value, int index ->
-			if (index != 0) sb.append (',\n')
-
-			sb.append ('"').append (key).append ('": ')
-
-			if (value instanceof JsonBuilder) {
-				sb.append (value.toString())
-			} else if (value instanceof AbstractMap) {
-				sb.append (JsonOutput.toJson (value))
-			} else if (value instanceof String) {
-				sb.append ('"').append (value).append ('"')
-			} else {
-				sb.append ('"').append (value.toString()).append ('"')
-			}
-		}
-
-		sb.append ('\n')
-
-		sb.toString()
-	}
-
 	private static String escapeCypher (String cypher)
 	{
-		cypher.replaceAll ('\\/\\/.*\\n', ' ').replaceAll ('\n|\r|\t', ' ').replaceAll ('"', '\\\\"')
+		cypher.replaceAll ('\\/\\/.*\\n', ' ').replaceAll ('\n|\r|\t', ' ') // .replaceAll ('"', '\\\\"')
 	}
-
 }

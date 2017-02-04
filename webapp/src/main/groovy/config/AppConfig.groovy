@@ -44,13 +44,14 @@ class AppConfig extends AbstractModule
 	final String NEO_TX_COMMIT_PATH = '/db/data/transaction/commit'
 
 	final Map<String,String> neoDataMap = [
-	        'swapi-json': SWAPI_DATA_RESOURCE,
+		'add-constraints': 'cypher/db-setup.cypher',
+		'swapi-json': SWAPI_DATA_RESOURCE,
 		'swapi-load-cypher': SWAPI_LOAD_CYPHER,
-		'swsocial-char-map': "json/character-resource-map.json",
-		'swsocial-interactions': "json/starwars-full-interactions-allCharacters-merged.json",
-		'swsocial-load-cypher': "cypher/load-swsocial.cypher",
+		'swsocial-char-map': 'json/character-resource-map.json',
+		'swsocial-interactions': 'json/starwars-full-interactions-allCharacters-merged.json',
+		'swsocial-load-cypher': 'cypher/load-swsocial.cypher',
 		'moviedb-json': MOVIEDB_ACTORS_RESOURCE,
-		'moviedb-load-cypher': "cypher/load-moviedb.cypher"
+		'moviedb-load-cypher': 'cypher/load-moviedb.cypher'
 	]
 
 	@Override
