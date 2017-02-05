@@ -1,6 +1,6 @@
 {
 	"entries": [
-		{ "name": "DARTH VADER", "url": "http://swapi.co/api/people/4/", "movieDbId": [ "24342", "15152", "25451", "1728954" ] },
+		{ "name": "DARTH VADER", "url": "http://swapi.co/api/people/4/", "movieDbId": [ "24342", "15152", "25451", "1728954", "28235" ] },
 		{ "name": "R2-D2", "url": "http://swapi.co/api/people/3/", "movieDbId": [ "130", "1214513" ] },
 		{ "name": "CHEWBACCA", "url": "http://swapi.co/api/people/13/", "movieDbId": [ "24343" ] },
 		{ "name": "BB-8", "url": "http://swapi.co/api/people/87/", "movieDbId": [ "19278" ] },
@@ -18,7 +18,7 @@
 		{ "name": "SHMI", "url": "http://swapi.co/api/people/43/", "movieDbId": [ "33190" ] },
 		{ "name": "C-3PO", "url": "http://swapi.co/api/people/2/", "movieDbId": [ "6" ] },
 		{ "name": "DARTH MAUL", "url": "http://swapi.co/api/people/44/", "movieDbId": [ "11007", "11115", "46362" ] },
-		{ "name": "JABBA", "url": "http://swapi.co/api/people/16/", "movieDbId": [ "1590529", "1220451", "1521791", "1590523", "159108", "24362" ] },
+		{ "name": "JABBA", "url": "http://swapi.co/api/people/16/", "movieDbId": [ "159108", "24362" ] },
 		{ "name": "GREEDO", "url": "http://swapi.co/api/people/15/", "movieDbId": [ "199356", "104149", "159108" ] },
 		{ "name": "VALORUM", "url": "http://swapi.co/api/people/34/", "movieDbId": [ "28641", "59062" ] },
 		{ "name": "MACE WINDU", "url": "http://swapi.co/api/people/51/", "movieDbId": [ "2231", "233191" ] },
@@ -44,7 +44,7 @@
 		{ "name": "BIGGS", "url": "http://swapi.co/api/people/9/", "movieDbId": [ "17356" ] },
 		{ "name": "LEIA", "url": "http://swapi.co/api/people/5/", "movieDbId": [ "4", "1583054", "1445414" ] },
 		{ "name": "TARKIN", "url": "http://swapi.co/api/people/12/", "movieDbId": [ "5", "82434", "1213640" ] },
-		{ "name": "HAN", "url": "http://swapi.co/api/people/14/", "movieDbId": [ "8", "71375" ] },
+		{ "name": "HAN", "url": "http://swapi.co/api/people/14/", "movieDbId": [ "3", "71375" ] },
 		{ "name": "WEDGE", "url": "http://swapi.co/api/people/18/", "movieDbId": [ "47698", "4967", "1216947" ] },
 		{ "name": "LANDO", "url": "http://swapi.co/api/people/25/", "movieDbId": [ "3799", "119589" ] },
 		{ "name": "BIB FORTUNA", "url": "http://swapi.co/api/people/45/", "movieDbId": [ "33186", "199055", "1729665" ] },
