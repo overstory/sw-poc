@@ -1,5 +1,5 @@
 {
-  "timestamp": "2017-02-01T02:46:17.000Z",
+  "timestamp": "2017-02-05T23:46:36.000Z",
   "actors": [
     {
       "adult": false,
@@ -15,7 +15,7 @@
       "imdb_id": "nm0001190",
       "name": "David Prowse",
       "place_of_birth": "Bristol, England",
-      "popularity": 0.540648,
+      "popularity": 0.291829,
       "profile_path": "/cJtmBVrjYwawh2cCiAfZkEjPeqc.jpg",
       "swapiId": "http://swapi.co/api/people/4/",
       "swapiMovies": [
@@ -39,7 +39,7 @@
       "imdb_id": "nm0000469",
       "name": "James Earl Jones",
       "place_of_birth": "Arkabutla, Mississippi, USA",
-      "popularity": 5.739472,
+      "popularity": 2.902592,
       "profile_path": "/2ZuBf3ip2RXhkiQqGUjbUzAf4Nx.jpg",
       "swapiId": "http://swapi.co/api/people/4/",
       "swapiMovies": [
@@ -47,48 +47,6 @@
         "http://swapi.co/api/films/3/",
         "http://swapi.co/api/films/1/",
         "http://swapi.co/api/films/6/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-        "Spencer Lee Wilding"
-      ],
-      "biography": "Spencer Lee Wilding, is a Welsh actor and stuntman based in the UK. He is from St Asaph in North Wales.",
-      "birthday": "1972-07-26",
-      "deathday": "",
-      "gender": 0,
-      "homepage": "http://www.spencerwilding.com/",
-      "id": 25451,
-      "imdb_id": "nm1872855",
-      "name": "Spencer Wilding",
-      "place_of_birth": "St. Asaph - Wales - UK",
-      "popularity": 0.296537,
-      "profile_path": "/g3FJIpQZri7gG515rLehuo81T6W.jpg",
-      "swapiId": "http://swapi.co/api/people/4/",
-      "swapiMovies": [
-
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": null,
-      "birthday": null,
-      "deathday": null,
-      "gender": 0,
-      "homepage": null,
-      "id": 1728954,
-      "imdb_id": null,
-      "name": "Daniel Naprous",
-      "place_of_birth": null,
-      "popularity": 0.001255,
-      "profile_path": null,
-      "swapiId": "http://swapi.co/api/people/4/",
-      "swapiMovies": [
-
       ]
     },
     {
@@ -106,16 +64,16 @@
       "imdb_id": "nm0048652",
       "name": "Kenny Baker",
       "place_of_birth": "Birmingham, England, UK",
-      "popularity": 1.087079,
+      "popularity": 1.675303,
       "profile_path": "/sdd9rgifNF9C51RejG7sUGU8Bka.jpg",
       "swapiId": "http://swapi.co/api/people/3/",
       "swapiMovies": [
+        "http://swapi.co/api/films/1/",
         "http://swapi.co/api/films/2/",
         "http://swapi.co/api/films/3/",
         "http://swapi.co/api/films/4/",
         "http://swapi.co/api/films/5/",
         "http://swapi.co/api/films/6/",
-        "http://swapi.co/api/films/1/",
         "http://swapi.co/api/films/7/"
       ]
     },
@@ -133,7 +91,7 @@
       "imdb_id": "nm1835544",
       "name": "Jimmy Vee",
       "place_of_birth": null,
-      "popularity": 0.000003,
+      "popularity": 0.4095,
       "profile_path": null,
       "swapiId": "http://swapi.co/api/people/3/",
       "swapiMovies": [
@@ -154,7 +112,7 @@
       "imdb_id": "nm0562679",
       "name": "Peter Mayhew",
       "place_of_birth": "Barnes - London - England - UK",
-      "popularity": 0.987429,
+      "popularity": 0.343103,
       "profile_path": "/din1s5H4C4CfcnkHfEeRcdFlsVj.jpg",
       "swapiId": "http://swapi.co/api/people/13/",
       "swapiMovies": [
@@ -179,7 +137,7 @@
       "imdb_id": "nm0352778",
       "name": "Bill Hader",
       "place_of_birth": "Tulsa - Oklahoma - USA",
-      "popularity": 4.671517,
+      "popularity": 4.933267,
       "profile_path": "/3Z5JsyLw7YTLZgpA3FAlLmFSN9F.jpg",
       "swapiId": "http://swapi.co/api/people/87/",
       "swapiMovies": [
@@ -189,8 +147,7 @@
     {
       "adult": false,
       "also_known_as": [
-        "\u8fde\u59c6\u00b7\u5c3c\u68ee",
-        "\u041b\u0438\u0430\u043c \u041d\u0438\u0441\u043e\u043d"
+
       ],
       "biography": "William John \"Liam\" Neeson OBE (born 7 June 1952) is an Irish actor who has been nominated for an Oscar, a BAFTA and three Golden Globe Awards.\n\nHe has starred in a number of notable roles including Oskar Schindler in Schindler's List, Michael Collins in Michael Collins, Peyton Westlake in Darkman, Jean Valjean in Les Mis\u00e9rables, Qui-Gon Jinn in Star Wars Episode I: The Phantom Menace, Alfred Kinsey in Kinsey, Ras Al Ghul in Batman Begins and the voice of Aslan in The Chronicles of Narnia film series. He has also starred in several other notable films, from major Hollywood studio releases (ie. Excalibur, The Dead Pool, Nell, Rob Roy, The Haunting, Love Actually, Kingdom of Heaven, Taken, Clash of the Titans, The A-Team, Unknown) to smaller arthouse films (ie. Deception, Breakfast on Pluto, Chloe).\n\nHe was born in Ballymena, County Antrim, Northern Ireland and educated at Saint Patrick's College, Ballymena Technical College and Queen's University Belfast. He moved to Dublin after university to further his acting career, joining the renowned Abbey Theatre. In the early 1990s, he moved again to the United States, where the wide acclaim for his performance in Schindler's List led to more high-profile work. He is widowed and lives in New York with his two sons.\n\nDescription above from the Wikipedia article Liam Neeson, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
       "birthday": "1952-06-07",
@@ -201,7 +158,7 @@
       "imdb_id": "nm0000553",
       "name": "Liam Neeson",
       "place_of_birth": "Ballymena, County Antrim, Northern Ireland",
-      "popularity": 10.351397,
+      "popularity": 7.041822,
       "profile_path": "/9mdAohLsDu36WaXV2N3SQ388bvz.jpg",
       "swapiId": "http://swapi.co/api/people/32/",
       "swapiMovies": [
@@ -222,7 +179,7 @@
       "imdb_id": "nm0141324",
       "name": "Silas Carson",
       "place_of_birth": "England, UK",
-      "popularity": 0.02187,
+      "popularity": 0.000005,
       "profile_path": "/cT7Qyu8Zl8IDsgYzduzuCm1zxpt.jpg",
       "swapiId": "http://swapi.co/api/people/33/",
       "swapiMovies": [
@@ -245,34 +202,13 @@
       "imdb_id": "nm0000191",
       "name": "Ewan McGregor",
       "place_of_birth": "Perth, Scotland, UK",
-      "popularity": 7.15081,
-      "profile_path": "/lVjs6E3vriUXhHrAx0mSzyOVts2.jpg",
+      "popularity": 10.194534,
+      "profile_path": "/fHv0hv766frb4nqOua0zX0lqklH.jpg",
       "swapiId": "http://swapi.co/api/people/10/",
       "swapiMovies": [
         "http://swapi.co/api/films/4/",
         "http://swapi.co/api/films/5/",
         "http://swapi.co/api/films/6/",
-        "http://swapi.co/api/films/7/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": null,
-      "birthday": "1969-07-22",
-      "deathday": "",
-      "gender": 0,
-      "homepage": null,
-      "id": 19506,
-      "imdb_id": "nm0852517",
-      "name": "James Arnold Taylor",
-      "place_of_birth": "",
-      "popularity": 2.95949,
-      "profile_path": "/y8SCPH3ackhej26YH5sKps0g7Ch.jpg",
-      "swapiId": "http://swapi.co/api/people/10/",
-      "swapiMovies": [
         "http://swapi.co/api/films/7/"
       ]
     },
@@ -291,7 +227,7 @@
       "imdb_id": "nm0000027",
       "name": "Alec Guinness",
       "place_of_birth": "Marylebone, London, England, UK",
-      "popularity": 3.30535,
+      "popularity": 3.796612,
       "profile_path": "/89QNJ7u1hNaCglkotmZEbwCNp1M.jpg",
       "swapiId": "http://swapi.co/api/people/10/",
       "swapiMovies": [
@@ -306,19 +242,23 @@
       "also_known_as": [
 
       ],
-      "biography": null,
-      "birthday": "1901-02-05",
-      "deathday": "1986-04-21",
-      "gender": 0,
-      "homepage": null,
-      "id": 117714,
-      "imdb_id": "nm0247856",
-      "name": "Marjorie Eaton",
-      "place_of_birth": null,
-      "popularity": 0.000002,
-      "profile_path": "/mwJVP4W18Rpbi8qn0a2nVyE7fdO.jpg",
+      "biography": "Ian McDiarmid was born in Tayside, Scotland, in 1944. He studied for an M.A. in Clinical Psychology at The University of St Andrews, but eventually found that his calling was in theatre. He went to the Royal Academy in Glasgow, where he received the prestigious gold medal for his work. He now has a highly successful career as a theatre director, and from 1990 until his retirement in 2001 was Joint Artistic Director of London's Almeida Theatre in Islington. He and his co-director Jonathan Kent revived the Almeida and persuaded many Hollywood stars including Kevin Spacey, Ralph Fiennes and Anna Friel to tread the boards in their humble theatre. They won the coveted London Evening Standard Award in 1998 for their efforts. McDiarmid is also well known for his film and television appearances, and is perhaps most famous for his chilling performance as The Emperor in George Lucas's Star Wars films.",
+      "birthday": "1944-08-11",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 27762,
+      "imdb_id": "nm0001519",
+      "name": "Ian McDiarmid",
+      "place_of_birth": "Carnoustie, Tayside, Scotland",
+      "popularity": 2.815559,
+      "profile_path": "/8YkDYHhuWoCzP41fkqI1RXGTz2P.jpg",
       "swapiId": "http://swapi.co/api/people/21/",
       "swapiMovies": [
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/4/",
+        "http://swapi.co/api/films/5/",
+        "http://swapi.co/api/films/6/",
         "http://swapi.co/api/films/2/"
       ]
     },
@@ -336,7 +276,7 @@
       "imdb_id": "nm0078886",
       "name": "Ahmed Best",
       "place_of_birth": "New York City - New York - USA",
-      "popularity": 0.000023,
+      "popularity": 0.000052,
       "profile_path": "/kBblb0GZjqN3W1VcJ2J5IkC7Qg3.jpg",
       "swapiId": "http://swapi.co/api/people/36/",
       "swapiMovies": [
@@ -363,7 +303,7 @@
       "imdb_id": "nm0818648",
       "name": "Steve Speirs",
       "place_of_birth": "Troedyrhiw - near Merthyr Tydfil - Wales - UK",
-      "popularity": 0.945,
+      "popularity": 0.000033,
       "profile_path": "/cCNJouXVxnXJv9j26PaEWJxIkOE.jpg",
       "swapiId": "http://swapi.co/api/people/37/",
       "swapiMovies": [
@@ -385,7 +325,7 @@
       "imdb_id": "nm0851317",
       "name": "Fred Tatasciore",
       "place_of_birth": "New York City - New York - USA",
-      "popularity": 2.77012,
+      "popularity": 1.475472,
       "profile_path": "/lNe4zn9fJ302GehQVaFk5BNcGGM.jpg",
       "swapiId": "http://swapi.co/api/people/37/",
       "swapiMovies": [
@@ -406,7 +346,7 @@
       "imdb_id": "nm0000306",
       "name": "Brian Blessed",
       "place_of_birth": "Mexborough, Yorkshire, England, UK",
-      "popularity": 1.422893,
+      "popularity": 1.035804,
       "profile_path": "/azFYGqcDS1Oo8skhbHzGPZSICTU.jpg",
       "swapiId": "http://swapi.co/api/people/38/",
       "swapiMovies": [
@@ -428,7 +368,7 @@
       "imdb_id": "nm0000204",
       "name": "Natalie Portman",
       "place_of_birth": "Jerusalem, Israel",
-      "popularity": 20.158397,
+      "popularity": 11.065231,
       "profile_path": "/jJcRWku3e9OHrmRqytn6WcBjhvh.jpg",
       "swapiId": "http://swapi.co/api/people/35/",
       "swapiMovies": [
@@ -451,7 +391,7 @@
       "imdb_id": "nm0845941",
       "name": "Catherine Taber",
       "place_of_birth": null,
-      "popularity": 1.015,
+      "popularity": 0.2667,
       "profile_path": "/3xCtIwBDiQe9smigTQXA2UUvuxy.jpg",
       "swapiId": "http://swapi.co/api/people/35/",
       "swapiMovies": [
@@ -472,7 +412,7 @@
       "imdb_id": "nm0114460",
       "name": "Ralph Brown",
       "place_of_birth": "Cambridge - Cambridgeshire - UK",
-      "popularity": 1.770012,
+      "popularity": 0.038286,
       "profile_path": "/ksIVhmaAB5oRiOkm9mDKALVkaJk.jpg",
       "swapiId": "http://swapi.co/api/people/39/",
       "swapiMovies": [
@@ -495,7 +435,7 @@
       "imdb_id": "nm0781181",
       "name": "Andrew Secombe",
       "place_of_birth": "Mumbles Head - South Wales - UK",
-      "popularity": 0.012758,
+      "popularity": 0.000155,
       "profile_path": "/oKLhyJo4doxuPBpuGzLQ3WGGu9f.jpg",
       "swapiId": "http://swapi.co/api/people/40/",
       "swapiMovies": [
@@ -519,7 +459,7 @@
       "imdb_id": "nm0533914",
       "name": "Lewis Macleod",
       "place_of_birth": "Glasgow - Scotland - UK",
-      "popularity": 0.000002,
+      "popularity": 0.000052,
       "profile_path": "/mv3TTVkxdDn11Gs2AWKvFzAuW7Y.jpg",
       "swapiId": "http://swapi.co/api/people/41/",
       "swapiMovies": [
@@ -542,7 +482,7 @@
       "imdb_id": "nm0000278",
       "name": "Pernilla August",
       "place_of_birth": "Stockholm, Stockholms lan, Sweden",
-      "popularity": 0.063998,
+      "popularity": 0.137921,
       "profile_path": "/zDMvEQCCUcjJeDWEstDBjoK8kA4.jpg",
       "swapiId": "http://swapi.co/api/people/43/",
       "swapiMovies": [
@@ -564,7 +504,7 @@
       "imdb_id": "nm0000355",
       "name": "Anthony Daniels",
       "place_of_birth": "Salisbury, Wiltshire, England, UK",
-      "popularity": 3.172059,
+      "popularity": 1.727456,
       "profile_path": "/cljvryjb3VwTsNR7fjQKjNPMaBB.jpg",
       "swapiId": "http://swapi.co/api/people/2/",
       "swapiMovies": [
@@ -591,7 +531,7 @@
       "imdb_id": "nm0661917",
       "name": "Ray Park",
       "place_of_birth": "Glasgow, Scotland, UK",
-      "popularity": 0.000333,
+      "popularity": 0.099658,
       "profile_path": "/3qB3uEjTOIkVy1cBAfCntGMRGDT.jpg",
       "swapiId": "http://swapi.co/api/people/44/",
       "swapiMovies": [
@@ -612,7 +552,7 @@
       "imdb_id": "nm0784818",
       "name": "Peter Serafinowicz",
       "place_of_birth": "Liverpool - England - UK",
-      "popularity": 2.656809,
+      "popularity": 0.974031,
       "profile_path": "/6bWPwi6HLej1gGObTjIzyLcxsYS.jpg",
       "swapiId": "http://swapi.co/api/people/44/",
       "swapiMovies": [
@@ -633,95 +573,11 @@
       "imdb_id": "nm1022429",
       "name": "Samuel Witwer",
       "place_of_birth": "",
-      "popularity": 0.000187,
+      "popularity": 0.000014,
       "profile_path": "/fJiYTRHIBP2gUxoM6QPBMCA6FVT.jpg",
       "swapiId": "http://swapi.co/api/people/44/",
       "swapiMovies": [
         "http://swapi.co/api/films/7/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": null,
-      "birthday": "1947-02-14",
-      "deathday": "",
-      "gender": 2,
-      "homepage": "",
-      "id": 1590529,
-      "imdb_id": "nm0680975",
-      "name": "Toby Philpott",
-      "place_of_birth": "London, UK",
-      "popularity": 0.0,
-      "profile_path": null,
-      "swapiId": "http://swapi.co/api/people/16/",
-      "swapiMovies": [
-        "http://swapi.co/api/films/3/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-        "Mike Edmunds"
-      ],
-      "biography": "Mike Edmonds is an English actor with dwarfism, known for his role as Little Ron in the children's television show Maid Marian and Her Merry Men. Edmonds can also be seen dancing in the Men Without Hats music video \"The Safety Dance\" as a dwarf jester, his shirt reads \"rhythm of youth\". Edmonds has also appeared in several films, including Flash Gordon, The Dark Crystal, and Who Framed Roger Rabbit. Edmonds played the role of Og in the Terry Gilliam film Time Bandits. In Return of the Jedi, he performed as the Ewok Logray as well as the operator for Jabba the Hutt's tail.",
-      "birthday": "1944-01-13",
-      "deathday": "",
-      "gender": 0,
-      "homepage": "http://mikeedmonds.winnsworld.co.uk/",
-      "id": 1220451,
-      "imdb_id": "nm0249507",
-      "name": "Mike Edmonds",
-      "place_of_birth": "Chelmsford, Essex, UK",
-      "popularity": 0.42,
-      "profile_path": "/2sjtnY8P7OZF5L9smPK1grhZmCy.jpg",
-      "swapiId": "http://swapi.co/api/people/16/",
-      "swapiMovies": [
-        "http://swapi.co/api/films/3/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": null,
-      "birthday": null,
-      "deathday": null,
-      "gender": 0,
-      "homepage": null,
-      "id": 1521791,
-      "imdb_id": "nm5601053",
-      "name": "Dave Barclay",
-      "place_of_birth": null,
-      "popularity": 0.0,
-      "profile_path": null,
-      "swapiId": "http://swapi.co/api/people/16/",
-      "swapiMovies": [
-
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": null,
-      "birthday": "1947-07-13",
-      "deathday": "",
-      "gender": 2,
-      "homepage": "",
-      "id": 1590523,
-      "imdb_id": "nm0178846",
-      "name": "John Coppinger",
-      "place_of_birth": "England, UK",
-      "popularity": 0.0,
-      "profile_path": null,
-      "swapiId": "http://swapi.co/api/people/16/",
-      "swapiMovies": [
-
       ]
     },
     {
@@ -738,7 +594,7 @@
       "imdb_id": "nm5925474",
       "name": "Larry Ward",
       "place_of_birth": null,
-      "popularity": 0.001686,
+      "popularity": 0.000004,
       "profile_path": "/zRqHcr0ySV1IJiDVmpciCokzn3h.jpg",
       "swapiId": "http://swapi.co/api/people/16/",
       "swapiMovies": [
@@ -760,7 +616,7 @@
       "imdb_id": "nm0724656",
       "name": "Kevin Michael Richardson",
       "place_of_birth": "The Bronx, New York, USA",
-      "popularity": 1.779448,
+      "popularity": 2.666076,
       "profile_path": "/9dMOW2CFRrlDkNzeXVGMJfASupM.jpg",
       "swapiId": "http://swapi.co/api/people/16/",
       "swapiMovies": [
@@ -781,7 +637,7 @@
       "imdb_id": "nm0086685",
       "name": "Paul Blake",
       "place_of_birth": null,
-      "popularity": 0.7,
+      "popularity": 0.000008,
       "profile_path": "/WSO4C7YdURE1thtj2MPkWSKD6o.jpg",
       "swapiId": "http://swapi.co/api/people/15/",
       "swapiMovies": [
@@ -802,7 +658,7 @@
       "imdb_id": "nm0207117",
       "name": "Maria De Aragon",
       "place_of_birth": null,
-      "popularity": 0.4725,
+      "popularity": 0.000233,
       "profile_path": "/rnaslrjV5ui6cKphksSni3K0TVQ.jpg",
       "swapiId": "http://swapi.co/api/people/15/",
       "swapiMovies": [
@@ -823,7 +679,7 @@
       "imdb_id": "nm5925474",
       "name": "Larry Ward",
       "place_of_birth": null,
-      "popularity": 0.001686,
+      "popularity": 0.000004,
       "profile_path": "/zRqHcr0ySV1IJiDVmpciCokzn3h.jpg",
       "swapiId": "http://swapi.co/api/people/15/",
       "swapiMovies": [
@@ -845,7 +701,7 @@
       "imdb_id": "nm0000654",
       "name": "Terence Stamp",
       "place_of_birth": "Stepney, London, England, UK",
-      "popularity": 6.690503,
+      "popularity": 4.526769,
       "profile_path": "/fyGkLjgVfyKIPBaMQs5Df3gMuOV.jpg",
       "swapiId": "http://swapi.co/api/people/34/",
       "swapiMovies": [
@@ -866,7 +722,7 @@
       "imdb_id": "nm0750823",
       "name": "Ian Ruskin",
       "place_of_birth": "",
-      "popularity": 0.006123,
+      "popularity": 0.042525,
       "profile_path": null,
       "swapiId": "http://swapi.co/api/people/34/",
       "swapiMovies": [
@@ -889,7 +745,7 @@
       "imdb_id": "nm0000168",
       "name": "Samuel L. Jackson",
       "place_of_birth": "Washington - D.C. - USA",
-      "popularity": 13.915725,
+      "popularity": 13.088227,
       "profile_path": "/dlW6prW9HwYDsIRXNoFYtyHpSny.jpg",
       "swapiId": "http://swapi.co/api/people/51/",
       "swapiMovies": [
@@ -917,7 +773,7 @@
       "imdb_id": "nm0141333",
       "name": "Terrence 'T.C.' Carson",
       "place_of_birth": "Chicago, Illinois, USA",
-      "popularity": 0.000004,
+      "popularity": 0.162633,
       "profile_path": "/eto2MDC4VXLGiPOXNqSdlWJ5yxL.jpg",
       "swapiId": "http://swapi.co/api/people/51/",
       "swapiMovies": [
@@ -938,7 +794,7 @@
       "imdb_id": "nm0141324",
       "name": "Silas Carson",
       "place_of_birth": "England, UK",
-      "popularity": 0.02187,
+      "popularity": 0.000005,
       "profile_path": "/cT7Qyu8Zl8IDsgYzduzuCm1zxpt.jpg",
       "swapiId": "http://swapi.co/api/people/52/",
       "swapiMovies": [
@@ -961,7 +817,7 @@
       "imdb_id": "nm0000568",
       "name": "Frank Oz",
       "place_of_birth": "Hereford, Herefordshire, England, United Kingdom ",
-      "popularity": 2.196552,
+      "popularity": 1.934015,
       "profile_path": "/aLH5bYwMIlVxCe4rIDaEsVJqDKn.jpg",
       "swapiId": "http://swapi.co/api/people/20/",
       "swapiMovies": [
@@ -970,27 +826,6 @@
         "http://swapi.co/api/films/4/",
         "http://swapi.co/api/films/5/",
         "http://swapi.co/api/films/6/",
-        "http://swapi.co/api/films/7/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": null,
-      "birthday": "1962-04-15",
-      "deathday": "",
-      "gender": 0,
-      "homepage": null,
-      "id": 71535,
-      "imdb_id": "nm0437454",
-      "name": "Tom Kane",
-      "place_of_birth": "",
-      "popularity": 0.000328,
-      "profile_path": "/9X8liJ9UfiRNQVhjYc8XdbZl3v7.jpg",
-      "swapiId": "http://swapi.co/api/people/20/",
-      "swapiMovies": [
         "http://swapi.co/api/films/7/"
       ]
     },
@@ -1008,7 +843,7 @@
       "imdb_id": "nm0001751",
       "name": "Jimmy Smits",
       "place_of_birth": "Brooklyn, New York, USA",
-      "popularity": 0.315138,
+      "popularity": 1.306479,
       "profile_path": "/8ZDeoaJbyIY52dJ6sEJNNytCfNC.jpg",
       "swapiId": "http://swapi.co/api/people/68/",
       "swapiMovies": [
@@ -1036,7 +871,7 @@
       "imdb_id": "nm0482851",
       "name": "Phil LaMarr",
       "place_of_birth": "Los Angeles, California, USA",
-      "popularity": 0.388344,
+      "popularity": 0.59084,
       "profile_path": "/2rYa0M1bOSAATGbF5oe5pmoNeDn.jpg",
       "swapiId": "http://swapi.co/api/people/68/",
       "swapiMovies": [
@@ -1058,7 +893,7 @@
       "imdb_id": "nm0481092",
       "name": "Jay Laga'aia",
       "place_of_birth": "Auckland - New Zealand",
-      "popularity": 0.000008,
+      "popularity": 0.000021,
       "profile_path": "/nvcGMAYvHkbEo8VmdDvIJlohVjn.jpg",
       "swapiId": "http://swapi.co/api/people/60/",
       "swapiMovies": [
@@ -1080,7 +915,7 @@
       "imdb_id": null,
       "name": "James C. Mathis III",
       "place_of_birth": null,
-      "popularity": 0.000027,
+      "popularity": 0.000009,
       "profile_path": null,
       "swapiId": "http://swapi.co/api/people/60/",
       "swapiMovies": [
@@ -1101,7 +936,7 @@
       "imdb_id": "nm0654240",
       "name": "Rena Owen",
       "place_of_birth": "Bay of Islands, New Zealand",
-      "popularity": 0.001386,
+      "popularity": 0.000326,
       "profile_path": "/gH41kolbpQswwqYomRiicZMOOXj.jpg",
       "swapiId": "http://swapi.co/api/people/73/",
       "swapiMovies": [
@@ -1123,7 +958,7 @@
       "imdb_id": "nm0679715",
       "name": "Anthony Phelan",
       "place_of_birth": "",
-      "popularity": 0.000002,
+      "popularity": 0.0432,
       "profile_path": "/81fH305g9TTVvRj6xYO73bdS8X1.jpg",
       "swapiId": "http://swapi.co/api/people/72/",
       "swapiMovies": [
@@ -1144,7 +979,7 @@
       "imdb_id": "nm0517535",
       "name": "Daniel Logan",
       "place_of_birth": "Auckland - New Zealand",
-      "popularity": 0.430568,
+      "popularity": 0.00001,
       "profile_path": "/oZ4tJ2qszpK8goamVxYCCMo2QTD.jpg",
       "swapiId": "http://swapi.co/api/people/22/",
       "swapiMovies": [
@@ -1165,7 +1000,7 @@
       "imdb_id": "nm0120116",
       "name": "Jeremy Bulloch",
       "place_of_birth": "Market Harborough - Leicestershire - England - UK",
-      "popularity": 0.000027,
+      "popularity": 0.061721,
       "profile_path": "/yRnHoDmmWKdoLdiscCFfRpzzqMa.jpg",
       "swapiId": "http://swapi.co/api/people/22/",
       "swapiMovies": [
@@ -1188,7 +1023,7 @@
       "imdb_id": "nm0935067",
       "name": "Jason Wingreen",
       "place_of_birth": "Brooklyn, New York, USA",
-      "popularity": 0.42,
+      "popularity": 0.043594,
       "profile_path": "/mUodFFjIp374CmUDLW2Lu39MYf2.jpg",
       "swapiId": "http://swapi.co/api/people/22/",
       "swapiMovies": [
@@ -1209,7 +1044,7 @@
       "imdb_id": "nm0607325",
       "name": "Temuera Morrison",
       "place_of_birth": "Rotorua, North Island, New Zealand",
-      "popularity": 13.2177,
+      "popularity": 2.967112,
       "profile_path": "/A1nD5J5uRwJM4hnpXd3DdmwZGjP.jpg",
       "swapiId": "http://swapi.co/api/people/22/",
       "swapiMovies": [
@@ -1232,7 +1067,7 @@
       "imdb_id": "nm0607325",
       "name": "Temuera Morrison",
       "place_of_birth": "Rotorua, North Island, New Zealand",
-      "popularity": 13.2177,
+      "popularity": 2.967112,
       "profile_path": "/A1nD5J5uRwJM4hnpXd3DdmwZGjP.jpg",
       "swapiId": "http://swapi.co/api/people/69/",
       "swapiMovies": [
@@ -1255,7 +1090,7 @@
       "imdb_id": "nm0114436",
       "name": "Phil Brown",
       "place_of_birth": "Cambridge, Massachusetts",
-      "popularity": 0.14175,
+      "popularity": 0.000029,
       "profile_path": "/exkyN66HiZWJDmpcOza2hWoswOo.jpg",
       "swapiId": "http://swapi.co/api/people/6/",
       "swapiMovies": [
@@ -1276,7 +1111,7 @@
       "imdb_id": "nm0249291",
       "name": "Joel Edgerton",
       "place_of_birth": "Blacktown, New South Wales, Australia",
-      "popularity": 4.128592,
+      "popularity": 4.35998,
       "profile_path": "/lkOkaMKSRRGLMgkLaCzR9sYgTgx.jpg",
       "swapiId": "http://swapi.co/api/people/6/",
       "swapiMovies": [
@@ -1298,7 +1133,7 @@
       "imdb_id": "nm0292235",
       "name": "Shelagh Fraser",
       "place_of_birth": "Surrey, England",
-      "popularity": 0.000081,
+      "popularity": 0.000002,
       "profile_path": "/xNfiibBvknHztEnL0g7dcdrxOKq.jpg",
       "swapiId": "http://swapi.co/api/people/7/",
       "swapiMovies": [
@@ -1320,7 +1155,7 @@
       "imdb_id": "nm0682837",
       "name": "Bonnie Piesse",
       "place_of_birth": "Melbourne - Australia",
-      "popularity": 0.00045,
+      "popularity": 0.08505,
       "profile_path": "/xM4s2HYCmSunDpExLnllYCp8rjZ.jpg",
       "swapiId": "http://swapi.co/api/people/7/",
       "swapiMovies": [
@@ -1342,7 +1177,7 @@
       "imdb_id": "nm0860233",
       "name": "Jack Thompson",
       "place_of_birth": "Sydney, New South Wales, Australia",
-      "popularity": 1.012385,
+      "popularity": 0.166843,
       "profile_path": "/l2NNfs9bd6qxqzIOahcz2hErrq8.jpg",
       "swapiId": "http://swapi.co/api/people/62/",
       "swapiMovies": [
@@ -1366,7 +1201,7 @@
       "imdb_id": "nm0000489",
       "name": "Christopher Lee",
       "place_of_birth": "Belgravia, Westminster, England",
-      "popularity": 5.672952,
+      "popularity": 5.081134,
       "profile_path": "/aVzp6zflzedmdKPLxaPqcZ05PDK.jpg",
       "swapiId": "http://swapi.co/api/people/67/",
       "swapiMovies": [
@@ -1388,7 +1223,7 @@
       "imdb_id": "nm0123553",
       "name": "Corey Burton",
       "place_of_birth": "Los Angeles - California - USA",
-      "popularity": 0.942726,
+      "popularity": 0.095025,
       "profile_path": "/2YzqhrgSpWqm8lxZoyIR4F0nusM.jpg",
       "swapiId": "http://swapi.co/api/people/67/",
       "swapiMovies": [
@@ -1409,7 +1244,7 @@
       "imdb_id": "nm0003214",
       "name": "Matthew Wood",
       "place_of_birth": "Walnut Creek - California - USA",
-      "popularity": 0.019886,
+      "popularity": 0.031058,
       "profile_path": "/oB9wVbEIg8fjY3ulDKjKsGn2A55.jpg",
       "swapiId": "http://swapi.co/api/people/63/",
       "swapiMovies": [
@@ -1431,7 +1266,7 @@
       "imdb_id": "nm0190744",
       "name": "Marton Csokas",
       "place_of_birth": "Invercargill, New Zealand",
-      "popularity": 4.416336,
+      "popularity": 0.504711,
       "profile_path": "/g36Ydyv0YbwXLOQ2KzGjFfkCDo1.jpg",
       "swapiId": "http://swapi.co/api/people/63/",
       "swapiMovies": [
@@ -1452,7 +1287,7 @@
       "imdb_id": "nm0805992",
       "name": "Matt Sloan",
       "place_of_birth": null,
-      "popularity": 0.000021,
+      "popularity": 0.126,
       "profile_path": null,
       "swapiId": "http://swapi.co/api/people/58/",
       "swapiMovies": [
@@ -1474,7 +1309,7 @@
       "imdb_id": "nm0750603",
       "name": "Alan Ruscoe",
       "place_of_birth": "",
-      "popularity": 0.000021,
+      "popularity": 0.273788,
       "profile_path": "/cQ7Dc4vZGzSmjxuLtJ9ZkOVsHZK.jpg",
       "swapiId": "http://swapi.co/api/people/58/",
       "swapiMovies": [
@@ -1496,7 +1331,7 @@
       "imdb_id": "nm0003214",
       "name": "Matthew Wood",
       "place_of_birth": "Walnut Creek - California - USA",
-      "popularity": 0.019886,
+      "popularity": 0.031058,
       "profile_path": "/oB9wVbEIg8fjY3ulDKjKsGn2A55.jpg",
       "swapiId": "http://swapi.co/api/people/79/",
       "swapiMovies": [
@@ -1518,7 +1353,7 @@
       "imdb_id": "nm0642444",
       "name": "Genevieve O'Reilly",
       "place_of_birth": "Dublin, Ireland",
-      "popularity": 2.261547,
+      "popularity": 0.007031,
       "profile_path": "/8NrrFxrGng88GU7lxwOyK3PZv05.jpg",
       "swapiId": "http://swapi.co/api/people/28/",
       "swapiMovies": [
@@ -1539,7 +1374,7 @@
       "imdb_id": "nm0086860",
       "name": "Caroline Blakiston",
       "place_of_birth": "Chelsea, London, England, UK",
-      "popularity": 0.000017,
+      "popularity": 0.001046,
       "profile_path": "/tbABMp1c3zgiJKOoRaIkw9XWQ2Y.jpg",
       "swapiId": "http://swapi.co/api/people/28/",
       "swapiMovies": [
@@ -1560,7 +1395,7 @@
       "imdb_id": "nm0817748",
       "name": "Bruce Spence",
       "place_of_birth": " Auckland, North Island, New Zealand",
-      "popularity": 1.294365,
+      "popularity": 2.907442,
       "profile_path": "/pwJJBmO9MG3OxVX9efGrB6BTFyw.jpg",
       "swapiId": "http://swapi.co/api/people/83/",
       "swapiMovies": [
@@ -1581,7 +1416,7 @@
       "imdb_id": "nm1404216",
       "name": "Rohan Nichol",
       "place_of_birth": "Geraldton - Western Australia - Australia",
-      "popularity": 0.126,
+      "popularity": 0.00007,
       "profile_path": "/nzvL3MRpADYWlH4ppyYgmCnM1kZ.jpg",
       "swapiId": "http://swapi.co/api/people/81/",
       "swapiMovies": [
@@ -1603,35 +1438,14 @@
       "imdb_id": "nm0000434",
       "name": "Mark Hamill",
       "place_of_birth": "Concord, California, USA",
-      "popularity": 10.688312,
+      "popularity": 8.938637,
       "profile_path": "/ws544EgE5POxGJqq9LUfhnDrHtV.jpg",
       "swapiId": "http://swapi.co/api/people/1/",
       "swapiMovies": [
+        "http://swapi.co/api/films/1/",
         "http://swapi.co/api/films/2/",
         "http://swapi.co/api/films/3/",
-        "http://swapi.co/api/films/7/",
-        "http://swapi.co/api/films/1/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": null,
-      "birthday": null,
-      "deathday": null,
-      "gender": 0,
-      "homepage": null,
-      "id": 1445414,
-      "imdb_id": null,
-      "name": "Aidan Barton",
-      "place_of_birth": null,
-      "popularity": 0.315,
-      "profile_path": null,
-      "swapiId": "http://swapi.co/api/people/1/",
-      "swapiMovies": [
-        "http://swapi.co/api/films/6/"
+        "http://swapi.co/api/films/7/"
       ]
     },
     {
@@ -1648,7 +1462,7 @@
       "imdb_id": "nm0353796",
       "name": "Garrick Hagon",
       "place_of_birth": "London, England",
-      "popularity": 0.000589,
+      "popularity": 0.000002,
       "profile_path": "/lZYitsCPzlwevNuHzqaSZMQiuUa.jpg",
       "swapiId": "http://swapi.co/api/people/9/",
       "swapiMovies": [
@@ -1669,7 +1483,7 @@
       "imdb_id": "nm0000402",
       "name": "Carrie Fisher",
       "place_of_birth": "Beverly Hills, Los Angeles, California, USA",
-      "popularity": 8.794601,
+      "popularity": 6.930222,
       "profile_path": "/pbleNurCYdrLFQMEnlQB2nkOR1O.jpg",
       "swapiId": "http://swapi.co/api/people/5/",
       "swapiMovies": [
@@ -1693,32 +1507,11 @@
       "imdb_id": null,
       "name": "Ingvild Deila",
       "place_of_birth": null,
-      "popularity": 0.000005,
+      "popularity": 0.001377,
       "profile_path": null,
       "swapiId": "http://swapi.co/api/people/5/",
       "swapiMovies": [
 
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": null,
-      "birthday": null,
-      "deathday": null,
-      "gender": 0,
-      "homepage": null,
-      "id": 1445414,
-      "imdb_id": null,
-      "name": "Aidan Barton",
-      "place_of_birth": null,
-      "popularity": 0.315,
-      "profile_path": null,
-      "swapiId": "http://swapi.co/api/people/5/",
-      "swapiMovies": [
-        "http://swapi.co/api/films/6/"
       ]
     },
     {
@@ -1735,7 +1528,7 @@
       "imdb_id": "nm0001088",
       "name": "Peter Cushing",
       "place_of_birth": "Kenley, Surrey, England, UK",
-      "popularity": 10.780737,
+      "popularity": 8.423887,
       "profile_path": "/fg7ufC0IMr6VasQzzdmTtX5ycQF.jpg",
       "swapiId": "http://swapi.co/api/people/12/",
       "swapiMovies": [
@@ -1757,7 +1550,7 @@
       "imdb_id": "nm0701460",
       "name": "Wayne Pygram",
       "place_of_birth": "Cootamundra - New South Wales - Australia",
-      "popularity": 0.000104,
+      "popularity": 0.005363,
       "profile_path": "/5mRDyCp2wIEqn3lFaAZFdnwMMLe.jpg",
       "swapiId": "http://swapi.co/api/people/12/",
       "swapiMovies": [
@@ -1767,64 +1560,26 @@
     {
       "adult": false,
       "also_known_as": [
-
+        "\u0413\u0430\u0440\u0440\u0456\u0441\u043e\u043d \u0424\u043e\u0440\u0434",
+        "\u0425\u0430\u0440\u0440\u0438\u0441\u043e\u043d \u0424\u043e\u0440\u0434"
       ],
-      "biography": null,
-      "birthday": null,
-      "deathday": null,
-      "gender": 0,
-      "homepage": null,
-      "id": 1213640,
-      "imdb_id": "nm0822812",
-      "name": "Stephen Stanton",
-      "place_of_birth": null,
-      "popularity": 0.016586,
-      "profile_path": null,
-      "swapiId": "http://swapi.co/api/people/12/",
-      "swapiMovies": [
-
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": "From Wikipedia, the free encyclopedia.\n\nLee Unkrich (born August 8, 1967) is an American director and film editor. He is a longtime member of the creative team at Pixar, where he started in 1994 as a film editor. He later began directing, first as co-director of Toy Story 2. After co-directing Monsters, Inc., and Finding Nemo, Unkrich made his solo directorial debut with Toy Story 3, for which he won the Academy Award for Best Animated Feature in 2011. Unkrich is the 2011 recipient of University of Southern California's Mary Pickford Distinguished Alumni Award recognizing alumni contributions to the cinematic arts. With the award, Unkrich joins a list of distinguished USC alumni including Robert Zemeckis, Walter Murch, Jon Landau, Gary Rydstrom and Jay Roach.\n\nA native of Chagrin Falls, Ohio, Unkrich spent his youth acting at the Cleveland Playhouse. Unkrich graduated from the University of Southern California School of Cinematic Arts in 1990. Before joining Pixar in 1994, Unkrich worked for several years in television as an editor and director.\n\nDescription above from the Wikipedia article Lee Unkrich, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
-      "birthday": "1967-08-08",
-      "deathday": "",
-      "gender": 0,
-      "homepage": "",
-      "id": 8,
-      "imdb_id": "nm0881279",
-      "name": "Lee Unkrich",
-      "place_of_birth": "Cleveland, Ohio, USA",
-      "popularity": 0.457906,
-      "profile_path": "/bdTCCXjgOV3YyaNmLGYGOxFQMOc.jpg",
-      "swapiId": "http://swapi.co/api/people/14/",
-      "swapiMovies": [
-
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": "From Wikipedia, the free encyclopedia\n\nAlden Caleb Ehrenreich (born November 22, 1989) is an American actor.\n\nDescription above from the Wikipedia article Alden Ehrenreich, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
-      "birthday": "1989-11-22",
+      "biography": "Legendary Hollywood Icon Harrison Ford was born on July 13,\u00a01942 in Chicago, Illinois.\u00a0 His family\u00a0history includes a strong lineage of actors, radio personalities, and models.\u00a0 Harrison attended public high school in Park\u00a0Ridge, Illinois where he was a member of the school Radio Station WMTH.\u00a0Harrison worked as the lead voice for sports reporting at WMTH for several\u00a0years.\u00a0 Acting wasn\u2019t a major interest to\u00a0Ford until his junior year at Ripon College when he first took an acting class.  Harrison Ford\u2019s career started in 1964 when he travelled to\u00a0California in search of a voice-over job.\u00a0He never received that position, but instead signed a contract with\u00a0Columbia Pictures where he earned $150 weekly to play small fill in roles in\u00a0various films.\u00a0 Through the 60\u2019s Harrison\u00a0worked on several TV shows including Gunsmoke,\u00a0Ironside, Kung Fu, and American Style.\u00a0 It wasn\u2019t until 1967 that Harrison received\u00a0his first credited role in the Western film, A Time for Killing. Dissatisfied with the meager roles he was being\u00a0offered, Ford took a hiatus from acting to work as a self-employed carpenter.\u00a0This seemingly odd diversion turned out to be a blessing in disguise for\u00a0Harrison\u2019s acting career when he was soon hired by famous film producer George\u00a0Lucas.\u00a0 This was a turning point in\u00a0Harrison\u2019s life that led to him be casted in milestone roles such as Hans Solo\u00a0and Indiana Jones.\u00a0 Since his most famous\u00a0roles in the Star Wars Trilogy and Raiders\u00a0of the Lost Ark, Harrison Ford has starred in over 40 films.\u00a0 Many criticize his recent work, saying his\u00a0performances have been lackluster leading to commercially disappointing films.  Harrison has always worked hard to protect his off-screen\u00a0private life, keeping details about his children and marriages quite.\u00a0 He has a total of five children including one\u00a0recent adoption with third and current wife Calista Flockhart. In addition to\u00a0acting Harrison Ford is passionate about environmental conservation, aviation,\u00a0and archeology.",
+      "birthday": "1942-07-13",
       "deathday": "",
       "gender": 2,
       "homepage": "",
-      "id": 71375,
-      "imdb_id": "nm2403277",
-      "name": "Alden Ehrenreich",
-      "place_of_birth": "Los Angeles, California, U.S.",
-      "popularity": 3.521772,
-      "profile_path": "/pXVMYy0pzpNoLl4C26IHFExrzvA.jpg",
+      "id": 3,
+      "imdb_id": "nm0000148",
+      "name": "Harrison Ford",
+      "place_of_birth": "Chicago - Illinois - USA",
+      "popularity": 7.609649,
+      "profile_path": "/aVKNqtkzZCymupOrvwxozamRyVc.jpg",
       "swapiId": "http://swapi.co/api/people/14/",
       "swapiMovies": [
-
+        "http://swapi.co/api/films/1/",
+        "http://swapi.co/api/films/2/",
+        "http://swapi.co/api/films/3/",
+        "http://swapi.co/api/films/7/"
       ]
     },
     {
@@ -1841,7 +1596,7 @@
       "imdb_id": "nm0493200",
       "name": "Denis Lawson",
       "place_of_birth": "Perthshire, Scotland, UK",
-      "popularity": 0.008432,
+      "popularity": 0.312008,
       "profile_path": "/nxPR7KIlJ4CPPI2hniTUk6bu9fA.jpg",
       "swapiId": "http://swapi.co/api/people/18/",
       "swapiMovies": [
@@ -1864,7 +1619,7 @@
       "imdb_id": "nm0383359",
       "name": "Colin Higgins",
       "place_of_birth": "Noum\u00e9a, New Caledonia, France",
-      "popularity": 0.000002,
+      "popularity": 0.002615,
       "profile_path": "/3JErvVcldUos3wrQeuAizrDlAkZ.jpg",
       "swapiId": "http://swapi.co/api/people/18/",
       "swapiMovies": [
@@ -1885,7 +1640,7 @@
       "imdb_id": "nm0030193",
       "name": "David Ankrum",
       "place_of_birth": "Santa Clara County, California, USA",
-      "popularity": 0.546,
+      "popularity": 0.002718,
       "profile_path": "/vo6JMA38exMSSbyQ3K0YCBwBrWT.jpg",
       "swapiId": "http://swapi.co/api/people/18/",
       "swapiMovies": [
@@ -1906,33 +1661,12 @@
       "imdb_id": "nm0001850",
       "name": "Billy Dee Williams",
       "place_of_birth": "New York City - New York - USA",
-      "popularity": 2.812343,
+      "popularity": 1.521469,
       "profile_path": "/sDuo82Mb5o3ZGt4SuV9dR0lAh8P.jpg",
       "swapiId": "http://swapi.co/api/people/25/",
       "swapiMovies": [
         "http://swapi.co/api/films/2/",
         "http://swapi.co/api/films/3/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-        "Childish Gambino"
-      ],
-      "biography": "Donald McKinley Glover (born September 25, 1983) is an American actor, writer, comedian, musician and rapper. Glover first came to attention for his work in the sketch group Derrick Comedy and is best known for his role as community college student Troy Barnes on the NBC comedy series Community. Contrary to a persistent rumor, he is not related to actor Danny Glover.",
-      "birthday": "1983-09-25",
-      "deathday": "",
-      "gender": 2,
-      "homepage": "http://iamdonald.com/",
-      "id": 119589,
-      "imdb_id": "nm2255973",
-      "name": "Donald Glover",
-      "place_of_birth": "Stone Mountain - Georgia - USA",
-      "popularity": 0.346551,
-      "profile_path": "/dHQ9gpLg2fGUUHNy5zVQ4zNgcYC.jpg",
-      "swapiId": "http://swapi.co/api/people/25/",
-      "swapiMovies": [
-
       ]
     },
     {
@@ -1949,7 +1683,7 @@
       "imdb_id": "nm0750603",
       "name": "Alan Ruscoe",
       "place_of_birth": "",
-      "popularity": 0.000021,
+      "popularity": 0.273788,
       "profile_path": "/cQ7Dc4vZGzSmjxuLtJ9ZkOVsHZK.jpg",
       "swapiId": "http://swapi.co/api/people/45/",
       "swapiMovies": [
@@ -1971,7 +1705,7 @@
       "imdb_id": "nm0141816",
       "name": "Michael Carter",
       "place_of_birth": "Dumfries - Scotland - UK",
-      "popularity": 0.0,
+      "popularity": 0.000002,
       "profile_path": "/rYVKZQ4uYLf7cpAGfdFzDcRNJXw.jpg",
       "swapiId": "http://swapi.co/api/people/45/",
       "swapiMovies": [
@@ -1992,7 +1726,7 @@
       "imdb_id": null,
       "name": "Erik Bauersfeld",
       "place_of_birth": null,
-      "popularity": 0.000001,
+      "popularity": 0.000032,
       "profile_path": null,
       "swapiId": "http://swapi.co/api/people/45/",
       "swapiMovies": [
@@ -2015,7 +1749,7 @@
       "imdb_id": "nm0741714",
       "name": "Tim Rose",
       "place_of_birth": "Pittsfield - Illinois - USA",
-      "popularity": 0.21,
+      "popularity": 0.08001,
       "profile_path": "/sYuRCsvqAvYBiqlY8xCCGv28kNs.jpg",
       "swapiId": "http://swapi.co/api/people/27/",
       "swapiMovies": [
@@ -2037,33 +1771,12 @@
       "imdb_id": null,
       "name": "Erik Bauersfeld",
       "place_of_birth": null,
-      "popularity": 0.000001,
+      "popularity": 0.000032,
       "profile_path": null,
       "swapiId": "http://swapi.co/api/people/27/",
       "swapiMovies": [
         "http://swapi.co/api/films/3/",
         "http://swapi.co/api/films/7/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": null,
-      "birthday": null,
-      "deathday": null,
-      "gender": 0,
-      "homepage": null,
-      "id": 1509454,
-      "imdb_id": "nm2995162",
-      "name": "Artt Butler",
-      "place_of_birth": null,
-      "popularity": 0.002552,
-      "profile_path": null,
-      "swapiId": "http://swapi.co/api/people/27/",
-      "swapiMovies": [
-
       ]
     },
     {
@@ -2080,7 +1793,7 @@
       "imdb_id": "nm1209966",
       "name": "Oscar Isaac",
       "place_of_birth": "Guatemala",
-      "popularity": 4.380381,
+      "popularity": 3.97477,
       "profile_path": "/i8LGOkTaR5g6vh81dic7nfM975t.jpg",
       "swapiId": "http://swapi.co/api/people/86/",
       "swapiMovies": [
@@ -2101,7 +1814,7 @@
       "imdb_id": "nm3729225",
       "name": "Gwendoline Christie",
       "place_of_birth": "Worthing, West Sussex, England",
-      "popularity": 5.393423,
+      "popularity": 1.533191,
       "profile_path": "/dTkS6VhTGjnFluTGf0PjNy9shkx.jpg",
       "swapiId": "http://swapi.co/api/people/88/",
       "swapiMovies": [
@@ -2122,7 +1835,7 @@
       "imdb_id": "nm3915784",
       "name": "John Boyega",
       "place_of_birth": "Peckham, London, England, UK",
-      "popularity": 6.243731,
+      "popularity": 5.907777,
       "profile_path": "/idr2vphzhidyMGOp0ky6RqUMah8.jpg",
       "swapiId": "http://swapi.co/api/people/84/",
       "swapiMovies": [
@@ -2143,7 +1856,7 @@
       "imdb_id": "nm5397459",
       "name": "Daisy Ridley",
       "place_of_birth": "Westminster, London, England",
-      "popularity": 7.132748,
+      "popularity": 5.708684,
       "profile_path": "/iiBJCkVVLHAUBW6vbUhJ3RtxlXv.jpg",
       "swapiId": "http://swapi.co/api/people/85/",
       "swapiMovies": [
@@ -2164,7 +1877,7 @@
       "imdb_id": "nm0702934",
       "name": "Hugh Quarshie",
       "place_of_birth": "Accra - Ghana",
-      "popularity": 0.000007,
+      "popularity": 0.000001,
       "profile_path": "/b6RSuGFTvpDe3WIdWglzfs0kyES.jpg",
       "swapiId": "http://swapi.co/api/people/42/",
       "swapiMovies": [
@@ -2185,11 +1898,32 @@
       "imdb_id": "nm0151268",
       "name": "Dhruv Chanchani",
       "place_of_birth": "Edison - New Jersey - USA",
-      "popularity": 0.000068,
+      "popularity": 0.001046,
       "profile_path": "/wHMU3yngBSH98EHgtPT0r4G6LcM.jpg",
       "swapiId": "http://swapi.co/api/people/53/",
       "swapiMovies": [
         "http://swapi.co/api/films/4/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "Sebastian Lewis Shaw was an English actor, director, novelist, playwright and poet. During his 65-year career, he appeared in dozens of stage performances and more than 40 film and television productions. Shaw was born and brought up in Holt, Norfolk, and made his acting debut at age eight at a London theatre. He studied acting at Gresham's School and the Royal Academy of Dramatic Art. Although he worked primarily on the London stage, he made his Broadway debut in 1929, when he played one of the two murderers in Rope's End. He appeared in his first film, Caste, in 1930 and quickly began to create a name for himself in films. He described himself as a \"rotten actor\" as a youth and said his success was primarily due to his good looks. He claimed to mature as a performer only after returning from service in the Royal Air Force during World War II. Shaw was particularly known for his performances in productions of Shakespeare plays which were considered daring and ahead of their time. In 1966, he joined the Royal Shakespeare Company, where he remained for a decade and delivered some of his most acclaimed performances. He also wrote several poems and a novel, The Christening, in 1975.",
+      "birthday": "1905-05-29",
+      "deathday": "1994-12-23",
+      "gender": 0,
+      "homepage": "",
+      "id": 28235,
+      "imdb_id": "nm0789970",
+      "name": "Sebastian Shaw",
+      "place_of_birth": "Holt - Norfolk - England - UK",
+      "popularity": 0.002616,
+      "profile_path": "/j6SFQiU0isXWNfMK6Cq4XQPdJDl.jpg",
+      "swapiId": "http://swapi.co/api/people/11/",
+      "swapiMovies": [
+        "http://swapi.co/api/films/3/"
       ]
     },
     {
@@ -2206,7 +1940,7 @@
       "imdb_id": "nm0242026",
       "name": "Lindsay Duncan",
       "place_of_birth": "Edinburgh, Scotland, UK",
-      "popularity": 2.718408,
+      "popularity": 2.703739,
       "profile_path": "/ddjjwMEHLBvzkZzZ5frEvJyWnZ6.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2228,7 +1962,7 @@
       "imdb_id": "nm0761497",
       "name": "Chris Sanders",
       "place_of_birth": null,
-      "popularity": 0.21,
+      "popularity": 0.000448,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -2249,7 +1983,7 @@
       "imdb_id": "nm0750603",
       "name": "Alan Ruscoe",
       "place_of_birth": "",
-      "popularity": 0.000021,
+      "popularity": 0.273788,
       "profile_path": "/cQ7Dc4vZGzSmjxuLtJ9ZkOVsHZK.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2271,7 +2005,7 @@
       "imdb_id": "nm0852511",
       "name": "James Taylor",
       "place_of_birth": null,
-      "popularity": 0.21,
+      "popularity": 0.0,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -2292,7 +2026,7 @@
       "imdb_id": "nm0086592",
       "name": "Jerome Blake",
       "place_of_birth": "England - UK",
-      "popularity": 0.002552,
+      "popularity": 0.09891,
       "profile_path": "/tUJwV5OUV4P8zrlfkMtp1vU47Ot.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2313,7 +2047,7 @@
       "imdb_id": "nm0750603",
       "name": "Alan Ruscoe",
       "place_of_birth": "",
-      "popularity": 0.000021,
+      "popularity": 0.273788,
       "profile_path": "/cQ7Dc4vZGzSmjxuLtJ9ZkOVsHZK.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2335,7 +2069,7 @@
       "imdb_id": "nm0852517",
       "name": "James Arnold Taylor",
       "place_of_birth": "",
-      "popularity": 2.95949,
+      "popularity": 2.823339,
       "profile_path": "/y8SCPH3ackhej26YH5sKps0g7Ch.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2356,7 +2090,7 @@
       "imdb_id": "nm0874455",
       "name": "Christopher Truswell",
       "place_of_birth": null,
-      "popularity": 0.000229,
+      "popularity": 0.063,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -2377,7 +2111,7 @@
       "imdb_id": "nm0878741",
       "name": "Amanda Lucas",
       "place_of_birth": null,
-      "popularity": 1.82,
+      "popularity": 0.00001,
       "profile_path": "/orl2zrSpf4WQUd268DsP7EspUCo.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2400,7 +2134,7 @@
       "imdb_id": "nm0203882",
       "name": "Oliver Ford Davies",
       "place_of_birth": "Ealing - London - England - UK",
-      "popularity": 0.000129,
+      "popularity": 0.037977,
       "profile_path": "/7fpNxQYZ85oRdnKWxPzQfURFkFT.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2423,7 +2157,7 @@
       "imdb_id": "nm0870026",
       "name": "Margaret Towner",
       "place_of_birth": null,
-      "popularity": 0.001148,
+      "popularity": 0.000002,
       "profile_path": "/wNWY8JXwlGzNVcY7JdMKCjRZHj5.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2445,7 +2179,7 @@
       "imdb_id": "nm0001116",
       "name": "Warwick Davis",
       "place_of_birth": "Epsom - Surrey - England - UK",
-      "popularity": 1.336452,
+      "popularity": 1.002292,
       "profile_path": "/5xBunTQJexQOuCmtlh8MNJerbaM.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2469,7 +2203,7 @@
       "imdb_id": "nm0698681",
       "name": "Greg Proops",
       "place_of_birth": "",
-      "popularity": 0.000001,
+      "popularity": 0.067791,
       "profile_path": "/6kzCvX6bxXYq1fxueHtmplctQ03.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2490,7 +2224,7 @@
       "imdb_id": "nm0196263",
       "name": "Karol Cristina da Silva",
       "place_of_birth": null,
-      "popularity": 0.000104,
+      "popularity": 0.000299,
       "profile_path": "/2YpNv0In4HZHByd6vSPbMSoKDFL.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2512,7 +2246,7 @@
       "imdb_id": "nm0852028",
       "name": "Benedict Taylor",
       "place_of_birth": "Hampstead - London - England - UK",
-      "popularity": 0.000701,
+      "popularity": 0.001636,
       "profile_path": "/tyZAHcq5IfK7rco9JptkRh4oNGS.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2533,7 +2267,7 @@
       "imdb_id": "nm0807734",
       "name": "Clarence Smith",
       "place_of_birth": "London - England - UK",
-      "popularity": 0.000002,
+      "popularity": 0.055443,
       "profile_path": "/zKvjmgqf08T3Xz7uwTrEvxB7qqZ.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2554,7 +2288,7 @@
       "imdb_id": "nm1239340",
       "name": "Steven Boyle",
       "place_of_birth": "",
-      "popularity": 0.14175,
+      "popularity": 0.095508,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -2575,7 +2309,7 @@
       "imdb_id": "nm1091328",
       "name": "Paul Spence",
       "place_of_birth": null,
-      "popularity": 0.273,
+      "popularity": 0.09324,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -2596,7 +2330,7 @@
       "imdb_id": "nm0746419",
       "name": "Matt Rowan",
       "place_of_birth": null,
-      "popularity": 0.042525,
+      "popularity": 0.063788,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -2618,7 +2352,7 @@
       "imdb_id": "nm0086592",
       "name": "Jerome Blake",
       "place_of_birth": "England - UK",
-      "popularity": 0.002552,
+      "popularity": 0.09891,
       "profile_path": "/tUJwV5OUV4P8zrlfkMtp1vU47Ot.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2645,7 +2379,7 @@
       "imdb_id": "nm0482851",
       "name": "Phil LaMarr",
       "place_of_birth": "Los Angeles, California, USA",
-      "popularity": 0.388344,
+      "popularity": 0.59084,
       "profile_path": "/2rYa0M1bOSAATGbF5oe5pmoNeDn.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2666,7 +2400,7 @@
       "imdb_id": "nm0440286",
       "name": "Claudia Karvan",
       "place_of_birth": "Sydney, New South Wales, Australia",
-      "popularity": 0.135669,
+      "popularity": 0.004041,
       "profile_path": "/4M0Z25W9hI2ihSa6xBrdFxmBdTD.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2688,7 +2422,7 @@
       "imdb_id": "nm0633682",
       "name": "Trisha Noble",
       "place_of_birth": "Marrickville - New South Wales - Australia",
-      "popularity": 0.000092,
+      "popularity": 0.000401,
       "profile_path": "/zDlrzpJUyVqynhH5hzZK9v4urS8.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2709,7 +2443,7 @@
       "imdb_id": "nm0089882",
       "name": "Graeme Blundell",
       "place_of_birth": "Melbourne - Victoria - Australia",
-      "popularity": 0.276413,
+      "popularity": 0.000014,
       "profile_path": "/gVV7qhA0bXBUa0XmVHUnOJH3u2k.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2730,7 +2464,7 @@
       "imdb_id": "nm0654481",
       "name": "Warren Owens",
       "place_of_birth": null,
-      "popularity": 0.000039,
+      "popularity": 0.000071,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -2751,7 +2485,7 @@
       "imdb_id": "nm0456130",
       "name": "Christopher Kirby",
       "place_of_birth": "",
-      "popularity": 0.000029,
+      "popularity": 0.00575,
       "profile_path": "/so9OxqBJDfCUp84Ja4PEMnWECAP.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2778,7 +2512,7 @@
       "imdb_id": "nm0048389",
       "name": "Dee Bradley Baker",
       "place_of_birth": "Bloomington - Indiana - USA",
-      "popularity": 0.958722,
+      "popularity": 2.899152,
       "profile_path": "/zFXwtsdvUCeNkzCzYpYZdAmTkJY.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2799,7 +2533,7 @@
       "imdb_id": "nm0607325",
       "name": "Temuera Morrison",
       "place_of_birth": "Rotorua, North Island, New Zealand",
-      "popularity": 13.2177,
+      "popularity": 2.967112,
       "profile_path": "/A1nD5J5uRwJM4hnpXd3DdmwZGjP.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2822,7 +2556,7 @@
       "imdb_id": "nm0503236",
       "name": "Richard LeParmentier",
       "place_of_birth": null,
-      "popularity": 0.001742,
+      "popularity": 0.91,
       "profile_path": "/eyQiSGCHIcmdU2gqKWZbneQEvFj.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2843,7 +2577,7 @@
       "imdb_id": "nm0567018",
       "name": "Alex McCrindle",
       "place_of_birth": " Glasgow, Scotland, UK",
-      "popularity": 0.000001,
+      "popularity": 0.082924,
       "profile_path": "/6Q1m79FMq444Q6VpmdERSqvwxpX.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2864,7 +2598,7 @@
       "imdb_id": "nm0532815",
       "name": "Angus MacInnes",
       "place_of_birth": "Windsor, Ontario, Canada",
-      "popularity": 0.005576,
+      "popularity": 0.444358,
       "profile_path": "/qftkol8hj7yBBP3KCxRWYkhRyLC.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2885,7 +2619,7 @@
       "imdb_id": "nm0377120",
       "name": "Drewe Henley",
       "place_of_birth": "",
-      "popularity": 0.000306,
+      "popularity": 0.273788,
       "profile_path": "/C28FmnpDyhI9BwD6YjagAe1U53.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2906,7 +2640,7 @@
       "imdb_id": "nm0030193",
       "name": "David Ankrum",
       "place_of_birth": "Santa Clara County, California, USA",
-      "popularity": 0.546,
+      "popularity": 0.002718,
       "profile_path": "/vo6JMA38exMSSbyQ3K0YCBwBrWT.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2927,7 +2661,7 @@
       "imdb_id": "nm0039061",
       "name": "Graham Ashley",
       "place_of_birth": null,
-      "popularity": 0.000002,
+      "popularity": 0.028705,
       "profile_path": "/wp02ruOjX8AiGMrRD8QEBljgnlA.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2948,7 +2682,7 @@
       "imdb_id": "nm0090124",
       "name": "Bruce Boa",
       "place_of_birth": "Calgary - Alberta - Canada",
-      "popularity": 0.000019,
+      "popularity": 0.028705,
       "profile_path": "/nPCLZTuTfOzSN5CvMnocX3hS92P.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2969,7 +2703,7 @@
       "imdb_id": "nm0001652",
       "name": "John Ratzenberger",
       "place_of_birth": "Bridgeport - Connecticut - USA",
-      "popularity": 3.487299,
+      "popularity": 0.230485,
       "profile_path": "/yGechiKWL6TJDfVE2KPSJYqdMsY.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2990,7 +2724,7 @@
       "imdb_id": "nm0539095",
       "name": "Christopher Malcolm",
       "place_of_birth": "Aberdeen, Aberdeenshire, Scotland, UK",
-      "popularity": 0.000004,
+      "popularity": 0.000044,
       "profile_path": "/9Ua0yZoI6dZQ5VDqfU096dAM1Un.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3012,7 +2746,7 @@
       "imdb_id": "nm0171829",
       "name": "Kenneth Colley",
       "place_of_birth": "Manchester, England",
-      "popularity": 0.00009,
+      "popularity": 0.012207,
       "profile_path": "/yNZF27tBauzUcg6Fw7M2xsRD8IC.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3034,7 +2768,7 @@
       "imdb_id": "nm0790410",
       "name": "Michael Sheard",
       "place_of_birth": "Aberdeenshire, Scotland, UK",
-      "popularity": 0.889,
+      "popularity": 0.001902,
       "profile_path": "/a29SbacT0kV8WWuoAMp2FHI5Y7I.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3055,7 +2789,7 @@
       "imdb_id": "nm0608014",
       "name": "John Morton",
       "place_of_birth": null,
-      "popularity": 0.2835,
+      "popularity": 0.000001,
       "profile_path": "/dizbXcyBZr1BKdjYlWpjy64FJcV.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3076,7 +2810,7 @@
       "imdb_id": "nm0514282",
       "name": "Ian Liston",
       "place_of_birth": "Crosby - Merseyside - England - UK",
-      "popularity": 0.005742,
+      "popularity": 0.000014,
       "profile_path": "/k6jCo3N5kFJ7PBybJRRR4b0ngKV.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3097,7 +2831,7 @@
       "imdb_id": "nm0135633",
       "name": "Mark Capri",
       "place_of_birth": null,
-      "popularity": 0.0,
+      "popularity": 0.00007,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -3118,7 +2852,7 @@
       "imdb_id": "nm0672190",
       "name": "Michael Pennington",
       "place_of_birth": "Cambridge - Cambridgeshire - England - UK",
-      "popularity": 0.000158,
+      "popularity": 0.446355,
       "profile_path": "/jreFHCg8golvAEbcwzKtPoqg6YZ.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3140,7 +2874,7 @@
       "imdb_id": "nm0001884",
       "name": "Max von Sydow",
       "place_of_birth": "Lund, Sk\u00e5ne l\u00e4n, Sweden",
-      "popularity": 6.213328,
+      "popularity": 3.636958,
       "profile_path": "/nwRB1DDylWFC4120kfbtPq2pZzA.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3161,7 +2895,7 @@
       "imdb_id": "nm3485845",
       "name": "Adam Driver",
       "place_of_birth": "San Diego,CA, USA",
-      "popularity": 10.456681,
+      "popularity": 4.28877,
       "profile_path": "/p0uafqSJrpjat0BacU7nDhhiNIS.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3182,7 +2916,7 @@
       "imdb_id": "nm0670408",
       "name": "Simon Pegg",
       "place_of_birth": "Brockworth, Gloucestershire, England, UK",
-      "popularity": 6.837795,
+      "popularity": 3.655325,
       "profile_path": "/23e2uoNlpDvLumNic16fS2YjZjL.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3203,7 +2937,7 @@
       "imdb_id": "nm1727304",
       "name": "Domhnall Gleeson",
       "place_of_birth": "Dublin, Ireland",
-      "popularity": 4.687426,
+      "popularity": 3.789137,
       "profile_path": "/vAvZLGZb6eik0DuIbLgqcSu9gRS.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3224,7 +2958,7 @@
       "imdb_id": "nm0273797",
       "name": "Sebastian Armesto",
       "place_of_birth": null,
-      "popularity": 0.000002,
+      "popularity": 0.020029,
       "profile_path": "/AhYOTKn1UgC0SveUfBsE54C3Vj5.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3245,7 +2979,7 @@
       "imdb_id": "nm4451290",
       "name": "Brian Vernel",
       "place_of_birth": null,
-      "popularity": 0.000001,
+      "popularity": 0.000004,
       "profile_path": "/xvC5diN35LZrF1Q4uIpaZYGTpiO.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3266,7 +3000,7 @@
       "imdb_id": "nm0785227",
       "name": "Andy Serkis",
       "place_of_birth": "Ruislip, Middlesex, UK",
-      "popularity": 7.706871,
+      "popularity": 3.411745,
       "profile_path": "/nQRsxFveJaUIlZ4GYWDe9uJ6u2f.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3287,7 +3021,7 @@
       "imdb_id": "nm2143282",
       "name": "Lupita Nyong'o",
       "place_of_birth": "Mexico City - Mexico",
-      "popularity": 4.931406,
+      "popularity": 2.694589,
       "profile_path": "/y3p0OMzIuAmcNt700RayK5A0k6t.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3308,7 +3042,7 @@
       "imdb_id": "nm0342399",
       "name": "Greg Grunberg",
       "place_of_birth": "Los Angeles - California - USA",
-      "popularity": 0.332244,
+      "popularity": 1.112521,
       "profile_path": "/kFK6AaPoUlLJArwLuHetUav8q19.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3329,7 +3063,7 @@
       "imdb_id": "nm0504962",
       "name": "Ken Leung",
       "place_of_birth": "New York City - New York - USA",
-      "popularity": 0.383322,
+      "popularity": 0.139902,
       "profile_path": "/kftJqCNab1x5W29b46rLUeXkwZi.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3350,7 +3084,7 @@
       "imdb_id": null,
       "name": "Stefan Grube",
       "place_of_birth": null,
-      "popularity": 0.000014,
+      "popularity": 0.000006,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -3371,7 +3105,7 @@
       "imdb_id": "nm0551136",
       "name": "Rocky Marshall",
       "place_of_birth": null,
-      "popularity": 0.000001,
+      "popularity": 0.000235,
       "profile_path": "/vIjpzunxC3M5CL1A6zp6RUJVSVn.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3392,7 +3126,7 @@
       "imdb_id": "nm0003214",
       "name": "Matthew Wood",
       "place_of_birth": "Walnut Creek - California - USA",
-      "popularity": 0.019886,
+      "popularity": 0.031058,
       "profile_path": "/oB9wVbEIg8fjY3ulDKjKsGn2A55.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3414,7 +3148,7 @@
       "imdb_id": "nm3725055",
       "name": "Jessica Henwick",
       "place_of_birth": null,
-      "popularity": 1.063125,
+      "popularity": 0.000766,
       "profile_path": "/hgGpPBqZ9nXJkjPzle8iACIuXnP.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3435,7 +3169,7 @@
       "imdb_id": null,
       "name": "James McArdle",
       "place_of_birth": null,
-      "popularity": 0.001723,
+      "popularity": 0.00009,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
