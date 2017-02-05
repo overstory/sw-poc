@@ -36,7 +36,11 @@ class NeoLoadHandler implements Handler
 	@Override
 	void handle (Context context) throws Exception
 	{
+		// Scripts are run in this order
+		List<String> scriptNames = [ 'add-constraints', 'swapi-load-cypher', 'swsocial-load-cypher', 'moviedb-load-cypher' ]
+
 		Map<String,Map> scripts = [
+			'add-constraints': [:],
 			'swapi-load-cypher': ['json': getResourceAsJson ('swapi-json')],
 			'swsocial-load-cypher': ['interactions': buildInteractions (getResourceAsJson ('swsocial-char-map'), getResourceAsJson ('swsocial-interactions'))],
 			'moviedb-load-cypher': ['json': getResourceAsJson ('moviedb-json')]
@@ -44,9 +48,10 @@ class NeoLoadHandler implements Handler
 
 		List<ReceivedResponse> responses = []
 
+		scriptNames.each { String name ->
+			Map value = scripts [name]
 
-		scripts.each { String key, Map value ->
-			neo4JServer.runRequest (getResourceAsText (key), value).then { responseList ->
+			neo4JServer.runRequest (getResourceAsText (name), value).then { responseList ->
 				responses.addAll (responseList)
 			}
 		}

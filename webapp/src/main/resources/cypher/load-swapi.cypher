@@ -1,23 +1,7 @@
 
 // Loads the merged SWAPI JSON data into Neo4J
 
-CREATE CONSTRAINT ON (f:Film) ASSERT f.url IS UNIQUE
-// TX-SPLIT ---------------------------------
-CREATE CONSTRAINT ON (c:Character) ASSERT c.url IS UNIQUE
-// TX-SPLIT ---------------------------------
-CREATE CONSTRAINT ON (p:Planet) ASSERT p.url IS UNIQUE
-// TX-SPLIT ---------------------------------
-CREATE CONSTRAINT ON (s:Species) ASSERT s.url IS UNIQUE
-// TX-SPLIT ---------------------------------
-CREATE CONSTRAINT ON (sh:Starship) ASSERT sh.url IS UNIQUE
-// TX-SPLIT ---------------------------------
-CREATE CONSTRAINT ON (v:Vehicle) ASSERT v.url IS UNIQUE
-// TX-SPLIT ---------------------------------
-CREATE CONSTRAINT ON (a:Actor) ASSERT a.movieDbId IS UNIQUE
-
-// TX-SPLIT ---------------------------------
-
-// Removed Category from the graph, un-necessarily cluttered, label serve the same purpose
+// Removed Category from the graph, un-necessarily cluttered, labels serve the same purpose
 //MERGE (swapi:Swapi)
 //  ON CREATE SET swapi.name = 'Star Wars API', swapi.downloaded = {json}.downloaded
 
