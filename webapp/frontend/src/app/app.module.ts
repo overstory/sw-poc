@@ -10,6 +10,7 @@ import { routing, appRoutingProviders } from './app.routes';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { QueryComponent } from './pages/query/query.component';
+import { ForceComponent } from './shared/force/force.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { QueryComponent } from './pages/query/query.component';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    QueryComponent
+    QueryComponent,
+	ForceComponent
   ],
   imports: [
     BrowserModule,
