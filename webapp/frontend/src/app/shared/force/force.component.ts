@@ -12,7 +12,7 @@ import * as d3 from 'd3';
 export class ForceComponent implements OnInit {
   @ViewChild('chart') private chartContainer: ElementRef;
   @Input() private data: Array<any>;
-  private margin: any = {top: 20, bottom: 20, left: 20, right: 20};
+  private margin: any = { top: 20, bottom: 20, left: 20, right: 20 };
   private chart: any;
   private width: number;
   private height: number;
@@ -61,11 +61,10 @@ export class ForceComponent implements OnInit {
 
   ngOnInit() {
 
-    this.createChart (this.dataTest);
-    if (this.dataTest) {
-      this.updateChart (this.dataTest);
+    this.createChart (this.data);
+    if (this.data) {
+      this.updateChart (this.data);
     }
-    console.log (JSON.stringify (this.dataTest));
   }
 
   ngOnChanges() {
@@ -201,7 +200,6 @@ export class ForceComponent implements OnInit {
       .attr ("r", this.nodeRadius)
       //change the outer layer of circle's colour
       .style ("stroke", function (d: any, i: any) {
-        console.log ("i is:" + d.group);
         return color (d.group);
       })
       .style("fill", "#eee");
@@ -225,7 +223,7 @@ export class ForceComponent implements OnInit {
           .delay (300)
           .duration (200)
           .style ("opacity", .9);
-        div.html ('<div class="name">' + d.id + '</div><br/><p class="biography">' + d.biography + '</p>')
+        div.html ('<div class="name">' + d.name + '</div><p class="biography">' + d.biography + '</p>')
           .style ("left", (d3.event.pageX) + "px")
           .style ("top", (d3.event.pageY - 28) + "px");
       })

@@ -18,8 +18,15 @@
 
   <div>
     <h4>Barchart Layout</h4>
-    <app-force [data]="chartData"></app-force>
+    <app-force *ngIf="chartData" [data]="chartData"></app-force>
     <hr/>
+  </div>
+
+  <div>
+    <h4>New service example</h4>
+    <form (ngSubmit)="runNeo()">
+      <button type="submit" class="btn">RunNeo</button>
+    </form>
   </div>
 </div>
 
