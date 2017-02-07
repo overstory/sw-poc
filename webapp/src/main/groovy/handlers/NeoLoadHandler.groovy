@@ -42,7 +42,7 @@ class NeoLoadHandler implements Handler
 		Map<String,Map> scripts = [
 			'add-constraints': [:],
 			'swapi-load-cypher': ['json': getResourceAsJson ('swapi-json')],
-			'swsocial-load-cypher': ['interactions': buildInteractions (getResourceAsJson ('swsocial-char-map'), getResourceAsJson ('swsocial-interactions'))],
+			'swsocial-load-cypher': ['interactions': buildInteractions (getResourceAsJson ('swsocial-char-map'), getResourceAsJson ('swsocial-interactions')).getContent()],
 			'moviedb-load-cypher': ['json': getResourceAsJson ('moviedb-json')]
 		]
 

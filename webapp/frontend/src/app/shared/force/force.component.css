@@ -1,0 +1,50 @@
+.d3-chart {
+    width: 100%;
+    height: 800px;
+    background-color: #fff;
+    border: 4px solid black;
+}
+
+.d3-chart .axis path,
+.d3-chart .axis line {
+    stroke: #999;
+}
+
+.d3-chart .axis text {
+    fill: #999;
+}
+/* Styles go here */
+
+.links line {
+    stroke: #999;
+    stroke-opacity: 0.6;
+}
+
+.nodes circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+
+.node-text {
+    font-size: 9px;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+div.name {
+    font-weight: bold;
+}
+
+p.biography {
+    font-size: 8px;
+}
