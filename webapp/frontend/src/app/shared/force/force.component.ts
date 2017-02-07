@@ -17,42 +17,6 @@ export class ForceComponent implements OnInit {
   private width: number;
   private height: number;
   private nodeRadius: number = 25;
-  @Input() private dataTest : any = {
-    "nodes": [
-      {
-        "id": "Yoda",
-        "group": "Actor",
-        "img": "http://image.tmdb.org/t/p/w185/azFYGqcDS1Oo8skhbHzGPZSICTU.jpg",
-        "biography": "Old guy. Very old."
-      },
-      {
-        "id": "Han Solo",
-        "group": "Actor",
-        "img": "http://image.tmdb.org/t/p/w185/i8LGOkTaR5g6vh81dic7nfM975t.jpg",
-        "biography": "His best friend is the hairy one"
-      },
-      {
-        "id": "Leia Organa",
-        "group": "Actor",
-        "img": "http://image.tmdb.org/t/p/w185/pbleNurCYdrLFQMEnlQB2nkOR1O.jpg",
-        "biography": "She is just a princess from Alderaan."
-      },
-      {
-        "id": "Jar Jar",
-        "group": "Voice",
-        "img": "http://image.tmdb.org/t/p/w185/kBblb0GZjqN3W1VcJ2J5IkC7Qg3.jpg",
-        "biography": "crazy long eared beast"
-      },
-      {"id": "Boba Fett", "group": "Film", "biography": "The villain"}
-    ],
-    "links": [
-      {"source": "Yoda", "target": "Han Solo", "strength": 1, "relationship": ":FRIEND_OF"},
-      {"source": "Yoda", "target": "Leia Organa", "strength": 4, "relationship": ":KNOWS"},
-      {"source": "Leia Organa", "target": "Han Solo", "strength": 1, "relationship": ":IN_RELATIONSHIP"},
-      {"source": "Han Solo", "target": "Jar Jar", "strength": 1, "relationship": ":IS_AFFILIATED_WITH"}
-    ]
-  };
-
 
 
   constructor() {
@@ -193,16 +157,32 @@ export class ForceComponent implements OnInit {
       .style ("opacity", 0);
 
 
-    /*
-    The node logic is here. Create a circle
-     */
+    //circle with a opaque fill so that lines in background are not visible
+    var circle = node.append ("circle")
+      .attr ("r", this.nodeRadius)
+      .style("fill", "#eee");
+
     var circle = node.append ("circle")
       .attr ("r", this.nodeRadius)
       //change the outer layer of circle's colour
       .style ("stroke", function (d: any, i: any) {
+        console.log ("i is:" + d.group);
         return color (d.group);
       })
-      .style("fill", "#eee");
+      //.style("fill", "#eee")
+      .style("fill", function (d: any, i: any) {
+        return color (d.group);
+      })
+      .style("fill-opacity", 0.2);
+
+    var text = node.append("text")
+      .text( function(d: any) {
+        return d.name;
+      })
+      .attr ("class", "node-text")
+      .attr("text-anchor", "middle")
+      .attr ("dy", ".35em")
+      .attr ("clip-path", "url(#circle-view)");
 
     var image = node.append ("image")
     // width height directly relates to inverse x/y here. divide by 2 here
