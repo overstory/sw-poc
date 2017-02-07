@@ -99,7 +99,7 @@ export class Neo4jService {
                  checkExists = true;
                }
              }
-             if (checkExists != true) {
+          //   if (checkExists != true) {
                output.links.push({
                  source: relationships[i].startNode,
                  target: relationships[i].endNode,
@@ -107,7 +107,7 @@ export class Neo4jService {
                  relationship: relationships[i].type
                });
              }
-           }
+          // }
          }
          return output;
        })

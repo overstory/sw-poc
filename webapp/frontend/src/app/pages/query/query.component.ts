@@ -18,7 +18,19 @@ export class QueryComponent implements OnInit {
   }
 
   runNeo()  {
-      var query = "MATCH (n:Character {name: \"Nute Gunray\"})-[p:PORTRAYED_BY]->(Actor) RETURN n,p";
+     var query = {
+        "statements": [
+          {
+            "statement": "MATCH (n:Character {name: \"Leia Organa\"})-[p]-()\nRETURN n,p \nLIMIT 250",
+            "parameters": null,
+            "resultDataContents": [
+              "graph"
+            ],
+            "includeStats": true
+          }
+        ]
+      };
+
       var query2 = {
         "statements": [
           {
@@ -32,7 +44,20 @@ export class QueryComponent implements OnInit {
         ]
       };
 
-      this.neo4j.rawQuery(query2).subscribe(data => this.chartData = data);
+      var query3 = {
+        "statements": [
+          {
+            "statement": "MATCH (n)-[r]-() RETURN n,r LIMIT 100",
+            "parameters": null,
+            "resultDataContents": [
+              "graph"
+            ],
+            "includeStats": true
+          }
+        ]
+      };
+
+      this.neo4j.rawQuery(query3).subscribe(data => this.chartData = data);
   }
 
 }
