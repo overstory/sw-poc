@@ -26,6 +26,10 @@
 }
 
 
+.node-text {
+    font-size: 9px;
+}
+
 div.tooltip {
     position: absolute;
     text-align: center;

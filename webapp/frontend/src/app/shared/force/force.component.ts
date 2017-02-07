@@ -33,7 +33,7 @@ export class ForceComponent implements OnInit {
 
   ngOnChanges() {
     if (this.chart) {
-      this.updateChart (this.dataTest);
+      this.updateChart (this.data);
     }
   }
 
@@ -289,8 +289,8 @@ export class ForceComponent implements OnInit {
     updateLinks.exit().remove();
 
     // update existing circles
-    let updateNodes = this.chart.selectAll ("circle")
-      .data (this.dataTest.nodes);
+   let updateNodes = this.chart.selectAll ("circle")
+      .data (data.nodes);
 
     // add new nodes
     updateNodes
