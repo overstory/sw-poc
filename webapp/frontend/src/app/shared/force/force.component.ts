@@ -223,7 +223,7 @@ export class ForceComponent implements OnInit {
           .delay (300)
           .duration (200)
           .style ("opacity", .9);
-        div.html ('<div class="name">' + d.name + '</div><p class="biography">' + d.biography + '</p>')
+        div.html ('<div class="name">' + d.group + ": " + d.name + '</div><p class="biography">' + d.biography + '</p>')
           .style ("left", (d3.event.pageX) + "px")
           .style ("top", (d3.event.pageY - 28) + "px");
       })
