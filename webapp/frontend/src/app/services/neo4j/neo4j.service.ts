@@ -83,7 +83,7 @@ export class Neo4jService {
                 id: nodes[i].id,
                 name: nodes[i].properties.name,
                 group: nodes[i].labels[0], //todo: fix this and use more groups
-                img: (nodes[i].properties.profileImg == null) ? "http://vignette4.wikia.nocookie.net/java/images/e/ea/Question_Mark.jpg" : this.settings.moviedbBaseUrl + nodes[i].properties.profileImg,
+                img: (nodes[i].properties.movieDbImage == null) ? null : this.settings.moviedbBaseUrl + nodes[i].properties.movieDbImage,
                 biography: (nodes[i].properties.biography == null) ? "Default bio" : nodes[i].properties.biography
               });
             }

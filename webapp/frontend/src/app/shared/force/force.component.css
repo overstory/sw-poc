@@ -1,9 +1,8 @@
 .d3-chart {
     width: 100%;
-    height: 400px;
+    height: 800px;
     background-color: #fff;
-    border-style: solid;
-    border-width: 1px;
+    border: 4px solid black;
 }
 
 .d3-chart .axis path,

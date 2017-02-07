@@ -122,7 +122,7 @@ export class ForceComponent implements OnInit {
     var color = d3.scaleOrdinal(d3.schemeCategory20);
 
     var simulation = d3.forceSimulation()
-      .force ("charge", d3.forceManyBody())
+      .force ("charge", d3.forceManyBody().strength(-2000).distanceMax(500).distanceMin(10))
       .force ("center", d3.forceCenter(width / 2, height / 2))
 
 
@@ -245,7 +245,7 @@ export class ForceComponent implements OnInit {
 
 	simulation.force("link", d3.forceLink().id (function (d: any) {
 	  return d.id;
-	}).distance (200).links (data.links))
+	}).links (data.links))
 
 
     function ticked() {

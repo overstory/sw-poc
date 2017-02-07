@@ -14,20 +14,14 @@
 
 <a name="about"></a>
 <div class="container">
-  <div id="network_canvas"></div>
-
-  <div>
-    <h4>Barchart Layout</h4>
+  <div id="network_canvas">
     <app-force *ngIf="chartData" [data]="chartData"></app-force>
-    <hr/>
-  </div>
-
-  <div>
-    <h4>New service example</h4>
     <form (ngSubmit)="runNeo()">
       <button type="submit" class="btn">RunNeo</button>
     </form>
+    <hr/>
   </div>
+
 </div>
 
 
