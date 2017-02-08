@@ -211,7 +211,13 @@ export class ForceComponent implements OnInit {
         div.transition()
           .duration (500)
           .style ("opacity", 0);
-      });
+      })
+      .on ("mousedown", function (d: any) {
+        div.transition()
+          .duration (100)
+          .style ("opacity", 0);
+      })
+        ;
 
     /* uncomment this if tooltip does not look good
      node.append("title")
@@ -228,9 +234,9 @@ export class ForceComponent implements OnInit {
 	}).links (data.links))
 
     function getTooltipText(data) {
-      let description = '<div class="name">' + data.group + ": " + data.name + '</div>'
+      let description = '<h2 class="tooltip-name">' + data.group + ": " + data.name + '</h2>'
       if (data.description != null) {
-        description += '<p class="description">' + data.description + '</p>'
+        description += '<p class="tooltip-description">' + data.description + '</p>'
       }
       return description
     }
