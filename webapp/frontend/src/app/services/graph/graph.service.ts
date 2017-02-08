@@ -19,7 +19,7 @@ export class GraphService {
     let url = this.settings.endpoint + query;
     return this.http.get (url)
       .map(res => {
-        let results = res.json().data;
+        let results = res.json().network;
         let output = {
           nodes: [],
           links: []
@@ -38,10 +38,10 @@ export class GraphService {
             output.nodes.push({
               id: results.nodes[i].id,
               name: results.nodes[i].label,
-              //group: nodes[i].labels[0], //todo: fix this and use more groups
-              //img: (nodes[i].properties.movieDbImage == null) ? null : this.settings.moviedbBaseUrl + nodes[i].properties.movieDbImage,
-              //biography: (nodes[i].properties.biography == null) ? "Default bio" : nodes[i].properties.biography
-              url: results.nodes[i].url
+              group: results.nodes[i].types[0], //todo: fix this and use more groups
+              img: (results.nodes[i].depiction == null) ? null : results.nodes[i].depiction,
+              description: (results.nodes[i].description == null) ? null : results.nodes[i].description,
+              url: results.nodes[i].swapi_url
             });
           }
         }
@@ -60,14 +60,15 @@ export class GraphService {
             source: results.edges[i].from,
             target: results.edges[i].to,
             strength: 1,
-            arrows: results.edges[i].arrows,
+            arrows: results.edges[i].arrows[1],
             relationship: results.edges[i].label
           });
           //}
         }
+        console.log(output);
         return output;
       })
-      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+      .catch((error:any) => Observable.throw(error.json() || 'Server error'));
   }
 
 }

@@ -203,7 +203,7 @@ export class ForceComponent implements OnInit {
           .delay (300)
           .duration (200)
           .style ("opacity", .9);
-        div.html ('<div class="name">' + d.group + ": " + d.name + '</div><p class="biography">' + d.biography + '</p>')
+        div.html ( getTooltipText(d) )
           .style ("left", (d3.event.pageX) + "px")
           .style ("top", (d3.event.pageY - 28) + "px");
       })
@@ -227,6 +227,13 @@ export class ForceComponent implements OnInit {
 	  return d.id;
 	}).links (data.links))
 
+    function getTooltipText(data) {
+      let description = '<div class="name">' + data.group + ": " + data.name + '</div>'
+      if (data.description != null) {
+        description += '<p class="description">' + data.description + '</p>'
+      }
+      return description
+    }
 
     function ticked() {
       // TODO: may want to combine link label with white box underneath so less calculations are done. may have performance issues later on

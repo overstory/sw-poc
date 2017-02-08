@@ -15,7 +15,7 @@ export class QueryComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.graph.getQueryResults("directed-by").subscribe(data => this.chartData = data);
+    this.graph.getQueryResults("referencing-nodes/8474").subscribe(data => this.chartData = data);
   }
 
 }
