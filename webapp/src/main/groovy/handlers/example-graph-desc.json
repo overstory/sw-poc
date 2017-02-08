@@ -1,0 +1,56 @@
+{
+	"options": [
+		{
+			"color": "#eeeeee"
+		}
+	],
+	"network": {
+		"options": {
+			"color": "#997733"
+		},
+		"nodes": [
+			{
+				"id": "2",
+				"label": "Quick Fox",
+				"description": "The quick brown fox jumped over the lazy dog",
+				"depiction": "http://someimageplace.org/abc/124/fox.jpg",
+				"group": 4,
+				"types": [
+					"Mammal", "Fox"
+				],
+				"size": 25,
+				"color": "#2d5f11"
+			},
+			{
+				"id": "53",
+				"label": "Fuzzy Bunny",
+				"description": "Fuzzy bunnies are noce",
+				"depiction": "http://someimageplace.org/abc/124/bunny.jpg",
+				"group": 7,
+				"types": [
+					"Mammal", "Rabbit"
+				],
+				"size": 16,
+
+			}
+		],
+		"edges": [
+			{
+				"id": "128",
+				"from": "53",
+				"to": "2",
+				"label": "BEST_FRIENDS",
+				"thickness": 3,
+				"color": "#112211",
+				"arrows": {
+					"NOTE": "this needs more thought",
+					"from": false,
+					"to": true,
+					"size": 4
+				},
+				"NOTE": "Line curvature, SVG arrowhead image, etc"
+			}
+		]
+	}
+
+}

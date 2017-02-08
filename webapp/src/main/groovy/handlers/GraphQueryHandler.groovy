@@ -1,6 +1,7 @@
 package handlers
 
 import com.google.inject.Inject
+import com.google.inject.name.Named
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
 import neo4j.Neo4JServer
@@ -18,11 +19,13 @@ import ratpack.http.client.ReceivedResponse
 class GraphQueryHandler implements Handler
 {
 	private final Neo4JServer neo4JServer
+	private final String movieDbBaseUri
 
 	@Inject
-	GraphQueryHandler (Neo4JServer neo4JServer)
+	GraphQueryHandler (Neo4JServer neo4JServer, @Named('MOVIEDB_IMAGE_BASE_URL') String movieDbBaseUri)
 	{
 		this.neo4JServer = neo4JServer
+		this.movieDbBaseUri = movieDbBaseUri
 	}
 
 	@Override
@@ -58,7 +61,7 @@ class GraphQueryHandler implements Handler
 				throw new RuntimeException (resp.body.text)
 			}
 
-			neoResultToVisJs (resp.body.text)
+			neoResultToResponseJson (resp.body.text)
 		}
 
 
@@ -68,7 +71,13 @@ class GraphQueryHandler implements Handler
 
 	// ----------------------------------------------------------------
 
-	private static String neoResultToVisJs (String neoJsonText)
+	/*
+
+
+
+	 */
+
+	private String neoResultToResponseJson (String neoJsonText)
 	{
 		Object neoJson = new JsonSlurper().parseText (neoJsonText)
 		List<Map<String,Object>> data = neoJson.results[0].data
@@ -85,23 +94,29 @@ class GraphQueryHandler implements Handler
 
 			nodes.each { Map<String,Object> node ->
 				if ( ! nodesSeen.contains (node.id)) {
-					nodeList << [id: node.id, label: node.properties.name, url: node.properties.url]
+					String desc = (node.properties.biography) ?: (node.properties.opening_crawl) ?: node.properties.description
+					String img = (node.properties.movieDbImage) ? "${movieDbBaseUri}${node.properties.movieDbImage}".toString() : node.properties.depiction
+
+					nodeList << [id: node.id, label: node.properties.name, swapi_url: node.properties.url, description: desc, birthday: node.properties.birthday, deathday: node.properties.deathday, gender: node.properties.gender, homepage: node.properties.homepage, depiction: img, types: node.labels ]
 					nodesSeen << node.id
 				}
 			}
 
 			relationships.each { Map<String,Object> rel ->
 				if ( ! edgesSeen.contains (rel.id)) {
-					edgeList << [id: rel.id, from: rel.startNode, to: rel.endNode, label: rel.type, arrows: 'to']
+					// ToDo: set arrowhead values according to directionality of relationship
+					Map<String,Object> arrowProps = [from: false, to: true]
+
+					edgeList << [id: rel.id, from: rel.startNode, to: rel.endNode, label: rel.type, arrows: arrowProps]
 					edgesSeen << rel.id
 				}
 			}
 		}
 
-		Map<String,Object> graphComponents = [ nodes: nodeList, edges: edgeList ]
-		Map<String,Object> network = [ data: graphComponents, options: bubbleOptions ]
+		Map<String,Object> network = [options:[], nodes: nodeList, edges: edgeList]
+		Map<String,Object> root = [options:[], network: network]
 
-		new JsonBuilder (network).toPrettyString()
+		new JsonBuilder (root).toPrettyString()
 	}
 
 	static final Map<String,Object> bubbleOptions = [

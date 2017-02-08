@@ -29,6 +29,7 @@ class AppConfig extends AbstractModule
 	final static String SWAPI_RESOURCE_MAP = "json/resource-map.json"
 
 	final static String MOVIEDB_BASE_URL = "http://api.themoviedb.org/3"
+	final static String MOVIEDB_IMAGE_BASE_URL = "http://image.tmdb.org/t/p/w185"
 	final static String MOVIEDB_API_KEY = "52201713fb76d70a41d93c1cefe0ae03"
 	final static String MOVIEDB_MOVIES_RESOURCE = "json/resource-map.json"
 	final static String MOVIEDB_ACTORS_RESOURCE = "json/moviedb-actors.json"
@@ -69,6 +70,7 @@ class AppConfig extends AbstractModule
 		bind (String).annotatedWith (Names.named ("SWAPI_JSON_PATH")).toInstance (SWAPI_ALL_OUTPUT_PATH)
 
 		bind (String).annotatedWith (Names.named ("MOVIEDB_BASE_URL")).toInstance (MOVIEDB_BASE_URL)
+		bind (String).annotatedWith (Names.named ("MOVIEDB_IMAGE_BASE_URL")).toInstance (MOVIEDB_IMAGE_BASE_URL)
 		bind (String).annotatedWith (Names.named ("MOVIEDB_API_KEY")).toInstance (MOVIEDB_API_KEY)
 		bind (String).annotatedWith (Names.named ("MOVIEDB_ACTORS_RESOURCE")).toInstance (MOVIEDB_ACTORS_RESOURCE)
 		bind (String).annotatedWith (Names.named ("MOVIEDB_MOVIES_RESOURCE")).toInstance (MOVIEDB_MOVIES_RESOURCE)
