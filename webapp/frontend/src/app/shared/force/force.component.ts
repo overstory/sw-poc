@@ -279,9 +279,8 @@ export class ForceComponent implements OnInit {
     }
 
     function dragended (d: any) {
+      // 'calm down' graph nodes after some time as we reach alpha = 0
       if (!d3.event.active) simulation.alphaTarget(0);
-      d.fx = null;
-      d.fy = null;
     }
   }
 
