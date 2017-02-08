@@ -1,5 +1,5 @@
 {
-  "timestamp": "2017-02-05T23:46:36.000Z",
+  "timestamp": "2017-02-08T00:13:03.000Z",
   "actors": [
     {
       "adult": false,
@@ -15,7 +15,7 @@
       "imdb_id": "nm0001190",
       "name": "David Prowse",
       "place_of_birth": "Bristol, England",
-      "popularity": 0.291829,
+      "popularity": 0.437744,
       "profile_path": "/cJtmBVrjYwawh2cCiAfZkEjPeqc.jpg",
       "swapiId": "http://swapi.co/api/people/4/",
       "swapiMovies": [
@@ -39,7 +39,7 @@
       "imdb_id": "nm0000469",
       "name": "James Earl Jones",
       "place_of_birth": "Arkabutla, Mississippi, USA",
-      "popularity": 2.902592,
+      "popularity": 3.670778,
       "profile_path": "/2ZuBf3ip2RXhkiQqGUjbUzAf4Nx.jpg",
       "swapiId": "http://swapi.co/api/people/4/",
       "swapiMovies": [
@@ -64,7 +64,7 @@
       "imdb_id": "nm0048652",
       "name": "Kenny Baker",
       "place_of_birth": "Birmingham, England, UK",
-      "popularity": 1.675303,
+      "popularity": 2.512955,
       "profile_path": "/sdd9rgifNF9C51RejG7sUGU8Bka.jpg",
       "swapiId": "http://swapi.co/api/people/3/",
       "swapiMovies": [
@@ -91,7 +91,7 @@
       "imdb_id": "nm1835544",
       "name": "Jimmy Vee",
       "place_of_birth": null,
-      "popularity": 0.4095,
+      "popularity": 0.61425,
       "profile_path": null,
       "swapiId": "http://swapi.co/api/people/3/",
       "swapiMovies": [
@@ -112,7 +112,7 @@
       "imdb_id": "nm0562679",
       "name": "Peter Mayhew",
       "place_of_birth": "Barnes - London - England - UK",
-      "popularity": 0.343103,
+      "popularity": 0.514655,
       "profile_path": "/din1s5H4C4CfcnkHfEeRcdFlsVj.jpg",
       "swapiId": "http://swapi.co/api/people/13/",
       "swapiMovies": [
@@ -137,7 +137,7 @@
       "imdb_id": "nm0352778",
       "name": "Bill Hader",
       "place_of_birth": "Tulsa - Oklahoma - USA",
-      "popularity": 4.933267,
+      "popularity": 4.27998,
       "profile_path": "/3Z5JsyLw7YTLZgpA3FAlLmFSN9F.jpg",
       "swapiId": "http://swapi.co/api/people/87/",
       "swapiMovies": [
@@ -158,7 +158,7 @@
       "imdb_id": "nm0000553",
       "name": "Liam Neeson",
       "place_of_birth": "Ballymena, County Antrim, Northern Ireland",
-      "popularity": 7.041822,
+      "popularity": 7.712547,
       "profile_path": "/9mdAohLsDu36WaXV2N3SQ388bvz.jpg",
       "swapiId": "http://swapi.co/api/people/32/",
       "swapiMovies": [
@@ -179,7 +179,7 @@
       "imdb_id": "nm0141324",
       "name": "Silas Carson",
       "place_of_birth": "England, UK",
-      "popularity": 0.000005,
+      "popularity": 0.000008,
       "profile_path": "/cT7Qyu8Zl8IDsgYzduzuCm1zxpt.jpg",
       "swapiId": "http://swapi.co/api/people/33/",
       "swapiMovies": [
@@ -202,7 +202,7 @@
       "imdb_id": "nm0000191",
       "name": "Ewan McGregor",
       "place_of_birth": "Perth, Scotland, UK",
-      "popularity": 10.194534,
+      "popularity": 8.65836,
       "profile_path": "/fHv0hv766frb4nqOua0zX0lqklH.jpg",
       "swapiId": "http://swapi.co/api/people/10/",
       "swapiMovies": [
@@ -227,7 +227,7 @@
       "imdb_id": "nm0000027",
       "name": "Alec Guinness",
       "place_of_birth": "Marylebone, London, England, UK",
-      "popularity": 3.796612,
+      "popularity": 1.838984,
       "profile_path": "/89QNJ7u1hNaCglkotmZEbwCNp1M.jpg",
       "swapiId": "http://swapi.co/api/people/10/",
       "swapiMovies": [
@@ -251,7 +251,7 @@
       "imdb_id": "nm0001519",
       "name": "Ian McDiarmid",
       "place_of_birth": "Carnoustie, Tayside, Scotland",
-      "popularity": 2.815559,
+      "popularity": 1.544668,
       "profile_path": "/8YkDYHhuWoCzP41fkqI1RXGTz2P.jpg",
       "swapiId": "http://swapi.co/api/people/21/",
       "swapiMovies": [
@@ -276,7 +276,7 @@
       "imdb_id": "nm0078886",
       "name": "Ahmed Best",
       "place_of_birth": "New York City - New York - USA",
-      "popularity": 0.000052,
+      "popularity": 0.000016,
       "profile_path": "/kBblb0GZjqN3W1VcJ2J5IkC7Qg3.jpg",
       "swapiId": "http://swapi.co/api/people/36/",
       "swapiMovies": [
@@ -303,7 +303,7 @@
       "imdb_id": "nm0818648",
       "name": "Steve Speirs",
       "place_of_birth": "Troedyrhiw - near Merthyr Tydfil - Wales - UK",
-      "popularity": 0.000033,
+      "popularity": 0.00001,
       "profile_path": "/cCNJouXVxnXJv9j26PaEWJxIkOE.jpg",
       "swapiId": "http://swapi.co/api/people/37/",
       "swapiMovies": [
@@ -325,7 +325,7 @@
       "imdb_id": "nm0851317",
       "name": "Fred Tatasciore",
       "place_of_birth": "New York City - New York - USA",
-      "popularity": 1.475472,
+      "popularity": 2.213208,
       "profile_path": "/lNe4zn9fJ302GehQVaFk5BNcGGM.jpg",
       "swapiId": "http://swapi.co/api/people/37/",
       "swapiMovies": [
@@ -346,7 +346,7 @@
       "imdb_id": "nm0000306",
       "name": "Brian Blessed",
       "place_of_birth": "Mexborough, Yorkshire, England, UK",
-      "popularity": 1.035804,
+      "popularity": 1.010741,
       "profile_path": "/azFYGqcDS1Oo8skhbHzGPZSICTU.jpg",
       "swapiId": "http://swapi.co/api/people/38/",
       "swapiMovies": [
@@ -368,7 +368,7 @@
       "imdb_id": "nm0000204",
       "name": "Natalie Portman",
       "place_of_birth": "Jerusalem, Israel",
-      "popularity": 11.065231,
+      "popularity": 9.619569,
       "profile_path": "/jJcRWku3e9OHrmRqytn6WcBjhvh.jpg",
       "swapiId": "http://swapi.co/api/people/35/",
       "swapiMovies": [
@@ -391,7 +391,7 @@
       "imdb_id": "nm0845941",
       "name": "Catherine Taber",
       "place_of_birth": null,
-      "popularity": 0.2667,
+      "popularity": 0.40005,
       "profile_path": "/3xCtIwBDiQe9smigTQXA2UUvuxy.jpg",
       "swapiId": "http://swapi.co/api/people/35/",
       "swapiMovies": [
@@ -412,7 +412,7 @@
       "imdb_id": "nm0114460",
       "name": "Ralph Brown",
       "place_of_birth": "Cambridge - Cambridgeshire - UK",
-      "popularity": 0.038286,
+      "popularity": 0.057429,
       "profile_path": "/ksIVhmaAB5oRiOkm9mDKALVkaJk.jpg",
       "swapiId": "http://swapi.co/api/people/39/",
       "swapiMovies": [
@@ -435,7 +435,7 @@
       "imdb_id": "nm0781181",
       "name": "Andrew Secombe",
       "place_of_birth": "Mumbles Head - South Wales - UK",
-      "popularity": 0.000155,
+      "popularity": 0.000047,
       "profile_path": "/oKLhyJo4doxuPBpuGzLQ3WGGu9f.jpg",
       "swapiId": "http://swapi.co/api/people/40/",
       "swapiMovies": [
@@ -459,7 +459,7 @@
       "imdb_id": "nm0533914",
       "name": "Lewis Macleod",
       "place_of_birth": "Glasgow - Scotland - UK",
-      "popularity": 0.000052,
+      "popularity": 0.000078,
       "profile_path": "/mv3TTVkxdDn11Gs2AWKvFzAuW7Y.jpg",
       "swapiId": "http://swapi.co/api/people/41/",
       "swapiMovies": [
@@ -482,7 +482,7 @@
       "imdb_id": "nm0000278",
       "name": "Pernilla August",
       "place_of_birth": "Stockholm, Stockholms lan, Sweden",
-      "popularity": 0.137921,
+      "popularity": 0.206882,
       "profile_path": "/zDMvEQCCUcjJeDWEstDBjoK8kA4.jpg",
       "swapiId": "http://swapi.co/api/people/43/",
       "swapiMovies": [
@@ -504,7 +504,7 @@
       "imdb_id": "nm0000355",
       "name": "Anthony Daniels",
       "place_of_birth": "Salisbury, Wiltshire, England, UK",
-      "popularity": 1.727456,
+      "popularity": 1.218237,
       "profile_path": "/cljvryjb3VwTsNR7fjQKjNPMaBB.jpg",
       "swapiId": "http://swapi.co/api/people/2/",
       "swapiMovies": [
@@ -531,7 +531,7 @@
       "imdb_id": "nm0661917",
       "name": "Ray Park",
       "place_of_birth": "Glasgow, Scotland, UK",
-      "popularity": 0.099658,
+      "popularity": 0.149487,
       "profile_path": "/3qB3uEjTOIkVy1cBAfCntGMRGDT.jpg",
       "swapiId": "http://swapi.co/api/people/44/",
       "swapiMovies": [
@@ -552,7 +552,7 @@
       "imdb_id": "nm0784818",
       "name": "Peter Serafinowicz",
       "place_of_birth": "Liverpool - England - UK",
-      "popularity": 0.974031,
+      "popularity": 0.992209,
       "profile_path": "/6bWPwi6HLej1gGObTjIzyLcxsYS.jpg",
       "swapiId": "http://swapi.co/api/people/44/",
       "swapiMovies": [
@@ -573,7 +573,7 @@
       "imdb_id": "nm1022429",
       "name": "Samuel Witwer",
       "place_of_birth": "",
-      "popularity": 0.000014,
+      "popularity": 0.000004,
       "profile_path": "/fJiYTRHIBP2gUxoM6QPBMCA6FVT.jpg",
       "swapiId": "http://swapi.co/api/people/44/",
       "swapiMovies": [
@@ -594,7 +594,7 @@
       "imdb_id": "nm5925474",
       "name": "Larry Ward",
       "place_of_birth": null,
-      "popularity": 0.000004,
+      "popularity": 0.000001,
       "profile_path": "/zRqHcr0ySV1IJiDVmpciCokzn3h.jpg",
       "swapiId": "http://swapi.co/api/people/16/",
       "swapiMovies": [
@@ -616,7 +616,7 @@
       "imdb_id": "nm0724656",
       "name": "Kevin Michael Richardson",
       "place_of_birth": "The Bronx, New York, USA",
-      "popularity": 2.666076,
+      "popularity": 2.899823,
       "profile_path": "/9dMOW2CFRrlDkNzeXVGMJfASupM.jpg",
       "swapiId": "http://swapi.co/api/people/16/",
       "swapiMovies": [
@@ -637,7 +637,7 @@
       "imdb_id": "nm0086685",
       "name": "Paul Blake",
       "place_of_birth": null,
-      "popularity": 0.000008,
+      "popularity": 0.000012,
       "profile_path": "/WSO4C7YdURE1thtj2MPkWSKD6o.jpg",
       "swapiId": "http://swapi.co/api/people/15/",
       "swapiMovies": [
@@ -658,33 +658,11 @@
       "imdb_id": "nm0207117",
       "name": "Maria De Aragon",
       "place_of_birth": null,
-      "popularity": 0.000233,
+      "popularity": 0.00007,
       "profile_path": "/rnaslrjV5ui6cKphksSni3K0TVQ.jpg",
       "swapiId": "http://swapi.co/api/people/15/",
       "swapiMovies": [
         "http://swapi.co/api/films/1/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": null,
-      "birthday": "1924-10-03",
-      "deathday": "1985-02-16",
-      "gender": 0,
-      "homepage": null,
-      "id": 159108,
-      "imdb_id": "nm5925474",
-      "name": "Larry Ward",
-      "place_of_birth": null,
-      "popularity": 0.000004,
-      "profile_path": "/zRqHcr0ySV1IJiDVmpciCokzn3h.jpg",
-      "swapiId": "http://swapi.co/api/people/15/",
-      "swapiMovies": [
-        "http://swapi.co/api/films/1/",
-        "http://swapi.co/api/films/3/"
       ]
     },
     {
@@ -701,7 +679,7 @@
       "imdb_id": "nm0000654",
       "name": "Terence Stamp",
       "place_of_birth": "Stepney, London, England, UK",
-      "popularity": 4.526769,
+      "popularity": 2.058031,
       "profile_path": "/fyGkLjgVfyKIPBaMQs5Df3gMuOV.jpg",
       "swapiId": "http://swapi.co/api/people/34/",
       "swapiMovies": [
@@ -722,7 +700,7 @@
       "imdb_id": "nm0750823",
       "name": "Ian Ruskin",
       "place_of_birth": "",
-      "popularity": 0.042525,
+      "popularity": 0.012758,
       "profile_path": null,
       "swapiId": "http://swapi.co/api/people/34/",
       "swapiMovies": [
@@ -745,7 +723,7 @@
       "imdb_id": "nm0000168",
       "name": "Samuel L. Jackson",
       "place_of_birth": "Washington - D.C. - USA",
-      "popularity": 13.088227,
+      "popularity": 13.026468,
       "profile_path": "/dlW6prW9HwYDsIRXNoFYtyHpSny.jpg",
       "swapiId": "http://swapi.co/api/people/51/",
       "swapiMovies": [
@@ -773,34 +751,11 @@
       "imdb_id": "nm0141333",
       "name": "Terrence 'T.C.' Carson",
       "place_of_birth": "Chicago, Illinois, USA",
-      "popularity": 0.162633,
+      "popularity": 0.04879,
       "profile_path": "/eto2MDC4VXLGiPOXNqSdlWJ5yxL.jpg",
       "swapiId": "http://swapi.co/api/people/51/",
       "swapiMovies": [
 
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": "From Wikipedia, the free encyclopedia\n\nSilas Carson (born 1965) is an English actor, mostly known for playing Jedi Master Ki-Adi-Mundi and Viceroy Nute Gunray in all three of the Star Wars prequels and providing the voice of the Ood in Doctor Who.\n\nIn Star Wars Episode I: The Phantom Menace, Carson also plays two other speaking parts, the Senator of the Trade Federation, Lott Dod (although his voice was replaced with that of actor Toby Longworth) and the co-pilot of the ship which Qui-Gon Jinn and Obi-Wan Kenobi are on in the first scene.\n\nHe also made a guest appearance on the BBC series Hustle, as Bollywood film fan and perfectionist Kulvinder Samar (whose correct name in the show is actually Kulvinda, but was written as Kulvinder in the credits), and in Spooks and The IT Crowd. He provided alien voices for the Doctor Who episodes \"The End of the World\", \"The Impossible Planet\", \"The Satan Pit\", \"Planet of the Ood\" and \"The End of Time\". In the latter four he voiced the Ood, a race once enslaved by humanity.\n\nSince late 2007 he has appeared in several episodes of BBC's school drama Waterloo Road as blackmailer Stuart Hordley.\n\nCarson also had a minor role in Series one of BBC sit-com Outnumbered as a character named Ravi when Sue and Pete had a dinner party.\n\nHe also starred in the third series of BBC3 comedy How Not to Live Your Life, alongside Dan Clark and David Armand. He plays Samantha's university professor/love interest Brian.\n\nDescription above from the Wikipedia article Silas Carson,licensed under CC-BY-SA, full list of contributors on Wikipedia.",
-      "birthday": "1965",
-      "deathday": "",
-      "gender": 0,
-      "homepage": "",
-      "id": 20806,
-      "imdb_id": "nm0141324",
-      "name": "Silas Carson",
-      "place_of_birth": "England, UK",
-      "popularity": 0.000005,
-      "profile_path": "/cT7Qyu8Zl8IDsgYzduzuCm1zxpt.jpg",
-      "swapiId": "http://swapi.co/api/people/52/",
-      "swapiMovies": [
-        "http://swapi.co/api/films/5/",
-        "http://swapi.co/api/films/6/",
-        "http://swapi.co/api/films/4/"
       ]
     },
     {
@@ -817,7 +772,7 @@
       "imdb_id": "nm0000568",
       "name": "Frank Oz",
       "place_of_birth": "Hereford, Herefordshire, England, United Kingdom ",
-      "popularity": 1.934015,
+      "popularity": 2.901023,
       "profile_path": "/aLH5bYwMIlVxCe4rIDaEsVJqDKn.jpg",
       "swapiId": "http://swapi.co/api/people/20/",
       "swapiMovies": [
@@ -843,7 +798,7 @@
       "imdb_id": "nm0001751",
       "name": "Jimmy Smits",
       "place_of_birth": "Brooklyn, New York, USA",
-      "popularity": 1.306479,
+      "popularity": 1.959719,
       "profile_path": "/8ZDeoaJbyIY52dJ6sEJNNytCfNC.jpg",
       "swapiId": "http://swapi.co/api/people/68/",
       "swapiMovies": [
@@ -871,7 +826,7 @@
       "imdb_id": "nm0482851",
       "name": "Phil LaMarr",
       "place_of_birth": "Los Angeles, California, USA",
-      "popularity": 0.59084,
+      "popularity": 0.877252,
       "profile_path": "/2rYa0M1bOSAATGbF5oe5pmoNeDn.jpg",
       "swapiId": "http://swapi.co/api/people/68/",
       "swapiMovies": [
@@ -893,7 +848,7 @@
       "imdb_id": "nm0481092",
       "name": "Jay Laga'aia",
       "place_of_birth": "Auckland - New Zealand",
-      "popularity": 0.000021,
+      "popularity": 0.000032,
       "profile_path": "/nvcGMAYvHkbEo8VmdDvIJlohVjn.jpg",
       "swapiId": "http://swapi.co/api/people/60/",
       "swapiMovies": [
@@ -915,7 +870,7 @@
       "imdb_id": null,
       "name": "James C. Mathis III",
       "place_of_birth": null,
-      "popularity": 0.000009,
+      "popularity": 0.000003,
       "profile_path": null,
       "swapiId": "http://swapi.co/api/people/60/",
       "swapiMovies": [
@@ -936,7 +891,7 @@
       "imdb_id": "nm0654240",
       "name": "Rena Owen",
       "place_of_birth": "Bay of Islands, New Zealand",
-      "popularity": 0.000326,
+      "popularity": 0.000489,
       "profile_path": "/gH41kolbpQswwqYomRiicZMOOXj.jpg",
       "swapiId": "http://swapi.co/api/people/73/",
       "swapiMovies": [
@@ -958,7 +913,7 @@
       "imdb_id": "nm0679715",
       "name": "Anthony Phelan",
       "place_of_birth": "",
-      "popularity": 0.0432,
+      "popularity": 0.01296,
       "profile_path": "/81fH305g9TTVvRj6xYO73bdS8X1.jpg",
       "swapiId": "http://swapi.co/api/people/72/",
       "swapiMovies": [
@@ -979,7 +934,7 @@
       "imdb_id": "nm0517535",
       "name": "Daniel Logan",
       "place_of_birth": "Auckland - New Zealand",
-      "popularity": 0.00001,
+      "popularity": 0.000015,
       "profile_path": "/oZ4tJ2qszpK8goamVxYCCMo2QTD.jpg",
       "swapiId": "http://swapi.co/api/people/22/",
       "swapiMovies": [
@@ -1000,7 +955,7 @@
       "imdb_id": "nm0120116",
       "name": "Jeremy Bulloch",
       "place_of_birth": "Market Harborough - Leicestershire - England - UK",
-      "popularity": 0.061721,
+      "popularity": 0.018516,
       "profile_path": "/yRnHoDmmWKdoLdiscCFfRpzzqMa.jpg",
       "swapiId": "http://swapi.co/api/people/22/",
       "swapiMovies": [
@@ -1023,7 +978,7 @@
       "imdb_id": "nm0935067",
       "name": "Jason Wingreen",
       "place_of_birth": "Brooklyn, New York, USA",
-      "popularity": 0.043594,
+      "popularity": 0.065391,
       "profile_path": "/mUodFFjIp374CmUDLW2Lu39MYf2.jpg",
       "swapiId": "http://swapi.co/api/people/22/",
       "swapiMovies": [
@@ -1044,32 +999,9 @@
       "imdb_id": "nm0607325",
       "name": "Temuera Morrison",
       "place_of_birth": "Rotorua, North Island, New Zealand",
-      "popularity": 2.967112,
+      "popularity": 2.990134,
       "profile_path": "/A1nD5J5uRwJM4hnpXd3DdmwZGjP.jpg",
       "swapiId": "http://swapi.co/api/people/22/",
-      "swapiMovies": [
-        "http://swapi.co/api/films/5/",
-        "http://swapi.co/api/films/6/",
-        "http://swapi.co/api/films/2/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": "From Wikipedia, the free encyclopedia\n\nTemuera Derek Morrison (born December 26, 1960) is a New Zealand actor. He has become one of the country's most famous stars for his roles as the abusive Jake \"the Muss\" Heke in 1994's Once Were Warriors and as bounty hunter Jango Fett and the Clone Troopers in the Star Wars series. He also voiced Boba Fett in the 2004 special edition of Star Wars Episode V: The Empire Strikes Back.\n\nDescription above from the Wikipedia article Temuera Morrison, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
-      "birthday": "1960-12-26",
-      "deathday": "",
-      "gender": 0,
-      "homepage": "",
-      "id": 7242,
-      "imdb_id": "nm0607325",
-      "name": "Temuera Morrison",
-      "place_of_birth": "Rotorua, North Island, New Zealand",
-      "popularity": 2.967112,
-      "profile_path": "/A1nD5J5uRwJM4hnpXd3DdmwZGjP.jpg",
-      "swapiId": "http://swapi.co/api/people/69/",
       "swapiMovies": [
         "http://swapi.co/api/films/5/",
         "http://swapi.co/api/films/6/",
@@ -1090,7 +1022,7 @@
       "imdb_id": "nm0114436",
       "name": "Phil Brown",
       "place_of_birth": "Cambridge, Massachusetts",
-      "popularity": 0.000029,
+      "popularity": 0.000009,
       "profile_path": "/exkyN66HiZWJDmpcOza2hWoswOo.jpg",
       "swapiId": "http://swapi.co/api/people/6/",
       "swapiMovies": [
@@ -1111,7 +1043,7 @@
       "imdb_id": "nm0249291",
       "name": "Joel Edgerton",
       "place_of_birth": "Blacktown, New South Wales, Australia",
-      "popularity": 4.35998,
+      "popularity": 3.407994,
       "profile_path": "/lkOkaMKSRRGLMgkLaCzR9sYgTgx.jpg",
       "swapiId": "http://swapi.co/api/people/6/",
       "swapiMovies": [
@@ -1133,7 +1065,7 @@
       "imdb_id": "nm0292235",
       "name": "Shelagh Fraser",
       "place_of_birth": "Surrey, England",
-      "popularity": 0.000002,
+      "popularity": 0.000003,
       "profile_path": "/xNfiibBvknHztEnL0g7dcdrxOKq.jpg",
       "swapiId": "http://swapi.co/api/people/7/",
       "swapiMovies": [
@@ -1155,7 +1087,7 @@
       "imdb_id": "nm0682837",
       "name": "Bonnie Piesse",
       "place_of_birth": "Melbourne - Australia",
-      "popularity": 0.08505,
+      "popularity": 0.127575,
       "profile_path": "/xM4s2HYCmSunDpExLnllYCp8rjZ.jpg",
       "swapiId": "http://swapi.co/api/people/7/",
       "swapiMovies": [
@@ -1177,7 +1109,7 @@
       "imdb_id": "nm0860233",
       "name": "Jack Thompson",
       "place_of_birth": "Sydney, New South Wales, Australia",
-      "popularity": 0.166843,
+      "popularity": 0.250265,
       "profile_path": "/l2NNfs9bd6qxqzIOahcz2hErrq8.jpg",
       "swapiId": "http://swapi.co/api/people/62/",
       "swapiMovies": [
@@ -1201,7 +1133,7 @@
       "imdb_id": "nm0000489",
       "name": "Christopher Lee",
       "place_of_birth": "Belgravia, Westminster, England",
-      "popularity": 5.081134,
+      "popularity": 5.72434,
       "profile_path": "/aVzp6zflzedmdKPLxaPqcZ05PDK.jpg",
       "swapiId": "http://swapi.co/api/people/67/",
       "swapiMovies": [
@@ -1223,7 +1155,7 @@
       "imdb_id": "nm0123553",
       "name": "Corey Burton",
       "place_of_birth": "Los Angeles - California - USA",
-      "popularity": 0.095025,
+      "popularity": 0.142537,
       "profile_path": "/2YzqhrgSpWqm8lxZoyIR4F0nusM.jpg",
       "swapiId": "http://swapi.co/api/people/67/",
       "swapiMovies": [
@@ -1244,7 +1176,7 @@
       "imdb_id": "nm0003214",
       "name": "Matthew Wood",
       "place_of_birth": "Walnut Creek - California - USA",
-      "popularity": 0.031058,
+      "popularity": 0.009317,
       "profile_path": "/oB9wVbEIg8fjY3ulDKjKsGn2A55.jpg",
       "swapiId": "http://swapi.co/api/people/63/",
       "swapiMovies": [
@@ -1266,7 +1198,7 @@
       "imdb_id": "nm0190744",
       "name": "Marton Csokas",
       "place_of_birth": "Invercargill, New Zealand",
-      "popularity": 0.504711,
+      "popularity": 0.757067,
       "profile_path": "/g36Ydyv0YbwXLOQ2KzGjFfkCDo1.jpg",
       "swapiId": "http://swapi.co/api/people/63/",
       "swapiMovies": [
@@ -1287,7 +1219,7 @@
       "imdb_id": "nm0805992",
       "name": "Matt Sloan",
       "place_of_birth": null,
-      "popularity": 0.126,
+      "popularity": 0.0378,
       "profile_path": null,
       "swapiId": "http://swapi.co/api/people/58/",
       "swapiMovies": [
@@ -1309,34 +1241,12 @@
       "imdb_id": "nm0750603",
       "name": "Alan Ruscoe",
       "place_of_birth": "",
-      "popularity": 0.273788,
+      "popularity": 0.410682,
       "profile_path": "/cQ7Dc4vZGzSmjxuLtJ9ZkOVsHZK.jpg",
       "swapiId": "http://swapi.co/api/people/58/",
       "swapiMovies": [
         "http://swapi.co/api/films/5/",
         "http://swapi.co/api/films/4/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-        "Matthew Russell Wood"
-      ],
-      "biography": "Matthew Russell Wood\u00a0(born August 15, 1972) is an American sound engineer and employee of\u00a0Skywalker Sound. For the last 15 years, he has worked on numerous film projects, his work being credited as sound editing and sound design. He has been an innovative force within the industry, pioneering new technologies for motion picture sound.\u00a0He is currently a Supervising Sound Editor employed at\u00a0Skywalker Sound\u00a0in Marin County, California.",
-      "birthday": "1972-08-15",
-      "deathday": "",
-      "gender": 0,
-      "homepage": "",
-      "id": 71536,
-      "imdb_id": "nm0003214",
-      "name": "Matthew Wood",
-      "place_of_birth": "Walnut Creek - California - USA",
-      "popularity": 0.031058,
-      "profile_path": "/oB9wVbEIg8fjY3ulDKjKsGn2A55.jpg",
-      "swapiId": "http://swapi.co/api/people/79/",
-      "swapiMovies": [
-        "http://swapi.co/api/films/6/",
-        "http://swapi.co/api/films/7/"
       ]
     },
     {
@@ -1353,7 +1263,7 @@
       "imdb_id": "nm0642444",
       "name": "Genevieve O'Reilly",
       "place_of_birth": "Dublin, Ireland",
-      "popularity": 0.007031,
+      "popularity": 0.002109,
       "profile_path": "/8NrrFxrGng88GU7lxwOyK3PZv05.jpg",
       "swapiId": "http://swapi.co/api/people/28/",
       "swapiMovies": [
@@ -1374,7 +1284,7 @@
       "imdb_id": "nm0086860",
       "name": "Caroline Blakiston",
       "place_of_birth": "Chelsea, London, England, UK",
-      "popularity": 0.001046,
+      "popularity": 0.001569,
       "profile_path": "/tbABMp1c3zgiJKOoRaIkw9XWQ2Y.jpg",
       "swapiId": "http://swapi.co/api/people/28/",
       "swapiMovies": [
@@ -1395,7 +1305,7 @@
       "imdb_id": "nm0817748",
       "name": "Bruce Spence",
       "place_of_birth": " Auckland, North Island, New Zealand",
-      "popularity": 2.907442,
+      "popularity": 2.272233,
       "profile_path": "/pwJJBmO9MG3OxVX9efGrB6BTFyw.jpg",
       "swapiId": "http://swapi.co/api/people/83/",
       "swapiMovies": [
@@ -1416,7 +1326,7 @@
       "imdb_id": "nm1404216",
       "name": "Rohan Nichol",
       "place_of_birth": "Geraldton - Western Australia - Australia",
-      "popularity": 0.00007,
+      "popularity": 0.000105,
       "profile_path": "/nzvL3MRpADYWlH4ppyYgmCnM1kZ.jpg",
       "swapiId": "http://swapi.co/api/people/81/",
       "swapiMovies": [
@@ -1438,7 +1348,7 @@
       "imdb_id": "nm0000434",
       "name": "Mark Hamill",
       "place_of_birth": "Concord, California, USA",
-      "popularity": 8.938637,
+      "popularity": 6.181591,
       "profile_path": "/ws544EgE5POxGJqq9LUfhnDrHtV.jpg",
       "swapiId": "http://swapi.co/api/people/1/",
       "swapiMovies": [
@@ -1462,7 +1372,7 @@
       "imdb_id": "nm0353796",
       "name": "Garrick Hagon",
       "place_of_birth": "London, England",
-      "popularity": 0.000002,
+      "popularity": 0.000003,
       "profile_path": "/lZYitsCPzlwevNuHzqaSZMQiuUa.jpg",
       "swapiId": "http://swapi.co/api/people/9/",
       "swapiMovies": [
@@ -1483,7 +1393,7 @@
       "imdb_id": "nm0000402",
       "name": "Carrie Fisher",
       "place_of_birth": "Beverly Hills, Los Angeles, California, USA",
-      "popularity": 6.930222,
+      "popularity": 7.679067,
       "profile_path": "/pbleNurCYdrLFQMEnlQB2nkOR1O.jpg",
       "swapiId": "http://swapi.co/api/people/5/",
       "swapiMovies": [
@@ -1507,7 +1417,7 @@
       "imdb_id": null,
       "name": "Ingvild Deila",
       "place_of_birth": null,
-      "popularity": 0.001377,
+      "popularity": 0.000413,
       "profile_path": null,
       "swapiId": "http://swapi.co/api/people/5/",
       "swapiMovies": [
@@ -1528,7 +1438,7 @@
       "imdb_id": "nm0001088",
       "name": "Peter Cushing",
       "place_of_birth": "Kenley, Surrey, England, UK",
-      "popularity": 8.423887,
+      "popularity": 4.627166,
       "profile_path": "/fg7ufC0IMr6VasQzzdmTtX5ycQF.jpg",
       "swapiId": "http://swapi.co/api/people/12/",
       "swapiMovies": [
@@ -1550,7 +1460,7 @@
       "imdb_id": "nm0701460",
       "name": "Wayne Pygram",
       "place_of_birth": "Cootamundra - New South Wales - Australia",
-      "popularity": 0.005363,
+      "popularity": 0.001609,
       "profile_path": "/5mRDyCp2wIEqn3lFaAZFdnwMMLe.jpg",
       "swapiId": "http://swapi.co/api/people/12/",
       "swapiMovies": [
@@ -1572,7 +1482,7 @@
       "imdb_id": "nm0000148",
       "name": "Harrison Ford",
       "place_of_birth": "Chicago - Illinois - USA",
-      "popularity": 7.609649,
+      "popularity": 7.882895,
       "profile_path": "/aVKNqtkzZCymupOrvwxozamRyVc.jpg",
       "swapiId": "http://swapi.co/api/people/14/",
       "swapiMovies": [
@@ -1596,7 +1506,7 @@
       "imdb_id": "nm0493200",
       "name": "Denis Lawson",
       "place_of_birth": "Perthshire, Scotland, UK",
-      "popularity": 0.312008,
+      "popularity": 0.468012,
       "profile_path": "/nxPR7KIlJ4CPPI2hniTUk6bu9fA.jpg",
       "swapiId": "http://swapi.co/api/people/18/",
       "swapiMovies": [
@@ -1619,7 +1529,7 @@
       "imdb_id": "nm0383359",
       "name": "Colin Higgins",
       "place_of_birth": "Noum\u00e9a, New Caledonia, France",
-      "popularity": 0.002615,
+      "popularity": 0.003923,
       "profile_path": "/3JErvVcldUos3wrQeuAizrDlAkZ.jpg",
       "swapiId": "http://swapi.co/api/people/18/",
       "swapiMovies": [
@@ -1640,7 +1550,7 @@
       "imdb_id": "nm0030193",
       "name": "David Ankrum",
       "place_of_birth": "Santa Clara County, California, USA",
-      "popularity": 0.002718,
+      "popularity": 0.000815,
       "profile_path": "/vo6JMA38exMSSbyQ3K0YCBwBrWT.jpg",
       "swapiId": "http://swapi.co/api/people/18/",
       "swapiMovies": [
@@ -1661,34 +1571,12 @@
       "imdb_id": "nm0001850",
       "name": "Billy Dee Williams",
       "place_of_birth": "New York City - New York - USA",
-      "popularity": 1.521469,
+      "popularity": 2.282204,
       "profile_path": "/sDuo82Mb5o3ZGt4SuV9dR0lAh8P.jpg",
       "swapiId": "http://swapi.co/api/people/25/",
       "swapiMovies": [
         "http://swapi.co/api/films/2/",
         "http://swapi.co/api/films/3/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": "Alan Ruscoe\u00a0is a British actor who is best known for his work as various aliens, monsters and androids in the\u00a0Star Wars\u00a0films and the television series\u00a0Doctor Who.  On television, he has played Baraquel, Sariel and Araquiel in Sky One's\u00a0Hex\u00a0season 2, as well as a number of characters in the\u00a02005 series\u00a0of\u00a0Doctor Who:\u00a0Blon Fel-Fotch Passameer-Day Slitheen\u00a0in \"Aliens of London\" and \"World War Three\" (and briefly in \"Boom Town\"), lead\u00a0Auton\u00a0in \"Rose\", the Anne Droid in \"Bad Wolf\" and \"The Parting of the Ways\", Trine-E in \"Bad Wolf\", and Lute of the Forest of Cheem in \"The End of the World\". Ruscoe has also appeared in the\u00a0Doctor Whoaudio dramas\u00a0The Veiled Leopard,\u00a0The Settling,\u00a0Gallifrey: Annihilation\u00a0and\u00a0Bernice Summerfield: Paradise Frost\u00a0Big Finish Productions. He also played Andrew Stone, a Mars colonist later taken over by an alien lifeform in the November 2009\u00a0Doctor Who\u00a0special \"The Waters of Mars\".  In films, Ruscoe has played\u00a0Daultay Dofine,\u00a0Lott Dod\u00a0and\u00a0Plo Koon\u00a0in\u00a0Star Wars Episode I: The Phantom Menace, and the Mangalore Kino in\u00a0The Fifth Element. He also played \"the Poulterer\" in a 2004 television adaptation of\u00a0A Christmas Carol. He appears alongside Terence Stamp, Vanessa Redgrave and Gemma Arterton in \"Song For Marion\" released this year.  In theatre, he has played Deputy and Snake Preacher in\u00a0Whistle Down the Wind, Riff Raff in\u00a0The Rocky Horror Show\u00a0in the English Theatre Frankfurt, Bob Cratchit in the 2004 touring version of\u00a0Scrooge\u00a0and Gussie Fink-Nottle in the 2007 UK tour of\u00a0By Jeeves. In Germany, he played \"Bob\" the pizza-boy-eating alien for the\u00a0T-Online\u00a0television and poster campaign.",
-      "birthday": "1972-04-14",
-      "deathday": "",
-      "gender": 0,
-      "homepage": "",
-      "id": 33186,
-      "imdb_id": "nm0750603",
-      "name": "Alan Ruscoe",
-      "place_of_birth": "",
-      "popularity": 0.273788,
-      "profile_path": "/cQ7Dc4vZGzSmjxuLtJ9ZkOVsHZK.jpg",
-      "swapiId": "http://swapi.co/api/people/45/",
-      "swapiMovies": [
-        "http://swapi.co/api/films/5/",
-        "http://swapi.co/api/films/4/"
       ]
     },
     {
@@ -1705,7 +1593,7 @@
       "imdb_id": "nm0141816",
       "name": "Michael Carter",
       "place_of_birth": "Dumfries - Scotland - UK",
-      "popularity": 0.000002,
+      "popularity": 0.000003,
       "profile_path": "/rYVKZQ4uYLf7cpAGfdFzDcRNJXw.jpg",
       "swapiId": "http://swapi.co/api/people/45/",
       "swapiMovies": [
@@ -1726,7 +1614,7 @@
       "imdb_id": null,
       "name": "Erik Bauersfeld",
       "place_of_birth": null,
-      "popularity": 0.000032,
+      "popularity": 0.000048,
       "profile_path": null,
       "swapiId": "http://swapi.co/api/people/45/",
       "swapiMovies": [
@@ -1749,30 +1637,8 @@
       "imdb_id": "nm0741714",
       "name": "Tim Rose",
       "place_of_birth": "Pittsfield - Illinois - USA",
-      "popularity": 0.08001,
+      "popularity": 0.024003,
       "profile_path": "/sYuRCsvqAvYBiqlY8xCCGv28kNs.jpg",
-      "swapiId": "http://swapi.co/api/people/27/",
-      "swapiMovies": [
-        "http://swapi.co/api/films/3/",
-        "http://swapi.co/api/films/7/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": null,
-      "birthday": null,
-      "deathday": null,
-      "gender": 0,
-      "homepage": null,
-      "id": 1729665,
-      "imdb_id": null,
-      "name": "Erik Bauersfeld",
-      "place_of_birth": null,
-      "popularity": 0.000032,
-      "profile_path": null,
       "swapiId": "http://swapi.co/api/people/27/",
       "swapiMovies": [
         "http://swapi.co/api/films/3/",
@@ -1793,7 +1659,7 @@
       "imdb_id": "nm1209966",
       "name": "Oscar Isaac",
       "place_of_birth": "Guatemala",
-      "popularity": 3.97477,
+      "popularity": 3.292431,
       "profile_path": "/i8LGOkTaR5g6vh81dic7nfM975t.jpg",
       "swapiId": "http://swapi.co/api/people/86/",
       "swapiMovies": [
@@ -1814,7 +1680,7 @@
       "imdb_id": "nm3729225",
       "name": "Gwendoline Christie",
       "place_of_birth": "Worthing, West Sussex, England",
-      "popularity": 1.533191,
+      "popularity": 2.299786,
       "profile_path": "/dTkS6VhTGjnFluTGf0PjNy9shkx.jpg",
       "swapiId": "http://swapi.co/api/people/88/",
       "swapiMovies": [
@@ -1835,7 +1701,7 @@
       "imdb_id": "nm3915784",
       "name": "John Boyega",
       "place_of_birth": "Peckham, London, England, UK",
-      "popularity": 5.907777,
+      "popularity": 5.272333,
       "profile_path": "/idr2vphzhidyMGOp0ky6RqUMah8.jpg",
       "swapiId": "http://swapi.co/api/people/84/",
       "swapiMovies": [
@@ -1856,7 +1722,7 @@
       "imdb_id": "nm5397459",
       "name": "Daisy Ridley",
       "place_of_birth": "Westminster, London, England",
-      "popularity": 5.708684,
+      "popularity": 5.912605,
       "profile_path": "/iiBJCkVVLHAUBW6vbUhJ3RtxlXv.jpg",
       "swapiId": "http://swapi.co/api/people/85/",
       "swapiMovies": [
@@ -1877,7 +1743,7 @@
       "imdb_id": "nm0702934",
       "name": "Hugh Quarshie",
       "place_of_birth": "Accra - Ghana",
-      "popularity": 0.000001,
+      "popularity": 0.000002,
       "profile_path": "/b6RSuGFTvpDe3WIdWglzfs0kyES.jpg",
       "swapiId": "http://swapi.co/api/people/42/",
       "swapiMovies": [
@@ -1898,7 +1764,7 @@
       "imdb_id": "nm0151268",
       "name": "Dhruv Chanchani",
       "place_of_birth": "Edison - New Jersey - USA",
-      "popularity": 0.001046,
+      "popularity": 0.000314,
       "profile_path": "/wHMU3yngBSH98EHgtPT0r4G6LcM.jpg",
       "swapiId": "http://swapi.co/api/people/53/",
       "swapiMovies": [
@@ -1919,7 +1785,7 @@
       "imdb_id": "nm0789970",
       "name": "Sebastian Shaw",
       "place_of_birth": "Holt - Norfolk - England - UK",
-      "popularity": 0.002616,
+      "popularity": 0.000785,
       "profile_path": "/j6SFQiU0isXWNfMK6Cq4XQPdJDl.jpg",
       "swapiId": "http://swapi.co/api/people/11/",
       "swapiMovies": [
@@ -1940,7 +1806,7 @@
       "imdb_id": "nm0242026",
       "name": "Lindsay Duncan",
       "place_of_birth": "Edinburgh, Scotland, UK",
-      "popularity": 2.703739,
+      "popularity": 2.211122,
       "profile_path": "/ddjjwMEHLBvzkZzZ5frEvJyWnZ6.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -1962,32 +1828,10 @@
       "imdb_id": "nm0761497",
       "name": "Chris Sanders",
       "place_of_birth": null,
-      "popularity": 0.000448,
+      "popularity": 0.000134,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
-        "http://swapi.co/api/films/4/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": "Alan Ruscoe\u00a0is a British actor who is best known for his work as various aliens, monsters and androids in the\u00a0Star Wars\u00a0films and the television series\u00a0Doctor Who.  On television, he has played Baraquel, Sariel and Araquiel in Sky One's\u00a0Hex\u00a0season 2, as well as a number of characters in the\u00a02005 series\u00a0of\u00a0Doctor Who:\u00a0Blon Fel-Fotch Passameer-Day Slitheen\u00a0in \"Aliens of London\" and \"World War Three\" (and briefly in \"Boom Town\"), lead\u00a0Auton\u00a0in \"Rose\", the Anne Droid in \"Bad Wolf\" and \"The Parting of the Ways\", Trine-E in \"Bad Wolf\", and Lute of the Forest of Cheem in \"The End of the World\". Ruscoe has also appeared in the\u00a0Doctor Whoaudio dramas\u00a0The Veiled Leopard,\u00a0The Settling,\u00a0Gallifrey: Annihilation\u00a0and\u00a0Bernice Summerfield: Paradise Frost\u00a0Big Finish Productions. He also played Andrew Stone, a Mars colonist later taken over by an alien lifeform in the November 2009\u00a0Doctor Who\u00a0special \"The Waters of Mars\".  In films, Ruscoe has played\u00a0Daultay Dofine,\u00a0Lott Dod\u00a0and\u00a0Plo Koon\u00a0in\u00a0Star Wars Episode I: The Phantom Menace, and the Mangalore Kino in\u00a0The Fifth Element. He also played \"the Poulterer\" in a 2004 television adaptation of\u00a0A Christmas Carol. He appears alongside Terence Stamp, Vanessa Redgrave and Gemma Arterton in \"Song For Marion\" released this year.  In theatre, he has played Deputy and Snake Preacher in\u00a0Whistle Down the Wind, Riff Raff in\u00a0The Rocky Horror Show\u00a0in the English Theatre Frankfurt, Bob Cratchit in the 2004 touring version of\u00a0Scrooge\u00a0and Gussie Fink-Nottle in the 2007 UK tour of\u00a0By Jeeves. In Germany, he played \"Bob\" the pizza-boy-eating alien for the\u00a0T-Online\u00a0television and poster campaign.",
-      "birthday": "1972-04-14",
-      "deathday": "",
-      "gender": 0,
-      "homepage": "",
-      "id": 33186,
-      "imdb_id": "nm0750603",
-      "name": "Alan Ruscoe",
-      "place_of_birth": "",
-      "popularity": 0.273788,
-      "profile_path": "/cQ7Dc4vZGzSmjxuLtJ9ZkOVsHZK.jpg",
-      "swapiId": null,
-      "swapiMovies": [
-        "http://swapi.co/api/films/5/",
         "http://swapi.co/api/films/4/"
       ]
     },
@@ -2005,7 +1849,7 @@
       "imdb_id": "nm0852511",
       "name": "James Taylor",
       "place_of_birth": null,
-      "popularity": 0.0,
+      "popularity": 0.7,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -2026,32 +1870,10 @@
       "imdb_id": "nm0086592",
       "name": "Jerome Blake",
       "place_of_birth": "England - UK",
-      "popularity": 0.09891,
+      "popularity": 0.029673,
       "profile_path": "/tUJwV5OUV4P8zrlfkMtp1vU47Ot.jpg",
       "swapiId": null,
       "swapiMovies": [
-        "http://swapi.co/api/films/4/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": "Alan Ruscoe\u00a0is a British actor who is best known for his work as various aliens, monsters and androids in the\u00a0Star Wars\u00a0films and the television series\u00a0Doctor Who.  On television, he has played Baraquel, Sariel and Araquiel in Sky One's\u00a0Hex\u00a0season 2, as well as a number of characters in the\u00a02005 series\u00a0of\u00a0Doctor Who:\u00a0Blon Fel-Fotch Passameer-Day Slitheen\u00a0in \"Aliens of London\" and \"World War Three\" (and briefly in \"Boom Town\"), lead\u00a0Auton\u00a0in \"Rose\", the Anne Droid in \"Bad Wolf\" and \"The Parting of the Ways\", Trine-E in \"Bad Wolf\", and Lute of the Forest of Cheem in \"The End of the World\". Ruscoe has also appeared in the\u00a0Doctor Whoaudio dramas\u00a0The Veiled Leopard,\u00a0The Settling,\u00a0Gallifrey: Annihilation\u00a0and\u00a0Bernice Summerfield: Paradise Frost\u00a0Big Finish Productions. He also played Andrew Stone, a Mars colonist later taken over by an alien lifeform in the November 2009\u00a0Doctor Who\u00a0special \"The Waters of Mars\".  In films, Ruscoe has played\u00a0Daultay Dofine,\u00a0Lott Dod\u00a0and\u00a0Plo Koon\u00a0in\u00a0Star Wars Episode I: The Phantom Menace, and the Mangalore Kino in\u00a0The Fifth Element. He also played \"the Poulterer\" in a 2004 television adaptation of\u00a0A Christmas Carol. He appears alongside Terence Stamp, Vanessa Redgrave and Gemma Arterton in \"Song For Marion\" released this year.  In theatre, he has played Deputy and Snake Preacher in\u00a0Whistle Down the Wind, Riff Raff in\u00a0The Rocky Horror Show\u00a0in the English Theatre Frankfurt, Bob Cratchit in the 2004 touring version of\u00a0Scrooge\u00a0and Gussie Fink-Nottle in the 2007 UK tour of\u00a0By Jeeves. In Germany, he played \"Bob\" the pizza-boy-eating alien for the\u00a0T-Online\u00a0television and poster campaign.",
-      "birthday": "1972-04-14",
-      "deathday": "",
-      "gender": 0,
-      "homepage": "",
-      "id": 33186,
-      "imdb_id": "nm0750603",
-      "name": "Alan Ruscoe",
-      "place_of_birth": "",
-      "popularity": 0.273788,
-      "profile_path": "/cQ7Dc4vZGzSmjxuLtJ9ZkOVsHZK.jpg",
-      "swapiId": null,
-      "swapiMovies": [
-        "http://swapi.co/api/films/5/",
         "http://swapi.co/api/films/4/"
       ]
     },
@@ -2069,7 +1891,7 @@
       "imdb_id": "nm0852517",
       "name": "James Arnold Taylor",
       "place_of_birth": "",
-      "popularity": 2.823339,
+      "popularity": 2.247002,
       "profile_path": "/y8SCPH3ackhej26YH5sKps0g7Ch.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2090,7 +1912,7 @@
       "imdb_id": "nm0874455",
       "name": "Christopher Truswell",
       "place_of_birth": null,
-      "popularity": 0.063,
+      "popularity": 0.0189,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -2111,7 +1933,7 @@
       "imdb_id": "nm0878741",
       "name": "Amanda Lucas",
       "place_of_birth": null,
-      "popularity": 0.00001,
+      "popularity": 0.000003,
       "profile_path": "/orl2zrSpf4WQUd268DsP7EspUCo.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2134,7 +1956,7 @@
       "imdb_id": "nm0203882",
       "name": "Oliver Ford Davies",
       "place_of_birth": "Ealing - London - England - UK",
-      "popularity": 0.037977,
+      "popularity": 0.011393,
       "profile_path": "/7fpNxQYZ85oRdnKWxPzQfURFkFT.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2157,7 +1979,7 @@
       "imdb_id": "nm0870026",
       "name": "Margaret Towner",
       "place_of_birth": null,
-      "popularity": 0.000002,
+      "popularity": 0.000001,
       "profile_path": "/wNWY8JXwlGzNVcY7JdMKCjRZHj5.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2179,7 +2001,7 @@
       "imdb_id": "nm0001116",
       "name": "Warwick Davis",
       "place_of_birth": "Epsom - Surrey - England - UK",
-      "popularity": 1.002292,
+      "popularity": 1.503438,
       "profile_path": "/5xBunTQJexQOuCmtlh8MNJerbaM.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2203,7 +2025,7 @@
       "imdb_id": "nm0698681",
       "name": "Greg Proops",
       "place_of_birth": "",
-      "popularity": 0.067791,
+      "popularity": 0.020337,
       "profile_path": "/6kzCvX6bxXYq1fxueHtmplctQ03.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2224,7 +2046,7 @@
       "imdb_id": "nm0196263",
       "name": "Karol Cristina da Silva",
       "place_of_birth": null,
-      "popularity": 0.000299,
+      "popularity": 0.00009,
       "profile_path": "/2YpNv0In4HZHByd6vSPbMSoKDFL.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2246,7 +2068,7 @@
       "imdb_id": "nm0852028",
       "name": "Benedict Taylor",
       "place_of_birth": "Hampstead - London - England - UK",
-      "popularity": 0.001636,
+      "popularity": 0.002454,
       "profile_path": "/tyZAHcq5IfK7rco9JptkRh4oNGS.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2267,7 +2089,7 @@
       "imdb_id": "nm0807734",
       "name": "Clarence Smith",
       "place_of_birth": "London - England - UK",
-      "popularity": 0.055443,
+      "popularity": 0.016633,
       "profile_path": "/zKvjmgqf08T3Xz7uwTrEvxB7qqZ.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2288,7 +2110,7 @@
       "imdb_id": "nm1239340",
       "name": "Steven Boyle",
       "place_of_birth": "",
-      "popularity": 0.095508,
+      "popularity": 0.028652,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -2309,7 +2131,7 @@
       "imdb_id": "nm1091328",
       "name": "Paul Spence",
       "place_of_birth": null,
-      "popularity": 0.09324,
+      "popularity": 0.027972,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -2330,60 +2152,12 @@
       "imdb_id": "nm0746419",
       "name": "Matt Rowan",
       "place_of_birth": null,
-      "popularity": 0.063788,
+      "popularity": 0.095682,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
         "http://swapi.co/api/films/5/",
         "http://swapi.co/api/films/6/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": "Jerome Blake debuted as an actor with a part as one of the knights guarding\u00a0Sean Connery\u00a0in\u00a0Lancelot\u00a0(1995). After playing a succession of roles,\u00a0Nick Dudman\u00a0Creature effects supremo called him to say: \"I'm doing Star Wars now\". After Jerome congratulated him, Nick simply said \"Do you want to be in it?\" Blake - a Star Wars fan since he saw the first movie on its opening day back in 1977- immediately said yes. A year later he had Seven different characters in \"Episode 1 - The Phantom Menace\". And reprised several of those roles in \"Episode 2 - Attack of the Clones\" and \"Episode 3 - Revenge of the Sith\"  - IMDb Mini Biography",
-      "birthday": "1956",
-      "deathday": "",
-      "gender": 0,
-      "homepage": "http://www.jeromeblake.co.uk/",
-      "id": 589398,
-      "imdb_id": "nm0086592",
-      "name": "Jerome Blake",
-      "place_of_birth": "England - UK",
-      "popularity": 0.09891,
-      "profile_path": "/tUJwV5OUV4P8zrlfkMtp1vU47Ot.jpg",
-      "swapiId": null,
-      "swapiMovies": [
-        "http://swapi.co/api/films/4/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-        "Phil La Mar",
-        "Phil La Marr",
-        "Phil LaMaar",
-        "Phil LaMar",
-        "Phil Lamarr",
-        "Phillip La Marr",
-        "Phillip LaMarr"
-      ],
-      "biography": "Phillip \"Phil\" LaMarr (born January 24, 1967) is an American actor, comedian and voice actor. One of the original cast members on the sketch comedy series MADtv, he is also known for his voice acting on the animated series Futurama, Static Shock, Samurai Jack, Justice League, Justice League Unlimited, Star Wars: Knights of the Old Republic II The Sith Lords, Star Wars: The Clone Wars, Metal Gear Solid 2: Sons of Liberty, Metal Gear Solid 4: Guns of the Patriots, and inFAMOUS.",
-      "birthday": "1967-01-24",
-      "deathday": "",
-      "gender": 2,
-      "homepage": "",
-      "id": 31549,
-      "imdb_id": "nm0482851",
-      "name": "Phil LaMarr",
-      "place_of_birth": "Los Angeles, California, USA",
-      "popularity": 0.59084,
-      "profile_path": "/2rYa0M1bOSAATGbF5oe5pmoNeDn.jpg",
-      "swapiId": null,
-      "swapiMovies": [
-        "http://swapi.co/api/films/3/"
       ]
     },
     {
@@ -2400,7 +2174,7 @@
       "imdb_id": "nm0440286",
       "name": "Claudia Karvan",
       "place_of_birth": "Sydney, New South Wales, Australia",
-      "popularity": 0.004041,
+      "popularity": 0.006062,
       "profile_path": "/4M0Z25W9hI2ihSa6xBrdFxmBdTD.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2422,7 +2196,7 @@
       "imdb_id": "nm0633682",
       "name": "Trisha Noble",
       "place_of_birth": "Marrickville - New South Wales - Australia",
-      "popularity": 0.000401,
+      "popularity": 0.000602,
       "profile_path": "/zDlrzpJUyVqynhH5hzZK9v4urS8.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2443,7 +2217,7 @@
       "imdb_id": "nm0089882",
       "name": "Graeme Blundell",
       "place_of_birth": "Melbourne - Victoria - Australia",
-      "popularity": 0.000014,
+      "popularity": 0.000004,
       "profile_path": "/gVV7qhA0bXBUa0XmVHUnOJH3u2k.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2464,7 +2238,7 @@
       "imdb_id": "nm0654481",
       "name": "Warren Owens",
       "place_of_birth": null,
-      "popularity": 0.000071,
+      "popularity": 0.000021,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -2485,7 +2259,7 @@
       "imdb_id": "nm0456130",
       "name": "Christopher Kirby",
       "place_of_birth": "",
-      "popularity": 0.00575,
+      "popularity": 0.008625,
       "profile_path": "/so9OxqBJDfCUp84Ja4PEMnWECAP.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2512,34 +2286,11 @@
       "imdb_id": "nm0048389",
       "name": "Dee Bradley Baker",
       "place_of_birth": "Bloomington - Indiana - USA",
-      "popularity": 2.899152,
+      "popularity": 4.348728,
       "profile_path": "/zFXwtsdvUCeNkzCzYpYZdAmTkJY.jpg",
       "swapiId": null,
       "swapiMovies": [
 
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": "From Wikipedia, the free encyclopedia\n\nTemuera Derek Morrison (born December 26, 1960) is a New Zealand actor. He has become one of the country's most famous stars for his roles as the abusive Jake \"the Muss\" Heke in 1994's Once Were Warriors and as bounty hunter Jango Fett and the Clone Troopers in the Star Wars series. He also voiced Boba Fett in the 2004 special edition of Star Wars Episode V: The Empire Strikes Back.\n\nDescription above from the Wikipedia article Temuera Morrison, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
-      "birthday": "1960-12-26",
-      "deathday": "",
-      "gender": 0,
-      "homepage": "",
-      "id": 7242,
-      "imdb_id": "nm0607325",
-      "name": "Temuera Morrison",
-      "place_of_birth": "Rotorua, North Island, New Zealand",
-      "popularity": 2.967112,
-      "profile_path": "/A1nD5J5uRwJM4hnpXd3DdmwZGjP.jpg",
-      "swapiId": null,
-      "swapiMovies": [
-        "http://swapi.co/api/films/5/",
-        "http://swapi.co/api/films/6/",
-        "http://swapi.co/api/films/2/"
       ]
     },
     {
@@ -2556,7 +2307,7 @@
       "imdb_id": "nm0503236",
       "name": "Richard LeParmentier",
       "place_of_birth": null,
-      "popularity": 0.91,
+      "popularity": 0.973,
       "profile_path": "/eyQiSGCHIcmdU2gqKWZbneQEvFj.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2577,7 +2328,7 @@
       "imdb_id": "nm0567018",
       "name": "Alex McCrindle",
       "place_of_birth": " Glasgow, Scotland, UK",
-      "popularity": 0.082924,
+      "popularity": 0.024877,
       "profile_path": "/6Q1m79FMq444Q6VpmdERSqvwxpX.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2598,7 +2349,7 @@
       "imdb_id": "nm0532815",
       "name": "Angus MacInnes",
       "place_of_birth": "Windsor, Ontario, Canada",
-      "popularity": 0.444358,
+      "popularity": 0.133307,
       "profile_path": "/qftkol8hj7yBBP3KCxRWYkhRyLC.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2619,29 +2370,8 @@
       "imdb_id": "nm0377120",
       "name": "Drewe Henley",
       "place_of_birth": "",
-      "popularity": 0.273788,
+      "popularity": 0.410682,
       "profile_path": "/C28FmnpDyhI9BwD6YjagAe1U53.jpg",
-      "swapiId": null,
-      "swapiMovies": [
-        "http://swapi.co/api/films/1/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-
-      ],
-      "biography": null,
-      "birthday": "1947-05-02",
-      "deathday": "",
-      "gender": 2,
-      "homepage": "",
-      "id": 1216947,
-      "imdb_id": "nm0030193",
-      "name": "David Ankrum",
-      "place_of_birth": "Santa Clara County, California, USA",
-      "popularity": 0.002718,
-      "profile_path": "/vo6JMA38exMSSbyQ3K0YCBwBrWT.jpg",
       "swapiId": null,
       "swapiMovies": [
         "http://swapi.co/api/films/1/"
@@ -2661,7 +2391,7 @@
       "imdb_id": "nm0039061",
       "name": "Graham Ashley",
       "place_of_birth": null,
-      "popularity": 0.028705,
+      "popularity": 0.008612,
       "profile_path": "/wp02ruOjX8AiGMrRD8QEBljgnlA.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2682,7 +2412,7 @@
       "imdb_id": "nm0090124",
       "name": "Bruce Boa",
       "place_of_birth": "Calgary - Alberta - Canada",
-      "popularity": 0.028705,
+      "popularity": 0.008612,
       "profile_path": "/nPCLZTuTfOzSN5CvMnocX3hS92P.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2703,7 +2433,7 @@
       "imdb_id": "nm0001652",
       "name": "John Ratzenberger",
       "place_of_birth": "Bridgeport - Connecticut - USA",
-      "popularity": 0.230485,
+      "popularity": 0.069146,
       "profile_path": "/yGechiKWL6TJDfVE2KPSJYqdMsY.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2724,7 +2454,7 @@
       "imdb_id": "nm0539095",
       "name": "Christopher Malcolm",
       "place_of_birth": "Aberdeen, Aberdeenshire, Scotland, UK",
-      "popularity": 0.000044,
+      "popularity": 0.000066,
       "profile_path": "/9Ua0yZoI6dZQ5VDqfU096dAM1Un.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2746,7 +2476,7 @@
       "imdb_id": "nm0171829",
       "name": "Kenneth Colley",
       "place_of_birth": "Manchester, England",
-      "popularity": 0.012207,
+      "popularity": 0.018311,
       "profile_path": "/yNZF27tBauzUcg6Fw7M2xsRD8IC.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2768,7 +2498,7 @@
       "imdb_id": "nm0790410",
       "name": "Michael Sheard",
       "place_of_birth": "Aberdeenshire, Scotland, UK",
-      "popularity": 0.001902,
+      "popularity": 0.002853,
       "profile_path": "/a29SbacT0kV8WWuoAMp2FHI5Y7I.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2789,7 +2519,7 @@
       "imdb_id": "nm0608014",
       "name": "John Morton",
       "place_of_birth": null,
-      "popularity": 0.000001,
+      "popularity": 0.0,
       "profile_path": "/dizbXcyBZr1BKdjYlWpjy64FJcV.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2810,7 +2540,7 @@
       "imdb_id": "nm0514282",
       "name": "Ian Liston",
       "place_of_birth": "Crosby - Merseyside - England - UK",
-      "popularity": 0.000014,
+      "popularity": 0.000004,
       "profile_path": "/k6jCo3N5kFJ7PBybJRRR4b0ngKV.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2831,7 +2561,7 @@
       "imdb_id": "nm0135633",
       "name": "Mark Capri",
       "place_of_birth": null,
-      "popularity": 0.00007,
+      "popularity": 0.000105,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -2852,7 +2582,7 @@
       "imdb_id": "nm0672190",
       "name": "Michael Pennington",
       "place_of_birth": "Cambridge - Cambridgeshire - England - UK",
-      "popularity": 0.446355,
+      "popularity": 0.133906,
       "profile_path": "/jreFHCg8golvAEbcwzKtPoqg6YZ.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2874,7 +2604,7 @@
       "imdb_id": "nm0001884",
       "name": "Max von Sydow",
       "place_of_birth": "Lund, Sk\u00e5ne l\u00e4n, Sweden",
-      "popularity": 3.636958,
+      "popularity": 3.191087,
       "profile_path": "/nwRB1DDylWFC4120kfbtPq2pZzA.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2895,7 +2625,7 @@
       "imdb_id": "nm3485845",
       "name": "Adam Driver",
       "place_of_birth": "San Diego,CA, USA",
-      "popularity": 4.28877,
+      "popularity": 5.486631,
       "profile_path": "/p0uafqSJrpjat0BacU7nDhhiNIS.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2916,7 +2646,7 @@
       "imdb_id": "nm0670408",
       "name": "Simon Pegg",
       "place_of_birth": "Brockworth, Gloucestershire, England, UK",
-      "popularity": 3.655325,
+      "popularity": 3.196597,
       "profile_path": "/23e2uoNlpDvLumNic16fS2YjZjL.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2937,7 +2667,7 @@
       "imdb_id": "nm1727304",
       "name": "Domhnall Gleeson",
       "place_of_birth": "Dublin, Ireland",
-      "popularity": 3.789137,
+      "popularity": 2.536741,
       "profile_path": "/vAvZLGZb6eik0DuIbLgqcSu9gRS.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2958,7 +2688,7 @@
       "imdb_id": "nm0273797",
       "name": "Sebastian Armesto",
       "place_of_birth": null,
-      "popularity": 0.020029,
+      "popularity": 0.006009,
       "profile_path": "/AhYOTKn1UgC0SveUfBsE54C3Vj5.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -2979,7 +2709,7 @@
       "imdb_id": "nm4451290",
       "name": "Brian Vernel",
       "place_of_birth": null,
-      "popularity": 0.000004,
+      "popularity": 0.000006,
       "profile_path": "/xvC5diN35LZrF1Q4uIpaZYGTpiO.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3000,7 +2730,7 @@
       "imdb_id": "nm0785227",
       "name": "Andy Serkis",
       "place_of_birth": "Ruislip, Middlesex, UK",
-      "popularity": 3.411745,
+      "popularity": 5.117618,
       "profile_path": "/nQRsxFveJaUIlZ4GYWDe9uJ6u2f.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3021,7 +2751,7 @@
       "imdb_id": "nm2143282",
       "name": "Lupita Nyong'o",
       "place_of_birth": "Mexico City - Mexico",
-      "popularity": 2.694589,
+      "popularity": 2.208377,
       "profile_path": "/y3p0OMzIuAmcNt700RayK5A0k6t.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3042,7 +2772,7 @@
       "imdb_id": "nm0342399",
       "name": "Greg Grunberg",
       "place_of_birth": "Los Angeles - California - USA",
-      "popularity": 1.112521,
+      "popularity": 1.668782,
       "profile_path": "/kFK6AaPoUlLJArwLuHetUav8q19.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3063,7 +2793,7 @@
       "imdb_id": "nm0504962",
       "name": "Ken Leung",
       "place_of_birth": "New York City - New York - USA",
-      "popularity": 0.139902,
+      "popularity": 0.209853,
       "profile_path": "/kftJqCNab1x5W29b46rLUeXkwZi.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3084,7 +2814,7 @@
       "imdb_id": null,
       "name": "Stefan Grube",
       "place_of_birth": null,
-      "popularity": 0.000006,
+      "popularity": 0.000002,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
@@ -3105,32 +2835,10 @@
       "imdb_id": "nm0551136",
       "name": "Rocky Marshall",
       "place_of_birth": null,
-      "popularity": 0.000235,
+      "popularity": 0.00007,
       "profile_path": "/vIjpzunxC3M5CL1A6zp6RUJVSVn.jpg",
       "swapiId": null,
       "swapiMovies": [
-        "http://swapi.co/api/films/7/"
-      ]
-    },
-    {
-      "adult": false,
-      "also_known_as": [
-        "Matthew Russell Wood"
-      ],
-      "biography": "Matthew Russell Wood\u00a0(born August 15, 1972) is an American sound engineer and employee of\u00a0Skywalker Sound. For the last 15 years, he has worked on numerous film projects, his work being credited as sound editing and sound design. He has been an innovative force within the industry, pioneering new technologies for motion picture sound.\u00a0He is currently a Supervising Sound Editor employed at\u00a0Skywalker Sound\u00a0in Marin County, California.",
-      "birthday": "1972-08-15",
-      "deathday": "",
-      "gender": 0,
-      "homepage": "",
-      "id": 71536,
-      "imdb_id": "nm0003214",
-      "name": "Matthew Wood",
-      "place_of_birth": "Walnut Creek - California - USA",
-      "popularity": 0.031058,
-      "profile_path": "/oB9wVbEIg8fjY3ulDKjKsGn2A55.jpg",
-      "swapiId": null,
-      "swapiMovies": [
-        "http://swapi.co/api/films/6/",
         "http://swapi.co/api/films/7/"
       ]
     },
@@ -3148,7 +2856,7 @@
       "imdb_id": "nm3725055",
       "name": "Jessica Henwick",
       "place_of_birth": null,
-      "popularity": 0.000766,
+      "popularity": 0.00023,
       "profile_path": "/hgGpPBqZ9nXJkjPzle8iACIuXnP.jpg",
       "swapiId": null,
       "swapiMovies": [
@@ -3169,11 +2877,201 @@
       "imdb_id": null,
       "name": "James McArdle",
       "place_of_birth": null,
-      "popularity": 0.00009,
+      "popularity": 0.000027,
       "profile_path": null,
       "swapiId": null,
       "swapiMovies": [
         "http://swapi.co/api/films/7/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "George Walton Lucas Jr. "
+      ],
+      "biography": "Arguably the most important film innovator in the history of the medium, George Lucas continually \"pushed the envelope\" of filmmaking technology since his early days as a student at U.S.C. Considered a wunderkind by his contemporaries, he had a much harder time communicating his vision to studio executives, whose meddling managed to compromise each of his first three feature directing efforts in some way. The monumental success of \"Star Wars\" (1977) ushered in the era of the \"summer blockbuster,\" which, despite the later popularity of low budget independent films, was still the prevailing mentality powering the Hollywood engine.\n\nThough he set the tone and established the expectations which influenced studios to devote the bulk of their resources to films designed to blast off into hyperspace for spectacular profits, it was doubtful that a film as revolutionary as \"Star Wars\" was in its day could get made in the later blockbuster assembly line climate of the new millennium.",
+      "birthday": "1944-05-14",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 1,
+      "imdb_id": "nm0000184",
+      "name": "George Lucas",
+      "place_of_birth": "Modesto - California - USA",
+      "popularity": 4.702601,
+      "profile_path": "/8qxin8urtFE0NqaZNFWOuV537bH.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/6/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia\n\nRichard Marquand (22 September 1937 \u2013 4 September 1987) was a Welsh film director best known for directing the blockbuster Star Wars film, Star Wars Episode VI: Return of the Jedi (1983).\n\nDescription above from the Wikipedia article Richard Marquand, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1937-09-22",
+      "deathday": "1987-09-04",
+      "gender": 0,
+      "homepage": "",
+      "id": 19800,
+      "imdb_id": "nm0549658",
+      "name": "Richard Marquand",
+      "place_of_birth": "Cardiff, Wales, UK",
+      "popularity": 0.000012,
+      "profile_path": "/wuO69rNp2mMG9unvRpZhbccoAh9.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "\u200bFrom Wikipedia, the free encyclopedia. \u00a0\n\nIrvin Kershner (April 29, 1923 \u2013 November 27, 2010) was an American film director and occasional actor, best known for directing quirky, independent films early in his career, and then Star Wars Episode V: The Empire Strikes Back.\n\nDescription above from the Wikipedia article\u00a0Irvin Kershner\u00a0, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1923-04-29",
+      "deathday": "2010-11-27",
+      "gender": 0,
+      "homepage": "",
+      "id": 10930,
+      "imdb_id": "nm0449984",
+      "name": "Irvin Kershner",
+      "place_of_birth": "Philadelphia, Pennsylvania, USA",
+      "popularity": 0.000011,
+      "profile_path": "/iSlCSA4WeR1eNt6T0yoL4HiO9XJ.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+        "J. J. Abrams",
+        "Jeffrey Jacob Abrams"
+      ],
+      "biography": "Jeffrey Jacob Abrams, better known as his screen moniker J.J. Abrams, is an American film and television producer, screenwriter, director, actor and composer. \u00a0\n\nBest known for his work in science fiction and action genres, Abrams (co-)created multiple award winning television series, including: Felicity, Alias, Lost, Fringe, Undercovers, Person of Interest and Revolution. \u00a0His film work includes the late 2000s reboots of beloved film series such as Star Trek, Star Wars, and Mission: Impossible. \u00a0Many of the films he has contributed to are distributed by\u00a0Paramount Pictures, while his television series are, generally, co-produced by either\u00a0Warner Bros. Television\u00a0or\u00a0Touchstone Television. Abrams' frequent creative collaborators include writers\u00a0Alex Kurtzman\u00a0and\u00a0Roberto Orci, composer\u00a0Michael Giacchino, cinematographers\u00a0Daniel Mindel\u00a0and\u00a0Larry Fong, and editors\u00a0Maryann Brandon\u00a0and\u00a0Mary Jo Markey. \u00a0\n\nAbrams was born in New York City, but raised in Los Angeles, the son of television producer Gerald W. Abrams and executive producer Carol Ann Abrams (n\u00e9e Kelvin). \u00a0He attended Palisades High School and Sarah Lawrence College. \u00a0Abrams' first movie business job came at the age of 16, when he wrote music for Don Dohler's film Nightbeast. \u00a0During his senior year at college, he teamed with Jill Mazursky to write a feature\u00a0film treatment later used as the basis for\u00a0Taking Care of Business, Abrams' first produced film. Abrahms continues to create major television and motion picture pieces under his production company, Bad Robot, founded in 2001 with Byran Burk. \u00a0\u00a0\n\nDescription above provided by and modified from the Wikipedia article J. J. Abrams, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+      "birthday": "1966-06-27",
+      "deathday": "",
+      "gender": 2,
+      "homepage": "",
+      "id": 15344,
+      "imdb_id": "nm0009190",
+      "name": "J. J. Abrams",
+      "place_of_birth": "New York City, New York, USA",
+      "popularity": 3.783927,
+      "profile_path": "/xljsYopubv9egYzclBPNf9EAYxB.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nGary Kurtz (born July 27, 1940 in Los Angeles, California) is an American film producer whose list of credits include American Graffiti, Star Wars and The Empire Strikes Back. He later produced The Dark Crystal and Return to Oz after departing from the Star Wars series. Kurtz also co-produced the 1989 low-budget science fiction film Slipstream, which reunited him with Star Wars star Mark Hamill.\n\nDescription above from the Wikipedia article Gary Kurtz, licensed under CC-BY-SA, full list of contributors on Wikipedia",
+      "birthday": "1940-07-27",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 12401,
+      "imdb_id": "nm0476030",
+      "name": "Gary Kurtz",
+      "place_of_birth": "Los Angeles, California, United States",
+      "popularity": 0.000004,
+      "profile_path": "/qMuYGnSQn4V5PSfEpEjLCOeWPM0.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 19801,
+      "imdb_id": "nm0564768",
+      "name": "Rick McCallum",
+      "place_of_birth": null,
+      "popularity": 0.000044,
+      "profile_path": "/qfKgg9sNcIOp2hELpEksqI4DDoo.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+        "http://swapi.co/api/films/1/"
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": null,
+      "deathday": null,
+      "gender": 0,
+      "homepage": null,
+      "id": 665,
+      "imdb_id": "nm0443599",
+      "name": "Howard G. Kazanjian",
+      "place_of_birth": null,
+      "popularity": 0.000465,
+      "profile_path": null,
+      "swapiId": null,
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": null,
+      "birthday": "1953-06-05",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 489,
+      "imdb_id": "nm0005086",
+      "name": "Kathleen Kennedy",
+      "place_of_birth": "Berkeley, California, USA",
+      "popularity": 0.00033,
+      "profile_path": "/hfv9j3rMDNQKnhbK680e7l3fnRJ.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+
+      ]
+    },
+    {
+      "adult": false,
+      "also_known_as": [
+
+      ],
+      "biography": "From Wikipedia, the free encyclopedia.\n\nBryan Burk (born December 30, 1968, height 5' 7\" (1,70 m) ) is an American film and television producer, as well as an occasional television writer. Career A graduate of USC's School of Cinema-Television, Bryan Burk began his career working with producers Brad Weston at Columbia Pictures, Ned Tanen at Sony Pictures and John Davis at FOX. In 1995, he joined Gerber Pictures, where he developed TNT's Emmy-nominated \"James Dean\", and is currently attached to produce \"NFL: A Love Story.\"\n\nHe has collaborated with J. J. Abrams frequently and is the co-founder of his production company Bad Robot Production. TV series he's worked with Abrams on include, Alias, Six Degrees, What About Brian, Lost, Fringe, Undercovers, Person of Interest, and Alcatraz. He has also served as a producer for Abrams' feature films, Cloverfield, Star Trek, Super 8, and Star Trek Into Darkness.He is set to produce Abrams' next feature, Star Wars: Episode VII.\n\nIn 2009, Burk co-wrote the story, with Akiva Goldsman (teleplay by Jeff Pinkner and J. H. Wyman), for the season one finale of Fringe, \"There's More Than One of Everything\".",
+      "birthday": "1968-12-30",
+      "deathday": "",
+      "gender": 0,
+      "homepage": "",
+      "id": 28977,
+      "imdb_id": "nm1333357",
+      "name": "Bryan Burk",
+      "place_of_birth": "",
+      "popularity": 1.3902,
+      "profile_path": "/8sjfYlGhhqPwCoDzhze211ONtBX.jpg",
+      "swapiId": null,
+      "swapiMovies": [
+
       ]
     }
   ]

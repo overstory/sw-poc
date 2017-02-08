@@ -71,21 +71,25 @@ class MovieDbHandler implements Handler
 		String now = new SimpleDateFormat ("yyyy-MM-dd'T'HH:mm:ss.'000Z'").format (new Date (System.currentTimeMillis()))
 		def actorList = new JsonSlurper().parseText ("{ \"timestamp\": \"${now}\", \"actors\": [] }")
 		def actors = actorList.actors
+		Set seenIds = []
 
-		map.entries.eachWithIndex { Object entry, int index ->
-			entry.movieDbId.each { String id ->
-				if (id) {
-					doGetRequest ("${baseUri}/person/${id}", apiKey).onError {
-						println "Caught exception: ${it}"
-						null
-					} flatMap {
-						def actor = new JsonSlurper().parseText (it)
+		map.each { key, item ->
+			item.eachWithIndex { Object entry, int index ->
+				entry.movieDbId.each { String id ->
+					if (id && ( ! seenIds.contains (id))) {
+						seenIds.add (id)
+						doGetRequest ("${baseUri}/person/${id}", apiKey).onError {
+							println "Caught exception: ${it}"
+							null
+						} flatMap {
+							def actor = new JsonSlurper().parseText (it)
 
-						actor << [swapiId: entry.url]
+							actor << [swapiId: entry.url]
 
-						decorateActorWithMovies (actor as Map<String,Object>)
-					} then { actor ->
-						actors << actor
+							decorateActorWithMovies (actor as Map<String,Object>)
+						} then { actor ->
+							actors << actor
+						}
 					}
 				}
 			}

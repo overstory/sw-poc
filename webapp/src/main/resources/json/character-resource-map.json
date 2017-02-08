@@ -113,5 +113,21 @@
 		{ "name": "ELLO ASTY", "url": null, "movieDbId": [ "71536" ] },
 		{ "name": "JESS", "url": null, "movieDbId": [ "1202689" ] },
 		{ "name": "NIV LEK", "url": null, "movieDbId": [ "1256215" ] }
+	],
+	"directors": [
+		{ "name": "George Lucas", "url": null, "movieDbId": [ "1" ] },
+		{ "name": "Richard Marquand", "url": null, "movieDbId": [ "19800" ] },
+		{ "name": "Irvin Kershner", "url": null, "movieDbId": [ "10930" ] },
+		{ "name": "J. J. Abrams", "url": null, "movieDbId": [ "15344" ] }
+	],
+	"producers": [
+		{ "name": "Gary Kurtz", "url": null, "movieDbId": [ "12401" ] },
+		{ "name": "Rick McCallum", "url": null, "movieDbId": [ "19801" ] },
+		{ "name": "Howard G. Kazanjian", "url": null, "movieDbId": [ "665" ] },
+		{ "name": "George Lucas", "url": null, "movieDbId": [ "1" ] },
+		{ "name": "Kathleen Kennedy", "url": null, "movieDbId": [ "489" ] },
+		{ "name": "Bryan Burk", "url": null, "movieDbId": [ "28977" ] },
+		{ "name": "Howard G. Kazanjian", "url": null, "movieDbId": [ "665" ] },
+		{ "name": "J. J. Abrams", "url": null, "movieDbId": [ "15344" ] }
 	]
 }

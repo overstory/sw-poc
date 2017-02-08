@@ -43,12 +43,13 @@ FOREACH (furl IN f.vehicles |
 
 WITH film, f
 UNWIND split (f.director, ",") AS d
-MERGE (dir:Director { name: d } )
+MERGE (dir:Director { name: trim(d) } )
 MERGE (dir) <-[:DIRECTED_BY]- (film)
 
 WITH film, f
 UNWIND split (f.producer, ",") AS p
-MERGE (prod:Producer { name: p } )
+MERGE (prod { name: trim(p) } )
+SET prod :Producer
 MERGE (prod) <-[:PRODUCED_BY]- (film)
 
 // TX-SPLIT ---------------------------------
