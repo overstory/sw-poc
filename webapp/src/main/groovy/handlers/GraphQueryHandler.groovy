@@ -54,7 +54,7 @@ class GraphQueryHandler implements Handler
 
 	Promise<String> runQueryById (String id, String param)
 	{
-		String cypher = cypherQueries [id].replace (PARAM_MAGIC, param)
+		String cypher = (param == null) ? cypherQueries [id] : cypherQueries [id].replace (PARAM_MAGIC, param)
 
 		if (id == null) return Promise.value (null)
 
