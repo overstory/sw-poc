@@ -67,6 +67,11 @@ ratpack
 				get { insert c.get (GraphQueryHandler) }
 			}
 		}
+		path ('graph/query/id/:id/:param') { Context c ->
+			byMethod {
+				get { insert c.get (GraphQueryHandler) }
+			}
+		}
 
 
 		// Catch the empty patch and match it to index.html
