@@ -12,7 +12,13 @@ export class QueryComponent implements OnInit {
 
   constructor(
     private graph: GraphService
-  ) { }
+  ) {
+    graph.dataSourced$.subscribe(data => {
+      console.log("beep");
+      this.chartData = data;
+      console.log("this data is: " + JSON.stringify(data))
+    });
+  }
 
   ngOnInit() {
     this.graph.getQueryResults("directed-by").subscribe(data => this.chartData = data);

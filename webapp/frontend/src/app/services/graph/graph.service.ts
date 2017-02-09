@@ -1,18 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
-import { Observable } from "rxjs";
+import { Observable, Subject } from "rxjs";
 
 @Injectable()
 export class GraphService {
-  private defaultOptions: RequestOptions;
-  private settings =  {
-    endpoint: 'http://localhost:5050/graph/query/id/'
-  };
+private defaultOptions: RequestOptions;
+private settings =  {
+endpoint: 'http://localhost:5050/graph/query/id/'
+};
+private dataSource = new Subject<any>();
+// Observable string streams
+dataSourced$ = this.dataSource.asObservable();
 
-  constructor(
+constructor(
     private http: Http
   ) { }
 
+  announce(data: any) {
+    this.dataSource.next(data);
+  }
 
   getQueryResults (query:string): Observable<any> {
     let url = this.settings.endpoint + query;
@@ -81,8 +87,7 @@ export class GraphService {
             id: results.nodes[i].id
           })
         }
-      return output
+        return output
       })
-}
-
+  }
 }

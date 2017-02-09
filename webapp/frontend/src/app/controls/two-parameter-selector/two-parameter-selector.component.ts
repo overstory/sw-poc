@@ -8,14 +8,10 @@ import { GraphService } from '../../services/graph/graph.service';
 })
 export class TwoParameterSelectorComponent implements OnInit {
   labels: any = { labels: [] };
- @Output() notify: EventEmitter<any> = new EventEmitter<any>();
-
   character: any = {
-	firstCharacter: null,
-	secondCharacter: null
+    firstCharacter: null,
+    secondCharacter: null
   };
-
-  chartData: any;
 
   constructor(
     private graph: GraphService
@@ -32,9 +28,10 @@ export class TwoParameterSelectorComponent implements OnInit {
 
   getNearestPath() {
     let endPath = 'shortest-path-by-name/' + this.character.firstCharacter + '/' + this.character.secondCharacter;
-	console.log (endPath);
-	this.graph.getQueryResults (endPath).subscribe (data => this.chartData = data);
-	return this.notify.emit(this.chartData)
+    console.log (endPath);
+    this.graph.getQueryResults (endPath).subscribe (data => {
+      this.graph.announce (data)
+    });
   }
 
 }
