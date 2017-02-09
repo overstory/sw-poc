@@ -130,7 +130,7 @@ class GraphQueryHandler implements Handler
 
 	// ToDo: Externalize these into a config file or separate files
 	Map<String,String> cypherQueries = [
-		'root': 'MATCH p=()-[r:DIRECTED_BY]->() RETURN p LIMIT 50',
+		'root': 'MATCH p = (f:Film)-[]->() RETURN p',
 		'directed-by': 'MATCH p=()-[r:DIRECTED_BY]->() RETURN p LIMIT 50',
 		'produced-by': 'MATCH p=()-[r:PRODUCED_BY]->() RETURN p LIMIT 50',
 		'node-by-id': 'MATCH (n) WHERE ID(n) = @param1@ RETURN n',

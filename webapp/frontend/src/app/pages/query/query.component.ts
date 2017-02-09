@@ -15,7 +15,7 @@ export class QueryComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.graph.getQueryResults("directed-by").subscribe(data => this.chartData = data);
+    this.graph.getQueryResults("root").subscribe(data => this.chartData = data);
   }
 
 }
