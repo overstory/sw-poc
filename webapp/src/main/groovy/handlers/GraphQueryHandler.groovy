@@ -32,10 +32,15 @@ class GraphQueryHandler implements Handler
 	@Override
 	void handle (Context context) throws Exception
 	{
-		String id = context.allPathTokens ['id']
-		String param = context.allPathTokens ['param']
+		String id = context.allPathTokens ['qid']
+		Map<String,String> params = [:]
 
-		runQueryById (id, param).onError { Throwable t ->
+		params ['param1'] = (context.allPathTokens ['param1']) ?: ''
+		params ['param2'] = (context.allPathTokens ['param2']) ?: ''
+		params ['param3'] = (context.allPathTokens ['param3']) ?: ''
+
+
+		runQueryById (id, params).onError { Throwable t ->
 			context.response.contentType ('text/plain')
 			context.response.status (500)
 			context.render (t.toString())
@@ -52,9 +57,13 @@ class GraphQueryHandler implements Handler
 		}
 	}
 
-	Promise<String> runQueryById (String id, String param)
+	Promise<String> runQueryById (String id, Map<String,String> params)
 	{
-		String cypher = (param == null) ? cypherQueries [id] : cypherQueries [id].replace (PARAM_MAGIC, param)
+		String cypher = cypherQueries [id]
+
+		params.each { String key, String value ->
+			cypher = cypher.replace ("@${key}@".toString(), value)
+		}
 
 		if (id == null) return Promise.value (null)
 
@@ -124,8 +133,14 @@ class GraphQueryHandler implements Handler
 		'root': 'MATCH p=()-[r:DIRECTED_BY]->() RETURN p LIMIT 50',
 		'directed-by': 'MATCH p=()-[r:DIRECTED_BY]->() RETURN p LIMIT 50',
 		'produced-by': 'MATCH p=()-[r:PRODUCED_BY]->() RETURN p LIMIT 50',
-		'node-by-id': "MATCH (n) WHERE ID(n) = ${PARAM_MAGIC} RETURN n".toString(),
-		'referenced-nodes': "MATCH (n)-[l]->(p) WHERE ID(n) = ${PARAM_MAGIC} RETURN p, l".toString(),
-		'referencing-nodes': "MATCH (n)<-[l]-(p) WHERE ID(n) = ${PARAM_MAGIC} RETURN p, l".toString()
+		'node-by-id': "MATCH (n) WHERE ID(n) = @param1@ RETURN n".toString(),
+		'referenced-nodes': "MATCH (n)-[l]->(p) WHERE ID(n) = @param1@ RETURN p, l".toString(),
+		'referencing-nodes': "MATCH (n)<-[l]-(p) WHERE ID(n) = @param1@ RETURN p, l".toString(),
+		'shortest-path-by-name': """
+MATCH (from:Character {name: "@param1@"})
+MATCH (to:Character {name: "@param2@"})
+MATCH p=shortestPath((from)-[SPEAKS_WITH*]-(to))
+RETURN p
+""".toString()
 	]
 }

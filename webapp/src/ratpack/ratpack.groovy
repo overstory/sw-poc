@@ -62,12 +62,7 @@ ratpack
 			}
 		}
 
-		path ('graph/query/id/:id') { Context c ->
-			byMethod {
-				get { insert c.get (GraphQueryHandler) }
-			}
-		}
-		path ('graph/query/id/:id/:param') { Context c ->
+		path ('graph/query/id/:qid/:param1?/:param2?/:param3?') { Context c ->
 			byMethod {
 				get { insert c.get (GraphQueryHandler) }
 			}
