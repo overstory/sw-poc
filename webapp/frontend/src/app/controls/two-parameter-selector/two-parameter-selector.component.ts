@@ -26,8 +26,24 @@ export class TwoParameterSelectorComponent implements OnInit {
     this.graph.getLabelEntries ('Character').subscribe (data => this.labels = data);
   }
 
-  getNearestPath() {
-    let endPath = 'shortest-path-by-name/' + this.character.firstCharacter + '/' + this.character.secondCharacter;
+  shortestPathById() {
+    let endPath = 'shortest-path-by-id/' + this.character.firstCharacter + '/' + this.character.secondCharacter;
+    console.log (endPath);
+    this.graph.getQueryResults (endPath).subscribe (data => {
+      this.graph.announce (data)
+    });
+  }
+
+  allShortestPathsById() {
+    let endPath = 'all-shortest-paths-by-id/' + this.character.firstCharacter + '/' + this.character.secondCharacter;
+    console.log (endPath);
+    this.graph.getQueryResults (endPath).subscribe (data => {
+      this.graph.announce (data)
+    });
+  }
+
+  pivotalNodeById() {
+    let endPath = 'pivotal-node-by-id/' + this.character.firstCharacter + '/' + this.character.secondCharacter;
     console.log (endPath);
     this.graph.getQueryResults (endPath).subscribe (data => {
       this.graph.announce (data)

@@ -25,86 +25,93 @@ export class ForceComponent implements OnInit {
 
   ngOnInit() {
 
-    this.createChart (this.data);
+    this.createChart ();
     if (this.data) {
-      this.updateChart (this.data);
+      this.update (this.data);
     }
   }
 
   ngOnChanges() {
-    if (this.chart) {
-      this.updateChart (this.data);
-    }
+    this.update(this.data)
   }
 
-  createChart(data) {
+  createChart() {
 
     //define what element  is going to be used for a chart
     let element = this.chartContainer.nativeElement;
     let width = element.offsetWidth - this.margin.left - this.margin.right;
     let height = element.offsetHeight - this.margin.top - this.margin.bottom;
-
-    let svg = d3.select(element).append("svg")
+    let svg =  d3.select(element).append("svg")
+        .attr("id", "force")
         .attr("width", element.offsetWidth)
         .attr("height", element.offsetHeight)
-        ;
+      ;
+  }
+
+  update(data) {
+    let element = this.chartContainer.nativeElement;
+    let width = element.offsetWidth - this.margin.left - this.margin.right;
+    let height = element.offsetHeight - this.margin.top - this.margin.bottom;
+
+    d3.select("#chart").remove();
 
     //chart plot
+	let svg = d3.select("svg")
     this.chart = svg.append("g")
-        .attr("class", "bars")
-        .attr("transform", `translate(${this.margin.left}, ${this.margin.top})`)
-        .call(d3.drag()
-            .on("start", dragstarted)
-            .on("drag", dragged)
-            .on("end", dragended)
-        )
+      .attr("id", "chart")
+      .attr("transform", `translate(${this.margin.left}, ${this.margin.top})`)
+      .call(d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended)
+)
 
-    // .on("keypress", keypress)
-    ;
+// .on("keypress", keypress)
+;
 
-    /*
-     Define <defs> part of svg. This is going to contain any reusable definitions of shapes
-     */
+/*
+Define <defs> part of svg. This is going to contain any reusable definitions of shapes
+*/
 
-    var defs = this.chart.append("defs")
+var defs = this.chart.append("defs")
 
-    var clipart = defs.append("clipPath")
-        .attr("id", "circle-view")
-        .append("circle")
-        .style("fill", "#555")
-        .style("stroke-width", "4")
-        .style("stroke", "#455")
-        .attr("r", this.nodeRadius - 1);
+var clipart = defs.append("clipPath")
+.attr("id", "circle-view")
+      .append("circle")
+      .style("fill", "#555")
+      .style("stroke-width", "4")
+      .style("stroke", "#455")
+      .attr("r", this.nodeRadius - 1);
 
 
     var arrowheads = defs.selectAll("marker").data(["end"])
-        .enter().append("svg:marker")
-        .attr("id", String)
-        .attr("viewBox", "0 -5 10 10")
-        //refX value must be the same as radius of an outer circle - this way it will be pointing correctly
-        .attr("refX", 37)
-        .attr("refY", 0)
-        .attr("markerWidth", 9)
-        .attr("markerHeight", 9)
-        .attr("orient", "auto")
-        .style('fill', "#aaa")
-        .append("svg:path")
-        .attr("d", "M0,-5L10,0L0,5");
+      .enter().append("svg:marker")
+      .attr("id", String)
+      .attr("viewBox", "0 -5 10 10")
+      //refX value must be the same as radius of an outer circle - this way it will be pointing correctly
+      .attr("refX", 37)
+      .attr("refY", 0)
+      .attr("markerWidth", 9)
+      .attr("markerHeight", 9)
+      .attr("orient", "auto")
+      .style('fill', "#aaa")
+      .append("svg:path")
+      .attr("d", "M0,-5L10,0L0,5");
 
 
     var color = d3.scaleOrdinal(d3.schemeCategory20);
 
     var simulation = d3.forceSimulation()
-        .force("charge", d3.forceManyBody().strength(-2000).distanceMax(400).distanceMin(100))
-        .force("center", d3.forceCenter(width / 2, height / 2))
+      .force("charge", d3.forceManyBody().strength(-2000).distanceMax(500).distanceMin(10))
+      .force("center", d3.forceCenter(width / 2, height / 2))
 
 
     //group all links under one <g class="links">
     var link = this.chart.append("g")
-        .attr("class", "links")
-        .selectAll("line")
-        .data(data.links)
-        .enter().append("g");
+      .attr("class", "links")
+      .selectAll("line")
+      .data(data.links)
+      .enter().append("g")
 
 
     //group all nodes under one <g class="nodes"
@@ -114,45 +121,45 @@ export class ForceComponent implements OnInit {
         .data(data.nodes)
         .enter().append("g")
         .attr("class", "node")
-            // .on ("dblclick", nodeDoubleClicked)
-            // .on ("contextmenu", contextMenu)
+        // .on ("dblclick", nodeDoubleClicked)
+        // .on ("contextmenu", contextMenu)
         .call(d3.drag()
-            .on("start", dragstarted)
-            .on("drag", dragged)
-            .on("end", dragended)
-        )
-    ;
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended)
+)
+;
 
 
-    var links = link.append("line")
-        .attr("marker-end", "url(#end)");
+var links = link.append("line")
+.attr("marker-end", "url(#end)");
 
 
     var linkLabel = link.append("text")
-        .attr("class", "linkLabel")
-        .attr("font-size", "8px")
-        .attr("x", -20)
-        .attr("dy", ".35em")
-        // .attr("filter", "url(#solid)")
-        .text(function (d: any) {
-          return "   " + d.relationship + "   ";
-        }).call(getTextBox);
+      .attr("class", "linkLabel")
+      .attr("font-size", "8px")
+      .attr("x", -20)
+      .attr("dy", ".35em")
+      // .attr("filter", "url(#solid)")
+      .text(function (d: any) {
+        return d.relationship;
+      }).call(getTextBox);
 
     //https://bl.ocks.org/mbostock/1160929
     var linkboundBox = link.insert("rect", "text")
-        .attr("x", function (d: any) {
-          return -20
-        })
-        .attr("y", function (d: any) {
-          return -2
-        })
-        .attr("width", function (d: any) {
-          return d.bbox.width + 1
-        })
-        .attr("height", function (d: any) {
-          return d.bbox.height + 3
-        })
-        .style("fill", "#fff");
+      .attr("x", function (d: any) {
+        return -20
+      })
+      .attr("y", function (d: any) {
+        return -2
+      })
+      .attr("width", function (d: any) {
+        return d.bbox.width + 1
+      })
+      .attr("height", function (d: any) {
+        return d.bbox.height + 3
+      })
+      .style("fill", "#fff");
 
 
     function getTextBox(selection) {
@@ -164,72 +171,71 @@ export class ForceComponent implements OnInit {
 
     // Define the div for the tooltip
     var div = d3.select("body")
-        .append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 0);
+      .append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 0);
 
 
     //circle with a opaque fill so that lines in background are not visible
     var circle = node.append("circle")
-        .attr("r", this.nodeRadius)
-        .style("fill", "#eee");
+      .attr("r", this.nodeRadius)
+      .style("fill", "#eee");
 
     var circle = node.append("circle")
-        .attr("r", this.nodeRadius)
-        //change the outer layer of circle's colour
-        .style("stroke", function (d: any, i: any) {
-          console.log("i is:" + d.group);
-          return color(d.group);
-        })
-        //.style("fill", "#eee")
-        .style("fill", function (d: any, i: any) {
-          return color(d.group);
-        })
-        .style("fill-opacity", 0.2);
+      .attr("r", this.nodeRadius)
+      //change the outer layer of circle's colour
+      .style("stroke", function (d: any, i: any) {
+        return color(d.group);
+      })
+      //.style("fill", "#eee")
+      .style("fill", function (d: any, i: any) {
+        return color(d.group);
+      })
+      .style("fill-opacity", 0.2);
 
     var text = node.append("text")
-        .text(function (d: any) {
-          return d.name;
-        })
-        .attr("class", "node-text")
-        .attr("text-anchor", "middle")
-        .attr("dy", ".35em")
-        .attr("clip-path", "url(#circle-view)");
+      .text(function (d: any) {
+        return d.name;
+      })
+      .attr("class", "node-text")
+      .attr("text-anchor", "middle")
+      .attr("dy", ".35em")
+      .attr("clip-path", "url(#circle-view)");
 
     var image = node.append("image")
-        // width height directly relates to inverse x/y here. divide by 2 here
-            .attr("x", function (d) {
-              return -40;
-            })
-            .attr("y", function (d) {
-              return -40;
-            })
-            .attr("height", 80)
-            .attr("width", 80)
-            .attr("xlink:href", function (d: any) {
-              return d.img
-            })
-            .attr("clip-path", "url(#circle-view)")
-            .on("mouseover", function (d: any) {
-              div.transition()
-                  .delay(300)
-                  .duration(200)
-                  .style("opacity", .9);
-              div.html(getTooltipText(d))
-                  .style("left", (d3.event.pageX) + "px")
-                  .style("top", (d3.event.pageY - 28) + "px");
-            })
-            .on("mouseout", function (d: any) {
-              div.transition()
-                  .duration(500)
-                  .style("opacity", 0);
-            })
-            .on("mousedown", function (d: any) {
-              div.transition()
-                  .duration(100)
-                  .style("opacity", 0);
-            })
-        ;
+      // width height directly relates to inverse x/y here. divide by 2 here
+        .attr("x", function (d) {
+          return -40;
+        })
+        .attr("y", function (d) {
+          return -40;
+        })
+        .attr("height", 80)
+        .attr("width", 80)
+        .attr("xlink:href", function (d: any) {
+          return d.img
+        })
+        .attr("clip-path", "url(#circle-view)")
+        .on("mouseover", function (d: any) {
+          div.transition()
+            .delay(300)
+            .duration(200)
+            .style("opacity", .9);
+          div.html(getTooltipText(d))
+            .style("left", (d3.event.pageX) + "px")
+            .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on("mouseout", function (d: any) {
+          div.transition()
+            .duration(500)
+            .style("opacity", 0);
+        })
+        .on("mousedown", function (d: any) {
+          div.transition()
+            .duration(100)
+            .style("opacity", 0);
+        })
+      ;
 
     /* uncomment this if tooltip does not look good
      node.append("title")
@@ -238,12 +244,12 @@ export class ForceComponent implements OnInit {
 
 
     simulation
-        .nodes(data.nodes)
-        .on("tick", ticked);
+      .nodes(data.nodes)
+      .on("tick", ticked);
 
-    simulation.force("link", d3.forceLink(data.links).distance(10).strength(0.5).id(function (d: any) {
+    simulation.force("link", d3.forceLink().id(function (d: any) {
       return d.id;
-    }))
+    }).links(data.links))
 
     function getTooltipText(data) {
       let description = '<h2 class="tooltip-name">' + data.group + ": " + data.name + '</h2>';
@@ -273,18 +279,18 @@ export class ForceComponent implements OnInit {
 
 
       links
-          .attr("x1", function (d: any) {
-            return d.source.x;
-          })
-          .attr("y1", function (d: any) {
-            return d.source.y;
-          })
-          .attr("x2", function (d: any) {
-            return d.target.x;
-          })
-          .attr("y2", function (d: any) {
-            return d.target.y;
-          });
+        .attr("x1", function (d: any) {
+          return d.source.x;
+        })
+        .attr("y1", function (d: any) {
+          return d.source.y;
+        })
+        .attr("x2", function (d: any) {
+          return d.target.x;
+        })
+        .attr("y2", function (d: any) {
+          return d.target.y;
+        });
 
       node.attr("transform", function (d: any) {
         return "translate(" + d.x + "," + d.y + ")";
@@ -358,7 +364,7 @@ export class ForceComponent implements OnInit {
     updateLinks.exit().remove();
 
     // update existing circles
-   let updateNodes = this.chart.selectAll ("circle")
+    let updateNodes = this.chart.selectAll ("circle")
       .data (data.nodes);
 
     // add new nodes

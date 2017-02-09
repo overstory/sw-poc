@@ -70,7 +70,6 @@ constructor(
           });
           //}
         }
-        console.log (JSON.stringify(output));
         return output;
       })
       .catch ( (error:any) => Observable.throw (error.json() || 'Server error'));
