@@ -142,6 +142,25 @@ MATCH (from:Character {name: "@param1@"})
 MATCH (to:Character {name: "@param2@"})
 MATCH p=shortestPath((from)-[SPEAKS_WITH*]-(to))
 RETURN p
+""".toString(),
+		'shortest-path-by-id': """
+MATCH (from:Character) WHERE ID(@param1@) = 24
+MATCH (to:Character) WHERE ID(@param2@) = 30
+MATCH p=shortestPath((from)-[SPEAKS_WITH*]-(to))
+RETURN p
+""".toString(),
+		'all-shortest-paths-by-id': """
+MATCH (from:Character) WHERE ID(@param1@) = 24
+MATCH (to:Character) WHERE ID(@param2@) = 30
+MATCH p=allShortestPaths((from)-[SPEAKS_WITH*]-(to))
+RETURN p
+""".toString(),
+		'pivotal-node-by-id': """
+MATCH (a:Character) WHERE ID(a) = @param1@
+MATCH (b:Character) WHERE ID(b) = @param2@
+MATCH p=allShortestPaths((a)-[:SPEAKS_WITH*]-(b)) WITH collect(p) AS paths, a, b
+MATCH (c:Character) WHERE all(x IN paths WHERE c IN nodes(x)) AND NOT c IN [a,b]
+RETURN a, b, c LIMIT 10
 """.toString()
 	]
 }
