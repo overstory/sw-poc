@@ -10,6 +10,7 @@ export class GraphService {
   };
 
 
+
   constructor(
     private http: Http
   ) { }
@@ -65,10 +66,25 @@ export class GraphService {
           });
           //}
         }
-        console.log(output);
+        console.log(JSON.stringify(output));
         return output;
       })
       .catch((error:any) => Observable.throw(error.json() || 'Server error'));
   }
+
+  getLabelEntries (label: string) {
+    return this.http.get (this.settings.endpoint +'nodes-by-label/' + label)
+      .map(res => {
+        let results = res.json().network;
+        let output :any = { labels: []};
+        for (var i = 0; i < results.nodes.length; i++) {
+          output.labels.push({
+            name: results.nodes[i].label,
+            id: results.nodes[i].id
+          })
+        }
+      return output
+      })
+}
 
 }

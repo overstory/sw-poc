@@ -1,0 +1,31 @@
+<div class="app-two-parameter-selector">
+  <h4>Star Wars network controls</h4>
+
+  <form (ngSubmit)="getNearestPath()">
+    <select name="firstCharacter" class="show" name="firstCharacter" [(ngModel)]="character.firstCharacter">
+      <option id="x">----</option>
+      <option *ngFor="let x of labels.labels" [value]="x.name"  ngDefaultControl>{{x.name}}</option>
+    </select>
+    <select name="secondCharacter" class="show" name="secondCharacter" [(ngModel)]="character.secondCharacter" >
+      <option id="x">----</option>
+      <option *ngFor="let x of labels.labels" [value]="x.name"  ngDefaultControl>{{x.name}}</option>
+    </select>
+    <button type="submit" class="btn">Find closest</button>
+
+  </form>
+  <p>
+    first: {{character.firstCharacter}}
+    second: [{{character.secondCharacter}}]
+  </p>
+</div>
+<!--
+When page is loaded needs to run a query to get a list of nodes that would
+then could be used to populate a dropdown list from known characters, e.g. character names and ids.
+
+This should extend GraphQueryHandler's cypherQueries map using cypher query that picks up label.
+
+
+Queries:
+   * shortest distance
+   *
+-->

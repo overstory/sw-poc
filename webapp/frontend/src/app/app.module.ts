@@ -11,6 +11,7 @@ import { NavbarComponent } from './core/navbar/navbar.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { QueryComponent } from './pages/query/query.component';
 import { ForceComponent } from './shared/force/force.component';
+import { TwoParameterSelectorComponent } from './controls/two-parameter-selector/two-parameter-selector.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ForceComponent } from './shared/force/force.component';
     NavbarComponent,
     FooterComponent,
     QueryComponent,
-	ForceComponent
+	ForceComponent,
+	TwoParameterSelectorComponent
   ],
   imports: [
     BrowserModule,
