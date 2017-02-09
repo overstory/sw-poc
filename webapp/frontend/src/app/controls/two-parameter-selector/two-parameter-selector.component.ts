@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { GraphService } from '../../services/graph/graph.service';
 
 @Component({
@@ -7,7 +7,8 @@ import { GraphService } from '../../services/graph/graph.service';
   styleUrls: ['./two-parameter-selector.component.css']
 })
 export class TwoParameterSelectorComponent implements OnInit {
-  labels: any;
+  labels: any = { labels: [] };
+ @Output() notify: EventEmitter<any> = new EventEmitter<any>();
 
   character: any = {
 	firstCharacter: null,
@@ -32,7 +33,8 @@ export class TwoParameterSelectorComponent implements OnInit {
   getNearestPath() {
     let endPath = 'shortest-path-by-name/' + this.character.firstCharacter + '/' + this.character.secondCharacter;
 	console.log (endPath);
-    return this.graph.getQueryResults (endPath).subscribe (data => this.chartData = data)
+	this.graph.getQueryResults (endPath).subscribe (data => this.chartData = data);
+	return this.notify.emit(this.chartData)
   }
 
 }
