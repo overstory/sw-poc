@@ -133,9 +133,10 @@ class GraphQueryHandler implements Handler
 		'root': 'MATCH p=()-[r:DIRECTED_BY]->() RETURN p LIMIT 50',
 		'directed-by': 'MATCH p=()-[r:DIRECTED_BY]->() RETURN p LIMIT 50',
 		'produced-by': 'MATCH p=()-[r:PRODUCED_BY]->() RETURN p LIMIT 50',
-		'node-by-id': "MATCH (n) WHERE ID(n) = @param1@ RETURN n".toString(),
-		'referenced-nodes': "MATCH (n)-[l]->(p) WHERE ID(n) = @param1@ RETURN p, l".toString(),
-		'referencing-nodes': "MATCH (n)<-[l]-(p) WHERE ID(n) = @param1@ RETURN p, l".toString(),
+		'node-by-id': 'MATCH (n) WHERE ID(n) = @param1@ RETURN n',
+		'referenced-nodes': 'MATCH (n)-[l]->(p) WHERE ID(n) = @param1@ RETURN p, l',
+		'referencing-nodes': 'MATCH (n)<-[l]-(p) WHERE ID(n) = @param1@ RETURN p, l',
+		'nodes-by-label': 'MATCH (n:@param1@) RETURN n',
 		'shortest-path-by-name': """
 MATCH (from:Character {name: "@param1@"})
 MATCH (to:Character {name: "@param2@"})
