@@ -55,3 +55,9 @@ p.tooltip-description {
     font-size: 10pt;
     text-align: left;
 }
+
+img.tooltip-image {
+    padding: 5px;
+    border: 1px solid #66aaaa;
+    float: right;
+}
