@@ -95,7 +95,7 @@ export class ForceComponent implements OnInit {
     var color = d3.scaleOrdinal(d3.schemeCategory20);
 
     var simulation = d3.forceSimulation()
-        .force("charge", d3.forceManyBody().strength(-2000).distanceMax(500).distanceMin(10))
+        .force("charge", d3.forceManyBody().strength(-2000).distanceMax(400).distanceMin(100))
         .force("center", d3.forceCenter(width / 2, height / 2))
 
 
@@ -104,7 +104,7 @@ export class ForceComponent implements OnInit {
         .attr("class", "links")
         .selectAll("line")
         .data(data.links)
-        .enter().append("g")
+        .enter().append("g");
 
 
     //group all nodes under one <g class="nodes"
@@ -135,7 +135,7 @@ export class ForceComponent implements OnInit {
         .attr("dy", ".35em")
         // .attr("filter", "url(#solid)")
         .text(function (d: any) {
-          return d.relationship;
+          return "   " + d.relationship + "   ";
         }).call(getTextBox);
 
     //https://bl.ocks.org/mbostock/1160929
@@ -241,9 +241,9 @@ export class ForceComponent implements OnInit {
         .nodes(data.nodes)
         .on("tick", ticked);
 
-    simulation.force("link", d3.forceLink().id(function (d: any) {
+    simulation.force("link", d3.forceLink(data.links).distance(10).strength(0.5).id(function (d: any) {
       return d.id;
-    }).links(data.links))
+    }))
 
     function getTooltipText(data) {
       let description = '<h2 class="tooltip-name">' + data.group + ": " + data.name + '</h2>';
