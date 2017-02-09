@@ -7,9 +7,7 @@ import { GraphService } from '../../services/graph/graph.service';
   styleUrls: ['./two-parameter-selector.component.css']
 })
 export class TwoParameterSelectorComponent implements OnInit {
-  labels: any = {labels: [
-	{id: "1", name: "someone"}
-  ]};
+  labels: any;
 
   character: any = {
 	firstCharacter: null,
@@ -19,7 +17,7 @@ export class TwoParameterSelectorComponent implements OnInit {
   chartData: any;
 
   constructor(
-    private neo: GraphService
+    private graph: GraphService
   ) { }
 
   ngOnInit() {
@@ -28,16 +26,13 @@ export class TwoParameterSelectorComponent implements OnInit {
 
   /* get character list to populate the dropdown list */
   getCharacterList() {
-    this.neo.getLabelEntries('Character').subscribe(data => this.labels = data);
+    this.graph.getLabelEntries ('Character').subscribe (data => this.labels = data);
   }
 
   getNearestPath() {
     let endPath = 'shortest-path-by-name/' + this.character.firstCharacter + '/' + this.character.secondCharacter;
-	console.log(endPath);
-    return this.neo.getQueryResults(endPath).subscribe(data => this.chartData = data)
+	console.log (endPath);
+    return this.graph.getQueryResults (endPath).subscribe (data => this.chartData = data)
   }
 
-
-
-//shortest-path-by-name/Jar Jar Binks/Greedo
 }

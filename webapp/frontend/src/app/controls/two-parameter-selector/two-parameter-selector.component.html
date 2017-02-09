@@ -11,12 +11,7 @@
       <option *ngFor="let x of labels.labels" [value]="x.name"  ngDefaultControl>{{x.name}}</option>
     </select>
     <button type="submit" class="btn">Find closest</button>
-
   </form>
-  <p>
-    first: {{character.firstCharacter}}
-    second: [{{character.secondCharacter}}]
-  </p>
 </div>
 <!--
 When page is loaded needs to run a query to get a list of nodes that would

@@ -9,8 +9,6 @@ export class GraphService {
     endpoint: 'http://localhost:5050/graph/query/id/'
   };
 
-
-
   constructor(
     private http: Http
   ) { }
@@ -19,7 +17,7 @@ export class GraphService {
   getQueryResults (query:string): Observable<any> {
     let url = this.settings.endpoint + query;
     return this.http.get (url)
-      .map(res => {
+      .map (res => {
         let results = res.json().network;
         let output = {
           nodes: [],
@@ -66,15 +64,15 @@ export class GraphService {
           });
           //}
         }
-        console.log(JSON.stringify(output));
+        console.log (JSON.stringify(output));
         return output;
       })
-      .catch((error:any) => Observable.throw(error.json() || 'Server error'));
+      .catch ( (error:any) => Observable.throw (error.json() || 'Server error'));
   }
 
   getLabelEntries (label: string) {
     return this.http.get (this.settings.endpoint +'nodes-by-label/' + label)
-      .map(res => {
+      .map (res => {
         let results = res.json().network;
         let output :any = { labels: []};
         for (var i = 0; i < results.nodes.length; i++) {
