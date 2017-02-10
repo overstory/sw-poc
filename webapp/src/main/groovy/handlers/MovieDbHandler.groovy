@@ -26,7 +26,8 @@ class MovieDbHandler implements Handler
 	private final String baseUri
 	private final String apiKey
 	private final String jsonDataResource
-	private final String resourceMap
+	private final String swapiResource
+	private final String resourceJson
 	private final String characterMap
 	private final HttpClient httpClient
 	private final Map<String,String> moviesMap
@@ -34,13 +35,14 @@ class MovieDbHandler implements Handler
 	@Inject
 	MovieDbHandler (@Named('MOVIEDB_BASE_URL') String baseUri, @Named('MOVIEDB_API_KEY') String apiKey,
 		@Named('CHARACTER_MAP') String characterMap, @Named('MOVIEDB_ACTORS_RESOURCE') String jsonDataResource,
-		@Named('SWAPI_RESOURCE_MAP') String resourceMap,
+		@Named('SWAPI_RESOURCE_MAP') String swapiResourceMap, @Named('MOVIEDB_MOVIES_RESOURCE') String resourceJson,
 		HttpClient httpClient)
 	{
 		this.baseUri = baseUri
 		this.apiKey = apiKey
 		this.characterMap = characterMap
-		this.resourceMap = resourceMap
+		this.swapiResource = swapiResourceMap
+		this.resourceJson = resourceJson
 		this.jsonDataResource = jsonDataResource
 		this.httpClient = httpClient
 
@@ -67,13 +69,14 @@ class MovieDbHandler implements Handler
 
 	private Promise<String> aggregateMovieDbData (String baseUri)
 	{
-		def map = new JsonSlurper().parse (getClass().classLoader.getResourceAsStream (characterMap))
+		def characterMap = new JsonSlurper().parse (getClass().classLoader.getResourceAsStream (characterMap))
+		def resMap = new JsonSlurper().parse (getClass().classLoader.getResourceAsStream (resourceJson))
 		String now = new SimpleDateFormat ("yyyy-MM-dd'T'HH:mm:ss.'000Z'").format (new Date (System.currentTimeMillis()))
-		def actorList = new JsonSlurper().parseText ("{ \"timestamp\": \"${now}\", \"actors\": [] }")
-		def actors = actorList.actors
+		def movieDbList = new JsonSlurper().parseText ("{ \"timestamp\": \"${now}\", \"items\": [] }")
+		def movieDbItems = movieDbList.items
 		Set seenIds = []
 
-		map.each { key, item ->
+		characterMap.each { key, item ->
 			item.eachWithIndex { Object entry, int index ->
 				entry.movieDbId.each { String id ->
 					if (id && ( ! seenIds.contains (id))) {
@@ -86,16 +89,40 @@ class MovieDbHandler implements Handler
 
 							actor << [swapiId: entry.url]
 
+							// Minor glitch in the MovieDB data, fixup so it will match
+							if (actor ['name'] == 'J.J. Abrams') actor ['name'] = 'J. J. Abrams'
+
 							decorateActorWithMovies (actor as Map<String,Object>)
 						} then { actor ->
-							actors << actor
+							movieDbItems << actor
 						}
 					}
 				}
 			}
 		}
 
-		Promise.value (actorList).map {
+		seenIds.clear()
+
+		resMap.movies.eachWithIndex { Map movie, int index ->
+			String id = movie ['movieDbId']
+
+			if (id && ( ! seenIds.contains (id))) {
+				seenIds.add (id)
+
+				doGetRequest ("${baseUri}/movie/${id}", apiKey).onError {
+					println "Caught exception: ${it}"
+					null
+				} map {
+					def film = new JsonSlurper().parseText (it)
+
+					film << [swapiId: movie.swapiUrl]
+				} then { film ->
+					movieDbItems << film
+				}
+			}
+		}
+
+		Promise.value (movieDbList).map {
 			new JsonBuilder (it).toPrettyString()
 		}
 	}
@@ -119,7 +146,7 @@ class MovieDbHandler implements Handler
 
 	private Map<String,String> buildMdbToSwapiMovieMap()
 	{
-		def moviesList = new JsonSlurper().parse (getClass().classLoader.getResourceAsStream (resourceMap)).movies
+		def moviesList = new JsonSlurper().parse (getClass().classLoader.getResourceAsStream (swapiResource)).movies
 		Map<String,String> map = [:]
 
 		moviesList.each { Map<String,String> movie ->

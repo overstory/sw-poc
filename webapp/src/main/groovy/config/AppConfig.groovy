@@ -52,6 +52,7 @@ class AppConfig extends AbstractModule
 		'swsocial-interactions': 'json/starwars-full-interactions-allCharacters-merged.json',
 		'swsocial-load-cypher': 'cypher/load-swsocial.cypher',
 		'moviedb-json': MOVIEDB_ACTORS_RESOURCE,
+		'moviedb-res-json': MOVIEDB_MOVIES_RESOURCE,
 		'moviedb-load-cypher': 'cypher/load-moviedb.cypher'
 	]
 
