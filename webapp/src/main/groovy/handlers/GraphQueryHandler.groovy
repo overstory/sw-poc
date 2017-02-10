@@ -146,13 +146,13 @@ RETURN p
 		'shortest-path-by-id': """
 MATCH (from:Character) WHERE ID(from) = @param1@
 MATCH (to:Character) WHERE ID(to) = @param2@
-MATCH p=shortestPath((from)-[SPEAKS_WITH*]-(to))
+MATCH p=shortestPath((from)-[:SPEAKS_WITH*]-(to))
 RETURN p
 """.toString(),
 		'all-shortest-paths-by-id': """
 MATCH (from:Character) WHERE ID(from) = @param1@
 MATCH (to:Character) WHERE ID(to) = @param2@
-MATCH p=allShortestPaths((from)-[SPEAKS_WITH*]-(to))
+MATCH p=allShortestPaths((from)-[:SPEAKS_WITH*]-(to))
 RETURN p
 """.toString(),
 		'pivotal-node-by-id': """
