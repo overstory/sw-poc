@@ -102,8 +102,9 @@ var clipart = defs.append("clipPath")
     var color = d3.scaleOrdinal(d3.schemeCategory20);
 
     var simulation = d3.forceSimulation()
-      .force("charge", d3.forceManyBody().strength(-2000).distanceMax(500).distanceMin(10))
-      .force("center", d3.forceCenter(width / 2, height / 2))
+        .velocityDecay (0.2)
+      .force("charge", d3.forceManyBody().strength(-1000).distanceMax(400).distanceMin(1))
+      .force("center", d3.forceCenter(width / 2, height / 2));
 
 
     //group all links under one <g class="links">
@@ -111,7 +112,7 @@ var clipart = defs.append("clipPath")
       .attr("class", "links")
       .selectAll("line")
       .data(data.links)
-      .enter().append("g")
+      .enter().append("g");
 
 
     //group all nodes under one <g class="nodes"
@@ -247,7 +248,7 @@ var links = link.append("line")
       .nodes(data.nodes)
       .on("tick", ticked);
 
-    simulation.force("link", d3.forceLink().id(function (d: any) {
+    simulation.force("link", d3.forceLink().distance (50).strength (0.8).id(function (d: any) {
       return d.id;
     }).links(data.links))
 
