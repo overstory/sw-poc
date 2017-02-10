@@ -43,7 +43,8 @@ class NeoLoadHandler implements Handler
 			'add-constraints': [:],
 			'swapi-load-cypher': ['json': getResourceAsJson ('swapi-json')],
 			'swsocial-load-cypher': ['interactions': buildInteractions (getResourceAsJson ('swsocial-char-map'), getResourceAsJson ('swsocial-interactions')).getContent()],
-			'moviedb-load-cypher': ['json': getResourceAsJson ('moviedb-json')]
+			'moviedb-load-cypher': ['json': getResourceAsJson ('moviedb-json')],
+			'fixup-images': [:]
 		]
 
 		List<ReceivedResponse> responses = []

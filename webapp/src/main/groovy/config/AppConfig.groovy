@@ -53,7 +53,8 @@ class AppConfig extends AbstractModule
 		'swsocial-load-cypher': 'cypher/load-swsocial.cypher',
 		'moviedb-json': MOVIEDB_ACTORS_RESOURCE,
 		'moviedb-res-json': MOVIEDB_MOVIES_RESOURCE,
-		'moviedb-load-cypher': 'cypher/load-moviedb.cypher'
+		'moviedb-load-cypher': 'cypher/load-moviedb.cypher',
+		'fixup-images': 'cypher/fixup-images.cypher'
 	]
 
 	@Override
