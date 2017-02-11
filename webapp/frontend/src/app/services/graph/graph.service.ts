@@ -64,6 +64,7 @@ constructor(
           }
           // if (checkExists != true) {
           output.links.push({
+              id: results.edges[i].id,
             source: results.edges[i].from,
             target: results.edges[i].to,
             strength: 1,
@@ -93,10 +94,11 @@ constructor(
   }
 
   //localhost:5050/graph/query/id/referenced-nodes/9112
-  getOutboundNodes ( id: number , graph: any): Observable<any> {
+  getOutboundNodes (id: number): Observable<any> {
     return this.http.get (this.settings.endpoint + this.REFERENCED_NODES + id)
       .map (res => {
         let results = res.json().network;
+        let graph = { nodes: [], links: [] }
 
         for (var i = 0; i < results.nodes.length; i++) {
 
@@ -130,16 +132,18 @@ constructor(
             }
           }
            if (checkExists != true) {
-          graph.links.push({
-            source: results.edges[i].from,
-            target: results.edges[i].to,
-            strength: 1,
-            arrows: results.edges[i].arrows[1],
-            relationship: results.edges[i].label
-          });
+            graph.links.push({
+                id: results.edges[i].id,
+                strength: 1,
+                source: results.edges[i].from,
+                target: results.edges[i].to,
+                arrows: results.edges[i].arrows[1],
+                relationship: results.edges[i].label
+              });
           }
         }
-        return graph;
+
+          return graph;
       })
       .catch ( (error:any) => Observable.throw (error.json() || 'Server error'));
   }

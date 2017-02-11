@@ -20,23 +20,20 @@ export class ForceComponent implements OnInit {
   private height: number;
   private initialData: any;
 
-
-  constructor(
-    private graph: GraphService
-  ) {
-  }
-
+  constructor (private graph: GraphService) { }
 
   ngOnInit() {
 
     this.createChart();
+
     if (this.data) {
-      this.updateChart(this.data);
+      this.updateChart (this.data);
     }
   }
 
-  ngOnChanges() {
-    this.updateChart(this.data)
+  ngOnChanges()
+  {
+    this.updateChart (this.data)
   }
 
   createChart() {
@@ -52,7 +49,8 @@ export class ForceComponent implements OnInit {
       ;
   }
 
-  updateChart(data) {
+  updateChart (data)
+  {
     let element = this.chartContainer.nativeElement;
     let width = element.offsetWidth - this.margin.left - this.margin.right;
     let height = element.offsetHeight - this.margin.top - this.margin.bottom;
@@ -60,26 +58,66 @@ export class ForceComponent implements OnInit {
     var margin: any = this.margin;
     var linkLabel: any;
     var linkboundBox: any;
-    var links: any;
-    var link: any;
     var simulation: any;
-    var node: any;
+    var nodeSelection: any;
+    var linkSelection: any;
     var defs: any;
     var container: any;
     var nodeRadius: number = 25;
     var graphF: any = this.graph;
+  var nodeList: any = [];
+  var linkList: any = [];
 
     clear();
-    build(data);
+    build (data);
 
+    function clear()
+    {
+        nodeList.length = 0;
+        linkList.length = 0;
 
-    function clear() {
-      return d3.select("#chart").remove()
+        // This should not be necessary, find out why the restart() doesn't remove nodes and links
+        d3.select("#chart").remove();
+
+        restart()
     }
 
-    function build(data) {
+    function addToGraph (data)
+    {
+        mergeLists (linkList, data.links);
+        mergeLists (nodeList, data.nodes);
+        restart()
+    }
+
+    function mergeLists (existing, added)
+    {
+        let list = [];
+
+        for (let i = 0; i < added.length; i++) {
+            if ( ! itemExistsInList (existing, added[i].id)) {
+                existing.push (added [i])
+            }
+        }
+    }
+
+    // This is an inefficient O^N algorithm, there is probably a better JavaScript way to do this
+    function itemExistsInList (list, id)
+    {
+        for (let i = 0; i < list.length; i++) {
+            if ((list [i].id == id) ) {
+                return true;
+            }
+        }
+
+        return false
+    }
+
+    function build (data)
+    {
+
       //chart plot
-      let svg = d3.select("svg")
+      let svg = d3.select("svg");
+
       container = svg.append("g")
         .attr("id", "chart")
         .attr("transform", `translate(${margin.left}, ${margin.top})`)
@@ -88,7 +126,6 @@ export class ForceComponent implements OnInit {
           .on("drag", dragged)
           .on("end", dragended)
         )
-
 // .on("keypress", keypress)
       ;
 
@@ -96,9 +133,7 @@ export class ForceComponent implements OnInit {
        Define <defs> part of svg. This is going to contain any reusable definitions of shapes
        */
 
-      defs = container.append("defs")
-
-
+      defs = container.append ("defs");
 
       defs.selectAll("marker").data(["end"])
         .enter().append("svg:marker")
@@ -122,165 +157,39 @@ export class ForceComponent implements OnInit {
         .style("stroke", "#455")
         .attr("r", nodeRadius - 1);
 
-      var color = d3.scaleOrdinal(d3.schemeCategory20);
+      // let color = d3.scaleOrdinal(d3.schemeCategory20);
 
-      //group all links under one <g class="links">
-      var linksGrp = container
-          .append("g")
-          .attr("class", "links")
-        ;
-      var linkGrp = linksGrp
-          .selectAll("line")
-          .data(data.links)
-        ;
-      link = linkGrp
-        .enter()
-        .append("g")
-      ;
+      mergeLists (linkList, data.links);
 
+        var linksGrp = container.append ("g") .attr ("class", "links");
+        linkSelection = linksGrp.selectAll ("line").data ([], function(d) { return d.id; });
 
-      linkGrp.selectAll("line").exit().remove();
+        // setLinks (linkList);
+      // linkSelection = setLinks (linkList);
 
+      mergeLists (nodeList, data.nodes);
 
-      links = link
-        .append("line")
-        .attr("marker-end", "url(#end)")
-      ;
+        container.append("g").attr("class", "nodes");
+        var nodesGrp = container.append("g").attr("class", "nodes");
+        nodeSelection = nodesGrp.selectAll ("circle").data ([], function(d) { return d.id; });
 
-
-      linkLabel = link.append("text")
-        .attr("class", "linkLabel")
-        .attr("font-size", "8px")
-        .attr("x", -20)
-        .attr("dy", ".35em")
-        // .attr("filter", "url(#solid)")
-        .text(function (d: any) {
-          return d.relationship;
-        }).call(getTextBox);
-
-      //https://bl.ocks.org/mbostock/1160929
-      linkboundBox = link.insert("rect", "text")
-        .attr("x", function (d: any) {
-          return -20
-        })
-        .attr("y", function (d: any) {
-          return -2
-        })
-        .attr("width", function (d: any) {
-          return d.bbox.width + 1
-        })
-        .attr("height", function (d: any) {
-          return d.bbox.height + 3
-        })
-        .style("fill", "#fff");
-
-      //group all nodes under one <g class="nodes"
-      var nodesGrp = container.append("g")
-        .attr("class", "nodes");
-      var nodeGroup = nodesGrp.selectAll("circle").data(data.nodes);
-
-      node = nodeGroup
-        .enter().append("g")
-        .attr("class", "node")
-        .on("dblclick", nodeDoubleClicked)
-        // .on ("contextmenu", contextMenu)
-        .call(d3.drag()
-          .on("start", dragstarted)
-          .on("drag", dragged)
-          .on("end", dragended)
-        )
-      ;
-
-      nodeGroup.selectAll("circle").exit().remove();
-
-
-
-
-      // Define the div for the tooltip
-      var div = d3.select("body")
-        .append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 0);
-
-
-      //circle with a opaque fill so that lines in background are not visible
-      var circle = node.append("circle")
-        .attr("r", nodeRadius)
-        .style("fill", "#eee");
-
-      var circle = node.append("circle")
-        .attr("r", nodeRadius)
-        //change the outer layer of circle's colour
-        .style("stroke", function (d: any, i: any) {
-          return color(d.group);
-        })
-        //.style("fill", "#eee")
-        .style("fill", function (d: any, i: any) {
-          return color(d.group);
-        })
-        .style("fill-opacity", 0.2);
-
-      var text = node.append("text")
-        .text(function (d: any) {
-          return d.name;
-        })
-        .attr("class", "node-text")
-        .attr("text-anchor", "middle")
-        .attr("dy", ".35em")
-        .attr("clip-path", "url(#circle-view)");
-
-      var image = node.append("image")
-        // width height directly relates to inverse x/y here. divide by 2 here
-          .attr("x", function (d) {
-            return -40;
-          })
-          .attr("y", function (d) {
-            return -40;
-          })
-          .attr("height", 80)
-          .attr("width", 80)
-          .attr("xlink:href", function (d: any) {
-            return d.img
-          })
-          .attr("clip-path", "url(#circle-view)")
-          .on("mouseover", function (d: any) {
-            div.transition()
-              .delay(300)
-              .duration(200)
-              .style("opacity", .9);
-            div.html(getTooltipText(d))
-              .style("left", (d3.event.pageX) + "px")
-              .style("top", (d3.event.pageY - 28) + "px");
-          })
-          .on("mouseout", function (d: any) {
-            div.transition()
-              .duration(500)
-              .style("opacity", 0);
-          })
-          .on("mousedown", function (d: any) {
-            div.transition()
-              .duration(100)
-              .style("opacity", 0);
-          })
-        ;
-      simulate()
+        simulate()
+        restart()
     }
+
 
     function simulate() {
 
-      simulation = d3.forceSimulation()
-        .velocityDecay(0.2)
-        .force("charge", d3.forceManyBody().strength(-1000).distanceMax(400).distanceMin(1))
-        .force("center", d3.forceCenter(width / 2, height / 2));
-
-      simulation
-        .nodes(data.nodes)
-        .on("tick", ticked);
-
-      simulation.force("link", d3.forceLink().distance(50).strength(0.8).id(function (d: any) {
-        return d.id;
-      }).links(data.links))
-
+      simulation = d3.forceSimulation (nodeList)
+        .force ("charge", d3.forceManyBody().strength(-800))  // .distanceMax(400).distanceMin(1))
+        .force ("center", d3.forceCenter (width / 2, height / 2))
+        .force ("link", d3.forceLink (linkList).distance (200)/*.strength (0.8)*/.id (function (d: any) { return d.id; }))
+        .force ("x", d3.forceX())
+        .force ("y", d3.forceY())
+        .alphaTarget(1)
+        // .velocityDecay (0.2)
+        .on("tick", ticked)
+      ;
     }
 
     function getTextBox(selection) {
@@ -305,35 +214,171 @@ export class ForceComponent implements OnInit {
 
     function ticked() {
       // TODO: may want to combine link label with white box underneath so less calculations are done. may have performance issues later on
-     linkLabel.attr("transform", function (d: any) {
-        var angle = Math.atan((d.source.y - d.target.y) / (d.source.x - d.target.x)) * 180 / Math.PI;
-        return 'translate(' + [((d.source.x + d.target.x) / 2 ), ((d.source.y + d.target.y) / 2 )] + ')rotate(' + angle + ')';
-      });
+     // linkLabel.attr("transform", function (d: any) {
+     //    var angle = Math.atan((d.source.y - d.target.y) / (d.source.x - d.target.x)) * 180 / Math.PI;
+     //    return 'translate(' + [((d.source.x + d.target.x) / 2 ), ((d.source.y + d.target.y) / 2 )] + ')rotate(' + angle + ')';
+     //  });
 
-      linkboundBox.attr("transform", function (d: any) {
-        var angle = Math.atan((d.source.y - d.target.y) / (d.source.x - d.target.x)) * 180 / Math.PI;
-        return 'translate(' + [((d.source.x + d.target.x) / 2 ), ((d.source.y + d.target.y) / 2 )] + ')rotate(' + angle + ')';
-      });
+      // linkboundBox.attr("transform", function (d: any) {
+      //   var angle = Math.atan((d.source.y - d.target.y) / (d.source.x - d.target.x)) * 180 / Math.PI;
+      //   return 'translate(' + [((d.source.x + d.target.x) / 2 ), ((d.source.y + d.target.y) / 2 )] + ')rotate(' + angle + ')';
+      // });
 
 
-      links
-        .attr("x1", function (d: any) {
-          return d.source.x;
-        })
-        .attr("y1", function (d: any) {
-          return d.source.y;
-        })
-        .attr("x2", function (d: any) {
-          return d.target.x;
-        })
-        .attr("y2", function (d: any) {
-          return d.target.y;
-        });
+        nodeSelection.attr ("cx", function(d) { return d.x; })
+            .attr ("cy", function(d) { return d.y; })
+            .attr ("transform", function (d: any) { return "translate(" + d.x + "," + d.y + ")"; })
+        ;
 
-      node.attr("transform", function (d: any) {
-        return "translate(" + d.x + "," + d.y + ")";
-      })
+        linkSelection.attr ("x1", function(d) { return d.source.x; })
+            .attr ("y1", function(d) { return d.source.y; })
+            .attr ("x2", function(d) { return d.target.x; })
+            .attr ("y2", function(d) { return d.target.y; })
+        ;
+
+        // FixMe: I've messed this up somehow, it's not selecting the text nodes properly
+        linkSelection.selectAll ("text")
+            .attr("transform", function (d: any) {
+                var angle = Math.atan((d.source.y - d.target.y) / (d.source.x - d.target.x)) * 180 / Math.PI;
+                return 'translate(' + [((d.source.x + d.target.x) / 2 ), ((d.source.y + d.target.y) / 2 )] + ')rotate(' + angle + ')';
+            });
+
+        linkSelection.selectAll ("rect")
+            .attr("transform", function (d: any) {
+                var angle = Math.atan((d.source.y - d.target.y) / (d.source.x - d.target.x)) * 180 / Math.PI;
+                return 'translate(' + [((d.source.x + d.target.x) / 2 ), ((d.source.y + d.target.y) / 2 )] + ')rotate(' + angle + ')';
+            });
     }
+
+      function restart()
+      {
+          if (nodeSelection == null) return;    // Can happen on first paint,
+
+          // Apply the general update pattern to the nodes.
+          nodeSelection = nodeSelection.data (nodeList, function(d) { return d.id;});
+          nodeSelection.exit().remove();
+          nodeSelection = nodeSelection.enter()
+              .append("g").attr("class", "node")
+              .on("dblclick", nodeDoubleClicked)
+              // .on ("contextmenu", contextMenu)
+              .call(d3.drag()
+                  .on("start", dragstarted)
+                  .on("drag", dragged)
+                  .on("end", dragended)
+              )
+              .merge (nodeSelection)
+          ;
+
+          let color = d3.scaleOrdinal (d3.schemeCategory20);
+
+          // Define the div for the tooltip
+          var div = d3.select ("body")
+              .append("div")
+              .attr("class", "tooltip")
+              .style("opacity", 0);
+
+          //circle with a opaque fill so that lines in background are not visible
+          var circle = nodeSelection.append("circle")
+              .attr("r", nodeRadius)
+              .style("fill", "#eee");
+
+          var circle = nodeSelection.append("circle")
+              .attr("r", nodeRadius)
+              //change the outer layer of circle's colour
+              .style("stroke", function (d: any, i: any) {
+                  return color(d.group);
+              })
+              //.style("fill", "#eee")
+              .style("fill", function (d: any, i: any) {
+                  return color(d.group);
+              })
+              .style("fill-opacity", 0.2);
+
+          var text = nodeSelection.append("text")
+              .text(function (d: any) {
+                  return d.name;
+              })
+              .attr("class", "node-text")
+              .attr("text-anchor", "middle")
+              .attr("dy", ".35em")
+              .attr("clip-path", "url(#circle-view)");
+
+          var image = nodeSelection.append("image")
+              // width height directly relates to inverse x/y here. divide by 2 here
+                  .attr("x", function (d) {
+                      return -40;
+                  })
+                  .attr("y", function (d) {
+                      return -40;
+                  })
+                  .attr("height", 80)
+                  .attr("width", 80)
+                  .attr("xlink:href", function (d: any) {
+                      return d.img
+                  })
+                  .attr("clip-path", "url(#circle-view)")
+                  .on("mouseover", function (d: any) {
+                      div.transition()
+                          .delay(300)
+                          .duration(200)
+                          .style("opacity", .9);
+                      div.html(getTooltipText(d))
+                          .style("left", (d3.event.pageX) + "px")
+                          .style("top", (d3.event.pageY - 28) + "px");
+                  })
+                  .on("mouseout", function (d: any) {
+                      div.transition()
+                          .duration(500)
+                          .style("opacity", 0);
+                  })
+                  .on("mousedown", function (d: any) {
+                      div.transition()
+                          .duration(100)
+                          .style("opacity", 0);
+                  })
+              ;
+
+
+          // Apply the general update pattern to the links.
+          linkSelection = linkSelection.data(linkList, function(d) { return d.id; });
+          linkSelection.exit().remove();
+          linkSelection = linkSelection.enter()
+              .append ("line").attr ("marker-end", "url(#end)")
+              .merge (linkSelection);
+
+          linkLabel = linkSelection.append ("text")
+              .attr("class", "linkLabel")
+              .attr("font-size", "10px")
+              .attr("x", -20)
+              .attr("dy", ".35em")
+              // .attr("filter", "url(#solid)")
+              .text(function (d: any) {
+                  return d.relationship;
+              }).call (getTextBox);
+
+          //https://bl.ocks.org/mbostock/1160929
+          linkboundBox = linkSelection.insert ("rect", "text")
+              .attr("x", function (d: any) {
+                  return -20
+              })
+              .attr("y", function (d: any) {
+                  return -2
+              })
+              .attr("width", function (d: any) {
+                  return d.bbox.width + 1
+              })
+              .attr("height", function (d: any) {
+                  return d.bbox.height + 3
+              })
+              .style("fill", "#fff");
+
+
+          // Update and restart the simulation.
+          simulation.nodes (nodeList);
+          simulation.force ("link").links (linkList);
+          simulation.alpha (1).restart();
+      }
+
 
     function dragstarted(d: any) {
       if (!d3.event.active) simulation.alphaTarget(0.3).restart();
@@ -358,15 +403,10 @@ export class ForceComponent implements OnInit {
     }
 
     function nodeDoubleClicked(d: any) {
-      let network: any = data;
-      setTimeout(() => {
-        graphF.getOutboundNodes(d.id, network).subscribe(data => {
-          clear();
-          build(data);
+        graphF.getOutboundNodes(d.id).subscribe (newData => {
+          addToGraph (newData);
+          restart()
         });
-      }, 4000);
-
-
     }
 
     function contextMenu(d) {

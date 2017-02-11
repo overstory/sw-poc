@@ -88,6 +88,6 @@ class Neo4JServerImpl implements Neo4JServer
 
 	private static String escapeCypher (String cypher)
 	{
-		cypher.replaceAll ('\\/\\/.*\\n', ' ').replaceAll ('\n|\r|\t', ' ') // .replaceAll ('"', '\\\\"')
+		cypher.replaceAll ('^\\\\w*\\/\\/.*\\n', ' ').replaceAll ('\n|\r|\t', ' ') // .replaceAll ('"', '\\\\"')
 	}
 }
