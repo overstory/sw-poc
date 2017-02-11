@@ -184,6 +184,7 @@ export class ForceComponent implements OnInit {
         .force ("charge", d3.forceManyBody().strength(-800))  // .distanceMax(400).distanceMin(1))
         .force ("center", d3.forceCenter (width / 2, height / 2))
         .force ("link", d3.forceLink (linkList).distance (200)/*.strength (0.8)*/.id (function (d: any) { return d.id; }))
+        .force ("collide", d3.forceCollide (function (d:any) { return d.r }))
         .force ("x", d3.forceX())
         .force ("y", d3.forceY())
         .alphaTarget(1)
@@ -192,24 +193,44 @@ export class ForceComponent implements OnInit {
       ;
     }
 
-    function getTextBox(selection) {
+    function getTextBox (selection) {
       selection.each(function (d) {
         d.bbox = this.getBBox();
       })
     }
 
-    function getTooltipText(data) {
-      let description = '<h2 class="tooltip-name">' + data.group + ": " + data.name + '</h2>';
+    let hiddenProperties = {
+        description: true, img: true, x: true, y: true, vx: true, vy: true, index: true, id: true,
+        name: true, group: true, fx: true, fy: true, moved: true
+    };
 
-      if (data.img != null) {
-        description += '<img src="' + data.img + '" title="' + data.name + '" class="tooltip-image"/>';
+    function getTooltipText (data) {
+      let html = '<h2 class="tooltip-name">' + data.group + ": " + data.name + '</h2>';
+
+      if ((data.description != null) || (data.img != null)) {
+          html += "<div class='tooltip-desc-row'>";
+
+          if (data.img != null) {
+            html += '<img src="' + data.img + '" title="' + data.name + '" class="tooltip-image"/>';
+          }
+
+          if (data.description != null) {
+            html += '<p class="tooltip-description">' + data.description + '</p>'
+          }
+
+          html += "</div>";
       }
 
-      if (data.description != null) {
-        description += '<p class="tooltip-description">' + data.description + '</p>'
-      }
+        html += "<div class='tooltip-desc-row'>";
 
-      return description
+        for (let key in data) {
+            if (hiddenProperties [key] == true) continue;
+            html += '<p class="tooltip-prop"><span class="tooltip-prop-label">' + key + ':</span> <span class="tooltip-prop-value">' + data [key] + '</span></p>\n'
+        }
+
+        html += "</div>";
+
+      return html
     }
 
     function ticked() {
@@ -321,8 +342,8 @@ export class ForceComponent implements OnInit {
                       div.transition()
                           .delay(300)
                           .duration(200)
-                          .style("opacity", .9);
-                      div.html(getTooltipText(d))
+                          .style("opacity", 1.0);
+                      div.html (getTooltipText (d))
                           .style("left", (d3.event.pageX) + "px")
                           .style("top", (d3.event.pageY - 28) + "px");
                   })
