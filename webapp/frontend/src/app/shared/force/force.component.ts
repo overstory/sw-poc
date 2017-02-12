@@ -181,9 +181,9 @@ export class ForceComponent implements OnInit {
     function simulate() {
 
       simulation = d3.forceSimulation (nodeList)
-        .force ("charge", d3.forceManyBody().strength(-800))  // .distanceMax(400).distanceMin(1))
+        .force ("charge", d3.forceManyBody().strength(-500))  // .distanceMax(400).distanceMin(1))
         .force ("center", d3.forceCenter (width / 2, height / 2))
-        .force ("link", d3.forceLink (linkList).distance (200)/*.strength (0.8)*/.id (function (d: any) { return d.id; }))
+        .force ("link", d3.forceLink (linkList).distance (180).strength (0.5).id (function (d: any) { return d.id; }))
         .force ("collide", d3.forceCollide (function (d:any) { return d.r }))
         .force ("x", d3.forceX())
         .force ("y", d3.forceY())
@@ -199,39 +199,55 @@ export class ForceComponent implements OnInit {
       })
     }
 
-    let hiddenProperties = {
-        description: true, img: true, x: true, y: true, vx: true, vy: true, index: true, id: true,
-        name: true, group: true, fx: true, fy: true, moved: true
-    };
+          let hiddenProperties = {
+                  description: true, img: true, x: true, y: true, vx: true, vy: true, index: true, id: true,
+                  name: true, group: true, fx: true, fy: true, moved: true, originalNode: true, url: true,
+                  depiction: true, label: true, types: true
+          };
 
-    function getTooltipText (data) {
-      let html = '<h2 class="tooltip-name">' + data.group + ": " + data.name + '</h2>';
+          function getTooltipText(data) {
+                  let html = '<h2 class="tooltip-name">' + data.group + ": " + data.name + '</h2>';
 
-      if ((data.description != null) || (data.img != null)) {
-          html += "<div class='tooltip-desc-row'>";
+                  if ((data.description != null) || (data.img != null)) {
+                          html += "<div class='tooltip-desc-row'>";
 
-          if (data.img != null) {
-            html += '<img src="' + data.img + '" title="' + data.name + '" class="tooltip-image"/>';
+                          if (data.img != null) {
+                                  html += '<img src="' + data.img + '" title="' + data.name + '" class="tooltip-image"/>';
+                          }
+
+                          if (data.description != null) {
+                                  html += '<p class="tooltip-description">' + data.description + '</p>'
+                          }
+
+                          html += "</div>";
+                  }
+
+                  html += "<div class='tooltip-desc-row'>";
+                  html += formatProperties (data);
+
+                  html += "</div>";
+
+                  return html
           }
 
-          if (data.description != null) {
-            html += '<p class="tooltip-description">' + data.description + '</p>'
+          function formatProperties(props) {
+                  let str = '';
+
+                  for (let key in props) {
+                          if (key == 'originalNode') {
+                                  str += formatProperties(props [key])
+                          } else {
+
+                                  if (hiddenProperties [key] == true) continue;
+
+                                  if (props [key] != null) {
+                                          str += '<p class="tooltip-prop"><span class="tooltip-prop-label">' + key + ':</span> <span class="tooltip-prop-value">' + props [key] + '</span></p>\n'
+                                  }
+                          }
+                  }
+
+                  return str;
           }
-
-          html += "</div>";
-      }
-
-        html += "<div class='tooltip-desc-row'>";
-
-        for (let key in data) {
-            if (hiddenProperties [key] == true) continue;
-            html += '<p class="tooltip-prop"><span class="tooltip-prop-label">' + key + ':</span> <span class="tooltip-prop-value">' + data [key] + '</span></p>\n'
-        }
-
-        html += "</div>";
-
-      return html
-    }
 
     function ticked() {
       // TODO: may want to combine link label with white box underneath so less calculations are done. may have performance issues later on

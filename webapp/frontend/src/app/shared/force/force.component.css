@@ -79,6 +79,7 @@ div.tooltip-desc-row {
     margin: 0;
     padding: 0;
     border-bottom: 3px solid #66aaaa;
+    overflow-y: auto;
 }
 
 img.tooltip-image {

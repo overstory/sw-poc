@@ -104,7 +104,10 @@ class GraphQueryHandler implements Handler
 					String desc = (node.properties.biography) ?: (node.properties.opening_crawl) ?: node.properties.description
 					String img = (node.properties.movieDbImage) ? "${movieDbBaseUri}${node.properties.movieDbImage}".toString() : node.properties.depiction
 
-					nodeList << [id: node.id, label: node.properties.name, swapi_url: node.properties.url, description: desc, birthday: node.properties.birthday, deathday: node.properties.deathday, gender: node.properties.gender, homepage: node.properties.homepage, depiction: img, types: node.labels ]
+					nodeList << [id: node.id, type:node.properties.type, label: node.properties.name, swapi_url: node.properties.url, description: desc,
+						     birthday: node.properties.birthday, deathday: node.properties.deathday, gender: node.properties.gender,
+						     releaseDate: node.properties.releaseDate, openingCrawl: node.properties.opening_crawl, episodeId: node.properties.episode_id,
+						     homepage: node.properties.homepage, tagline: node.properties.tagline, depiction: img, types: node.labels ]
 					nodesSeen << node.id
 				}
 			}
