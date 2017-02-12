@@ -7,22 +7,26 @@
 
 .d3-chart .axis path,
 .d3-chart .axis line {
-    stroke: #999;
+    stroke: #00b;
 }
 
 .d3-chart .axis text {
-    fill: #999;
+    fill: #00b;
 }
 /* Styles go here */
 
 .links line {
-    stroke: #999;
-    stroke-opacity: 0.6;
+    stroke: #00b;
+    stroke-opacity: 0.9;
 }
 
 .nodes circle {
     stroke: #fff;
     stroke-width: 1.5px;
+}
+
+.linklabel {
+    color: black;
 }
 
 
