@@ -20,6 +20,10 @@
     stroke-opacity: 0.9;
 }
 
+rect.linkboundBox {
+	fill: #fff;
+}
+
 .nodes circle {
     stroke: #fff;
     stroke-width: 1.5px;

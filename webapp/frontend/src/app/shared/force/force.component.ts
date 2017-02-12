@@ -58,6 +58,7 @@ export class ForceComponent implements OnInit {
     var margin: any = this.margin;
     var linkLabel: any;
     var linkboundBox: any;
+    var linkLine: any;
     var simulation: any;
     var nodeSelection: any;
     var linkSelection: any;
@@ -267,7 +268,8 @@ export class ForceComponent implements OnInit {
             .attr ("transform", function (d: any) { return "translate(" + d.x + "," + d.y + ")"; })
         ;
 
-        linkSelection.attr ("x1", function(d) { return d.source.x; })
+      linkSelection.selectAll("line")
+            .attr ("x1", function(d) { return d.source.x; })
             .attr ("y1", function(d) { return d.source.y; })
             .attr ("x2", function(d) { return d.target.x; })
             .attr ("y2", function(d) { return d.target.y; })
@@ -380,11 +382,17 @@ export class ForceComponent implements OnInit {
           linkSelection = linkSelection.data(linkList, function(d) { return d.id; });
           linkSelection.exit().remove();
           linkSelection = linkSelection.enter()
-              .append ("line").attr ("marker-end", "url(#end)")
+              .append("g")
+              .attr("class","link relationship")
               .merge (linkSelection);
 
+          linkLine = linkSelection
+              .insert ("line", "rect")
+              .attr("class", "relationship")
+              .attr ("marker-end", "url(#end)");
+
           linkLabel = linkSelection.append ("text")
-              .attr("class", "linkLabel")
+              .attr("class", "linkLabel relationship")
               .attr("font-size", "10px")
               .attr("x", -20)
               .attr("dy", ".35em")
@@ -395,19 +403,19 @@ export class ForceComponent implements OnInit {
 
           //https://bl.ocks.org/mbostock/1160929
           linkboundBox = linkSelection.insert ("rect", "text")
+              .attr("class", "linkboundBox relationship")
               .attr("x", function (d: any) {
                   return -20
               })
               .attr("y", function (d: any) {
-                  return -2
+                  return -4
               })
               .attr("width", function (d: any) {
                   return d.bbox.width + 1
               })
               .attr("height", function (d: any) {
-                  return d.bbox.height + 3
-              })
-              .style("fill", "#fff");
+                  return d.bbox.height + 2
+              });
 
 
           // Update and restart the simulation.
