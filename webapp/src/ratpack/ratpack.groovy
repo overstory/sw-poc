@@ -79,6 +79,11 @@ ratpack
 			mapPath (context, [ 'public', 'public/assets' ], request.path)
 		}
 
+		// Special handling for Cypher and JSON files
+		path ("::(.*\\.(json|cypher))") { Context context ->
+			mapPath (context, [ '.' ], request.path)
+		}
+
 		// if it look like a simple path identifier, assume it's an Angular page name
 		path ("::([-a-zA-Z0-9]*)") {
 			mapPath (context, [ 'public' ], 'index.html')
