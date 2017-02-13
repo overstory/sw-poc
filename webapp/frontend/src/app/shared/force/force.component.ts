@@ -68,9 +68,9 @@ export class ForceComponent implements OnInit {
     var graphF: any = this.graph;
     var nodeList: any = [];
     var linkList: any = [];
-    var min_zoom = 0.1;
-    var max_zoom = 10;
-    var zoom = d3.zoom().scaleExtent([min_zoom,max_zoom]);
+    var minZoom = 0.1;
+    var maxZoom = 10;
+    var zoom = d3.zoom().scaleExtent ([minZoom,maxZoom]);
 
     clear();
     build (data);
@@ -134,11 +134,11 @@ export class ForceComponent implements OnInit {
       //.on("keypress", keypress)
       ;
 
-      zoom.on("zoom", function() {
-          container.attr("transform", d3.event.transform)
+      zoom.on ("zoom", function() {
+          container.attr ("transform", d3.event.transform)
       });
 
-      svg.call(zoom);
+      svg.call (zoom);
 
       /*
        Define <defs> part of svg. This is going to contain any reusable definitions of shapes
