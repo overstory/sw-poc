@@ -11,7 +11,7 @@ import { GraphService } from '../../services/graph/graph.service';
   encapsulation: ViewEncapsulation.None
 })
 
-export class ForceComponent implements OnInit {
+export class ForceComponent implements OnInit, OnChanges {
   @ViewChild('chart') private chartContainer: ElementRef;
   @Input() private data: Array<any>;
   private margin: any = {top: 20, bottom: 20, left: 20, right: 20};
