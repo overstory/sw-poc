@@ -130,15 +130,21 @@ export class ForceComponent implements OnInit {
               .on("start", dragstarted)
               .on("drag", dragged)
               .on("end", dragended)
-        )
+          )
       //.on("keypress", keypress)
       ;
 
-      zoom.on ("zoom", function() {
-          container.attr ("transform", d3.event.transform)
-      });
+      svg.call(
+          zoom.on("zoom", zoomed)
+      ).on("dblclick.zoom", dblClickZoomed);
 
-      svg.call (zoom);
+      function zoomed (d) {
+          container.attr ("transform", d3.event.transform)
+      }
+
+      function dblClickZoomed (d) {
+          null
+      }
 
       /*
        Define <defs> part of svg. This is going to contain any reusable definitions of shapes
