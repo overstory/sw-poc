@@ -1,24 +1,14 @@
 
 // Loads the merged SWAPI JSON data into Neo4J
 
-// Removed Category from the graph, un-necessarily cluttered, labels serve the same purpose
-//MERGE (swapi:Swapi)
-//  ON CREATE SET swapi.name = 'Star Wars API', swapi.downloaded = {json}.downloaded
 
-//WITH swapi, {json} AS swapidata
-WITH {json} AS swapidata
-UNWIND swapidata.categories AS cat
-//MERGE (category:Category { name: cat.name, uri: cat.uri })
-//MERGE (category) -[:CATEGORY_OF]-> (swapi)
-
-WITH {json}.categories[0] AS filmcat
-//MATCH (category:Category { name: filmcat.name })
-UNWIND filmcat.members AS f
+UNWIND {json}.categories AS cat
+WITH cat WHERE cat.name = 'films'
+UNWIND cat.members AS f
 MERGE (film:Film { url: f.url })
 SET film.name = f.title, film.edited = f.edited, film.created = f.created,
 	film.episode_id = f.episode_id,
 	film.opening_crawl = f.opening_crawl, film.release_date = f.release.date
-//MERGE (category) <-[:IN_CATEGORY]- (film)
 
 FOREACH (furl IN f.characters |
 	MERGE (character:Character { url: furl })
@@ -54,9 +44,9 @@ MERGE (prod) <-[:PRODUCED_BY]- (film)
 
 // TX-SPLIT ---------------------------------
 
-WITH {json}.categories[1] AS peoplecat
-//MATCH (category:Category { name: peoplecat.name })
-UNWIND peoplecat.members AS c
+UNWIND {json}.categories AS cat
+WITH cat WHERE cat.name = 'people'
+UNWIND cat.members AS c
 MERGE (character:Character { url: c.url })
 SET character.name = c.name, character.edited = c.edited, character.created = c.created, character.birth_year = c.birth_year,
 	character.eye_color = c.eye_color, character.hair_color = c.hair_color, character.gender = c.gender, character.height = c.height,
@@ -85,9 +75,9 @@ FOREACH (furl IN c.vehicles |
 
 // TX-SPLIT ---------------------------------
 
-WITH {json}.categories[2] AS planetcat
-//MATCH (category:Category { name: planetcat.name })
-UNWIND planetcat.members AS p
+UNWIND {json}.categories AS cat
+WITH cat WHERE cat.name = 'planets'
+UNWIND cat.members AS p
 MERGE (planet:Planet { url: p.url })
 SET planet.name = p.name, planet.edited = p.edited, planet.created = p.created,
 	planet.gravity = p.gravity, planet.orbital_period = p.orbital_period,
@@ -116,9 +106,9 @@ MERGE (terrain) <-[:HAS_TERRAIN]- (planet)
 
 // TX-SPLIT ---------------------------------
 
-WITH {json}.categories[3] AS speciescat
-//MATCH (category:Category { name: speciescat.name })
-UNWIND speciescat.members AS x
+UNWIND {json}.categories AS cat
+WITH cat WHERE cat.name = 'species'
+UNWIND cat.members AS x
 MERGE (species:Species { url: x.url })
 SET species.name = x.name, species.edited = x.edited, species.created = x.created,
 	species.average_height = x.average_height, species.average_lifespan = x.average_lifespan,
@@ -144,9 +134,9 @@ MERGE (homeworld) <-[:HOME_WORLD]- (species)
 
 // TX-SPLIT ---------------------------------
 
-WITH {json}.categories[4] AS shipcat
-//MATCH (category:Category { name: shipcat.name })
-UNWIND shipcat.members AS x
+UNWIND {json}.categories AS cat
+WITH cat WHERE cat.name = 'starships'
+UNWIND cat.members AS x
 MERGE (starship:Starship { url: x.url })
 SET starship.name = x.name, starship.edited = x.edited, starship.created = x.created,
 	starship.MGLT = x.MGLT, starship.cargo_capacity = x.cargo_capacity, starship.consumables = x.consumables,
@@ -172,9 +162,9 @@ FOREACH (furl IN x.pilots |
 
 // TX-SPLIT ---------------------------------
 
-WITH {json}.categories[5] AS vehiclecat
-//MATCH (category:Category { name: vehiclecat.name })
-UNWIND vehiclecat.members AS x
+UNWIND {json}.categories AS cat
+WITH cat WHERE cat.name = 'vehicles'
+UNWIND cat.members AS x
 MERGE (vehicle:Vehicle { url: x.url })
 SET vehicle.name = x.name, vehicle.edited = x.edited, vehicle.created = x.created,
 	vehicle.cargo_capacity = x.cargo_capacity, vehicle.consumables = x.consumables, vehicle.cost_in_credits = x.cost_in_credits,

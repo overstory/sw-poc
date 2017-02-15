@@ -54,6 +54,7 @@ class AppConfig extends AbstractModule
 		'moviedb-json': MOVIEDB_ACTORS_RESOURCE,
 		'moviedb-res-json': MOVIEDB_MOVIES_RESOURCE,
 		'moviedb-load-cypher': 'cypher/load-moviedb.cypher',
+		'extra-resources-map': SWAPI_RESOURCE_MAP,
 		'fixup-images': 'cypher/fixup-images.cypher'
 	]
 

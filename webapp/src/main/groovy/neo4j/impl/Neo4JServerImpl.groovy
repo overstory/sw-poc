@@ -12,6 +12,7 @@ import ratpack.http.client.HttpClient
 import ratpack.http.client.ReceivedResponse
 
 import java.time.Duration
+import java.util.regex.Pattern
 
 /**
  * Created by IntelliJ IDEA.
@@ -86,8 +87,10 @@ class Neo4JServerImpl implements Neo4JServer
 
 	// ----------------------------------------------------------
 
+	private static Pattern regex = Pattern.compile ('^\\s*\\/\\/.*$', Pattern.MULTILINE)
+
 	private static String escapeCypher (String cypher)
 	{
-		cypher.replaceAll ('^\\\\w*\\/\\/.*\\n', ' ').replaceAll ('\n|\r|\t', ' ') // .replaceAll ('"', '\\\\"')
+		cypher.replaceAll (regex, ' ').replaceAll ('[\n\r\t]', ' ')
 	}
 }

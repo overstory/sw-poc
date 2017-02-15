@@ -37,14 +37,17 @@ class NeoLoadHandler implements Handler
 	void handle (Context context) throws Exception
 	{
 		// Scripts are run in this order
-		List<String> scriptNames = [ 'add-constraints', 'swapi-load-cypher', 'swsocial-load-cypher', 'moviedb-load-cypher' ]
+		List<String> scriptNames = [
+			'add-constraints', 'swapi-load-cypher', 'swsocial-load-cypher',
+			'moviedb-load-cypher', 'fixup-images'
+		]
 
 		Map<String,Map> scripts = [
 			'add-constraints': [:],
 			'swapi-load-cypher': ['json': getResourceAsJson ('swapi-json')],
 			'swsocial-load-cypher': ['interactions': buildInteractions (getResourceAsJson ('swsocial-char-map'), getResourceAsJson ('swsocial-interactions')).getContent()],
 			'moviedb-load-cypher': ['json': getResourceAsJson ('moviedb-json')],
-			'fixup-images': [:]
+			'fixup-images': ['json': getResourceAsJson ('extra-resources-map')]
 		]
 
 		List<ReceivedResponse> responses = []

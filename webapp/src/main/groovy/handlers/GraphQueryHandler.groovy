@@ -102,7 +102,7 @@ class GraphQueryHandler implements Handler
 			nodes.each { Map<String,Object> node ->
 				if ( ! nodesSeen.contains (node.id)) {
 					String desc = (node.properties.biography) ?: (node.properties.opening_crawl) ?: node.properties.description
-					String img = (node.properties.movieDbImage) ? "${movieDbBaseUri}${node.properties.movieDbImage}".toString() : node.properties.depiction
+					String img = (node.properties.depiction) ?: (node.properties.movieDbImage) ? "${movieDbBaseUri}${node.properties.movieDbImage}".toString() : node.properties.depiction
 
 					nodeList << [id: node.id, type:node.properties.type, label: node.properties.name, swapi_url: node.properties.url, description: desc,
 						     birthday: node.properties.birthday, deathday: node.properties.deathday, gender: node.properties.gender,
