@@ -72,8 +72,9 @@ class MovieDbHandler implements Handler
 		def characterMap = new JsonSlurper().parse (getClass().classLoader.getResourceAsStream (characterMap))
 		def resMap = new JsonSlurper().parse (getClass().classLoader.getResourceAsStream (resourceJson))
 		String now = new SimpleDateFormat ("yyyy-MM-dd'T'HH:mm:ss.'000Z'").format (new Date (System.currentTimeMillis()))
-		def movieDbList = new JsonSlurper().parseText ("{ \"timestamp\": \"${now}\", \"items\": [] }")
-		def movieDbItems = movieDbList.items
+		def movieDbList = new JsonSlurper().parseText ("{ \"timestamp\": \"${now}\", \"actors\": [], \"movies\": [] }")
+		def movieDbActors = movieDbList.actors
+		def movieDbMovies = movieDbList.movies
 		Set seenIds = []
 
 		characterMap.each { key, item ->
@@ -94,7 +95,7 @@ class MovieDbHandler implements Handler
 
 							decorateActorWithMovies (actor as Map<String,Object>)
 						} then { actor ->
-							movieDbItems << actor
+							movieDbActors << actor
 						}
 					}
 				}
@@ -117,7 +118,7 @@ class MovieDbHandler implements Handler
 
 					film << [swapiId: movie.swapiUrl]
 				} then { film ->
-					movieDbItems << film
+					movieDbMovies << film
 				}
 			}
 		}

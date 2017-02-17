@@ -1,6 +1,6 @@
 
 WITH {json} AS moviedb
-UNWIND moviedb.items AS a
+UNWIND moviedb.actors AS a
 // Actor (NODE {id: int})
 // Actor <-[:PORTRAYED_BY]- Character
 // Actor -[:APPEARS_IN]-> Film
@@ -33,7 +33,7 @@ FOREACH (movie IN a.swapiMovies |
 )
 
 WITH {json} AS moviedb
-UNWIND moviedb.items AS a
+UNWIND moviedb.actors AS a
 MATCH (prod:Producer { name: trim(a.`name`) })
 WITH prod, a
 	SET prod.movieDbId = a.`id`,
@@ -48,7 +48,7 @@ WITH prod, a
 		prod.movieDbImage = a.`profile_path`
 
 WITH {json} AS moviedb
-UNWIND moviedb.items AS a
+UNWIND moviedb.actors AS a
 MATCH (dir:Director { name: trim(a.`name`) })
 WITH dir, a
 	SET dir.movieDbId = a.`id`,
@@ -65,7 +65,7 @@ WITH dir, a
 // TX-SPLIT ---------------------------------
 
 WITH {json} AS moviedb
-UNWIND moviedb.items AS a
+UNWIND moviedb.movies AS a
 MATCH (f:Film { url: a.`swapiId`} )
 SET f.movieDbId = a.`id`,
 	f.imdbId = a.`imdb_id`,

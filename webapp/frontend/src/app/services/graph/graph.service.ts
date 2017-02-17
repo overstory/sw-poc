@@ -35,14 +35,14 @@ export class GraphService {
 		return this.http.get(this.settings.endpoint + 'nodes-by-label/' + label)
 			.map(res => {
 				let results = res.json().network;
-				let output: any = {labels: []};
+				let labelsTmp: any = [];
 				for (var i = 0; i < results.nodes.length; i++) {
-					output.labels.push({
+					labelsTmp.push({
 						name: results.nodes[i].label,
 						id: results.nodes[i].id
 					})
 				}
-				return output
+				return { labels: labelsTmp.sort ((n1, n2) => { return (n1.name > n2.name) ? 1 : (n1.name < n2.name) ? -1 : 0 }) }
 			})
 	}
 
