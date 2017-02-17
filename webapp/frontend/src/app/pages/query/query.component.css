@@ -1,5 +1,9 @@
-.network_canvas {
-	opacity: 0.8;
+#network_canvas {
+}
+
+.container {
+	width: 98%;
+	/*opacity: 0;*/
 }
 
 .query-page {
@@ -9,3 +13,4 @@
 .query-controls {
 	margin: 10px 10px 10px 10px;
 }
+
