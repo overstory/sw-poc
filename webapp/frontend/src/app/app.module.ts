@@ -12,6 +12,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { QueryComponent } from './pages/query/query.component';
 import { ForceComponent } from './shared/force/force.component';
 import { TwoParameterSelectorComponent } from './controls/two-parameter-selector/two-parameter-selector.component';
+import { ByLabelComponent } from './controls/by-label/by-label.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { TwoParameterSelectorComponent } from './controls/two-parameter-selector
     FooterComponent,
     QueryComponent,
 	ForceComponent,
-	TwoParameterSelectorComponent
+	TwoParameterSelectorComponent,
+        ByLabelComponent
   ],
   imports: [
     BrowserModule,

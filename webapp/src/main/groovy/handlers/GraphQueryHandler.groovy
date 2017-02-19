@@ -72,7 +72,9 @@ class GraphQueryHandler implements Handler
 				throw new RuntimeException (resp.body.text)
 			}
 
-			neoResultToResponseJson (resp.body.text)
+			Closure formatter = (resultFormatters [id]) ?: nodeFormatter
+
+			formatter (resp.body.text)
 		}
 
 
@@ -84,8 +86,7 @@ class GraphQueryHandler implements Handler
 
 	// See 'example-graph--desc.json'
 
-	private String neoResultToResponseJson (String neoJsonText)
-	{
+	Closure nodeFormatter = { String neoJsonText ->
 		Object neoJson = new JsonSlurper().parseText (neoJsonText)
 		List<Map<String,Object>> data = neoJson.results[0].data
 
@@ -129,7 +130,27 @@ class GraphQueryHandler implements Handler
 		new JsonBuilder (root).toPrettyString()
 	}
 
+	Closure stringListFormatter = { String resultBody ->
+		Object neoJson = new JsonSlurper().parseText (resultBody)
+		List<Map<String,Object>> data = neoJson.results[0].data
+		List<String> outputStrings = []
+
+		data.each { dataRow ->
+			dataRow.row.each {
+				outputStrings << it
+			}
+		}
+
+		Map<String,Object> root = [strings: outputStrings]
+
+		new JsonBuilder (root).toPrettyString()
+	}
+
 	// ----------------------------------------------------------------
+
+	Map<String,Closure<String>> resultFormatters = [
+		'node-labels': stringListFormatter
+	]
 
 	// ToDo: Externalize these into a config file or separate files
 	Map<String,String> cypherQueries = [
@@ -145,6 +166,13 @@ RETURN p
 		'referenced-nodes': 'MATCH (n)-[l]->(p) WHERE ID(n) = @param1@ RETURN p, l',
 		'referencing-nodes': 'MATCH (n)<-[l]-(p) WHERE ID(n) = @param1@ RETURN p, l',
 		'nodes-by-label': 'MATCH (n:@param1@) RETURN n',
+		'node-labels': """
+MATCH (n)
+WITH DISTINCT labels(n) AS labels
+UNWIND labels AS label
+RETURN DISTINCT label
+ORDER BY label
+""".toString(),
 		'shortest-path-by-name': """
 MATCH (from:Character {name: "@param1@"})
 MATCH (to:Character {name: "@param2@"})

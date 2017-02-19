@@ -1,4 +1,4 @@
-div.app-two-parameter-selector {
+div.app-by-label {
 	margin-left: 10%;
 	margin-right: 10%;
 	padding: 8px;
@@ -7,7 +7,7 @@ div.app-two-parameter-selector {
 	border-radius: 8px;
 }
 
-div.app-two-parameter-selector > h2 {
+div.app-by-label > h2 {
 	font-size: 12pt;
 	color: yellow;
 	text-align: center;
