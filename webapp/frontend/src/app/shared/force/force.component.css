@@ -20,6 +20,28 @@
     stroke-opacity: 0.9;
 }
 
+.linklabel {
+    color: black;
+}
+
+/*
+.linkContainer .halo {
+    fill: none;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    stroke: #6ac6ff;
+}
+
+.linkContainer:hover .halo {
+    fill: none;
+    opacity: .6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    stroke: #6ac6ff;
+}
+*/
+
 rect.linkboundBox {
 	fill: #fff;
 }
@@ -29,13 +51,24 @@ rect.linkboundBox {
     stroke-width: 1.5px;
 }
 
-.linklabel {
-    color: black;
-}
 
 
 .node-text {
     font-size: 9px;
+}
+
+.nodeContainer .halo {
+    fill: none;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    stroke: #6ac6ff;
+}
+
+.nodeContainer:hover .halo {
+    opacity: .3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
 }
 
 div.tooltip {

@@ -9,7 +9,12 @@ export class GraphService {
 		endpoint: 'http://localhost:5050/graph/query/id/'
 	};
 	private dataSource = new Subject<any>();
-	private REFERENCED_NODES: string = "referenced-nodes/";
+	private REFERENCED_NODES: string = "referenced-nodes";
+	private REFERENCING_NODES: string = "referencing-nodes";
+	private DIRECTED_BY: string = "directed-by";
+	private PRODUCED_BY: string = "produced-by";
+	private NODE_BY_ID: string = "node-by-id";
+	private NODES_BY_LABEL: string = "";
 
 	// Observable string streams
 	dataSourced$ = this.dataSource.asObservable();
@@ -48,11 +53,19 @@ export class GraphService {
 
 	//localhost:5050/graph/query/id/referenced-nodes/9112
 	getOutboundNodes(id: number): Observable<any> {
-		return this.http.get(this.settings.endpoint + this.REFERENCED_NODES + id)
-			.map(res => {
+		return this.http.get(this.settings.endpoint + this.REFERENCED_NODES + '/' + id)
+      .map(res => {
 				return GraphService.reformatNodes (res.json().network);
 			})
-			.catch((error: any) => Observable.throw(error.json() || 'Server error'));
+      .catch((error: any) => Observable.throw(error.json() || 'Server error'));
+	}
+
+	getInboundNodes(id: number): Observable<any> {
+		return this.http.get(this.settings.endpoint + this.REFERENCING_NODES + '/' + id)
+      .map(res => {
+				return GraphService.reformatNodes (res.json().network);
+			})
+      .catch((error: any) => Observable.throw(error.json() || 'Server error'));
 	}
 
 	static reformatNodes (results) {

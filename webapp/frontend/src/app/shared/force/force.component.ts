@@ -131,7 +131,7 @@ export class ForceComponent implements OnInit, OnChanges {
           })
         ;
 
-        this.linksGrp.selectAll ("line")
+        this.linksGrp.selectAll (".link")
           .attr ("x1", (d) => {
             //console.log("link source x coordinate is: " + d.source.x + " name: " + d.name);
             return d.source.x;
@@ -197,6 +197,12 @@ export class ForceComponent implements OnInit, OnChanges {
         )
         .merge (this.nodeSelector)
       ;
+
+
+    node.append("circle")
+      .attr("class", "halo")
+      .style("stroke-width", "8px")
+      .attr("r", this.nodeRadius);
 
     //circle with a opaque fill so that lines in background are not visible
     node.append ("circle")
@@ -266,6 +272,7 @@ export class ForceComponent implements OnInit, OnChanges {
     ;
 
 
+
     // Apply the general update pattern to the links.
     this.linkSelector = this.linksGrp.selectAll ('.relationship')
       .data (this.data.links, (d) => {
@@ -274,11 +281,18 @@ export class ForceComponent implements OnInit, OnChanges {
     this.linkSelector.exit().remove();
     var link = this.linkSelector.enter()
       .append ("g")
-      .attr ("class", "link relationship")
+      .attr ("class", "linkContainer relationship")
       .merge (this.linkSelector);
+
+    /*
+    link.insert ("line")
+      .attr ("class", "relationship halo")
+      .style("stroke-width", "10px");
+      */
+
     //linkLine
     link.insert ("line", "rect")
-      .attr ("class", "relationship")
+      .attr ("class", "link relationship")
       .attr ("marker-end", "url(#end)");
 
     //linkLabel
@@ -403,6 +417,13 @@ export class ForceComponent implements OnInit, OnChanges {
     this.graph.getOutboundNodes (d.id).subscribe (newData => {
       this.addToGraph (newData);
       this.restart ();
+    });
+  }
+
+  private InboundNodesClicked :any = (d: any) => {
+    this.graph.getInboundNodes(d.id).subscribe (newData => {
+      this.addToGraph (newData);
+      this.restart()
     });
   }
 
