@@ -37,7 +37,16 @@ export class GraphService {
 	}
 
 	getLabelNames() {
-		return this.http.get(this.settings.endpoint + 'node-labels')
+		return this.getStrings ('node-labels');
+	}
+
+	getRelationNames() {
+		return this.getStrings ('relation-names');
+	}
+
+	getStrings (query: string)
+	{
+		return this.http.get (this.settings.endpoint + query)
 			.map(res => {
 				let strings = res.json().strings;
 				let stringsTmp: any = [];

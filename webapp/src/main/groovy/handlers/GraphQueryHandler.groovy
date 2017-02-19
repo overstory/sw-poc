@@ -149,7 +149,8 @@ class GraphQueryHandler implements Handler
 	// ----------------------------------------------------------------
 
 	Map<String,Closure<String>> resultFormatters = [
-		'node-labels': stringListFormatter
+		'node-labels': stringListFormatter,
+		'relation-names': stringListFormatter
 	]
 
 	// ToDo: Externalize these into a config file or separate files
@@ -166,6 +167,7 @@ RETURN p
 		'referenced-nodes': 'MATCH (n)-[l]->(p) WHERE ID(n) = @param1@ RETURN p, l',
 		'referencing-nodes': 'MATCH (n)<-[l]-(p) WHERE ID(n) = @param1@ RETURN p, l',
 		'nodes-by-label': 'MATCH (n:@param1@) RETURN n',
+		'nodes-by-relation': 'MATCH (n)-[l:@param1@]-(m) RETURN DISTINCT n, m, l',
 		'node-labels': """
 MATCH (n)
 WITH DISTINCT labels(n) AS labels
@@ -173,6 +175,7 @@ UNWIND labels AS label
 RETURN DISTINCT label
 ORDER BY label
 """.toString(),
+		'relation-names': 'MATCH ()-[r]-()\n RETURN DISTINCT type(r)',
 		'shortest-path-by-name': """
 MATCH (from:Character {name: "@param1@"})
 MATCH (to:Character {name: "@param2@"})

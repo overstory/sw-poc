@@ -12,4 +12,18 @@
       </div>
     </div>
   </form>
+
+  <h2>Select a Relationship and click GO</h2>
+  <form>
+    <div class="sw-selectors grid grid-pad">
+      <div class="col-1-2">
+          <select name="relation" class="show" [(ngModel)]="relation">
+            <option *ngFor="let x of relations.labels" [value]="x.id"  ngDefaultControl>{{x.name}}</option>
+          </select>
+      </div>
+      <div class="col-1-2">
+        <button type="submit" class="waves-effect btn green" (click)="allRelations()">GO <i class="material-icons right">send</i></button>
+      </div>
+    </div>
+  </form>
 </div>

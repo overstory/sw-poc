@@ -80,6 +80,7 @@ class Neo4JServerImpl implements Neo4JServer
 			it.headers.set ("Accept", 'application/json')
 			it.basicAuth (hostDetails.user, hostDetails.pass)
 			it.body.text (body)
+			it.maxContentLength (10000000)
 		} then { resp ->
 			responses << resp
 		}
