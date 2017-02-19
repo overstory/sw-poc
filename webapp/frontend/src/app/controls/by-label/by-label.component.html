@@ -1,0 +1,15 @@
+<div class="app-by-label">
+  <h2>Select a Node label and click GO</h2>
+  <form>
+    <div class="sw-selectors grid grid-pad">
+      <div class="col-1-2">
+          <select name="label" class="show" [(ngModel)]="label">
+            <option *ngFor="let x of labels.labels" [value]="x.id"  ngDefaultControl>{{x.name}}</option>
+          </select>
+      </div>
+      <div class="col-1-2">
+        <button type="submit" class="waves-effect btn green" (click)="allLabels()">GO <i class="material-icons right">send</i></button>
+      </div>
+    </div>
+  </form>
+</div>

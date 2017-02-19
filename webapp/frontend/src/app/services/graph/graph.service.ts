@@ -31,6 +31,21 @@ export class GraphService {
 			.catch ((error: any) => Observable.throw(error.json() || 'Server error'));
 	}
 
+	getLabelNames() {
+		return this.http.get(this.settings.endpoint + 'node-labels')
+			.map(res => {
+				let strings = res.json().strings;
+				let stringsTmp: any = [];
+				for (var i = 0; i < strings.length; i++) {
+					stringsTmp.push ({
+						name: strings [i],
+						id: strings [i]
+					})
+				}
+				return { labels: stringsTmp.sort ((n1, n2) => { return (n1.name > n2.name) ? 1 : (n1.name < n2.name) ? -1 : 0 }) }
+			})
+	}
+
 	getLabelEntries(label: string) {
 		return this.http.get(this.settings.endpoint + 'nodes-by-label/' + label)
 			.map(res => {
