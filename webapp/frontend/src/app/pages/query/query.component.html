@@ -12,10 +12,27 @@
     </div>
   </div>
 
-  <a name="about"></a>
-  <div class="query-controls">
-    <app-two-parameter-selector></app-two-parameter-selector>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 white-text teal center"><span class="flow-text">Select a Class of Query to Visualize</span></div>
+      <div class="col s12 center">
+        <ul class="tabs control-tabs">
+          <li class="tab col s6 teal"><a href="#twochars" class="white-text">Two Characters</a></li>
+          <li class="tab col s6 teal"><a class="active white-text" href="#labels">Labels</a></li>
+        </ul>
+      </div>
+      <div id="twochars" class="col s12">
+        <div class="query-controls">
+          <app-two-parameter-selector></app-two-parameter-selector>
+        </div>
+      </div>
+      <div id="labels" class="col s12">
+        Placeholder for labels
+      </div>
+    </div>
   </div>
+
+  <a name="about"></a>
 
   <div class="container">
     <div id="network_canvas">
