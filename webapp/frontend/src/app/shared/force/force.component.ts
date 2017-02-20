@@ -35,7 +35,8 @@ export class ForceComponent implements OnInit, OnChanges {
   };
 
 
-  constructor (private graph: GraphService) { }
+  constructor (private graph: GraphService) {
+  }
 
   ngOnInit() {
     this.assembleChart();
@@ -116,7 +117,7 @@ export class ForceComponent implements OnInit, OnChanges {
       .force ("link", d3.forceLink (this.data.links).distance (180).strength (0.5).id ((d: any) => {
         return d.id;
       }))
-      .force ("collide", d3.forceCollide ((d:any) => {
+      .force ("collide", d3.forceCollide ((d: any) => {
         return d.r
       }))
       .force ("x", d3.forceX())
@@ -188,6 +189,54 @@ export class ForceComponent implements OnInit, OnChanges {
     var node = this.nodeSelector.enter ()
         .append ("g")
         .attr ("class", "node nodeContainer")
+        .on ("click", (d) => {
+          //todo remove selection later on
+          //there is a probably better way to dd this but this.parentNode didn't work for me
+          node.selectAll(".rm").remove()
+          let parent = d3.select(node.nodes()[d.index]);
+
+          parent.insert ("path", "circle")
+            .attr ("d", "M0 0-70 70A99 99 0 0 1-70-70Z")
+            .attr ("class", "rm radial-menu")
+            .on("click", this.nodeDoubleClicked);
+          parent.insert("text")
+            .attr("class", "rm radial-menu radial-menu-text")
+            .attr ("text-anchor", "middle")
+            .attr("x", -60)
+            .attr("y", 0)
+            .text("Outbound")
+            .on("click", this.nodeDoubleClicked);
+
+          parent.insert ("path", "circle")
+            .attr ("d", "M0 0-70-70A99 99 0 0 1 70-70Z")
+            .attr ("class", "rm radial-menu")
+            .on("click", this.InboundNodesClicked);
+          parent.insert("text")
+            .attr("class", "rm radial-menu radial-menu-text")
+            .attr ("text-anchor", "middle")
+            .attr("x", 0)
+            .attr("y", -60)
+            .text("Inbound")
+            .on("click", this.InboundNodesClicked);
+
+          parent.insert ("path", "circle")
+            .attr ("d", "M0 0 70-70A99 99 0 0 1 70 70Z")
+            .attr ("class", "rm radial-menu");
+
+
+          parent.insert ("path", "circle")
+            .attr ("d", "M0 0 70 70A99 99 0 0 1-70 70Z")
+            .attr ("class", "rm radial-menu")
+            .on("click", (d) => {
+              node.selectAll(".rm").exit().remove()
+            });
+          parent.insert("text")
+            .attr("class", "rm radial-menu radial-menu-text")
+            .attr ("text-anchor", "middle")
+            .attr("x", 0)
+            .attr("y", 60)
+            .text("Close");
+        })
         .on ("dblclick", this.nodeDoubleClicked)
         // .on ("contextmenu", contextMenu)
         .call (d3.drag ()
@@ -199,11 +248,23 @@ export class ForceComponent implements OnInit, OnChanges {
       ;
 
 
-    node.append("circle")
-      .attr("class", "halo")
-      .style("stroke-width", "8px")
-      .attr("r", this.nodeRadius);
+    // http://stackoverflow.com/questions/32750613/svg-draw-a-circle-with-4-sectors
+    /* node.append("path")
+     .attr("d", "M0 0-70 70A99 99 0 0 1-70-70Z");
+     node.append("path")
+     .attr("d", "M0 0-70-70A99 99 0 0 1 70-70Z");
+     node.append("path")
+     .attr("d", "M0 0 70-70A99 99 0 0 1 70 70Z");
+     node.append("path")
+     .attr("d", "M0 0 70 70A99 99 0 0 1-70 70Z");*/
 
+
+    node.append ("circle")
+      .attr ("class", "halo")
+      .style ("stroke-width", "8px")
+      .attr ("r", this.nodeRadius);
+
+    //circle with a opaque fill so that lines in background are not visible
     //circle with a opaque fill so that lines in background are not visible
     node.append ("circle")
       .attr ("class", "node")
@@ -272,7 +333,6 @@ export class ForceComponent implements OnInit, OnChanges {
     ;
 
 
-
     // Apply the general update pattern to the links.
     this.linkSelector = this.linksGrp.selectAll ('.relationship')
       .data (this.data.links, (d) => {
@@ -285,10 +345,10 @@ export class ForceComponent implements OnInit, OnChanges {
       .merge (this.linkSelector);
 
     /*
-    link.insert ("line")
-      .attr ("class", "relationship halo")
-      .style("stroke-width", "10px");
-      */
+     link.insert ("line")
+     .attr ("class", "relationship halo")
+     .style("stroke-width", "10px");
+     */
 
     //linkLine
     link.insert ("line", "rect")
@@ -324,7 +384,7 @@ export class ForceComponent implements OnInit, OnChanges {
         return d.bbox.height + 2
       });
 
-    this.showObjects();
+    //this.showObjects ();
 
     // Update and restart the simulation.
     this.simulation.nodes (this.data.nodes);
@@ -420,8 +480,21 @@ export class ForceComponent implements OnInit, OnChanges {
     });
   }
 
-  private InboundNodesClicked :any = (d: any) => {
-    this.graph.getInboundNodes(d.id).subscribe (newData => {
+  /*private nodeSingleClicked: any = (d: any) => {
+    let node = d3.select (this);
+    console.log ("singleClick!");
+    node.append ("path")
+      .attr ("d", "M0 0-70 70A99 99 0 0 1-70-70Z");
+    node.append ("path")
+      .attr ("d", "M0 0-70-70A99 99 0 0 1 70-70Z");
+    node.append ("path")
+      .attr ("d", "M0 0 70-70A99 99 0 0 1 70 70Z");
+    node.append ("path")
+      .attr ("d", "M0 0 70 70A99 99 0 0 1-70 70Z");
+  }*/
+
+  private InboundNodesClicked: any = (d: any) => {
+    this.graph.getInboundNodes (d.id).subscribe (newData => {
       this.addToGraph (newData);
       this.restart()
     });

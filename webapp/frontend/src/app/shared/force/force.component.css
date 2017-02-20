@@ -126,3 +126,22 @@ img.tooltip-image {
     border: 1px solid #66aaaa;
     float: right;
 }
+
+/* Radial Menu */
+
+.radial-menu {
+	opacity: .3;
+	fill: #555;
+	stroke: #aaa;
+}
+
+.radial-menu:hover {
+	opacity: .6;
+	fill: #E9EDDE;
+	stroke: #aaa;
+}
+
+.radial-menu-text {
+	opacity: .8;
+	fill: #fff;
+}
