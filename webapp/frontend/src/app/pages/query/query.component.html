@@ -14,11 +14,12 @@
 
   <div class="container">
     <div class="row">
-      <div class="col s12 white-text teal center"><span class="flow-text">Select a Class of Query to Visualize</span></div>
+      <div class="col s12 white-text teal center">Select a Class of Query to Visualize</div>
       <div class="col s12 center">
         <ul class="tabs control-tabs">
-          <li class="tab col s6 teal"><a href="#twochars" class="active white-text">Two Characters</a></li>
-          <li class="tab col s6 teal"><a class="white-text" href="#labels">Labels</a></li>
+          <li class="tab col s4 teal"><a class="white-text" href="#twochars" >Two Characters</a></li>
+          <li class="tab col s4 teal"><a class="white-text" href="#labels">Labels</a></li>
+          <li class="tab col s4 teal"><a class="active white-text" href="#empty">Hide</a></li>
         </ul>
       </div>
       <div id="twochars" class="col s12">
@@ -28,6 +29,8 @@
       </div>
       <div id="labels" class="col s12">
         <app-by-label></app-by-label>
+      </div>
+      <div id="empty" class="col s12">
       </div>
     </div>
   </div>

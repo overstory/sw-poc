@@ -1,27 +1,27 @@
 <div class="app-by-label">
-  <h2>Select a Node label and click GO</h2>
   <form>
     <div class="sw-selectors grid grid-pad">
-      <div class="col-1-2">
+      <div class="col-1-3 center"><p>Select a Node label and click GO</p></div>
+      <div class="col-1-3 center">
           <select name="label" class="show" [(ngModel)]="label">
             <option *ngFor="let x of labels.labels" [value]="x.id"  ngDefaultControl>{{x.name}}</option>
           </select>
       </div>
-      <div class="col-1-2">
+      <div class="col-1-3 center">
         <button type="submit" class="waves-effect btn green" (click)="allLabels()">GO <i class="material-icons right">send</i></button>
       </div>
     </div>
   </form>
 
-  <h2>Select a Relationship and click GO</h2>
   <form>
     <div class="sw-selectors grid grid-pad">
-      <div class="col-1-2">
+      <div class="col-1-3 center"><p>Select a Relationship and click GO</p></div>
+      <div class="col-1-3 center">
           <select name="relation" class="show" [(ngModel)]="relation">
             <option *ngFor="let x of relations.labels" [value]="x.id"  ngDefaultControl>{{x.name}}</option>
           </select>
       </div>
-      <div class="col-1-2">
+      <div class="col-1-3 center">
         <button type="submit" class="waves-effect btn green" (click)="allRelations()">GO <i class="material-icons right">send</i></button>
       </div>
     </div>

@@ -7,7 +7,7 @@ div.app-by-label {
 	border-radius: 8px;
 }
 
-div.app-by-label > h2 {
+div.app-by-label > form > div > div > p {
 	font-size: 12pt;
 	color: yellow;
 	text-align: center;
