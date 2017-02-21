@@ -75,7 +75,9 @@ export class ForceComponent implements OnInit, OnChanges {
     svg.call (
       d3.zoom().scaleExtent ([this.minZoom, this.maxZoom])
         .on ("zoom", () => {
-          this.container.attr ("transform", d3.event.transform)
+          if (d3.event.sourceEvent.shiftKey) {
+            this.container.attr ("transform", d3.event.transform)
+          }
         })
     ).on ("dblclick.zoom", () => {
       null
@@ -247,24 +249,11 @@ export class ForceComponent implements OnInit, OnChanges {
         .merge (this.nodeSelector)
       ;
 
-
-    // http://stackoverflow.com/questions/32750613/svg-draw-a-circle-with-4-sectors
-    /* node.append("path")
-     .attr("d", "M0 0-70 70A99 99 0 0 1-70-70Z");
-     node.append("path")
-     .attr("d", "M0 0-70-70A99 99 0 0 1 70-70Z");
-     node.append("path")
-     .attr("d", "M0 0 70-70A99 99 0 0 1 70 70Z");
-     node.append("path")
-     .attr("d", "M0 0 70 70A99 99 0 0 1-70 70Z");*/
-
-
     node.append ("circle")
       .attr ("class", "halo")
       .style ("stroke-width", "8px")
       .attr ("r", this.nodeRadius);
 
-    //circle with a opaque fill so that lines in background are not visible
     //circle with a opaque fill so that lines in background are not visible
     node.append ("circle")
       .attr ("class", "node")
@@ -479,19 +468,6 @@ export class ForceComponent implements OnInit, OnChanges {
       this.restart ();
     });
   }
-
-  /*private nodeSingleClicked: any = (d: any) => {
-    let node = d3.select (this);
-    console.log ("singleClick!");
-    node.append ("path")
-      .attr ("d", "M0 0-70 70A99 99 0 0 1-70-70Z");
-    node.append ("path")
-      .attr ("d", "M0 0-70-70A99 99 0 0 1 70-70Z");
-    node.append ("path")
-      .attr ("d", "M0 0 70-70A99 99 0 0 1 70 70Z");
-    node.append ("path")
-      .attr ("d", "M0 0 70 70A99 99 0 0 1-70 70Z");
-  }*/
 
   private InboundNodesClicked: any = (d: any) => {
     this.graph.getInboundNodes (d.id).subscribe (newData => {
