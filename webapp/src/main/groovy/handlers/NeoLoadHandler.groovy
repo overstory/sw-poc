@@ -38,16 +38,20 @@ class NeoLoadHandler implements Handler
 	{
 		// Scripts are run in this order
 		List<String> scriptNames = [
-			'add-constraints', 'swapi-load-cypher', 'swsocial-load-cypher',
-			'moviedb-load-cypher', 'fixup-images'
+			'add-constraints', 'swapi-load-cypher', 'stage1', 'swsocial-load-cypher', 'stage2',
+			'moviedb-load-cypher', 'stage3', 'fixup-images', 'stage4'
 		]
 
 		Map<String,Map> scripts = [
 			'add-constraints': [:],
 			'swapi-load-cypher': ['json': getResourceAsJson ('swapi-json')],
+			'stage1': ['stage': new JsonSlurper().parseText ('{ "stage": 1 }')],
 			'swsocial-load-cypher': ['interactions': buildInteractions (getResourceAsJson ('swsocial-char-map'), getResourceAsJson ('swsocial-interactions')).getContent()],
+			'stage2': ['stage': new JsonSlurper().parseText ('{ "stage": 2 }')],
 			'moviedb-load-cypher': ['json': getResourceAsJson ('moviedb-json')],
-			'fixup-images': ['json': getResourceAsJson ('extra-resources-map')]
+			'stage3': ['stage': new JsonSlurper().parseText ('{ "stage": 3 }')],
+			'fixup-images': ['json': getResourceAsJson ('extra-resources-map')],
+			'stage4': ['stage': new JsonSlurper().parseText ('{ "stage": 4 }')],
 		]
 
 		List<ReceivedResponse> responses = []

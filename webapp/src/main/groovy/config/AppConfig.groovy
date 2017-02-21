@@ -45,6 +45,10 @@ class AppConfig extends AbstractModule
 	final String NEO_TX_COMMIT_PATH = '/db/data/transaction/commit'
 
 	final Map<String,String> neoDataMap = [
+		'stage1': 'cypher/stage.cypher',
+		'stage2': 'cypher/stage.cypher',
+		'stage3': 'cypher/stage.cypher',
+		'stage4': 'cypher/stage.cypher',
 		'add-constraints': 'cypher/db-setup.cypher',
 		'swapi-json': SWAPI_DATA_RESOURCE,
 		'swapi-load-cypher': SWAPI_LOAD_CYPHER,
