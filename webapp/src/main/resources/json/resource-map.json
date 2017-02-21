@@ -13,7 +13,7 @@
     { "swapiUrl": "http://swapi.co/api/people/4/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/Darth-Vader_6bda9114.jpeg?region=236%2C0%2C928%2C928&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/4/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/Darth-Vader_6bda9114.jpeg?region=236%2C0%2C928%2C928&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/3/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/R2-D2_41dacaa9.jpeg?region=549%2C0%2C864%2C864&width=320" },
-    { "swapiUrl": "http://swapi.co/api/people/1/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/Lightsaber_853fb596.jpeg?region=178%2C0%2C813%2C812&width=320" },
+    { "swapiUrl": "http://swapi.co/api/people/1/", "depiction": "https://lumiere-a.akamaihd.net/v1/images/Luke-Skywalker_dd9c9f9b.jpeg?region=389%2C0%2C864%2C864&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/21/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/Emperor-Palpatine_7ac4a10e.jpeg?region=311%2C0%2C900%2C900&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/2/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/C-3PO-See-Threepio_68fe125c.jpeg?region=353%2C0%2C791%2C793&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/5/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/Princess-Leia-Organa_d7761ff5.jpeg?region=608%2C0%2C900%2C900&width=320" },
@@ -67,12 +67,19 @@
     { "swapiUrl": "http://swapi.co/api/people/86/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/poe-dameron_70f5aee2.jpeg?region=450%2C33%2C663%2C663&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/78/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/shaak_ti_9523e7c7.jpeg?region=460%2C0%2C807%2C809&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/34/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/valorum_a31904f4.jpeg?region=200%2C0%2C1698%2C955&width=320" },
+    { "swapiUrl": "http://swapi.co/api/people/12/", "depiction": "https://lumiere-a.akamaihd.net/v1/images/Tarkin-3%402x_16f7b5db.jpeg?region=0%2C0%2C1200%2C800&width=320" },
+    { "swapiUrl": "http://swapi.co/api/people/73/", "depiction": "https://lumiere-a.akamaihd.net/v1/images/databank_taunwe_01_169_9b9e8eb9.jpeg?region=0%2C0%2C1560%2C878&width=320" },
+    { "swapiUrl": "http://swapi.co/api/people/46/", "depiction": "https://lumiere-a.akamaihd.net/v1/images/databank_aaylasecura_01_169_39a65af2.jpeg?region=636%2C0%2C878%2C878&width=320" },
+    { "swapiUrl": "http://swapi.co/api/people/74/", "depiction": "https://lumiere-a.akamaihd.net/v1/images/jocasta-nu_a3b32f08.jpeg?region=18%2C0%2C2208%2C1242&width=320" },
+    { "swapiUrl": "http://swapi.co/api/people/53/", "depiction": "https://lumiere-a.akamaihd.net/v1/images/databank_kitfisto_01_169_21517d01.jpeg?region=0%2C0%2C1560%2C878&width=320" },
 
 
     { "swapiUrl": "http://swapi.co/api/species/1/", "depiction": "http://www.touchstonemag.com/newimages/articlepics/25.03/leonardo-vitruvian-man.jpg" },
     { "swapiUrl": "http://swapi.co/api/species/5/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/databank_hutt_01_169_5d0535d2.jpeg?region=0%2C0%2C1560%2C878&width=320" },
     { "swapiUrl": "http://swapi.co/api/species/3/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/databank_wookiee_01_169_e2d0ebd0.jpeg?region=0%2C0%2C1560%2C878&width=320" },
     { "swapiUrl": "http://swapi.co/api/species/28/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/databank_geonosian_01_169_c6020111.jpeg?region=341%2C0%2C878%2C878&width=320" },
+    { "swapiUrl": "http://swapi.co/api/species/32/", "depiction": "https://lumiere-a.akamaihd.net/v1/images/kaminoan-main-image_8f582a48.jpeg?region=293%2C0%2C1180%2C663&width=320" },
+    { "swapiUrl": "http://swapi.co/api/species/15/", "depiction": "https://lumiere-a.akamaihd.net/v1/images/databank_twilek_01_169_ddff0797.jpeg?region=0%2C0%2C1560%2C878&width=320" },
 
     { "swapiUrl": "http://swapi.co/api/starships/9/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/Death-Star-I-copy_36ad2500.jpeg?region=347%2C0%2C900%2C900&width=320" },
     { "swapiUrl": "http://swapi.co/api/starships/10/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/Millennium-Falcon_018ea796.jpeg?region=336%2C0%2C865%2C865&width=320" },
