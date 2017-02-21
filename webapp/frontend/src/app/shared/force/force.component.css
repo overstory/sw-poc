@@ -129,19 +129,21 @@ img.tooltip-image {
 
 /* Radial Menu */
 
-.radial-menu {
-	opacity: .3;
+.rm {
+	opacity: .8;
 	fill: #555;
 	stroke: #aaa;
+	font-size: 1.75em;
 }
 
-.radial-menu:hover {
-	opacity: .6;
+.rm:hover {
+	opacity: .97;
 	fill: #E9EDDE;
-	stroke: #aaa;
 }
 
+/*
 .radial-menu-text {
-	opacity: .8;
-	fill: #fff;
+	color: #424242;
+	font-size: 1.75em;
 }
+*/

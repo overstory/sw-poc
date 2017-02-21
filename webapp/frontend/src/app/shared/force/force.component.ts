@@ -114,17 +114,14 @@ export class ForceComponent implements OnInit, OnChanges {
     this.nodeSelector = this.nodesGrp.selectAll (".node");
 
     this.simulation = d3.forceSimulation (this.data.nodes)
-      .force ("charge", d3.forceManyBody ().strength (-500))  // .distanceMax(400).distanceMin(1))
-      .force ("center", d3.forceCenter (this.width / 2, this.height / 2))
-      .force ("link", d3.forceLink (this.data.links).distance (180).strength (0.5).id ((d: any) => {
-        return d.id;
-      }))
-      .force ("collide", d3.forceCollide ((d: any) => {
-        return d.r
-      }))
-      .force ("x", d3.forceX())
-      .force ("y", d3.forceY())
-      .alphaTarget (1)
+      .force ("charge", d3.forceManyBody ().strength (-1250))  // .distanceMax(400).distanceMin(1))
+      //.force ("center", d3.forceCenter (this.width / 2, this.height / 2))
+      //.force ("link", d3.forceLink (this.data.links).distance (180).strength (0.5).id ((d: any) => { return d.id; }))
+      .force ("link", d3.forceLink (this.data.links).distance (2*this.nodeRadius+120).strength(1.4).id ((d: any) => { return d.id; }))
+      .force ("collide", d3.forceCollide ((d: any) => { return this.nodeRadius + 2 }))
+      .force ("x", d3.forceX(this.width / 2).strength(0.15))
+      .force ("y", d3.forceY(this.height / 2).strength(0.15))
+      .alphaTarget (0.9)
       // .velocityDecay (0.2)
       .on ("tick", () => {
 
@@ -181,6 +178,7 @@ export class ForceComponent implements OnInit, OnChanges {
     if (this.nodeSelector == null) return;    // Can happen on first paint,
     let color = d3.scaleOrdinal (d3.schemeCategory20);
     let tooltipContainer = d3.select (".tooltip")
+    let toggle = null;
 
     // Apply the general update pattern to the nodes.
     this.nodeSelector = this.nodesGrp.selectAll ('.node')
@@ -191,54 +189,6 @@ export class ForceComponent implements OnInit, OnChanges {
     var node = this.nodeSelector.enter ()
         .append ("g")
         .attr ("class", "node nodeContainer")
-        .on ("click", (d) => {
-          //todo remove selection later on
-          //there is a probably better way to dd this but this.parentNode didn't work for me
-          node.selectAll(".rm").remove()
-          let parent = d3.select(node.nodes()[d.index]);
-
-          parent.insert ("path", "circle")
-            .attr ("d", "M0 0-70 70A99 99 0 0 1-70-70Z")
-            .attr ("class", "rm radial-menu")
-            .on("click", this.nodeDoubleClicked);
-          parent.insert("text")
-            .attr("class", "rm radial-menu radial-menu-text")
-            .attr ("text-anchor", "middle")
-            .attr("x", -60)
-            .attr("y", 0)
-            .text("Outbound")
-            .on("click", this.nodeDoubleClicked);
-
-          parent.insert ("path", "circle")
-            .attr ("d", "M0 0-70-70A99 99 0 0 1 70-70Z")
-            .attr ("class", "rm radial-menu")
-            .on("click", this.InboundNodesClicked);
-          parent.insert("text")
-            .attr("class", "rm radial-menu radial-menu-text")
-            .attr ("text-anchor", "middle")
-            .attr("x", 0)
-            .attr("y", -60)
-            .text("Inbound")
-            .on("click", this.InboundNodesClicked);
-
-          parent.insert ("path", "circle")
-            .attr ("d", "M0 0 70-70A99 99 0 0 1 70 70Z")
-            .attr ("class", "rm radial-menu");
-
-
-          parent.insert ("path", "circle")
-            .attr ("d", "M0 0 70 70A99 99 0 0 1-70 70Z")
-            .attr ("class", "rm radial-menu")
-            .on("click", (d) => {
-              node.selectAll(".rm").exit().remove()
-            });
-          parent.insert("text")
-            .attr("class", "rm radial-menu radial-menu-text")
-            .attr ("text-anchor", "middle")
-            .attr("x", 0)
-            .attr("y", 60)
-            .text("Close");
-        })
         .on ("dblclick", this.nodeDoubleClicked)
         // .on ("contextmenu", contextMenu)
         .call (d3.drag ()
@@ -302,7 +252,7 @@ export class ForceComponent implements OnInit, OnChanges {
       .attr ("clip-path", "url(#circle-view)")
       .on ("mouseover", (d: any) => {
         tooltipContainer.transition()
-          .delay (300)
+          .delay (2000)
           .duration (200)
           .style ("opacity", 1.0);
         tooltipContainer.html (this.getTooltipText (d))
@@ -319,6 +269,67 @@ export class ForceComponent implements OnInit, OnChanges {
           .duration (100)
           .style ("opacity", 0);
       })
+      .on ("click", (d) => {
+        if (toggle != d.id) {
+          //there is a probably better way to dd this but this.parentNode didn't work for me
+          node.selectAll (".rm").remove ()
+          let parent = d3.select (node.nodes ()[d.index]);
+
+          parent.insert ("path", "circle")
+            .attr ("d", "M0 0-70 70A99 99 0 0 1-70-70Z")
+            .attr ("class", "rm radial-menu")
+            .on ("click", this.nodeDoubleClicked);
+          parent.insert ("text")
+            .attr ("class", "rm radial-menu-text")
+            .attr ("text-anchor", "middle")
+            .attr ("x", -60)
+            .attr ("y", 0)
+            .text ("⬅")
+            .on ("click", this.nodeDoubleClicked);
+
+          parent.insert ("path", "circle")
+            .attr ("d", "M0 0-70-70A99 99 0 0 1 70-70Z")
+            .attr ("class", "rm radial-menu")
+            .on ("click", this.InboundNodesClicked);
+          parent.insert ("text")
+            .attr ("class", "rm radial-menu-text")
+            .attr ("text-anchor", "middle")
+            .attr ("x", 0)
+            .attr ("y", -60)
+            .text("⬇")
+            .on ("click", this.InboundNodesClicked);
+
+          parent.insert ("path", "circle")
+            .attr ("d", "M0 0 70-70A99 99 0 0 1 70 70Z")
+            .attr ("class", "rm radial-menu");
+
+
+          parent.insert ("path", "circle")
+            .attr ("d", "M0 0 70 70A99 99 0 0 1-70 70Z")
+            .attr ("class", "rm radial-menu")
+            .on ("click", (d) => {
+              let rm = parent.selectAll (".rm");
+              console.log (rm);
+              rm.remove ();
+              toggle = null;
+            })
+          ;
+          parent.insert ("text")
+            .attr ("class", "rm radial-menu-text")
+            .attr ("text-anchor", "middle")
+            .attr ("x", 0)
+            .attr ("y", 60)
+            .text ("✘");
+
+          toggle = d.id;
+        } else {
+          //toggle id and id clicked next is exactly the same,
+          // hence the same node was clicked again
+          node.selectAll (".rm").remove();
+          toggle = null;
+        }
+    })
+
     ;
 
 
@@ -477,7 +488,7 @@ export class ForceComponent implements OnInit, OnChanges {
   }
 
   private dragstarted: any = (d: any) => {
-    if (!d3.event.active) this.simulation.alphaTarget (0.3).restart();
+    if (!d3.event.active) this.simulation.alphaTarget (0.9).restart();
     d.fx = d.x;
     d.fy = d.y;
     d.moved = false;
