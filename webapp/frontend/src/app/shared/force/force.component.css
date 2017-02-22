@@ -27,22 +27,22 @@
 }
 
 /*
-.linkContainer .halo {
+.relationship  halo{
     fill: none;
-    opacity: 0;
+    opacity: .4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    stroke: #6ac6ff;
+}*/
+
+.relationship:hover .halo {
+    fill: none;
+    opacity: .9;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     stroke: #6ac6ff;
 }
 
-.linkContainer:hover .halo {
-    fill: none;
-    opacity: .6;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    stroke: #6ac6ff;
-}
-*/
 
 rect.linkboundBox {
 	fill: #fff;

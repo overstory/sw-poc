@@ -116,7 +116,6 @@ export class ForceComponent implements OnInit, OnChanges {
     this.simulation = d3.forceSimulation (this.data.nodes)
       .force ("charge", d3.forceManyBody ().strength (-1250))  // .distanceMax(400).distanceMin(1))
       //.force ("center", d3.forceCenter (this.width / 2, this.height / 2))
-      //.force ("link", d3.forceLink (this.data.links).distance (180).strength (0.5).id ((d: any) => { return d.id; }))
       .force ("link", d3.forceLink (this.data.links).distance (2*this.nodeRadius+120).strength(1.4).id ((d: any) => { return d.id; }))
       .force ("collide", d3.forceCollide ((d: any) => { return this.nodeRadius + 2 }))
       .force ("x", d3.forceX(this.width / 2).strength(0.15))
@@ -178,7 +177,7 @@ export class ForceComponent implements OnInit, OnChanges {
     if (this.nodeSelector == null) return;    // Can happen on first paint,
     let color = d3.scaleOrdinal (d3.schemeCategory20);
     let tooltipContainer = d3.select (".tooltip")
-    let toggle = null;
+    let radialMenuToggle = null;
 
     // Apply the general update pattern to the nodes.
     this.nodeSelector = this.nodesGrp.selectAll ('.node')
@@ -270,9 +269,10 @@ export class ForceComponent implements OnInit, OnChanges {
           .style ("opacity", 0);
       })
       .on ("click", (d) => {
-        if (toggle != d.id) {
+        if (radialMenuToggle != d.id) {
           //there is a probably better way to dd this but this.parentNode didn't work for me
-          node.selectAll (".rm").remove ()
+          //node.selectAll (".rm").remove ()
+          removeRadialMenu();
           let parent = d3.select (node.nodes ()[d.index]);
 
           parent.insert ("path", "circle")
@@ -308,10 +308,10 @@ export class ForceComponent implements OnInit, OnChanges {
             .attr ("d", "M0 0 70 70A99 99 0 0 1-70 70Z")
             .attr ("class", "rm radial-menu")
             .on ("click", (d) => {
-              let rm = parent.selectAll (".rm");
+             /* let rm = parent.selectAll (".rm");
               console.log (rm);
-              rm.remove ();
-              toggle = null;
+              rm.remove ();*/
+              removeRadialMenu();
             })
           ;
           parent.insert ("text")
@@ -321,15 +321,13 @@ export class ForceComponent implements OnInit, OnChanges {
             .attr ("y", 60)
             .text ("✘");
 
-          toggle = d.id;
+          radialMenuToggle = d.id;
         } else {
           //toggle id and id clicked next is exactly the same,
           // hence the same node was clicked again
-          node.selectAll (".rm").remove();
-          toggle = null;
+          removeRadialMenu();
         }
     })
-
     ;
 
 
@@ -352,12 +350,12 @@ export class ForceComponent implements OnInit, OnChanges {
 
     //linkLine
     link.insert ("line", "rect")
-      .attr ("class", "link relationship")
+      .attr ("class", "link relationship halo")
       .attr ("marker-end", "url(#end)");
 
     //linkLabel
     link.append ("text")
-      .attr ("class", "linkLabelGrp relationship")
+      .attr ("class", "linkLabelGrp relationship halo")
       .attr ("font-size", "10px")
       .attr ("x", -20)
       .attr ("dy", ".35em")
@@ -390,6 +388,10 @@ export class ForceComponent implements OnInit, OnChanges {
     this.simulation.nodes (this.data.nodes);
     this.simulation.force ("link").links (this.data.links);
     this.simulation.alpha (1).restart();
+
+    function removeRadialMenu() {
+      d3.selectAll (".rm").remove ();
+    }
 
   }
 
