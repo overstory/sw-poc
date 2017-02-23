@@ -23,24 +23,24 @@
 }
 
 .linklabel {
-    color: black;
+    stroke: #00b;
+    fill: #00b;
 }
 
-/*
-.relationship  halo{
-    fill: none;
-    opacity: .4;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    stroke: #6ac6ff;
-}*/
 
-.relationship:hover .halo {
-    fill: none;
-    opacity: .9;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
+.linkContainer .halo {
+    opacity: .0;
     stroke: #6ac6ff;
+}
+
+.linkContainer:hover .halo {
+    opacity: .8;
+    stroke: #6ac6ff;
+}
+
+.linkContainer:hover .linkboundBox {
+    opacity: .8;
+    fill: #6ac6ff;
 }
 
 
@@ -68,7 +68,7 @@ rect.linkboundBox {
 }
 
 .nodeContainer:hover .halo {
-    opacity: .3;
+    opacity: .8;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
     filter: alpha(opacity=30);
 }
@@ -130,20 +130,21 @@ img.tooltip-image {
 /* Radial Menu */
 
 .rm {
-	opacity: .8;
-	fill: #555;
-	stroke: #aaa;
-	font-size: 1.75em;
+	fill: #ccc;
+	stroke: #999;
 }
 
-.rm:hover {
-	opacity: .97;
-	fill: #E9EDDE;
+.radialMenuContainer:hover .rm {
+	fill: #999;
 }
 
-/*
+
 .radial-menu-text {
-	color: #424242;
+	fill: #fff;
 	font-size: 1.75em;
 }
-*/
+
+.radialMenuContainer:hover .radial-menu-text {
+	fill: #fff;
+	font-size: 1.75em;
+}

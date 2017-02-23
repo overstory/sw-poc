@@ -72,16 +72,6 @@ export class ForceComponent implements OnInit, OnChanges {
         .on ("end", this.dragended)
       );
 
-    svg.call (
-      d3.zoom().scaleExtent ([this.minZoom, this.maxZoom])
-        .on ("zoom", () => {
-          if (d3.event.sourceEvent.shiftKey) {
-            this.container.attr ("transform", d3.event.transform)
-          }
-        })
-    ).on ("dblclick.zoom", () => {
-      null
-    });
     console.log ("setting up defs");
     var defs = this.container.append ("defs");
 
@@ -156,9 +146,45 @@ export class ForceComponent implements OnInit, OnChanges {
 
     // Define the div for the tooltip
     d3.select ("body")
+      .on ("keydown", keyDown)
+      .on ("keyup", keyUp)
       .append ("div")
       .attr ("class", "tooltip")
       .style ("opacity", 0);
+
+
+    function keyDown () {
+      let keyCode = d3.event.keyCode;
+      let container = d3.select ("#chart");
+
+      if (keyCode == 16) {
+        svg.call (
+          d3.zoom().scaleExtent ([0.1, 10])
+            .on ("zoom", () => {
+              container.attr ("transform", d3.event.transform)
+            })
+        ).on ("dblclick.zoom", () => {
+          null
+        })
+      }
+
+    }
+
+    function keyUp () {
+      let keyCode = d3.event.keyCode;
+
+      if (keyCode == 16) {
+        svg.on ("mousedown.zoom", null);
+        svg.on ("mousemove.zoom", null);
+        svg.on ("dblclick.zoom", null);
+        svg.on ("touchstart.zoom", null);
+        svg.on ("wheel.zoom", null);
+        svg.on ("mousewheel.zoom", null);
+        svg.on ("MozMousePixelScroll.zoom", null);
+      }
+    }
+
+
   }
 
   showObjects() {
@@ -200,7 +226,7 @@ export class ForceComponent implements OnInit, OnChanges {
 
     node.append ("circle")
       .attr ("class", "halo")
-      .style ("stroke-width", "8px")
+      .style ("stroke-width", "12px")
       .attr ("r", this.nodeRadius);
 
     //circle with a opaque fill so that lines in background are not visible
@@ -271,15 +297,19 @@ export class ForceComponent implements OnInit, OnChanges {
       .on ("click", (d) => {
         if (radialMenuToggle != d.id) {
           //there is a probably better way to dd this but this.parentNode didn't work for me
-          //node.selectAll (".rm").remove ()
-          removeRadialMenu();
+          this.removeRadialMenu();
+          this.fixNode (d);
           let parent = d3.select (node.nodes ()[d.index]);
 
-          parent.insert ("path", "circle")
+          let west =  parent.insert ("g", "circle")
+            .attr ("class", "rm radialMenuContainer");
+
+          west.insert ("path", "circle")
             .attr ("d", "M0 0-70 70A99 99 0 0 1-70-70Z")
             .attr ("class", "rm radial-menu")
             .on ("click", this.nodeDoubleClicked);
-          parent.insert ("text")
+
+          west.insert ("text")
             .attr ("class", "rm radial-menu-text")
             .attr ("text-anchor", "middle")
             .attr ("x", -60)
@@ -287,11 +317,13 @@ export class ForceComponent implements OnInit, OnChanges {
             .text ("⬅")
             .on ("click", this.nodeDoubleClicked);
 
-          parent.insert ("path", "circle")
+          let north = parent.insert ("g", "circle")
+            .attr ("class", "rm radialMenuContainer");
+          north.insert ("path", "circle")
             .attr ("d", "M0 0-70-70A99 99 0 0 1 70-70Z")
             .attr ("class", "rm radial-menu")
             .on ("click", this.InboundNodesClicked);
-          parent.insert ("text")
+          north.insert ("text")
             .attr ("class", "rm radial-menu-text")
             .attr ("text-anchor", "middle")
             .attr ("x", 0)
@@ -299,22 +331,27 @@ export class ForceComponent implements OnInit, OnChanges {
             .text("⬇")
             .on ("click", this.InboundNodesClicked);
 
-          parent.insert ("path", "circle")
+          let east = parent.insert ("g", "circle")
+            .attr ("class", "rm radialMenuContainer");
+
+          east.insert ("path", "circle")
             .attr ("d", "M0 0 70-70A99 99 0 0 1 70 70Z")
             .attr ("class", "rm radial-menu");
 
+          let south = parent.insert ("g", "circle")
+            .attr ("class", "rm radialMenuContainer");
 
-          parent.insert ("path", "circle")
+          south.insert ("path", "circle")
             .attr ("d", "M0 0 70 70A99 99 0 0 1-70 70Z")
             .attr ("class", "rm radial-menu")
             .on ("click", (d) => {
              /* let rm = parent.selectAll (".rm");
               console.log (rm);
               rm.remove ();*/
-              removeRadialMenu();
+              this.removeRadialMenu();
             })
           ;
-          parent.insert ("text")
+          south.insert ("text")
             .attr ("class", "rm radial-menu-text")
             .attr ("text-anchor", "middle")
             .attr ("x", 0)
@@ -325,7 +362,8 @@ export class ForceComponent implements OnInit, OnChanges {
         } else {
           //toggle id and id clicked next is exactly the same,
           // hence the same node was clicked again
-          removeRadialMenu();
+          this.removeRadialMenu();
+          radialMenuToggle = null;
         }
     })
     ;
@@ -342,20 +380,20 @@ export class ForceComponent implements OnInit, OnChanges {
       .attr ("class", "linkContainer relationship")
       .merge (this.linkSelector);
 
-    /*
-     link.insert ("line")
-     .attr ("class", "relationship halo")
-     .style("stroke-width", "10px");
-     */
+
+     link.append ("line")
+     .attr ("class", "link relationship halo")
+     .style ("stroke-width", "20");
+
 
     //linkLine
     link.insert ("line", "rect")
-      .attr ("class", "link relationship halo")
+      .attr ("class", "link relationship")
       .attr ("marker-end", "url(#end)");
 
     //linkLabel
     link.append ("text")
-      .attr ("class", "linkLabelGrp relationship halo")
+      .attr ("class", "linkLabel linkLabelGrp relationship")
       .attr ("font-size", "10px")
       .attr ("x", -20)
       .attr ("dy", ".35em")
@@ -388,10 +426,6 @@ export class ForceComponent implements OnInit, OnChanges {
     this.simulation.nodes (this.data.nodes);
     this.simulation.force ("link").links (this.data.links);
     this.simulation.alpha (1).restart();
-
-    function removeRadialMenu() {
-      d3.selectAll (".rm").remove ();
-    }
 
   }
 
@@ -426,6 +460,19 @@ export class ForceComponent implements OnInit, OnChanges {
     selection.each (function (d) {
       d.bbox = this.getBBox();
     })
+  }
+
+  private removeRadialMenu: any =  () => {
+    d3.selectAll (".rm").remove ();
+  }
+
+  private fixNode: any = (d: any) => {
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+
+  private unfixNode: any = (d: any) => {
+    d.fx = d.fy = null;
   }
 
   private getTooltipText: any = (data) => {
@@ -477,6 +524,7 @@ export class ForceComponent implements OnInit, OnChanges {
 
   private nodeDoubleClicked: any = (d: any) => {
     this.graph.getOutboundNodes (d.id).subscribe (newData => {
+      this.removeRadialMenu();
       this.addToGraph (newData);
       this.restart ();
     });
@@ -484,6 +532,7 @@ export class ForceComponent implements OnInit, OnChanges {
 
   private InboundNodesClicked: any = (d: any) => {
     this.graph.getInboundNodes (d.id).subscribe (newData => {
+      this.removeRadialMenu();
       this.addToGraph (newData);
       this.restart()
     });
