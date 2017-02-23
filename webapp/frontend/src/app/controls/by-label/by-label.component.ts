@@ -11,6 +11,7 @@ export class ByLabelComponent implements OnInit {
   label: any = null;
   relations: any = { relations: [] };
   relation: any = null;
+  stage: any = null;
 
   constructor(
     private graph: GraphService
@@ -32,7 +33,6 @@ export class ByLabelComponent implements OnInit {
 
   allLabels() {
     let endPath = 'nodes-by-label/' + this.label;
-    console.log (endPath);
     this.graph.getQueryResults (endPath).subscribe (data => {
       this.graph.announce (data)
     });
@@ -40,7 +40,13 @@ export class ByLabelComponent implements OnInit {
 
   allRelations() {
     let endPath = 'nodes-by-relation/' + this.relation;
-    console.log (endPath);
+    this.graph.getQueryResults (endPath).subscribe (data => {
+      this.graph.announce (data)
+    });
+  }
+
+  allByStage() {
+    let endPath = 'all-by-stage/' + this.stage;
     this.graph.getQueryResults (endPath).subscribe (data => {
       this.graph.announce (data)
     });

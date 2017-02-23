@@ -67,7 +67,9 @@ class GraphQueryHandler implements Handler
 
 		if (id == null) return Promise.value (null)
 
-		neo4JServer.runRequest (cypher).map { ReceivedResponse resp ->
+		List<String> responseTypes = (queryResponseTypes [id]) ?: [ 'graph' ]
+
+		neo4JServer.runRequest (cypher, [:], responseTypes).map { ReceivedResponse resp ->
 			if (resp.statusCode != 200) {
 				throw new RuntimeException (resp.body.text)
 			}
@@ -81,6 +83,11 @@ class GraphQueryHandler implements Handler
 //		Promise.value (queryResults [id])
 
 	}
+
+	private Map<String,List<String>> queryResponseTypes = [
+		'node-labels': [ 'row' ],
+		'relation-names': [ 'row' ]
+	]
 
 	// ----------------------------------------------------------------
 
@@ -168,6 +175,13 @@ RETURN p
 		'referencing-nodes': 'MATCH (n)<-[l]-(p) WHERE ID(n) = @param1@ RETURN p, l',
 		'nodes-by-label': 'MATCH (n:@param1@) RETURN n',
 		'nodes-by-relation': 'MATCH (n)-[l:@param1@]-(m) RETURN DISTINCT n, m, l',
+		'all-by-stage':
+"""
+MATCH (n) WHERE @param1@ IN n.stage 
+MATCH () -[l]- () WHERE @param1@ IN l.stage
+RETURN DISTINCT l, n
+LIMIT 500
+""".toString(),
 		'node-labels': """
 MATCH (n)
 WITH DISTINCT labels(n) AS labels

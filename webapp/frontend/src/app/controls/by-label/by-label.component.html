@@ -26,4 +26,21 @@
       </div>
     </div>
   </form>
+
+  <form>
+    <div class="sw-selectors grid grid-pad">
+      <div class="col-1-3 center"><p>Select a Stage and click GO</p></div>
+      <div class="col-1-3 center">
+          <select name="stage" class="show" [(ngModel)]="stage">
+            <option value="1">Stage 1</option>
+            <option value="2">Stage 2</option>
+            <option value="3">Stage 3</option>
+            <option value="4">Stage 4</option>
+          </select>
+      </div>
+      <div class="col-1-3 center">
+        <button type="submit" class="waves-effect btn green" (click)="allByStage()">GO <i class="material-icons right">send</i></button>
+      </div>
+    </div>
+  </form>
 </div>

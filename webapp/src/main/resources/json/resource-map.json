@@ -11,7 +11,6 @@
   "depictions": [
     { "swapiUrl": "http://swapi.co/api/people/14/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/Han-Solo_1d08eb2e.jpeg?region=573%2C0%2C899%2C901&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/4/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/Darth-Vader_6bda9114.jpeg?region=236%2C0%2C928%2C928&width=320" },
-    { "swapiUrl": "http://swapi.co/api/people/4/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/Darth-Vader_6bda9114.jpeg?region=236%2C0%2C928%2C928&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/3/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/R2-D2_41dacaa9.jpeg?region=549%2C0%2C864%2C864&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/1/", "depiction": "https://lumiere-a.akamaihd.net/v1/images/Luke-Skywalker_dd9c9f9b.jpeg?region=389%2C0%2C864%2C864&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/21/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/Emperor-Palpatine_7ac4a10e.jpeg?region=311%2C0%2C900%2C900&width=320" },

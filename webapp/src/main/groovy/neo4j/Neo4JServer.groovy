@@ -11,5 +11,5 @@ import ratpack.http.client.ReceivedResponse
  */
 interface Neo4JServer
 {
-	Promise<List<ReceivedResponse>> runRequest (String cypher, Map<String, Object> params)
+	Promise<List<ReceivedResponse>> runRequest (String cypher, Map<String, Object> params, List<String> resultTypes)
 }

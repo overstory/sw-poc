@@ -35,7 +35,7 @@ class Neo4JServerImpl implements Neo4JServer
 	}
 
 	@Override
-	Promise<List<ReceivedResponse>> runRequest (String cypher, Map<String,Object> params = [:])
+	Promise<List<ReceivedResponse>> runRequest (String cypher, Map<String,Object> params = [:], List<String> resultTypes = [ 'row', 'graph'])
 	{
 		List<Map<String,Object>> statements = []
 
@@ -44,7 +44,7 @@ class Neo4JServerImpl implements Neo4JServer
 
 			stmtObj ['statement'] = escapeCypher (statement)
 			stmtObj ['parameters'] = params
-			stmtObj ['resultDataContents'] = [ 'row', 'graph' ]
+			stmtObj ['resultDataContents'] = resultTypes
 
 			statements << stmtObj
 		}
@@ -80,7 +80,7 @@ class Neo4JServerImpl implements Neo4JServer
 			it.headers.set ("Accept", 'application/json')
 			it.basicAuth (hostDetails.user, hostDetails.pass)
 			it.body.text (body)
-			it.maxContentLength (10000000)
+			it.maxContentLength (50 * 1024 * 1024)
 		} then { resp ->
 			responses << resp
 		}
