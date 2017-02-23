@@ -214,7 +214,7 @@ export class ForceComponent implements OnInit, OnChanges {
     var node = this.nodeSelector.enter ()
         .append ("g")
         .attr ("class", "node nodeContainer")
-        .on ("dblclick", this.nodeDoubleClicked)
+        .on ("dblclick", this.outboundNodesClicked)
         // .on ("contextmenu", contextMenu)
         .call (d3.drag ()
           .on ("start", this.dragstarted)
@@ -307,7 +307,10 @@ export class ForceComponent implements OnInit, OnChanges {
           west.insert ("path", "circle")
             .attr ("d", "M0 0-70 70A99 99 0 0 1-70-70Z")
             .attr ("class", "rm radial-menu")
-            .on ("click", this.nodeDoubleClicked);
+            .on ("click", (d) => {
+              this.outboundNodesClicked(d);
+              this.removeRadialMenu();
+            });
 
           west.insert ("text")
             .attr ("class", "rm radial-menu-text")
@@ -315,21 +318,30 @@ export class ForceComponent implements OnInit, OnChanges {
             .attr ("x", -60)
             .attr ("y", 0)
             .text ("⬅")
-            .on ("click", this.nodeDoubleClicked);
+            .on ("click", (d) => {
+              this.outboundNodesClicked(d);
+              this.removeRadialMenu();
+            });
 
           let north = parent.insert ("g", "circle")
             .attr ("class", "rm radialMenuContainer");
           north.insert ("path", "circle")
             .attr ("d", "M0 0-70-70A99 99 0 0 1 70-70Z")
             .attr ("class", "rm radial-menu")
-            .on ("click", this.InboundNodesClicked);
+            .on ("click", (d) => {
+              this.InboundNodesClicked(d);
+              this.removeRadialMenu();
+            });
           north.insert ("text")
             .attr ("class", "rm radial-menu-text")
             .attr ("text-anchor", "middle")
             .attr ("x", 0)
             .attr ("y", -60)
             .text("⬇")
-            .on ("click", this.InboundNodesClicked);
+            .on ("click", (d) => {
+              this.InboundNodesClicked(d);
+              this.removeRadialMenu();
+            });
 
           let east = parent.insert ("g", "circle")
             .attr ("class", "rm radialMenuContainer");
@@ -348,6 +360,7 @@ export class ForceComponent implements OnInit, OnChanges {
              /* let rm = parent.selectAll (".rm");
               console.log (rm);
               rm.remove ();*/
+              this.removeNodesClicked(d);
               this.removeRadialMenu();
             })
           ;
@@ -356,7 +369,11 @@ export class ForceComponent implements OnInit, OnChanges {
             .attr ("text-anchor", "middle")
             .attr ("x", 0)
             .attr ("y", 60)
-            .text ("✘");
+            .text ("✘")
+            .on("click", (d) => {
+              this.removeNodesClicked(d);
+              this.removeRadialMenu();
+            });
 
           radialMenuToggle = d.id;
         } else {
@@ -456,6 +473,43 @@ export class ForceComponent implements OnInit, OnChanges {
     return false
   }
 
+
+  private removeNodeFromGraph: any = (removedNodeId) => {
+    console.log("removing node: " + removedNodeId);
+    let nodes = this.data.nodes;
+    let links = this.data.links;
+    for (let i = 0; i < nodes.length; i++) {
+      if (nodes[i].id == removedNodeId) {
+        nodes.splice(i, 1);
+      }
+    }
+    //expensive one
+  /*  for (let i = 0; i < links.length; i++) {
+      if (links[i].source.id == removedNodeId || links[i].target.id == removedNodeId) {
+        console.log("removing link: " + i);
+        if (links[i].source.id == removedNodeId) {console.log("source")}
+        else if (links[i].target.id == removedNodeId) {console.log("target")}
+          else {console.log("something else")}
+        links.splice(i, 1)
+      }
+    }
+    */
+
+    let indicesToRemove: Array<number> = [];
+
+    for(let i=0;i<links.length;i++){
+      if(links[i].source.id===removedNodeId || links[i].target.id === removedNodeId){ //let's say u wud like to remove all 2
+        indicesToRemove.push(i); //getting the indices and pushing it in a new array
+      }
+    }
+
+    for (let j = indicesToRemove.length -1; j >= 0; j--){
+      links.splice(indicesToRemove[j],1);
+    }
+
+
+  }
+
   getTextBox (selection) {
     selection.each (function (d) {
       d.bbox = this.getBBox();
@@ -522,9 +576,8 @@ export class ForceComponent implements OnInit, OnChanges {
 
   /* ============== Event Handlers =========================*/
 
-  private nodeDoubleClicked: any = (d: any) => {
+  private outboundNodesClicked: any = (d: any) => {
     this.graph.getOutboundNodes (d.id).subscribe (newData => {
-      this.removeRadialMenu();
       this.addToGraph (newData);
       this.restart ();
     });
@@ -532,10 +585,14 @@ export class ForceComponent implements OnInit, OnChanges {
 
   private InboundNodesClicked: any = (d: any) => {
     this.graph.getInboundNodes (d.id).subscribe (newData => {
-      this.removeRadialMenu();
       this.addToGraph (newData);
       this.restart()
     });
+  }
+
+  private removeNodesClicked: any = (removedNode: any) => {
+    this.removeNodeFromGraph (removedNode.id);
+    this.restart();
   }
 
   private dragstarted: any = (d: any) => {
