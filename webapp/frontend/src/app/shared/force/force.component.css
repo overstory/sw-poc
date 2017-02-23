@@ -130,12 +130,13 @@ img.tooltip-image {
 /* Radial Menu */
 
 .rm {
-	fill: #ccc;
-	stroke: #999;
+	fill: #999;
+	stroke: #ccc;
 }
 
 .radialMenuContainer:hover .rm {
-	fill: #999;
+	fill: #ccc;
+	stroke: #fff;
 }
 
 
