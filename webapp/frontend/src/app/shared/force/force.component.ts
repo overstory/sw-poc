@@ -21,6 +21,7 @@ export class ForceComponent implements OnInit, OnChanges {
   private minZoom: number = 0.1;
   private maxZoom: number = 10;
   private nodeRadius: number = 25;
+  private origWheelHandler: any = null;
 
   private simulation;
   private container;
@@ -55,7 +56,7 @@ export class ForceComponent implements OnInit, OnChanges {
 
   assembleChart() {
     console.log ("assembling...");
-    //define what element  is going to be used for a chart
+    //define what element is going to be used for a chart
     let element = this.chartContainer.nativeElement;
     this.width = element.offsetWidth - this.margin.left - this.margin.right;
     this.height = element.offsetHeight - this.margin.top - this.margin.bottom;
@@ -148,43 +149,43 @@ export class ForceComponent implements OnInit, OnChanges {
     d3.select ("body")
       .on ("keydown", keyDown)
       .on ("keyup", keyUp)
+      .on ("mouseenter", bodyMouseEnter)
       .append ("div")
       .attr ("class", "tooltip")
       .style ("opacity", 0);
 
+    svg.call (
+      d3.zoom().scaleExtent ([0.1, 10]).on ("zoom", () => {
+        d3.select ("#chart").attr ("transform", d3.event.transform)
+      })
+    );
 
     function keyDown () {
-      let keyCode = d3.event.keyCode;
-      let container = d3.select ("#chart");
-
-      if (keyCode == 16) {
-        svg.call (
-          d3.zoom().scaleExtent ([0.1, 10])
-            .on ("zoom", () => {
-              container.attr ("transform", d3.event.transform)
-            })
-        ).on ("dblclick.zoom", () => {
-          null
-        })
+      if (d3.event.keyCode == 16) {
+        if (this.origWheelHandler != null) {
+          svg.on ("wheel.zoom", this.origWheelHandler);
+        }
       }
 
     }
 
     function keyUp () {
-      let keyCode = d3.event.keyCode;
-
-      if (keyCode == 16) {
-        svg.on ("mousedown.zoom", null);
-        svg.on ("mousemove.zoom", null);
-        svg.on ("dblclick.zoom", null);
-        svg.on ("touchstart.zoom", null);
+      if (d3.event.keyCode == 16) {
+        if (this.origWheelHandler == null) {
+          this.origWheelHandler = svg.on ("wheel.zoom");
+        }
         svg.on ("wheel.zoom", null);
-        svg.on ("mousewheel.zoom", null);
-        svg.on ("MozMousePixelScroll.zoom", null);
       }
     }
 
-
+    // This is only here to catch a startup event so as to save off the wheel.zoom handler after it's been setup
+    function bodyMouseEnter ()
+    {
+      if (this.origWheelHandler == null) {
+        this.origWheelHandler = svg.on ("wheel.zoom");
+        svg.on ("wheel.zoom", null);
+      }
+    }
   }
 
   showObjects() {
