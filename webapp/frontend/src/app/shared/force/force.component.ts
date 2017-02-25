@@ -179,11 +179,12 @@ export class ForceComponent implements OnInit, OnChanges {
     }
 
     // This is only here to catch a startup event so as to save off the wheel.zoom handler after it's been setup
-    function bodyMouseEnter ()
+    function bodyMouseEnter()
     {
       if (this.origWheelHandler == null) {
         this.origWheelHandler = svg.on ("wheel.zoom");
         svg.on ("wheel.zoom", null);
+        svg.on ("dblclick.zoom", null);
       }
     }
   }
@@ -211,8 +212,9 @@ export class ForceComponent implements OnInit, OnChanges {
       .data (this.data.nodes, (d) => {
         return d.id
       });
-    this.nodeSelector.exit ().remove ();
-    var node = this.nodeSelector.enter ()
+    this.nodeSelector.exit ().remove();
+
+    var node = this.nodeSelector.enter()
         .append ("g")
         .attr ("class", "node nodeContainer")
         .on ("dblclick", this.outboundNodesClicked)
