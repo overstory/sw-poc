@@ -22,6 +22,8 @@ export class ForceComponent implements OnInit, OnChanges {
   private maxZoom: number = 10;
   private nodeRadius: number = 25;
   private origWheelHandler: any = null;
+  private tooltipFocus: boolean = false;
+  private nodeFocus: boolean = false;
 
   private simulation;
   private container;
@@ -35,9 +37,11 @@ export class ForceComponent implements OnInit, OnChanges {
     depiction: true, label: true, types: true
   };
 
+  private radialMenuToggle = null;
+
 
   constructor (private graph: GraphService) {
-  }
+}
 
   ngOnInit() {
     this.assembleChart();
@@ -122,6 +126,23 @@ export class ForceComponent implements OnInit, OnChanges {
         ;
 
         this.linksGrp.selectAll (".link")
+          .attr("d", (d) => {
+     /*     var dx = d.target.x - d.source.x,
+            dy = d.target.y - d.source.y,
+            dr = Math.sqrt(dx * dx + dy * dy);
+          let dAttribute;
+          if (this.countLinks(d) > 1) {
+            dAttribute = "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
+          }
+          else {
+            dAttribute = "M" + d.source.x + "," + d.source.y + "L" + d.target.x + "," + d.target.y;
+          }
+          return dAttribute*/
+            return this.countLinks(d)
+        });
+
+        /*
+        this.linksGrp.selectAll (".link")
           .attr ("x1", (d) => {
             //console.log("link source x coordinate is: " + d.source.x + " name: " + d.name);
             return d.source.x;
@@ -135,14 +156,15 @@ export class ForceComponent implements OnInit, OnChanges {
           .attr ("y2", (d) => {
             return d.target.y;
           })
-        ;
+        ;*/
 
         // FixMe: I've messed this up somehow, it's not selecting the text nodes properly
-        this.linksGrp.selectAll (".linkLabelGrp")
+    /*    this.linksGrp.selectAll (".linkLabelGrp")
           .attr ("transform", (d: any) => {
             var angle = Math.atan ((d.source.y - d.target.y) / (d.source.x - d.target.x)) * 180 / Math.PI;
             return 'translate(' + [((d.source.x + d.target.x) / 2 ), ((d.source.y + d.target.y) / 2 )] + ')rotate(' + angle + ')';
           });
+        */
       });
 
     // Define the div for the tooltip
@@ -158,7 +180,9 @@ export class ForceComponent implements OnInit, OnChanges {
       d3.zoom().scaleExtent ([0.1, 10]).on ("zoom", () => {
         d3.select ("#chart").attr ("transform", d3.event.transform)
       })
-    );
+    ).on ("click", (d) => {
+      this.removeRadialMenu();
+    });
 
     function keyDown () {
       if (d3.event.keyCode == 16) {
@@ -166,7 +190,6 @@ export class ForceComponent implements OnInit, OnChanges {
           svg.on ("wheel.zoom", this.origWheelHandler);
         }
       }
-
     }
 
     function keyUp () {
@@ -204,8 +227,7 @@ export class ForceComponent implements OnInit, OnChanges {
   restart() {
     if (this.nodeSelector == null) return;    // Can happen on first paint,
     let color = d3.scaleOrdinal (d3.schemeCategory20);
-    let tooltipContainer = d3.select (".tooltip")
-    let radialMenuToggle = null;
+    //let radialMenuToggle = null;
 
     // Apply the general update pattern to the nodes.
     this.nodeSelector = this.nodesGrp.selectAll ('.node')
@@ -225,6 +247,10 @@ export class ForceComponent implements OnInit, OnChanges {
           .on ("end", this.dragended)
         )
         .merge (this.nodeSelector)
+        // make sure that current node is on top of others. this is mainly for radial menu
+        .on('mouseover', function() {
+          this.parentNode.appendChild(this);
+        })
       ;
 
     node.append ("circle")
@@ -255,6 +281,7 @@ export class ForceComponent implements OnInit, OnChanges {
     //node text
     node.append ("text")
       .attr ("class", "node node-text")
+
       .text ((d: any) => {
         return d.name;
       })
@@ -279,95 +306,104 @@ export class ForceComponent implements OnInit, OnChanges {
       })
       .attr ("clip-path", "url(#circle-view)")
       .on ("mouseover", (d: any) => {
-        tooltipContainer.transition()
-          .delay (2000)
-          .duration (200)
-          .style ("opacity", 1.0);
-        tooltipContainer.html (this.getTooltipText (d))
-          .style ("left", (d3.event.pageX) + "px")
-          .style ("top", (d3.event.pageY - 28) + "px");
+        this.nodeFocus = true;
+        this.showTooltip (d, ".tooltip", 2000);
       })
       .on ("mouseout", (d: any) => {
-        tooltipContainer.transition()
-          .duration (500)
-          .style ("opacity", 0);
+        this.nodeFocus = false;
+        this.hideTooltip (".tooltip")
       })
       .on ("mousedown", (d: any) => {
-        tooltipContainer.transition()
-          .duration (100)
-          .style ("opacity", 0);
+        this.hideTooltip (".tooltip");
       })
       .on ("click", (d) => {
-        if (radialMenuToggle != d.id) {
+        if (this.radialMenuToggle != d.id) {
           //there is a probably better way to dd this but this.parentNode didn't work for me
           this.removeRadialMenu();
+          d3.event.stopPropagation();
           this.fixNode (d);
           let parent = d3.select (node.nodes ()[d.index]);
 
-          let west =  parent.insert ("g", "circle")
+          let northwest =  parent.insert ("g", "circle")
             .attr ("class", "rm radialMenuContainer");
-
-          west.insert ("path", "circle")
-            .attr ("d", "M0 0-70 70A99 99 0 0 1-70-70Z")
+          northwest.insert ("path", "circle")
+            .attr ("d", "M -9.184850993605149e-15 -50 A 50 50 0 0 0 -47.27592877996584 -16.27840772285784")
+            .attr("stroke-width", "20")
             .attr ("class", "rm radial-menu")
             .on ("click", (d) => {
               this.outboundNodesClicked(d);
+              this.fixNode (d);
               this.removeRadialMenu();
             });
-
-          west.insert ("text")
+          northwest.append ("text")
             .attr ("class", "rm radial-menu-text")
             .attr ("text-anchor", "middle")
-            .attr ("x", -60)
-            .attr ("y", 0)
+            .attr ("x", -30)
+            .attr ("y", -30)
             .text ("⬅")
             .on ("click", (d) => {
               this.outboundNodesClicked(d);
+              this.fixNode (d);
               this.removeRadialMenu();
             });
 
-          let north = parent.insert ("g", "circle")
+          let northeast = parent.append ("g")
             .attr ("class", "rm radialMenuContainer");
-          north.insert ("path", "circle")
-            .attr ("d", "M0 0-70-70A99 99 0 0 1 70-70Z")
+          northeast.append ("path")
+            .attr("d", "M 47.81523779815177 -14.618585236136838 A 50 50 0 0 0 0.8726203218641688 -49.992384757819565")
             .attr ("class", "rm radial-menu")
             .on ("click", (d) => {
               this.InboundNodesClicked(d);
+              this.fixNode (d);
               this.removeRadialMenu();
             });
-          north.insert ("text")
+          northeast.append ("text")
             .attr ("class", "rm radial-menu-text")
             .attr ("text-anchor", "middle")
-            .attr ("x", 0)
-            .attr ("y", -60)
+            .attr ("x", 30)
+            .attr ("y", -30)
             .text("⬇")
             .on ("click", (d) => {
               this.InboundNodesClicked(d);
+              this.fixNode (d);
               this.removeRadialMenu();
             });
 
-          let east = parent.insert ("g", "circle")
+          let southeast = parent.append ("g")
             .attr ("class", "rm radialMenuContainer");
+          southeast.append ("path")
+            .attr ("d", "M 29.389262614623657 40.45084971874737 A 50 50 0 0 0 47.81523779815177 -14.618585236136838")
+            .attr ("class", "rm radial-menu")
+            .on("click", (d) => {
+              this.showTooltip(d, ".tooltip", 0);
+              this.fixNode (d);
+              this.removeRadialMenu();
+            });
+          southeast.append ("text")
+            .attr ("class", "rm radial-menu-text")
+            .attr ("text-anchor", "middle")
+            .attr('font-family', 'FontAwesome')
+            .attr ("x", 45)
+            .attr ("y", 20)
+            .text ( (d) => { return "\uf129" })
+            .on("click", (d) => {
+              this.showTooltip(d, ".tooltip", 0);
+              this.fixNode (d);
+              this.removeRadialMenu();
+            });
 
-          east.insert ("path", "circle")
-            .attr ("d", "M0 0 70-70A99 99 0 0 1 70 70Z")
-            .attr ("class", "rm radial-menu");
 
-          let south = parent.insert ("g", "circle")
+          let southwest = parent.append ("g")
             .attr ("class", "rm radialMenuContainer");
-
-          south.insert ("path", "circle")
-            .attr ("d", "M0 0 70 70A99 99 0 0 1-70 70Z")
+          southwest.append ("path")
+            .attr ("d", "M -29.38926261462365 40.45084971874737 A 50 50 0 0 0 28.678821817552304 40.95760221444959")
             .attr ("class", "rm radial-menu")
             .on ("click", (d) => {
-             /* let rm = parent.selectAll (".rm");
-              console.log (rm);
-              rm.remove ();*/
               this.removeNodesClicked(d);
+              this.fixNode (d);
               this.removeRadialMenu();
-            })
-          ;
-          south.insert ("text")
+            });
+          southwest.append ("text")
             .attr ("class", "rm radial-menu-text")
             .attr ("text-anchor", "middle")
             .attr ("x", 0)
@@ -375,24 +411,52 @@ export class ForceComponent implements OnInit, OnChanges {
             .text ("✘")
             .on("click", (d) => {
               this.removeNodesClicked(d);
+              this.fixNode (d);
               this.removeRadialMenu();
             });
 
-          radialMenuToggle = d.id;
+
+          let west = parent.append ("g")
+            .attr ("class", "rm radialMenuContainer");
+          west.append ("path")
+            .attr ("d", "M -47.552825814757675 -15.450849718747387 A 50 50 0 0 0 -30.09075115760242 39.93177550236464")
+            .attr ("class", "rm radial-menu")
+            .on ("click", (d) => {
+              this.unfixNode (d);
+            });
+          west.append ("text")
+            .attr ("class", "rm radial-menu-text")
+            .attr ("text-anchor", "middle")
+            .attr('font-family', 'FontAwesome')
+            .attr ("x", -45)
+            .attr ("y", 20)
+            .text ( (d) => { return '\uf0b2' })
+            .on("click", (d) => {
+              this.unfixNode (d);
+            });
+
+          this.radialMenuToggle = d.id;
         } else {
           //toggle id and id clicked next is exactly the same,
           // hence the same node was clicked again
           this.removeRadialMenu();
-          radialMenuToggle = null;
+          this.fixNode (d);
+          this.radialMenuToggle = null;
         }
     })
     ;
+
+    node.append("title")
+      .text( (d: any) => {
+        return d.name
+      });
 
 
     // Apply the general update pattern to the links.
     this.linkSelector = this.linksGrp.selectAll ('.relationship')
       .data (this.data.links, (d) => {
         return d.id
+
       });
     this.linkSelector.exit().remove();
     var link = this.linkSelector.enter()
@@ -401,17 +465,53 @@ export class ForceComponent implements OnInit, OnChanges {
       .merge (this.linkSelector);
 
 
-     link.append ("line")
-     .attr ("class", "link relationship halo")
-     .style ("stroke-width", "20");
+     link.append ("path")
+       .attr ("class", "link relationship halo")
+       .style ("stroke-width", "20");
 
 
     //linkLine
-    link.insert ("line", "rect")
-      .attr ("class", "link relationship")
+    link.insert ("path", "rect")
+      .attr ("class", "linkLine link relationship")
+      .attr("id", (d) => {
+        return "link-" + d.id
+      })
       .attr ("marker-end", "url(#end)");
 
+    //linkBoundBox hack
+  /*  link.append ("text")
+      .attr ("class", "relationship linkboundBox")
+      .attr ("font-size", "12px")
+      .attr ("stroke-width", 6)
+      .attr ("stroke", "#fff")
+      .attr ("dy", ".35em")
+      //.attr ("filter", "url(#background)")
+      .append("textPath")
+      .attr("xlink:href", (d) => {
+        return "#link-" + d.id
+      })
+      .style("text-anchor","middle")
+      .attr("startOffset", "50%")
+      .text ((d: any) => {
+        return d.relationship;
+      });*/
+
     //linkLabel
+    link.append ("text")
+      .attr ("class", "linkLabel linkLabelGrp relationship")
+      .attr ("font-size", "10px")
+    //  .attr ("dy", ".35em")
+      //.attr ("filter", "url(#background)")
+      .append("textPath")
+      .attr("xlink:href", (d) => {
+        return "#link-" + d.id
+      })
+      .style("text-anchor","middle")
+      .attr("startOffset", "50%")
+      .text ((d: any) => {
+        return d.relationship;
+      });
+    /*
     link.append ("text")
       .attr ("class", "linkLabel linkLabelGrp relationship")
       .attr ("font-size", "10px")
@@ -422,10 +522,10 @@ export class ForceComponent implements OnInit, OnChanges {
         return d.relationship;
       })
       .call (this.getTextBox);
-
+*/
 
     //linkBoundBox: https://bl.ocks.org/mbostock/1160929
-    link.insert ("rect", "text")
+/*    link.insert ("rect", "text")
       .attr ("class", "linkLabelGrp linkboundBox relationship")
       .attr ("x", (d: any) => {
         return -20
@@ -438,7 +538,7 @@ export class ForceComponent implements OnInit, OnChanges {
       })
       .attr ("height", (d: any) => {
         return d.bbox.height + 2
-      });
+      });*/
 
     //this.showObjects ();
 
@@ -478,7 +578,6 @@ export class ForceComponent implements OnInit, OnChanges {
 
 
   private removeNodeFromGraph: any = (removedNodeId) => {
-    console.log("removing node: " + removedNodeId);
     let nodes = this.data.nodes;
     let links = this.data.links;
     for (let i = 0; i < nodes.length; i++) {
@@ -487,31 +586,70 @@ export class ForceComponent implements OnInit, OnChanges {
       }
     }
     //expensive one
-  /*  for (let i = 0; i < links.length; i++) {
-      if (links[i].source.id == removedNodeId || links[i].target.id == removedNodeId) {
-        console.log("removing link: " + i);
-        if (links[i].source.id == removedNodeId) {console.log("source")}
-        else if (links[i].target.id == removedNodeId) {console.log("target")}
-          else {console.log("something else")}
-        links.splice(i, 1)
-      }
-    }
-    */
 
     let indicesToRemove: Array<number> = [];
 
     for(let i=0;i<links.length;i++){
-      if(links[i].source.id===removedNodeId || links[i].target.id === removedNodeId){ //let's say u wud like to remove all 2
-        indicesToRemove.push(i); //getting the indices and pushing it in a new array
+      if(links[i].source.id===removedNodeId || links[i].target.id === removedNodeId){
+        indicesToRemove.push(i);
       }
     }
 
     for (let j = indicesToRemove.length -1; j >= 0; j--){
       links.splice(indicesToRemove[j],1);
     }
-
-
   }
+
+  private countLinks: any = (d) => {
+
+    let sourceId: number = d.source.id;
+    let targetId: number = d.target.id;
+    let links = this.data.links;
+    let availableLinks = [];
+
+    //go through all links and find similar ones in regards of source and target
+    for (let i = 0; i < links.length; i++) {
+      if (links[i].source.id === sourceId && links[i].target.id === targetId) {
+        availableLinks.push(
+          links[i].id //get the id of the link object from this.data.nodes
+        )
+      }
+    }
+
+    //find index of current node in available links for given node
+    let curIdx = availableLinks.indexOf(d.id);
+
+    let dx: number = d.target.x - d.source.x,
+      dy: number = d.target.y - d.source.y,
+      dr: number = Math.sqrt(dx * dx + dy * dy) / (1 + curIdx * 0.5);// setting up a simple coefficient that would
+    // create an angle for any additional relationships when we have more than two. inefficient as we do this
+    // also for straight links.
+    let dAttribute: string;
+
+    function leftOrRight (curIdx) {
+      if (curIdx % 2 == 0) {
+        //console.log("0 for " + id + "at index " + availableLinks.indexOf(id));
+        return 0
+      }
+      else {
+        //console.log("1 for " + id+ "at index " + availableLinks.indexOf(id));
+        return 1
+      }
+    }
+
+    // build links. if available links array bigger than 1, make curves.
+    if (availableLinks.length > 1) {
+      dAttribute = "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0," + leftOrRight(curIdx) + " " + d.target.x + "," + d.target.y;
+    }
+    else {
+      dAttribute = "M" + d.source.x + "," + d.source.y + "L" + d.target.x + "," + d.target.y;
+    }
+    return dAttribute
+
+
+
+
+  };
 
   getTextBox (selection) {
     selection.each (function (d) {
@@ -530,6 +668,43 @@ export class ForceComponent implements OnInit, OnChanges {
 
   private unfixNode: any = (d: any) => {
     d.fx = d.fy = null;
+  }
+
+  private showTooltip: any = (d, containerStyle: string, fadeInMils: number ) => {
+    let tooltipContainer = d3.select (containerStyle);
+    let tooltipContainerWithContent = d3.select (containerStyle + ", " + containerStyle + " *");
+    tooltipContainer.transition()
+    .delay (fadeInMils)
+    .duration (200)
+    .style ("opacity", 1.0);
+    tooltipContainer.html (this.getTooltipText (d))
+      .style ("left", (d3.event.pageX + 20) + "px")
+      .style ("top", (d3.event.pageY - 28) + "px");
+
+    tooltipContainerWithContent
+      .on("mouseover", (d) => {
+        console.log("over tooltip container");
+        console.log("tooltip: " + this.tooltipFocus);
+        console.log("node: " + this.nodeFocus);
+         this.tooltipFocus = true;
+         console.log ("value - " + this.tooltipFocus);
+      })
+      .on ("mouseout", (d) => {
+        this.hideTooltip (".tooltip");
+        this.tooltipFocus = false;
+      })
+
+  }
+
+  private hideTooltip: any = (containerStyle: string) => {
+    let tooltipContainer = d3.select (containerStyle)
+    if ( this.tooltipFocus === false && this.nodeFocus === false ) {
+      tooltipContainer.transition ()
+        .style ("left", "0px")
+        .style ("top", "0px")
+        .duration (100)
+        .style ("opacity", 0);
+    }
   }
 
   private getTooltipText: any = (data) => {
@@ -589,7 +764,7 @@ export class ForceComponent implements OnInit, OnChanges {
   private InboundNodesClicked: any = (d: any) => {
     this.graph.getInboundNodes (d.id).subscribe (newData => {
       this.addToGraph (newData);
-      this.restart()
+      this.restart();
     });
   }
 

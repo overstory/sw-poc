@@ -15,11 +15,16 @@
 .d3-chart .axis text {
     fill: #00b;
 }
+
+/*#chart {
+    pointer-events: all;
+}*/
 /* Styles go here */
 
-.links line {
+.links path {
     stroke: #00b;
     stroke-opacity: 0.9;
+    fill: none; /* fix the problem where background is black */
 }
 
 .linklabel {
@@ -82,7 +87,10 @@ div.tooltip {
     background: #d0d7de;
     border: 2px solid #0008ff;
     border-radius: 8px;
-    pointer-events: none;
+    /*pointer-events: none;*/
+    cursor: default;
+    overflow-y: scroll;
+    height:400px;
     /* ToDo: Need to add a scrollbar to this div, too lazy too lookup how to do it right now. */
 }
 
@@ -130,22 +138,35 @@ img.tooltip-image {
 /* Radial Menu */
 
 .rm {
+	/*
 	fill: #999;
 	stroke: #ccc;
+	*/
+	stroke: #999;
 }
 
 .radialMenuContainer:hover .rm {
+	/*
 	fill: #ccc;
 	stroke: #fff;
+	*/
+	stroke: #ccc;
+}
+
+.radial-menu {
+	stroke-width: 37;
 }
 
 
 .radial-menu-text {
 	fill: #fff;
+	stroke: #ccc;
 	font-size: 1.75em;
 }
 
 .radialMenuContainer:hover .radial-menu-text {
+	cursor:default;
 	fill: #fff;
+	stroke: #ccc;
 	font-size: 1.75em;
 }
