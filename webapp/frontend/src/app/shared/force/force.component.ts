@@ -22,8 +22,6 @@ export class ForceComponent implements OnInit, OnChanges {
   private maxZoom: number = 10;
   private nodeRadius: number = 25;
   private origWheelHandler: any = null;
-  private tooltipFocus: boolean = false;
-  private nodeFocus: boolean = false;
 
   private simulation;
   private container;
@@ -168,12 +166,17 @@ export class ForceComponent implements OnInit, OnChanges {
       });
 
     // Define the div for the tooltip
-    d3.select ("body")
+    let body = d3.select ("body")
       .on ("keydown", keyDown)
       .on ("keyup", keyUp)
-      .on ("mouseenter", bodyMouseEnter)
-      .append ("div")
+      .on ("mouseenter", bodyMouseEnter);
+
+    body.append ("div")
       .attr ("class", "tooltip")
+      .style ("opacity", 0);
+
+    body.append ("div")
+      .attr ("class", "small-tooltip")
       .style ("opacity", 0);
 
     svg.call (
@@ -181,7 +184,7 @@ export class ForceComponent implements OnInit, OnChanges {
         d3.select ("#chart").attr ("transform", d3.event.transform)
       })
     ).on ("click", (d) => {
-      this.removeRadialMenu();
+      this.removeSelection(".rm");
     });
 
     function keyDown () {
@@ -305,21 +308,19 @@ export class ForceComponent implements OnInit, OnChanges {
         return d.img
       })
       .attr ("clip-path", "url(#circle-view)")
-      .on ("mouseover", (d: any) => {
-        this.nodeFocus = true;
-        this.showTooltip (d, ".tooltip", 2000);
+      .on ("mouseover", (d)  => {
+        this.showSmallTooltip (d, ".small-tooltip", 200);
       })
       .on ("mouseout", (d: any) => {
-        this.nodeFocus = false;
-        this.hideTooltip (".tooltip")
+        this.hideTooltip (".small-tooltip")
       })
       .on ("mousedown", (d: any) => {
-        this.hideTooltip (".tooltip");
+        this.hideTooltip (".small-tooltip");
       })
       .on ("click", (d) => {
         if (this.radialMenuToggle != d.id) {
           //there is a probably better way to dd this but this.parentNode didn't work for me
-          this.removeRadialMenu();
+          this.removeSelection (".rm");
           d3.event.stopPropagation();
           this.fixNode (d);
           let parent = d3.select (node.nodes ()[d.index]);
@@ -333,7 +334,7 @@ export class ForceComponent implements OnInit, OnChanges {
             .on ("click", (d) => {
               this.outboundNodesClicked(d);
               this.fixNode (d);
-              this.removeRadialMenu();
+              this.removeSelection (".rm");
             });
           northwest.append ("text")
             .attr ("class", "rm radial-menu-text")
@@ -344,7 +345,7 @@ export class ForceComponent implements OnInit, OnChanges {
             .on ("click", (d) => {
               this.outboundNodesClicked(d);
               this.fixNode (d);
-              this.removeRadialMenu();
+              this.removeSelection (".rm");
             });
 
           let northeast = parent.append ("g")
@@ -355,7 +356,7 @@ export class ForceComponent implements OnInit, OnChanges {
             .on ("click", (d) => {
               this.InboundNodesClicked(d);
               this.fixNode (d);
-              this.removeRadialMenu();
+              this.removeSelection (".rm");
             });
           northeast.append ("text")
             .attr ("class", "rm radial-menu-text")
@@ -366,7 +367,7 @@ export class ForceComponent implements OnInit, OnChanges {
             .on ("click", (d) => {
               this.InboundNodesClicked(d);
               this.fixNode (d);
-              this.removeRadialMenu();
+              this.removeSelection (".rm");
             });
 
           let southeast = parent.append ("g")
@@ -377,7 +378,7 @@ export class ForceComponent implements OnInit, OnChanges {
             .on("click", (d) => {
               this.showTooltip(d, ".tooltip", 0);
               this.fixNode (d);
-              this.removeRadialMenu();
+              this.removeSelection (".rm");
             });
           southeast.append ("text")
             .attr ("class", "rm radial-menu-text")
@@ -389,7 +390,7 @@ export class ForceComponent implements OnInit, OnChanges {
             .on("click", (d) => {
               this.showTooltip(d, ".tooltip", 0);
               this.fixNode (d);
-              this.removeRadialMenu();
+              this.removeSelection (".rm");
             });
 
 
@@ -401,7 +402,7 @@ export class ForceComponent implements OnInit, OnChanges {
             .on ("click", (d) => {
               this.removeNodesClicked(d);
               this.fixNode (d);
-              this.removeRadialMenu();
+              this.removeSelection (".rm");
             });
           southwest.append ("text")
             .attr ("class", "rm radial-menu-text")
@@ -412,7 +413,7 @@ export class ForceComponent implements OnInit, OnChanges {
             .on("click", (d) => {
               this.removeNodesClicked(d);
               this.fixNode (d);
-              this.removeRadialMenu();
+              this.removeSelection (".rm");
             });
 
 
@@ -439,18 +440,12 @@ export class ForceComponent implements OnInit, OnChanges {
         } else {
           //toggle id and id clicked next is exactly the same,
           // hence the same node was clicked again
-          this.removeRadialMenu();
+          this.removeSelection (".rm");
           this.fixNode (d);
           this.radialMenuToggle = null;
         }
     })
     ;
-
-    node.append("title")
-      .text( (d: any) => {
-        return d.name
-      });
-
 
     // Apply the general update pattern to the links.
     this.linkSelector = this.linksGrp.selectAll ('.relationship')
@@ -478,23 +473,6 @@ export class ForceComponent implements OnInit, OnChanges {
       })
       .attr ("marker-end", "url(#end)");
 
-    //linkBoundBox hack
-  /*  link.append ("text")
-      .attr ("class", "relationship linkboundBox")
-      .attr ("font-size", "12px")
-      .attr ("stroke-width", 6)
-      .attr ("stroke", "#fff")
-      .attr ("dy", ".35em")
-      //.attr ("filter", "url(#background)")
-      .append("textPath")
-      .attr("xlink:href", (d) => {
-        return "#link-" + d.id
-      })
-      .style("text-anchor","middle")
-      .attr("startOffset", "50%")
-      .text ((d: any) => {
-        return d.relationship;
-      });*/
 
     //linkLabel
     link.append ("text")
@@ -511,34 +489,6 @@ export class ForceComponent implements OnInit, OnChanges {
       .text ((d: any) => {
         return d.relationship;
       });
-    /*
-    link.append ("text")
-      .attr ("class", "linkLabel linkLabelGrp relationship")
-      .attr ("font-size", "10px")
-      .attr ("x", -20)
-      .attr ("dy", ".35em")
-      // .attr("filter", "url(#solid)")
-      .text ((d: any) => {
-        return d.relationship;
-      })
-      .call (this.getTextBox);
-*/
-
-    //linkBoundBox: https://bl.ocks.org/mbostock/1160929
-/*    link.insert ("rect", "text")
-      .attr ("class", "linkLabelGrp linkboundBox relationship")
-      .attr ("x", (d: any) => {
-        return -20
-      })
-      .attr ("y", (d: any) => {
-        return -4
-      })
-      .attr ("width", (d: any) => {
-        return d.bbox.width + 1
-      })
-      .attr ("height", (d: any) => {
-        return d.bbox.height + 2
-      });*/
 
     //this.showObjects ();
 
@@ -657,8 +607,8 @@ export class ForceComponent implements OnInit, OnChanges {
     })
   }
 
-  private removeRadialMenu: any =  () => {
-    d3.selectAll (".rm").remove ();
+  private removeSelection: any =  (selection: string) => {
+    d3.selectAll (selection).remove();
   }
 
   private fixNode: any = (d: any) => {
@@ -670,45 +620,55 @@ export class ForceComponent implements OnInit, OnChanges {
     d.fx = d.fy = null;
   }
 
+  private showSmallTooltip: any = (d, containerStyle: string, fadeInMils: number) => {
+    let smallTooltip = d3.select (containerStyle);
+    let element = this.chartContainer.nativeElement;
+    let offsetTop = element.offsetTop,
+      offsetLeft = element.offsetLeft;
+
+    smallTooltip.transition()
+      .duration(fadeInMils)
+      .style("opacity", .9);
+
+    smallTooltip.html (d.name)
+      .style("left", (d.x + offsetLeft) + "px")
+      .style("top", (d.y + offsetTop - 70) + "px")
+      .style ("transform", "translateX(-50%"); // Translate() in css ROCKS! move stuff around X-axis depending on tooltips size
+}
+
   private showTooltip: any = (d, containerStyle: string, fadeInMils: number ) => {
     let tooltipContainer = d3.select (containerStyle);
-    let tooltipContainerWithContent = d3.select (containerStyle + ", " + containerStyle + " *");
+    ///let tooltipContainerWithContent = d3.select (containerStyle + ", " + containerStyle + " *");
+    let closeButton = d3.select (".close-tooltip-button");
     tooltipContainer.transition()
-    .delay (fadeInMils)
-    .duration (200)
-    .style ("opacity", 1.0);
+      .delay (fadeInMils)
+      .duration (200)
+      .style ("opacity", 1.0)
+      .style ("pointer-events", "auto"); // turn on pointer events
     tooltipContainer.html (this.getTooltipText (d))
       .style ("left", (d3.event.pageX + 20) + "px")
       .style ("top", (d3.event.pageY - 28) + "px");
 
-    tooltipContainerWithContent
-      .on("mouseover", (d) => {
-        console.log("over tooltip container");
-        console.log("tooltip: " + this.tooltipFocus);
-        console.log("node: " + this.nodeFocus);
-         this.tooltipFocus = true;
-         console.log ("value - " + this.tooltipFocus);
-      })
-      .on ("mouseout", (d) => {
+    tooltipContainer.selectAll ("a")
+      .on("click", (d) => {
+        console.log("clicked close!");
         this.hideTooltip (".tooltip");
-        this.tooltipFocus = false;
       })
 
   }
 
   private hideTooltip: any = (containerStyle: string) => {
     let tooltipContainer = d3.select (containerStyle)
-    if ( this.tooltipFocus === false && this.nodeFocus === false ) {
       tooltipContainer.transition ()
-        .style ("left", "0px")
-        .style ("top", "0px")
+        .style ("pointer-events", "none") //turn off pointer events as we want to click on nodes through when this is hidden
         .duration (100)
         .style ("opacity", 0);
-    }
   }
 
+
   private getTooltipText: any = (data) => {
-    let html = '<h2 class="tooltip-name">' + data.group + ": " + data.name + '</h2>';
+    let html = '<a class="waves-effect waves-light btn close-tooltip-button right">&#10006;</a>';
+      html += '<h2 class="tooltip-name">' + data.group + ": " + data.name + '</h2>';
 
     if ((data.description != null) || (data.img != null)) {
       html += "<div class='tooltip-desc-row'>";

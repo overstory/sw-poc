@@ -78,6 +78,17 @@ rect.linkboundBox {
     filter: alpha(opacity=30);
 }
 
+.small-tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    font: 12pt sans-serif;
+    background: #d0d7de;
+    border: 2px solid #0008ff;
+    border-radius: 8px;
+    cursor: default;
+}
+
 div.tooltip {
     max-width: 400px;
     position: absolute;
