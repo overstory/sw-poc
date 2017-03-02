@@ -125,44 +125,20 @@ export class ForceComponent implements OnInit, OnChanges {
 
         this.linksGrp.selectAll (".link")
           .attr("d", (d) => {
-     /*     var dx = d.target.x - d.source.x,
-            dy = d.target.y - d.source.y,
-            dr = Math.sqrt(dx * dx + dy * dy);
-          let dAttribute;
-          if (this.countLinks(d) > 1) {
-            dAttribute = "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
-          }
-          else {
-            dAttribute = "M" + d.source.x + "," + d.source.y + "L" + d.target.x + "," + d.target.y;
-          }
-          return dAttribute*/
-            return this.countLinks(d)
-        });
+            let dx: number = d.target.x - d.source.x,
+              dy: number = d.target.y - d.source.y,
+              dr: number = Math.sqrt(dx * dx + dy * dy) / (0.2 + d.curvature * 0.15);
+            let dAttribute: string;
 
-        /*
-        this.linksGrp.selectAll (".link")
-          .attr ("x1", (d) => {
-            //console.log("link source x coordinate is: " + d.source.x + " name: " + d.name);
-            return d.source.x;
-          })
-          .attr ("y1", (d) => {
-            return d.source.y;
-          })
-          .attr ("x2", (d) => {
-            return d.target.x;
-          })
-          .attr ("y2", (d) => {
-            return d.target.y;
-          })
-        ;*/
-
-        // FixMe: I've messed this up somehow, it's not selecting the text nodes properly
-    /*    this.linksGrp.selectAll (".linkLabelGrp")
-          .attr ("transform", (d: any) => {
-            var angle = Math.atan ((d.source.y - d.target.y) / (d.source.x - d.target.x)) * 180 / Math.PI;
-            return 'translate(' + [((d.source.x + d.target.x) / 2 ), ((d.source.y + d.target.y) / 2 )] + ')rotate(' + angle + ')';
+            // build links. if isCurved property == true, make curves.
+            if (d.isCurved) {
+              dAttribute = "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0," + d.curvedirection + " " + d.target.x + "," + d.target.y;
+            }
+            else {
+              dAttribute = "M" + d.source.x + "," + d.source.y + "L" + d.target.x + "," + d.target.y;
+            }
+            return dAttribute
           });
-        */
       });
 
     // Define the div for the tooltip
@@ -180,7 +156,7 @@ export class ForceComponent implements OnInit, OnChanges {
       .style ("opacity", 0);
 
     svg.call (
-      d3.zoom().scaleExtent ([0.1, 10]).on ("zoom", () => {
+      d3.zoom().scaleExtent ([this.minZoom, this.maxZoom]).on ("zoom", () => {
         d3.select ("#chart").attr ("transform", d3.event.transform)
       })
     ).on ("click", (d) => {
@@ -459,7 +435,6 @@ export class ForceComponent implements OnInit, OnChanges {
       .attr ("class", "linkContainer relationship")
       .merge (this.linkSelector);
 
-
      link.append ("path")
        .attr ("class", "link relationship halo")
        .style ("stroke-width", "20");
@@ -478,8 +453,7 @@ export class ForceComponent implements OnInit, OnChanges {
     link.append ("text")
       .attr ("class", "linkLabel linkLabelGrp relationship")
       .attr ("font-size", "10px")
-    //  .attr ("dy", ".35em")
-      //.attr ("filter", "url(#background)")
+      .attr ("dy", "-.2em")
       .append("textPath")
       .attr("xlink:href", (d) => {
         return "#link-" + d.id
@@ -495,6 +469,7 @@ export class ForceComponent implements OnInit, OnChanges {
     // Update and restart the simulation.
     this.simulation.nodes (this.data.nodes);
     this.simulation.force ("link").links (this.data.links);
+    this.calculateLinksCurvature();
     this.simulation.alpha (1).restart();
 
   }
@@ -550,56 +525,54 @@ export class ForceComponent implements OnInit, OnChanges {
     }
   }
 
-  private countLinks: any = (d) => {
-
-    let sourceId: number = d.source.id;
-    let targetId: number = d.target.id;
-    let links = this.data.links;
-    let availableLinks = [];
+  private calculateLinksCurvature: any = () => {
+    //we have to redo all links upon every restart
+    let links = this.data.links,
+      sourceId: number,
+      targetId: number,
+      curId: number,
+      availableLinks: Array<number> = [];
 
     //go through all links and find similar ones in regards of source and target
-    for (let i = 0; i < links.length; i++) {
-      if (links[i].source.id === sourceId && links[i].target.id === targetId) {
-        availableLinks.push(
-          links[i].id //get the id of the link object from this.data.nodes
-        )
+    for (let j = 0; j < links.length; j++) {
+
+      sourceId= links[j].source.id;
+      targetId = links[j].target.id;
+      curId = links[j].id;
+      availableLinks = [];
+
+      for (let i = 0; i < links.length; i++) {
+        if (links[i].source.id === sourceId && links[i].target.id === targetId) {
+          availableLinks.push (
+            links[i].id //get the id of the link object from this.data.nodes
+          )
+        }
       }
+
+      let curIdx = availableLinks.indexOf(curId);
+
+      // only add these properties if it is not supposed to be straight line
+      if (availableLinks.length > 1) {
+        links[j].isCurved = true;
+        links[j].curvature = curIdx;
+        links[j].curvedirection = leftOrRight (curIdx);
+      }
+
+      else {
+        links[j].isCurved = false;
+      }
+
     }
-
-    //find index of current node in available links for given node
-    let curIdx = availableLinks.indexOf(d.id);
-
-    let dx: number = d.target.x - d.source.x,
-      dy: number = d.target.y - d.source.y,
-      dr: number = Math.sqrt(dx * dx + dy * dy) / (1 + curIdx * 0.5);// setting up a simple coefficient that would
-    // create an angle for any additional relationships when we have more than two. inefficient as we do this
-    // also for straight links.
-    let dAttribute: string;
 
     function leftOrRight (curIdx) {
       if (curIdx % 2 == 0) {
-        //console.log("0 for " + id + "at index " + availableLinks.indexOf(id));
         return 0
       }
       else {
-        //console.log("1 for " + id+ "at index " + availableLinks.indexOf(id));
         return 1
       }
     }
-
-    // build links. if available links array bigger than 1, make curves.
-    if (availableLinks.length > 1) {
-      dAttribute = "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0," + leftOrRight(curIdx) + " " + d.target.x + "," + d.target.y;
-    }
-    else {
-      dAttribute = "M" + d.source.x + "," + d.source.y + "L" + d.target.x + "," + d.target.y;
-    }
-    return dAttribute
-
-
-
-
-  };
+  }
 
   getTextBox (selection) {
     selection.each (function (d) {
