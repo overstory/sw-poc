@@ -21,7 +21,7 @@
 }*/
 /* Styles go here */
 
-.links path {
+.links .linkLine {
     stroke: #00b;
     stroke-opacity: 0.9;
     fill: none; /* fix the problem where background is black */
@@ -38,9 +38,15 @@
     stroke: #6ac6ff;
 }
 
+.links .invisible {
+	stroke: none;
+	fill: none;
+}
+
 .linkContainer:hover .halo {
     opacity: .8;
     stroke: #6ac6ff;
+    fill: none;
 }
 
 .linkContainer:hover .linkboundBox {
@@ -78,15 +84,13 @@ rect.linkboundBox {
     filter: alpha(opacity=30);
 }
 
-.small-tooltip {
-    position: absolute;
-    text-align: center;
-    padding: 10px;
-    font: 12pt sans-serif;
-    background: #d0d7de;
-    border: 2px solid #0008ff;
-    border-radius: 8px;
-    cursor: default;
+.small-tooltip-text {
+	opacity: .0;
+	text-anchor: middle;
+}
+
+.nodeContainer:hover .small-tooltip {
+	opacity: .9;
 }
 
 div.tooltip {

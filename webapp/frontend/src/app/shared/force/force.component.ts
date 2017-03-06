@@ -22,6 +22,7 @@ export class ForceComponent implements OnInit, OnChanges {
   private maxZoom: number = 10;
   private nodeRadius: number = 25;
   private origWheelHandler: any = null;
+  private nodeFocus: boolean = false;
 
   private simulation;
   private container;
@@ -114,28 +115,66 @@ export class ForceComponent implements OnInit, OnChanges {
       .force ("x", d3.forceX(this.width / 2).strength(0.15))
       .force ("y", d3.forceY(this.height / 2).strength(0.15))
       .alphaTarget (0.9)
-      // .velocityDecay (0.2)
       .on ("tick", () => {
 
         this.nodesGrp.selectAll (".nodeContainer")
           .attr ("transform", (d) => {
             return "translate(" + d.x + "," + d.y + ")";
-          })
-        ;
+          });
 
         this.linksGrp.selectAll (".link")
-          .attr("d", (d) => {
-            let dx: number = d.target.x - d.source.x,
+          .attr ("d", (d) => {
+            let
+              sourceCoordinate: string = d.source.x + "," + d.source.y,
+              targetCoordinate: string = d.target.x + "," + d.target.y,
+              dx: number = d.target.x - d.source.x,
               dy: number = d.target.y - d.source.y,
-              dr: number = Math.sqrt(dx * dx + dy * dy) / (0.2 + d.curvature * 0.15);
+              //angle: number = Math.atan((d.source.y - d.target.y) / (d.source.x - d.target.x)) * 180 / Math.PI,
+              dr: number = Math.sqrt (dx * dx + dy * dy) / (0.4 + d.curvature * 0.15);
             let dAttribute: string;
-
             // build links. if isCurved property == true, make curves.
             if (d.isCurved) {
-              dAttribute = "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0," + d.curvedirection + " " + d.target.x + "," + d.target.y;
+              //dAttribute = "M" + sourceCoordinate + "A" + dr + "," + dr + " 0 0," + d.curvedirection + " " + targetCoordinate
+              dAttribute = this.drawArcedPath (sourceCoordinate, targetCoordinate, dr, d.curvedirection, false);
             }
             else {
-              dAttribute = "M" + d.source.x + "," + d.source.y + "L" + d.target.x + "," + d.target.y;
+              //dAttribute = "M" + sourceCoordinate + "L" + targetCoordinate;
+              dAttribute = this.drawLinePath(sourceCoordinate, targetCoordinate, false);
+            }
+            return dAttribute
+          });
+
+        this.linksGrp.selectAll (".invisible")
+          .attr ("d", (d) => {
+            let
+              sourceCoordinate: string = d.source.x + "," + d.source.y,
+              targetCoordinate: string = d.target.x + "," + d.target.y,
+              direction: any = d.curvedirection,
+              dx: number = d.target.x - d.source.x,
+              dy: number = d.target.y - d.source.y,
+              angle: number = (Math.atan2 (dy, dx) + 0.5 * Math.PI ) * 180 / Math.PI, //use atan2 function and move calculations 90degrees clockwise
+              dr: number = Math.sqrt (dx * dx + dy * dy) / (0.4 + d.curvature * 0.15);
+            let dAttribute: string;
+            // build links. if isCurved property == true, make curves.
+            if (0 <= angle && angle < 180) {
+              if (d.isCurved) {
+                //dAttribute = "M" + sourceCoordinate + "A" + dr + "," + dr + " 0 0," + d.curvedirection + " " + targetCoordinate
+                dAttribute = this.drawArcedPath (sourceCoordinate, targetCoordinate, dr, direction, false);
+              }
+              else {
+                //dAttribute = "M" + sourceCoordinate + "L" + targetCoordinate;
+                dAttribute = this.drawLinePath (sourceCoordinate, targetCoordinate, false);
+              }
+            } else {
+              if (d.isCurved) {
+                let inverseDirection =  function(d) {if (direction == 1) {return 0 } else { return 1}}; //flip small sweep around
+                //dAttribute = "M" + targetCoordinate + "A" + dr + "," + dr + " 0 0," + inverseDirection(d) + " " + sourceCoordinate;
+                dAttribute = this.drawArcedPath (sourceCoordinate, targetCoordinate, dr, inverseDirection(d), true);
+              }
+              else {
+                //dAttribute = "M" + targetCoordinate + "L" + sourceCoordinate;
+                dAttribute = this.drawLinePath (sourceCoordinate, targetCoordinate, true);
+              }
             }
             return dAttribute
           });
@@ -151,16 +190,13 @@ export class ForceComponent implements OnInit, OnChanges {
       .attr ("class", "tooltip")
       .style ("opacity", 0);
 
-    body.append ("div")
-      .attr ("class", "small-tooltip")
-      .style ("opacity", 0);
-
     svg.call (
       d3.zoom().scaleExtent ([this.minZoom, this.maxZoom]).on ("zoom", () => {
         d3.select ("#chart").attr ("transform", d3.event.transform)
       })
     ).on ("click", (d) => {
       this.removeSelection(".rm");
+      this.radialMenuToggle = null;
     });
 
     function keyDown () {
@@ -227,24 +263,87 @@ export class ForceComponent implements OnInit, OnChanges {
         )
         .merge (this.nodeSelector)
         // make sure that current node is on top of others. this is mainly for radial menu
-        .on('mouseover', function() {
-          this.parentNode.appendChild(this);
+        .on('mouseover', function(d, o, i) {
+          let curSelection = d;
+          this.parentNode.appendChild (this);
+
+          halo.attr("transform", function(o) {
+            let connected: boolean = isConnected(d, o),
+              scale = connected ? 1.3 : 1.0;
+            return "scale(" + scale + ")"
+          });
+
+          outerCircle.attr( "transform", function(o) {
+            let connected: boolean = isConnected(d, o),
+              scale = connected ? 1.3 : 1.0;
+
+            return "scale(" + scale + ")"
+          });
+
+          innerCircle.attr("transform", function(o) {
+            let connected: boolean = isConnected(d, o),
+              scale = connected ? 1.3 : 1.0;
+
+            return "scale(" + scale + ")"
+          });
+
+          nodeImg.attr("transform", function(o) {
+            let connected: boolean = isConnected(d, o),
+              scale = connected ? 1.3 : 1.0;
+
+            return "scale(" + scale + ")"
+          });
+
+          innerText.attr("transform", function(o) {
+            let connected: boolean = isConnected(d, o),
+              scale = connected ? 1.3 : 1.0;
+
+            return "scale(" + scale + ")"
+          });
+
+          node.attr("opacity", function(o) {
+            let connected: boolean = isConnected(d, o),
+              opacity = connected ? "2.0": "0.6";
+
+            return opacity
+          })
+
+          link.attr("opacity", function(d) {
+            let connected = function(d, o) {
+                if (d.source.index == curSelection.index || d.target.index == curSelection.index) { return true} else { return false}
+              },
+              opacity = connected(d, o) ? "3.0": "0.15";
+            return opacity
+          })
+
+
+        })
+        .on("mouseout", (d) => {
+          d3.selectAll ("circle, .node-text, image").attr("transform", "scale(1.0)");
+          d3.selectAll ("g").attr ("opacity", "1.0");
+          //this.removeSelection (".small-tooltip");
         })
       ;
 
-    node.append ("circle")
-      .attr ("class", "halo")
+    node.append ("text")
+      .attr ("class", "node small-tooltip small-tooltip-text")
+      .attr ("dy", ".35em")
+      .attr ("y", -45)
+      .text ((d:any) => {return d.name});
+
+    let halo = node.append ("circle")
+      .attr ("class", "node halo")
       .style ("stroke-width", "12px")
       .attr ("r", this.nodeRadius);
 
     //circle with a opaque fill so that lines in background are not visible
-    node.append ("circle")
+    let outerCircle = node.append ("circle")
       .attr ("class", "node")
       .attr ("r", this.nodeRadius)
       .style ("fill", "#eee");
 
     //main node
-    node.append ("circle")
+    let innerCircle = node.append ("circle")
       .attr ("class", "node")
       .attr ("r", this.nodeRadius)
       //change the outer layer of circle's colour
@@ -258,7 +357,7 @@ export class ForceComponent implements OnInit, OnChanges {
       .style ("fill-opacity", 0.2);
 
     //node text
-    node.append ("text")
+    let innerText = node.append ("text")
       .attr ("class", "node node-text")
 
       .text ((d: any) => {
@@ -269,7 +368,7 @@ export class ForceComponent implements OnInit, OnChanges {
       .attr ("clip-path", "url(#circle-view)");
 
     //node image
-    node.append ("image")
+    let nodeImg = node.append ("image")
       .attr ("class", "node")
       // width height directly relates to inverse x/y here. divide by 2 here
       .attr ("x", (d) => {
@@ -284,15 +383,6 @@ export class ForceComponent implements OnInit, OnChanges {
         return d.img
       })
       .attr ("clip-path", "url(#circle-view)")
-      .on ("mouseover", (d)  => {
-        this.showSmallTooltip (d, ".small-tooltip", 200);
-      })
-      .on ("mouseout", (d: any) => {
-        this.hideTooltip (".small-tooltip")
-      })
-      .on ("mousedown", (d: any) => {
-        this.hideTooltip (".small-tooltip");
-      })
       .on ("click", (d) => {
         if (this.radialMenuToggle != d.id) {
           //there is a probably better way to dd this but this.parentNode didn't work for me
@@ -301,9 +391,9 @@ export class ForceComponent implements OnInit, OnChanges {
           this.fixNode (d);
           let parent = d3.select (node.nodes ()[d.index]);
 
-          let northwest =  parent.insert ("g", "circle")
+          let northwest =  parent.append ("g")
             .attr ("class", "rm radialMenuContainer");
-          northwest.insert ("path", "circle")
+          northwest.append ("path")
             .attr ("d", "M -9.184850993605149e-15 -50 A 50 50 0 0 0 -47.27592877996584 -16.27840772285784")
             .attr("stroke-width", "20")
             .attr ("class", "rm radial-menu")
@@ -315,8 +405,7 @@ export class ForceComponent implements OnInit, OnChanges {
           northwest.append ("text")
             .attr ("class", "rm radial-menu-text")
             .attr ("text-anchor", "middle")
-            .attr ("x", -30)
-            .attr ("y", -30)
+            .attr ("transform", "translate(-35,-35)rotate(45)")
             .text ("⬅")
             .on ("click", (d) => {
               this.outboundNodesClicked(d);
@@ -337,9 +426,9 @@ export class ForceComponent implements OnInit, OnChanges {
           northeast.append ("text")
             .attr ("class", "rm radial-menu-text")
             .attr ("text-anchor", "middle")
-            .attr ("x", 30)
-            .attr ("y", -30)
-            .text("⬇")
+            .attr ("transform", "translate(35,-35)rotate(-45)")
+            .text ("⬅")
+            //.text("⬇")
             .on ("click", (d) => {
               this.InboundNodesClicked(d);
               this.fixNode (d);
@@ -407,7 +496,7 @@ export class ForceComponent implements OnInit, OnChanges {
             .attr('font-family', 'FontAwesome')
             .attr ("x", -45)
             .attr ("y", 20)
-            .text ( (d) => { return '\uf0b2' })
+            .text ( (d) => { return '\uf09c' })
             .on("click", (d) => {
               this.unfixNode (d);
             });
@@ -435,17 +524,22 @@ export class ForceComponent implements OnInit, OnChanges {
       .attr ("class", "linkContainer relationship")
       .merge (this.linkSelector);
 
+
+    link.append ("path")
+      .attr ("class", "relationship invisible")
+      .attr("id", (d) => {
+        return "link-" + d.id
+      });
+
      link.append ("path")
        .attr ("class", "link relationship halo")
        .style ("stroke-width", "20");
 
 
+
     //linkLine
     link.insert ("path", "rect")
       .attr ("class", "linkLine link relationship")
-      .attr("id", (d) => {
-        return "link-" + d.id
-      })
       .attr ("marker-end", "url(#end)");
 
 
@@ -453,7 +547,7 @@ export class ForceComponent implements OnInit, OnChanges {
     link.append ("text")
       .attr ("class", "linkLabel linkLabelGrp relationship")
       .attr ("font-size", "10px")
-      .attr ("dy", "-.2em")
+      .attr ("dy", "-.275em")
       .append("textPath")
       .attr("xlink:href", (d) => {
         return "#link-" + d.id
@@ -471,6 +565,15 @@ export class ForceComponent implements OnInit, OnChanges {
     this.simulation.force ("link").links (this.data.links);
     this.calculateLinksCurvature();
     this.simulation.alpha (1).restart();
+
+    var linkedByIndex = {};
+    this.data.links.forEach(function(d) {
+      linkedByIndex[d.source.index + "," + d.target.index] = 1;
+    });
+    
+    function isConnected(a, b) {
+      return linkedByIndex[a.index + "," + b.index] || linkedByIndex[b.index + "," + a.index] || a.index == b.index;
+    }
 
   }
 
@@ -525,6 +628,38 @@ export class ForceComponent implements OnInit, OnChanges {
     }
   }
 
+  private drawArcedPath: any = (
+    sourceCoordinate: number,
+    targetCoordinate: number,
+    arcRadius: number,
+    arcDirection: number,
+    isInverse: boolean
+  ) => {
+    let dAttribute: string;
+
+    if (isInverse) {
+      dAttribute = "M" + targetCoordinate + "A" + arcRadius + "," + arcRadius + " 0 0," + arcDirection + " " + sourceCoordinate;
+    } else {
+      dAttribute = "M" + sourceCoordinate + "A" + arcRadius + "," + arcRadius + " 0 0," + arcDirection + " " + targetCoordinate;
+    }
+    return dAttribute
+  }
+
+  private drawLinePath: any = (
+    sourceCoordinate: number,
+    targetCoordinate: number,
+    isInverse: boolean
+  ) => {
+    let dAttribute: string;
+
+    if (isInverse) {
+      dAttribute = "M" + targetCoordinate + "L" + sourceCoordinate;
+    } else {
+      dAttribute = "M" + sourceCoordinate + "L" + targetCoordinate;
+    }
+    return dAttribute
+  }
+
   private calculateLinksCurvature: any = () => {
     //we have to redo all links upon every restart
     let links = this.data.links,
@@ -549,7 +684,9 @@ export class ForceComponent implements OnInit, OnChanges {
         }
       }
 
-      let curIdx = availableLinks.indexOf(curId);
+
+      let curIdx: number = parseInt(availableLinks.indexOf(curId).toString());
+      let curvature: number = curIdx / 2 + 1;
 
       // only add these properties if it is not supposed to be straight line
       if (availableLinks.length > 1) {
@@ -593,22 +730,6 @@ export class ForceComponent implements OnInit, OnChanges {
     d.fx = d.fy = null;
   }
 
-  private showSmallTooltip: any = (d, containerStyle: string, fadeInMils: number) => {
-    let smallTooltip = d3.select (containerStyle);
-    let element = this.chartContainer.nativeElement;
-    let offsetTop = element.offsetTop,
-      offsetLeft = element.offsetLeft;
-
-    smallTooltip.transition()
-      .duration(fadeInMils)
-      .style("opacity", .9);
-
-    smallTooltip.html (d.name)
-      .style("left", (d.x + offsetLeft) + "px")
-      .style("top", (d.y + offsetTop - 70) + "px")
-      .style ("transform", "translateX(-50%"); // Translate() in css ROCKS! move stuff around X-axis depending on tooltips size
-}
-
   private showTooltip: any = (d, containerStyle: string, fadeInMils: number ) => {
     let tooltipContainer = d3.select (containerStyle);
     ///let tooltipContainerWithContent = d3.select (containerStyle + ", " + containerStyle + " *");
@@ -624,7 +745,6 @@ export class ForceComponent implements OnInit, OnChanges {
 
     tooltipContainer.selectAll ("a")
       .on("click", (d) => {
-        console.log("clicked close!");
         this.hideTooltip (".tooltip");
       })
 
@@ -640,7 +760,8 @@ export class ForceComponent implements OnInit, OnChanges {
 
 
   private getTooltipText: any = (data) => {
-    let html = '<a class="waves-effect waves-light btn close-tooltip-button right">&#10006;</a>';
+    let html = '<a class="btn-floating btn waves-effect waves-light teal close-tooltip-button right">&#10006;</a>';
+    //let html = '<a class="waves-effect waves-light btn close-tooltip-button right">&#10006;</a>';
       html += '<h2 class="tooltip-name">' + data.group + ": " + data.name + '</h2>';
 
     if ((data.description != null) || (data.img != null)) {
