@@ -254,7 +254,10 @@ export class ForceComponent implements OnInit, OnChanges {
     var node = this.nodeSelector.enter()
         .append ("g")
         .attr ("class", "node nodeContainer")
-        .on ("dblclick", this.outboundNodesClicked)
+        .on ("dblclick", (d:any ) => {
+          this.outboundNodesClicked(d);
+          this.unfixNode(d);
+        })
         // .on ("contextmenu", contextMenu)
         .call (d3.drag ()
           .on ("start", this.dragstarted)
