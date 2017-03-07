@@ -49,11 +49,12 @@
     fill: none;
 }
 
+/* not needed anymore - consider removing
 .linkContainer:hover .linkboundBox {
     opacity: .8;
     fill: #6ac6ff;
 }
-
+*/
 
 rect.linkboundBox {
 	fill: #fff;
@@ -82,6 +83,13 @@ rect.linkboundBox {
     opacity: .8;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
     filter: alpha(opacity=30);
+}
+
+.associated .halo {
+    opacity: 1.0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    stroke: #6ac6ff;
 }
 
 .small-tooltip-text {

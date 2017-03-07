@@ -307,9 +307,15 @@ export class ForceComponent implements OnInit, OnChanges {
           node.attr("opacity", function(o) {
             let connected: boolean = isConnected(d, o),
               opacity = connected ? "2.0": "0.6";
-
             return opacity
-          })
+          });
+
+          node.attr ("class", function(o) {
+            let connected: boolean = isConnected(d, o),
+              classes = connected ? "node nodeContainer associated": "node nodeContainer";
+            return classes
+          });
+
 
           link.attr("opacity", function(d) {
             let connected = function(d, o) {
@@ -317,13 +323,14 @@ export class ForceComponent implements OnInit, OnChanges {
               },
               opacity = connected(d, o) ? "3.0": "0.15";
             return opacity
-          })
+          });
 
 
         })
         .on("mouseout", (d) => {
           d3.selectAll ("circle, .node-text, image").attr("transform", "scale(1.0)");
           d3.selectAll ("g").attr ("opacity", "1.0");
+          d3.selectAll (".nodeContainer"). attr ("class", "node nodeContainer"); // revert back to normal classes
           //this.removeSelection (".small-tooltip");
         })
       ;
@@ -562,6 +569,8 @@ export class ForceComponent implements OnInit, OnChanges {
       });
 
     //this.showObjects ();
+    console.log (this.data.nodes);
+    console.log (this.data.links);
 
     // Update and restart the simulation.
     this.simulation.nodes (this.data.nodes);
