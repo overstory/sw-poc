@@ -54,15 +54,20 @@ export class ForceComponent implements OnInit, OnChanges {
     if (this.data) {
       this.restart()
     }
-  }
 
+    window.onresize = () => {
+      let element = this.chartContainer.nativeElement;
+      this.calculateWindowDimensions (element);
+      this.chartResized (element);
+      this.restart();
+    };
+  }
 
   assembleChart() {
     console.log ("assembling...");
     //define what element is going to be used for a chart
     let element = this.chartContainer.nativeElement;
-    this.width = element.offsetWidth - this.margin.left - this.margin.right;
-    this.height = element.offsetHeight - this.margin.top - this.margin.bottom;
+    this.calculateWindowDimensions (element);
     let svg = d3.select (element).append ("svg")
         .attr ("id", "force")
         .attr ("width", element.offsetWidth)
@@ -575,6 +580,9 @@ export class ForceComponent implements OnInit, OnChanges {
     // Update and restart the simulation.
     this.simulation.nodes (this.data.nodes);
     this.simulation.force ("link").links (this.data.links);
+    this.simulation
+      .force ("x", d3.forceX(this.width / 2).strength(0.15))
+      .force ("y", d3.forceY(this.height / 2).strength(0.15));
     this.calculateLinksCurvature();
     this.simulation.alpha (1).restart();
 
@@ -817,6 +825,10 @@ export class ForceComponent implements OnInit, OnChanges {
     return str;
   }
 
+  private calculateWindowDimensions: any = (element) => {
+    this.width = element.offsetWidth - this.margin.left - this.margin.right;
+    this.height = element.offsetHeight - this.margin.top - this.margin.bottom;
+  }
 
   /* ============== Event Handlers =========================*/
 
@@ -859,6 +871,12 @@ export class ForceComponent implements OnInit, OnChanges {
 
     // 'calm down' graph nodes after some time as we reach alpha = 0
     if (!d3.event.active) this.simulation.alphaTarget (0);
+  }
+
+  private chartResized: any = (element) => {
+    d3.select ("#force")
+      .attr ("width", element.offsetWidth)
+      .attr ("height", element.offsetHeight)
   }
 
 }
