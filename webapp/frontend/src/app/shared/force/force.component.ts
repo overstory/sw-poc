@@ -343,7 +343,7 @@ export class ForceComponent implements OnInit, OnChanges {
     node.append ("text")
       .attr ("class", "node small-tooltip small-tooltip-text")
       .attr ("dy", ".35em")
-      .attr ("y", -45)
+      .attr ("y", -48)
       .text ((d:any) => {return d.name});
 
     let halo = node.append ("circle")
@@ -780,9 +780,8 @@ export class ForceComponent implements OnInit, OnChanges {
 
 
   private getTooltipText: any = (data) => {
-    let html = '<a class="btn-floating btn waves-effect waves-light teal close-tooltip-button right">&#10006;</a>';
-    //let html = '<a class="waves-effect waves-light btn close-tooltip-button right">&#10006;</a>';
-      html += '<h2 class="tooltip-name">' + data.group + ": " + data.name + '</h2>';
+    let html = '<a class="close-tooltip-button right"><div class="chip"><i class="close material-icons">close</i></div></a>';
+      html += '<h2 class="tooltip-name">' + this.getNodeLabels (data.groups) + ": " + data.name + '</h2>';
 
     if ((data.description != null) || (data.img != null)) {
       html += "<div class='tooltip-desc-row'>";
@@ -804,6 +803,11 @@ export class ForceComponent implements OnInit, OnChanges {
     html += "</div>";
 
     return html
+
+  }
+
+  getNodeLabels (labelsList) {
+    return labelsList.join(", ")
   }
 
   formatProperties (props) {
