@@ -132,7 +132,7 @@ export class ForceComponent implements OnInit, OnChanges {
       .force ("collide", d3.forceCollide ((d: any) => { return this.nodeRadius + 2 }))
       .force ("x", d3.forceX(this.width / 2).strength(0.15))
       .force ("y", d3.forceY(this.height / 2).strength(0.15))
-      .alphaTarget (0.9)
+      .alpha (1)
       .on ("tick", () => {
 
         this.nodesGrp.selectAll (".nodeContainer")
@@ -368,14 +368,12 @@ export class ForceComponent implements OnInit, OnChanges {
        .attr ("x", (d: any) => {
          let width: number = d.bbox.width;
          return (0 - (width + 4)) / 2
-        // return d.bbox.width
        })
       .attr ("y", (d: any) => {
         return -62
       })
       .attr ("fill", "white")
       .attr ("width", (d: any) => {
-        console.log (d.bbox.width);
         return d.bbox.width + 4
       })
       .attr ("height", (d: any) => {

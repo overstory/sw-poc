@@ -80,13 +80,14 @@ rect.linkboundBox {
 }
 
 .nodeContainer:hover .halo {
-    opacity: .8;
+    opacity: .9 !important;
+    stroke: #13a5fb;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
     filter: alpha(opacity=30);
 }
 
 .associated .halo {
-    opacity: 1.0;
+    opacity: .5;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
     filter: alpha(opacity=30);
     stroke: #6ac6ff;
