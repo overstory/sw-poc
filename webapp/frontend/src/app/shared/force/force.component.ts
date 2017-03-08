@@ -33,7 +33,7 @@ export class ForceComponent implements OnInit, OnChanges {
   private hiddenProperties = {
     description: true, img: true, x: true, y: true, vx: true, vy: true, index: true, id: true,
     name: true, group: true, fx: true, fy: true, moved: true, originalNode: true, url: true,
-    depiction: true, label: true, types: true
+    depiction: true, label: true, types: true, bbox: true
   };
 
   private radialMenuToggle = null;
@@ -358,7 +358,7 @@ export class ForceComponent implements OnInit, OnChanges {
     node.append ("text")
       .attr ("class", "node small-tooltip small-tooltip-text")
       .attr ("dy", ".35em")
-      .attr ("y", -518)
+      .attr ("y", -51)
       .text ((d:any) => {return d.name})
       .call (this.getTextBox);
 
