@@ -97,6 +97,13 @@ rect.linkboundBox {
 	text-anchor: middle;
 }
 
+.small-tooltip-box {
+	opacity: .0;
+	fill: #d0d7de;
+	stroke: #0008ff;
+	stroke-width: 1px;
+}
+
 .nodeContainer:hover .small-tooltip {
 	opacity: .9;
 }

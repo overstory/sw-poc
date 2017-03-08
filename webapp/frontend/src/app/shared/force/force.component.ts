@@ -147,16 +147,13 @@ export class ForceComponent implements OnInit, OnChanges {
               targetCoordinate: string = d.target.x + "," + d.target.y,
               dx: number = d.target.x - d.source.x,
               dy: number = d.target.y - d.source.y,
-              //angle: number = Math.atan((d.source.y - d.target.y) / (d.source.x - d.target.x)) * 180 / Math.PI,
               dr: number = Math.sqrt (dx * dx + dy * dy) / (0.4 + d.curvature * 0.15);
             let dAttribute: string;
             // build links. if isCurved property == true, make curves.
             if (d.isCurved) {
-              //dAttribute = "M" + sourceCoordinate + "A" + dr + "," + dr + " 0 0," + d.curvedirection + " " + targetCoordinate
               dAttribute = this.drawArcedPath (sourceCoordinate, targetCoordinate, dr, d.curvedirection, false);
             }
             else {
-              //dAttribute = "M" + sourceCoordinate + "L" + targetCoordinate;
               dAttribute = this.drawLinePath(sourceCoordinate, targetCoordinate, false);
             }
             return dAttribute
@@ -176,21 +173,17 @@ export class ForceComponent implements OnInit, OnChanges {
             // build links. if isCurved property == true, make curves.
             if (0 <= angle && angle < 180) {
               if (d.isCurved) {
-                //dAttribute = "M" + sourceCoordinate + "A" + dr + "," + dr + " 0 0," + d.curvedirection + " " + targetCoordinate
                 dAttribute = this.drawArcedPath (sourceCoordinate, targetCoordinate, dr, direction, false);
               }
               else {
-                //dAttribute = "M" + sourceCoordinate + "L" + targetCoordinate;
                 dAttribute = this.drawLinePath (sourceCoordinate, targetCoordinate, false);
               }
             } else {
               if (d.isCurved) {
                 let inverseDirection =  function(d) {if (direction == 1) {return 0 } else { return 1}}; //flip small sweep around
-                //dAttribute = "M" + targetCoordinate + "A" + dr + "," + dr + " 0 0," + inverseDirection(d) + " " + sourceCoordinate;
                 dAttribute = this.drawArcedPath (sourceCoordinate, targetCoordinate, dr, inverseDirection(d), true);
               }
               else {
-                //dAttribute = "M" + targetCoordinate + "L" + sourceCoordinate;
                 dAttribute = this.drawLinePath (sourceCoordinate, targetCoordinate, true);
               }
             }
@@ -359,15 +352,38 @@ export class ForceComponent implements OnInit, OnChanges {
           d3.selectAll ("g").attr ("opacity", "1.0");
           d3.selectAll (".nodeContainer"). attr ("class", "node nodeContainer"); // revert back to normal classes
           d3.selectAll (".linkLine"). attr ("marker-end", "url(#end)");
-          //this.removeSelection (".small-tooltip");
         })
       ;
 
     node.append ("text")
       .attr ("class", "node small-tooltip small-tooltip-text")
       .attr ("dy", ".35em")
-      .attr ("y", -48)
-      .text ((d:any) => {return d.name});
+      .attr ("y", -518)
+      .text ((d:any) => {return d.name})
+      .call (this.getTextBox);
+
+
+    node.insert ("rect", "text")
+      .attr ("class", "node small-tooltip small-tooltip-box")
+       .attr ("x", (d: any) => {
+         let width: number = d.bbox.width;
+         return (0 - (width + 4)) / 2
+        // return d.bbox.width
+       })
+      .attr ("y", (d: any) => {
+        return -62
+      })
+      .attr ("fill", "white")
+      .attr ("width", (d: any) => {
+        console.log (d.bbox.width);
+        return d.bbox.width + 4
+      })
+      .attr ("height", (d: any) => {
+        return d.bbox.height + 4
+      })
+      .attr ("rx", 8)
+      .attr ("ry", 8)
+
 
     let halo = node.append ("circle")
       .attr ("class", "node halo")
@@ -775,7 +791,6 @@ export class ForceComponent implements OnInit, OnChanges {
 
   private showTooltip: any = (d, containerStyle: string, fadeInMils: number ) => {
     let tooltipContainer = d3.select (containerStyle);
-    ///let tooltipContainerWithContent = d3.select (containerStyle + ", " + containerStyle + " *");
     let closeButton = d3.select (".close-tooltip-button");
     tooltipContainer.transition()
       .delay (fadeInMils)
