@@ -94,7 +94,20 @@ export class ForceComponent implements OnInit, OnChanges {
       .attr ("markerWidth", 9)
       .attr ("markerHeight", 9)
       .attr ("orient", "auto")
-      .style ('fill', "#aaa")
+      .style ('fill', "#00b")
+      .append ("svg:path")
+      .attr ("d", "M0,-5L10,0L0,5");
+
+    defs.append ("svg:marker")
+      .attr ("id", "associated-end")
+      .attr ("viewBox", "0 -5 10 10")
+      //refX value must be the same as radius of an outer circle - this way it will be pointing correctly
+      .attr ("refX", 49)
+      .attr ("refY", 0)
+      .attr ("markerWidth", 9)
+      .attr ("markerHeight", 9)
+      .attr ("orient", "auto")
+      .style ('fill', "#00b")
       .append ("svg:path")
       .attr ("d", "M0,-5L10,0L0,5");
 
@@ -331,11 +344,21 @@ export class ForceComponent implements OnInit, OnChanges {
           });
 
 
+          linkLine.attr ("marker-end", function(d) {
+            let connected = function (d, o) {
+              if (d.source.index == curSelection.index || d.target.index == curSelection.index) { return true} else { return false}
+            },
+              arrow = connected (d, o) ? "url(#associated-end)": "url(#end)";
+            return arrow
+          });
+
+
         })
         .on("mouseout", (d) => {
           d3.selectAll ("circle, .node-text, image").attr("transform", "scale(1.0)");
           d3.selectAll ("g").attr ("opacity", "1.0");
           d3.selectAll (".nodeContainer"). attr ("class", "node nodeContainer"); // revert back to normal classes
+          d3.selectAll (".linkLine"). attr ("marker-end", "url(#end)");
           //this.removeSelection (".small-tooltip");
         })
       ;
@@ -553,7 +576,7 @@ export class ForceComponent implements OnInit, OnChanges {
 
 
     //linkLine
-    link.insert ("path", "rect")
+    var linkLine = link.insert ("path", "rect")
       .attr ("class", "linkLine link relationship")
       .attr ("marker-end", "url(#end)");
 
