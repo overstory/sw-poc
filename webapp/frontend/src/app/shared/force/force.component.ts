@@ -344,8 +344,6 @@ export class ForceComponent implements OnInit, OnChanges {
               arrow = connected (d, o) ? "url(#associated-end)": "url(#end)";
             return arrow
           });
-
-
         })
         .on("mouseout", (d) => {
           d3.selectAll ("circle, .node-text, image").attr("transform", "scale(1.0)");
@@ -355,33 +353,7 @@ export class ForceComponent implements OnInit, OnChanges {
         })
       ;
 
-    node.append ("text")
-      .attr ("class", "node small-tooltip small-tooltip-text")
-      .attr ("dy", ".35em")
-      .attr ("y", -51)
-      .text ((d:any) => {return d.name})
-      .call (this.getTextBox);
-
-
-    node.insert ("rect", "text")
-      .attr ("class", "node small-tooltip small-tooltip-box")
-       .attr ("x", (d: any) => {
-         let width: number = d.bbox.width;
-         return (0 - (width + 4)) / 2
-       })
-      .attr ("y", (d: any) => {
-        return -62
-      })
-      .attr ("fill", "white")
-      .attr ("width", (d: any) => {
-        return d.bbox.width + 4
-      })
-      .attr ("height", (d: any) => {
-        return d.bbox.height + 4
-      })
-      .attr ("rx", 8)
-      .attr ("ry", 8)
-
+    this.showSmallTooltip (node);
 
     let halo = node.append ("circle")
       .attr ("class", "node halo")
@@ -590,7 +562,7 @@ export class ForceComponent implements OnInit, OnChanges {
 
 
     //linkLine
-    var linkLine = link.insert ("path", "rect")
+    var linkLine = link.append ("path")
       .attr ("class", "linkLine link relationship")
       .attr ("marker-end", "url(#end)");
 
@@ -785,6 +757,42 @@ export class ForceComponent implements OnInit, OnChanges {
 
   private unfixNode: any = (d: any) => {
     d.fx = d.fy = null;
+  }
+
+  private showSmallTooltip: any = (selection) => {
+    let smallTooltip = null;
+
+    smallTooltip = selection.append ("text")
+      .attr ("class", "node small-tooltip small-tooltip-text")
+      .attr ("dy", ".35em")
+      .attr ("y", -51)
+      .text ((d: any) => {
+        return d.name
+      })
+      .call (this.getTextBox);
+
+    if (smallTooltip != null) {
+      selection.insert ("rect", ".small-tooltip-text")
+        .attr ("class", "node small-tooltip small-tooltip-box")
+        .attr ("x", (d: any) => {
+          let width: number = d.bbox.width;
+          return (0 - (width + 4)) / 2
+        })
+        .attr ("y", (d: any) => {
+          return -62
+        })
+        .attr ("fill", "white")
+        .attr ("width", (d: any) => {
+          return d.bbox.width + 4
+        })
+        .attr ("height", (d: any) => {
+          return d.bbox.height + 4
+        })
+        .attr ("rx", 8)
+        .attr ("ry", 8)
+    }
+
+
   }
 
   private showTooltip: any = (d, containerStyle: string, fadeInMils: number ) => {

@@ -15,7 +15,6 @@ export class QueryComponent implements OnInit {
   ) {
     graph.dataSourced$.subscribe(data => {
       this.chartData = data;
-      console.log("this data is: " + JSON.stringify(data))
     });
   }
 
