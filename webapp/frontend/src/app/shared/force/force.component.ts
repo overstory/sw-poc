@@ -126,9 +126,9 @@ export class ForceComponent implements OnInit, OnChanges {
     this.nodeSelector = this.nodesGrp.selectAll (".node");
 
     this.simulation = d3.forceSimulation (this.data.nodes)
-      .force ("charge", d3.forceManyBody ().strength (-2550).distanceMax(400).distanceMin(20))
+      .force ("charge", d3.forceManyBody ().strength (-2500).distanceMax(400).distanceMin(20))
       //.force ("center", d3.forceCenter (this.width / 2, this.height / 2))
-      .force ("link", d3.forceLink (this.data.links).distance ((2*this.nodeRadius)+100).strength(2).id ((d: any) => { return d.id; }))
+      .force ("link", d3.forceLink (this.data.links).distance ((2*this.nodeRadius)+100).strength(1.8).id ((d: any) => { return d.id; }))
       .force ("collide", d3.forceCollide ((d: any) => { return this.nodeRadius + 12 }).strength(1))
       .force ("x", d3.forceX(this.width / 2).strength(0.15))
       .force ("y", d3.forceY(this.height / 2).strength(0.15))
@@ -594,7 +594,7 @@ export class ForceComponent implements OnInit, OnChanges {
       .force ("x", d3.forceX(this.width / 2).strength(0.15))
       .force ("y", d3.forceY(this.height / 2).strength(0.15));
     this.calculateLinksCurvature();
-    this.simulation.alpha (1).restart();
+    this.simulation.alpha (0.8).restart();
 
     var linkedByIndex = {};
     this.data.links.forEach(function(d) {
@@ -758,6 +758,7 @@ export class ForceComponent implements OnInit, OnChanges {
 
   private unfixNode: any = (d: any) => {
     d.fx = d.fy = null;
+    this.simulation.alpha (0.5).restart();
   }
 
   private showSmallTooltip: any = (selection) => {
