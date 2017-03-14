@@ -126,10 +126,10 @@ export class ForceComponent implements OnInit, OnChanges {
     this.nodeSelector = this.nodesGrp.selectAll (".node");
 
     this.simulation = d3.forceSimulation (this.data.nodes)
-      .force ("charge", d3.forceManyBody ().strength (-1250))  // .distanceMax(400).distanceMin(1))
+      .force ("charge", d3.forceManyBody ().strength (-2550).distanceMax(400).distanceMin(20))
       //.force ("center", d3.forceCenter (this.width / 2, this.height / 2))
-      .force ("link", d3.forceLink (this.data.links).distance (2*this.nodeRadius+120).strength(1.4).id ((d: any) => { return d.id; }))
-      .force ("collide", d3.forceCollide ((d: any) => { return this.nodeRadius + 2 }))
+      .force ("link", d3.forceLink (this.data.links).distance ((2*this.nodeRadius)+100).strength(2).id ((d: any) => { return d.id; }))
+      .force ("collide", d3.forceCollide ((d: any) => { return this.nodeRadius + 12 }).strength(1))
       .force ("x", d3.forceX(this.width / 2).strength(0.15))
       .force ("y", d3.forceY(this.height / 2).strength(0.15))
       .alpha (1)
