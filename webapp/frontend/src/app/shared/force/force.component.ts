@@ -195,7 +195,7 @@ export class ForceComponent implements OnInit, OnChanges {
     let body = d3.select ("body")
       .on ("keydown", keyDown)
       .on ("keyup", keyUp)
-      .on ("mouseenter", bodyMouseEnter);
+      .on ("mouseover", bodyMouseEnter);
 
     body.append ("div")
       .attr ("class", "tooltip")
@@ -204,7 +204,8 @@ export class ForceComponent implements OnInit, OnChanges {
     svg.call (
       d3.zoom().scaleExtent ([this.minZoom, this.maxZoom]).on ("zoom", () => {
         d3.select ("#chart").attr ("transform", d3.event.transform)
-      })
+      }).filter(function() {
+        return  d3.event.keyCode != 16 && event.type !== 'click' ; })
     ).on ("click", (d) => {
       this.removeSelection(".rm");
       this.radialMenuToggle = null;
