@@ -23,6 +23,7 @@ export class ForceComponent implements OnInit, OnChanges {
   private nodeRadius: number = 25;
   private origWheelHandler: any = null;
   private nodeFocus: boolean = false;
+  private isNewInGraph: boolean = false;
 
   private simulation;
   private container;
@@ -126,12 +127,12 @@ export class ForceComponent implements OnInit, OnChanges {
     this.nodeSelector = this.nodesGrp.selectAll (".node");
 
     this.simulation = d3.forceSimulation (this.data.nodes)
-      .force ("charge", d3.forceManyBody ().strength (-2500).distanceMax(400).distanceMin(20))
+      .force ("charge", d3.forceManyBody ().strength (-2200).distanceMax(400).distanceMin(20))
       //.force ("center", d3.forceCenter (this.width / 2, this.height / 2))
-      .force ("link", d3.forceLink (this.data.links).distance ((2*this.nodeRadius)+100).strength(1.8).id ((d: any) => { return d.id; }))
+      .force ("link", d3.forceLink (this.data.links).distance ((2*this.nodeRadius)+100).strength(1.7).id ((d: any) => { return d.id; }))
       .force ("collide", d3.forceCollide ((d: any) => { return this.nodeRadius + 12 }).strength(1))
-      .force ("x", d3.forceX(this.width / 2).strength(0.15))
-      .force ("y", d3.forceY(this.height / 2).strength(0.15))
+      .force ("x", d3.forceX(this.width / 2).strength(0.3))
+      .force ("y", d3.forceY(this.height / 2).strength(0.3))
       .alpha (1)
       .on ("tick", () => {
 
@@ -347,10 +348,7 @@ export class ForceComponent implements OnInit, OnChanges {
           });
         })
         .on("mouseout", (d) => {
-          d3.selectAll ("circle, .node-text, image").attr("transform", "scale(1.0)");
-          d3.selectAll ("g").attr ("opacity", "1.0");
-          d3.selectAll (".nodeContainer"). attr ("class", "node nodeContainer"); // revert back to normal classes
-          d3.selectAll (".linkLine"). attr ("marker-end", "url(#end)");
+          this.graphToNormalState();
         })
       ;
 
@@ -415,117 +413,7 @@ export class ForceComponent implements OnInit, OnChanges {
           d3.event.stopPropagation();
           this.fixNode (d);
           let parent = d3.select (node.nodes ()[d.index]);
-
-          let northwest =  parent.append ("g")
-            .attr ("class", "rm radialMenuContainer");
-          northwest.append ("path")
-            .attr ("d", "M -9.184850993605149e-15 -50 A 50 50 0 0 0 -47.27592877996584 -16.27840772285784")
-            .attr("stroke-width", "20")
-            .attr ("class", "rm radial-menu")
-            .on ("click", (d) => {
-              this.outboundNodesClicked(d);
-              this.fixNode (d);
-              this.removeSelection (".rm");
-            });
-          northwest.append ("text")
-            .attr ("class", "rm radial-menu-text")
-            .attr ("text-anchor", "middle")
-            .attr ("transform", "translate(-35,-35)rotate(45)")
-            .text ("⬅")
-            .on ("click", (d) => {
-              this.outboundNodesClicked(d);
-              this.fixNode (d);
-              this.removeSelection (".rm");
-            });
-
-          let northeast = parent.append ("g")
-            .attr ("class", "rm radialMenuContainer");
-          northeast.append ("path")
-            .attr("d", "M 47.81523779815177 -14.618585236136838 A 50 50 0 0 0 0.8726203218641688 -49.992384757819565")
-            .attr ("class", "rm radial-menu")
-            .on ("click", (d) => {
-              this.InboundNodesClicked(d);
-              this.fixNode (d);
-              this.removeSelection (".rm");
-            });
-          northeast.append ("text")
-            .attr ("class", "rm radial-menu-text")
-            .attr ("text-anchor", "middle")
-            .attr ("transform", "translate(35,-35)rotate(-45)")
-            .text ("⬅")
-            //.text("⬇")
-            .on ("click", (d) => {
-              this.InboundNodesClicked(d);
-              this.fixNode (d);
-              this.removeSelection (".rm");
-            });
-
-          let southeast = parent.append ("g")
-            .attr ("class", "rm radialMenuContainer");
-          southeast.append ("path")
-            .attr ("d", "M 29.389262614623657 40.45084971874737 A 50 50 0 0 0 47.81523779815177 -14.618585236136838")
-            .attr ("class", "rm radial-menu")
-            .on("click", (d) => {
-              this.showTooltip(d, ".tooltip", 0);
-              this.fixNode (d);
-              this.removeSelection (".rm");
-            });
-          southeast.append ("text")
-            .attr ("class", "rm radial-menu-text")
-            .attr ("text-anchor", "middle")
-            .attr('font-family', 'FontAwesome')
-            .attr ("x", 45)
-            .attr ("y", 20)
-            .text ( (d) => { return "\uf129" })
-            .on("click", (d) => {
-              this.showTooltip(d, ".tooltip", 0);
-              this.fixNode (d);
-              this.removeSelection (".rm");
-            });
-
-
-          let southwest = parent.append ("g")
-            .attr ("class", "rm radialMenuContainer");
-          southwest.append ("path")
-            .attr ("d", "M -29.38926261462365 40.45084971874737 A 50 50 0 0 0 28.678821817552304 40.95760221444959")
-            .attr ("class", "rm radial-menu")
-            .on ("click", (d) => {
-              this.removeNodesClicked(d);
-              this.fixNode (d);
-              this.removeSelection (".rm");
-            });
-          southwest.append ("text")
-            .attr ("class", "rm radial-menu-text")
-            .attr ("text-anchor", "middle")
-            .attr ("x", 0)
-            .attr ("y", 60)
-            .text ("✘")
-            .on("click", (d) => {
-              this.removeNodesClicked(d);
-              this.fixNode (d);
-              this.removeSelection (".rm");
-            });
-
-
-          let west = parent.append ("g")
-            .attr ("class", "rm radialMenuContainer");
-          west.append ("path")
-            .attr ("d", "M -47.552825814757675 -15.450849718747387 A 50 50 0 0 0 -30.09075115760242 39.93177550236464")
-            .attr ("class", "rm radial-menu")
-            .on ("click", (d) => {
-              this.unfixNode (d);
-            });
-          west.append ("text")
-            .attr ("class", "rm radial-menu-text")
-            .attr ("text-anchor", "middle")
-            .attr('font-family', 'FontAwesome')
-            .attr ("x", -45)
-            .attr ("y", 20)
-            .text ( (d) => { return '\uf09c' })
-            .on("click", (d) => {
-              this.unfixNode (d);
-            });
-
+          this.buildRadialMenu (d, parent);
           this.radialMenuToggle = d.id;
         } else {
           //toggle id and id clicked next is exactly the same,
@@ -534,8 +422,7 @@ export class ForceComponent implements OnInit, OnChanges {
           this.fixNode (d);
           this.radialMenuToggle = null;
         }
-    })
-    ;
+    });
 
     // Apply the general update pattern to the links.
     this.linkSelector = this.linksGrp.selectAll ('.relationship')
@@ -591,10 +478,10 @@ export class ForceComponent implements OnInit, OnChanges {
     this.simulation.nodes (this.data.nodes);
     this.simulation.force ("link").links (this.data.links);
     this.simulation
-      .force ("x", d3.forceX(this.width / 2).strength(0.15))
-      .force ("y", d3.forceY(this.height / 2).strength(0.15));
+      .force ("x", d3.forceX(this.width / 2).strength(0.3))
+      .force ("y", d3.forceY(this.height / 2).strength(0.3));
     this.calculateLinksCurvature();
-    this.simulation.alpha (0.8).restart();
+    this.simulation.alpha (0.5).restart();
 
     var linkedByIndex = {};
     this.data.links.forEach(function(d) {
@@ -619,6 +506,7 @@ export class ForceComponent implements OnInit, OnChanges {
     for (let i = 0; i < added.length; i++) {
       if (!this.itemExistsInList (existing, added[i].id)) {
         existing.push (added [i])
+        this.isNewInGraph = true;
       }
     }
   }
@@ -758,7 +646,125 @@ export class ForceComponent implements OnInit, OnChanges {
 
   private unfixNode: any = (d: any) => {
     d.fx = d.fy = null;
-    this.simulation.alpha (0.5).restart();
+    this.simulation.alpha (0.3).restart();
+  }
+
+  private buildRadialMenu: any = (d:any, parent: any) => {
+    let northwest =  parent.append ("g")
+      .attr ("class", "rm radialMenuContainer");
+    northwest.append ("path")
+      .attr ("d", "M -9.184850993605149e-15 -50 A 50 50 0 0 0 -47.27592877996584 -16.27840772285784")
+      .attr("stroke-width", "20")
+      .attr ("class", "rm radial-menu")
+      .on ("click", (d) => {
+        this.outboundNodesClicked(d);
+        this.fixNode (d);
+        this.removeSelection (".rm");
+      });
+    northwest.append ("text")
+      .attr ("class", "rm radial-menu-text")
+      .attr ("text-anchor", "middle")
+      .attr ("transform", "translate(-35,-35)rotate(45)")
+      .text ("⬅")
+      .on ("click", (d) => {
+        this.outboundNodesClicked(d);
+        this.fixNode (d);
+        this.removeSelection (".rm");
+      });
+
+    let northeast = parent.append ("g")
+      .attr ("class", "rm radialMenuContainer");
+    northeast.append ("path")
+      .attr("d", "M 47.81523779815177 -14.618585236136838 A 50 50 0 0 0 0.8726203218641688 -49.992384757819565")
+      .attr ("class", "rm radial-menu")
+      .on ("click", (d) => {
+        this.InboundNodesClicked(d);
+        this.fixNode (d);
+        this.removeSelection (".rm");
+      });
+    northeast.append ("text")
+      .attr ("class", "rm radial-menu-text")
+      .attr ("text-anchor", "middle")
+      .attr ("transform", "translate(35,-35)rotate(-45)")
+      .text ("⬅")
+      .on ("click", (d) => {
+        this.InboundNodesClicked(d);
+        this.fixNode (d);
+        this.removeSelection (".rm");
+      });
+
+    let southeast = parent.append ("g")
+      .attr ("class", "rm radialMenuContainer");
+    southeast.append ("path")
+      .attr ("d", "M 29.389262614623657 40.45084971874737 A 50 50 0 0 0 47.81523779815177 -14.618585236136838")
+      .attr ("class", "rm radial-menu")
+      .on("click", (d) => {
+        this.showTooltip(d, ".tooltip", 0);
+        this.fixNode (d);
+        this.removeSelection (".rm");
+      });
+    southeast.append ("text")
+      .attr ("class", "rm radial-menu-text")
+      .attr ("text-anchor", "middle")
+      .attr('font-family', 'FontAwesome')
+      .attr ("x", 45)
+      .attr ("y", 20)
+      .text ( (d) => { return "\uf129" })
+      .on("click", (d) => {
+        this.showTooltip(d, ".tooltip", 0);
+        this.fixNode (d);
+        this.removeSelection (".rm");
+      });
+
+
+    let southwest = parent.append ("g")
+      .attr ("class", "rm radialMenuContainer");
+    southwest.append ("path")
+      .attr ("d", "M -29.38926261462365 40.45084971874737 A 50 50 0 0 0 28.678821817552304 40.95760221444959")
+      .attr ("class", "rm radial-menu")
+      .on ("click", (d) => {
+        this.removeNodesClicked(d);
+        this.fixNode (d);
+        this.removeSelection (".rm");
+      });
+    southwest.append ("text")
+      .attr ("class", "rm radial-menu-text")
+      .attr ("text-anchor", "middle")
+      .attr ("x", 0)
+      .attr ("y", 60)
+      .text ("✘")
+      .on("click", (d) => {
+        this.removeNodesClicked(d);
+        this.fixNode (d);
+        this.removeSelection (".rm");
+      });
+
+
+    let west = parent.append ("g")
+      .attr ("class", "rm radialMenuContainer");
+    west.append ("path")
+      .attr ("d", "M -47.552825814757675 -15.450849718747387 A 50 50 0 0 0 -30.09075115760242 39.93177550236464")
+      .attr ("class", "rm radial-menu")
+      .on ("click", (d) => {
+        this.unfixNode (d);
+      });
+    west.append ("text")
+      .attr ("class", "rm radial-menu-text")
+      .attr ("text-anchor", "middle")
+      .attr('font-family', 'FontAwesome')
+      .attr ("x", -45)
+      .attr ("y", 20)
+      .text ( (d) => { return '\uf09c' })
+      .on("click", (d) => {
+        this.unfixNode (d);
+      });
+  }
+
+  private graphToNormalState: any = () => {
+    d3.selectAll ("circle, .node-text, image").attr("transform", "scale(1.0)");
+    d3.selectAll ("g").attr ("opacity", "1.0");
+    d3.selectAll (".nodeContainer"). attr ("class", "node nodeContainer"); // revert back to normal classes
+    d3.selectAll (".linkLine"). attr ("marker-end", "url(#end)");
   }
 
   private showSmallTooltip: any = (selection) => {
@@ -884,15 +890,23 @@ export class ForceComponent implements OnInit, OnChanges {
 
   private outboundNodesClicked: any = (d: any) => {
     this.graph.getOutboundNodes (d.id).subscribe (newData => {
+      this.isNewInGraph = false;
       this.addToGraph (newData);
-      this.restart ();
+      if (this.isNewInGraph) {
+        this.restart ();
+      }
+      this.graphToNormalState();
     });
   }
 
   private InboundNodesClicked: any = (d: any) => {
     this.graph.getInboundNodes (d.id).subscribe (newData => {
+      this.isNewInGraph = false;
       this.addToGraph (newData);
-      this.restart();
+      if (this.isNewInGraph) {
+        this.restart ();
+      }
+      this.graphToNormalState();
     });
   }
 
