@@ -36,7 +36,6 @@
     { "swapiUrl": "http://swapi.co/api/people/43/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/databank_shmiskywalkerlars_01_169_7449f0a8.jpeg?region=341%2C0%2C878%2C878&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/7/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/databank_berulars_01_169_68101518.jpeg?region=76%2C0%2C877%2C878&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/62/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/databank_cliegglars_01_169_c2f0b9cb.jpeg?region=341%2C0%2C878%2C878&width=320" },
-    { "swapiUrl": "http://swapi.co/api/people/11/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/Anakin-Skywalker_d3330724.jpeg?region=188%2C0%2C675%2C675&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/63/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/databank_pogglethelesser_01_169_7095ae3c.jpeg?region=341%2C0%2C878%2C878&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/9/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/image_606ff7f7.jpeg?region=0%2C0%2C1560%2C878&width=320" },
     { "swapiUrl": "http://swapi.co/api/people/13/", "depiction": "http://lumiere-a.akamaihd.net/v1/images/chewie-db_2c0efea2.jpeg?region=376%2C151%2C799%2C799&width=320" },

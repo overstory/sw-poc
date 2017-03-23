@@ -1,0 +1,23 @@
+.float-picture-frame {
+	border: solid #0000bb thin;
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+.float-left-picture-frame {
+	border: solid #0000bb thin;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+
+.float-picture {
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+.framed-picture {
+	border: solid #0000bb thin;
+}

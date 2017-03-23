@@ -2,7 +2,7 @@
     <div class="section no-pad-bot">
         <div class="container">
             <br><br>
-            <h2 class="header center indigo-text text-lighten-2">Star Wars: The Graph Awakens</h2>
+            <h2 class="header center yellow-text text-lighten-2">Star Wars: The Graph Awakens</h2>
             <br>
         </div>
     </div>
@@ -13,37 +13,37 @@
 <div class="container">
     <div class="section">
         <div class="row center">
-            <h5 class="header col s12 dark">The Power of Connected Data, Jedi-Style</h5>
+            <a href="query" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Query The Force</a>
         </div>
         <div class="row center">
-            <a href="query" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Query The Force</a>
+            <h5 class="header col s12 dark">The Power of Connected Data, Jedi-Style</h5>
         </div>
 
         <!--   Icon Section   -->
         <div class="row">
             <div class="col s12 m4">
                 <div class="icon-block">
-                    <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+                    <h2 class="center brown-text"><i class="material-icons">library_books</i></h2>
                     <h5 class="center">Star Wars Facts</h5>
 
-                    <p class="light">We've imported the data from the <a href="http://swapi.co" target="other">Star Wars API</a>,
-                        combined it with social relationships derived from
-                        <a href="http://evelinag.com/blog/2015/12-15-star-wars-social-network/" target="other">text analysis of the first seven Star Wars films</a>
+                    <p class="light">We've imported data from the <a href="http://swapi.co" target="other">Star Wars API</a>,
+                        combined it with social links derived from
+                        <a href="http://evelinag.com/blog/2015/12-15-star-wars-social-network/" target="other">automated analysis of scripts from the Star Wars films</a>
                         and additional information from
-                        <a href="https://www.themoviedb.org/movie/11-star-wars" target="other">The Movie DB</a> data
+                        <a href="https://www.themoviedb.org/movie/11-star-wars" target="other">The Movie DB</a>
                         <a href="https://www.themoviedb.org/documentation/api" target="other">API</a>
-                        to create a combined graph of connected Star Wars data</p>
+                        to create a combined connected graph of Star Wars data.</p>
                 </div>
             </div>
 
             <div class="col s12 m4">
                 <div class="icon-block">
                     <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-                    <h5 class="center">Explore the graph and its many connections </h5>
+                    <h5 class="center">Better together</h5>
 
-                    <p class="light">Combining these disparate datasets, with a little bit of glue,
+                    <p class="light">Merging these disparate datasets, with a little bit of glue to map between them,
                         yields a rich network of nodes and connecting edges.  Each node represents
-                        an entity in the Star Wars universe and each edge is a relationship between
+                        an entity in the Star Wars universe and each link (an <i>edge</i>) is a labeled, directed relationship between
                         two nodes.
                     </p>
                 </div>
@@ -51,20 +51,19 @@
 
             <div class="col s12 m4">
                 <div class="icon-block">
-                    <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-                    <h5 class="center">Display information visually</h5>
+                    <h2 class="center brown-text"><i class="material-icons">visibility</i></h2>
+                    <h5 class="center">Explore the graph</h5>
 
-                    <p class="light">Nodes, which represent people, places and things, and links,
-                        which represent relationships between them, are displayed visually as a live graph network.
-                        The nodes can be moved around and manipulated. Hovering over a node shows more
-                        detailed information about it and
-                        double clicking it expands the graph to show its connections.
-                        Click the big green button to get started.
+                    <p class="light">Click the big green button above to play with a live, interactive
+                        representation of the Star Wars graph data.  Click.  Click and drag.  Double Click.
+                        See what you can discover.
+                    </p>
+                    <p class="light center">
+                        <a href="#howitworks" class="center btn-large waves-effect waves-light teal lighten-1">Tell Me More</a>
                     </p>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -73,40 +72,92 @@
     <div class="section no-pad-bot">
         <div class="container">
             <div class="row center">
-                <h4 class="header col s12 black-text">Fun facts, and who knows who, in and about the Empire</h4>
+                <h4 class="header col s12 white-text">Fun facts, and who knows who, in and about the Empire</h4>
             </div>
         </div>
     </div>
-    <div class="parallax"><img src="assets/images/esbgraph.png" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="assets/images/sw-graph-r2d2.png" alt="The Star Wars Universe"></div>
 </div>
 
-<a name="howitworks"></a>
 <div class="container">
     <div class="section">
 
         <div class="row">
             <div class="col s12 center">
+<a name="howitworks"></a>
                 <h3><i class="mdi-content-send brown-text"></i></h3>
-                <h4>How It Works</h4>
+
+                <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/Yoda-Retina_2a7ecc26.jpeg?region=461%2C0%2C864%2C864&width=320" title="Do or do not. There is no try."/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/Han-Solo_1d08eb2e.jpeg?region=573%2C0%2C899%2C901&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/Darth-Vader_6bda9114.jpeg?region=236%2C0%2C928%2C928&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/Luke-Skywalker_dd9c9f9b.jpeg?region=389%2C0%2C864%2C864&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/R2-D2_41dacaa9.jpeg?region=549%2C0%2C864%2C864&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/Princess-Leia-Organa_d7761ff5.jpeg?region=608%2C0%2C900%2C900&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/Padme-Amidala_05d50c8a.jpeg?region=336%2C0%2C864%2C864&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/C-3PO-See-Threepio_68fe125c.jpeg?region=353%2C0%2C791%2C793&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/Anakin-Skywalker_d3330724.jpeg?region=188%2C0%2C675%2C675&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/sebulba_1f3fe180.jpeg?region=240%2C0%2C1376%2C1380&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/Qui-Gon-Jinn_d89416e8.jpeg?region=353%2C0%2C862%2C865&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/rey_bddd0f27.jpeg?region=0%2C0%2C1560%2C1560&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/databank_ackbar_01_169_55137220.jpeg?region=209%2C0%2C877%2C878&width=320" title="It's a trap!"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/Tarkin-3%402x_16f7b5db.jpeg?region=0%2C0%2C1200%2C800&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/databank_jarjarbinks_01_169_c70767ab.jpeg?region=230%2C0%2C878%2C878&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/chewie-db_2c0efea2.jpeg?region=376%2C151%2C799%2C799&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/Jabba-The-Hutt_b5a08a70.jpeg?region=263%2C0%2C675%2C675&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/finn-3_a88b08d6.jpeg?region=0%2C0%2C800%2C326&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/databank_watto_01_169_ecd563f1.jpeg?region=287%2C0%2C878%2C878&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/Boba-Fett_61fdadfd.jpeg?region=250%2C0%2C675%2C675&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/Darth-Maul_632eb5af.jpeg?region=433%2C47%2C853%2C853&width=320"/></a>
+                    <a class="carousel-item" href="#one!"><img src="http://lumiere-a.akamaihd.net/v1/images/Obi-Wan-Kenobi_6d775533.jpeg?region=149%2C0%2C864%2C864&width=320"/></a>
+                </div>
+
+                <h4>What This Is</h4>
                 <p class="left-align light">
-                    We've pulled together data from several different open sources to build a combined linked data graph
-                    containing information about the Star Wars universe.  The data has been aggregated and stored to a
-                    <a href="http://neo4j.com" target="other">Neo4J database.</a>.  There is a small
+                    We wanted to try an experiment to see what we could discover by taking several datasets from
+                    different sources, finding the connections within and between them, mashing them together and then
+                    presenting the result.  This little Proof of Concept application is the result.  It's not very fancy,
+                    but it helped us try out several technologies and learn about integrating them together to build an application.
+                    It makes fun bouncy springy bubbles too.
+                </p>
+
+                <h5>Help Me Obi Wan Kanobi, You're My Only Hope</h5>
+                <p class="left-align light">
+                    <img src="http://lumiere-a.akamaihd.net/v1/images/Obi-Wan-Kenobi_6d775533.jpeg?region=149%2C0%2C864%2C864&width=160" class="float-picture-frame"/>
+                    We pulled together data from several different open sources to build a combined linked data graph
+                    of information about the Star Wars universe.  The data has been aggregated and stored into a
+                    <a href="http://neo4j.com" target="other">Neo4J database.</a>.
+                    The frontend browser code is an
+                    <a href="https://angular.io/" target="other">Angular 2</a> app that primarily uses
+                    <a href="https://www.typescriptlang.org/">TypeScript</a>.
+                    There is a small
                     <a href="http://ratpack.io" target="other">RatPack app server</a>, with code written in
-                    <a href="http://ratpack.io" target="other">Groovy</a>, to glue it together.
+                    <a href="http://ratpack.io" target="other">Groovy</a>, to ties it all together.
                 </p>
                 <p class="left-align light">
-                    Starting with the data in the fan-created Star Wars REST API at
-                    <a href="http://swapi.co" target="other">http://swapi.co</a>, we wrote a bit of code to traverse through
-                    its data and create a <a href="json/swapi.json" target="other">combined JSON file</a> (it's not very big).
+                    We first went looking for a starting dataset that had good internal linkage but that wasn't too big.
+                    We found a
+                    <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="other">REST API</a>
+                    service, created by Star Wars fan Paul Hallett at
+                    <a href="http://swapi.co" target="other">http://swapi.co</a>.  The site provides service endpoints that supply
+                    facts and figures about the Star Wars universe in JSON format.  The data is nicely structured and follows good
+                    <a href="https://codeplanet.io/principles-good-restful-api-design/">RESTful design principles</a>.
+                    There is not a single endpoint to fetch all the data at once, so our first
+                    task was to write a bit of code to traverse through
+                    its data and merge it into a <a href="json/swapi.json" target="other">combined JSON file</a> (it's not very big overall).
+                    This gave us a single JSON fie that we could load repeatedly.
                 </p>
+
+                <h5>It's Not What You Know</h5>
                 <p class="left-align light">
                     The SWAPI data contains facts about the movies, characters, planets, starships, etc.  There are many
                     relationships embedded in the data, such as which movies a given character appeared in and what species
-                    a character is, etc.  This yields a nice linked graph, but does not tell us very much about how the
-                    characters relate or interact with each other.
+                    a character is, for example.  This yields a nice linked graph but does not tell us very much about how the
+                    characters relate to or interact with each other.
                 </p>
                 <p class="left-align light">
+                    <img src="http://lumiere-a.akamaihd.net/v1/images/Death-Star-I-copy_36ad2500.jpeg?region=347%2C0%2C900%2C900&width=160" class="float-left-picture-frame"/>
+                    We wanted to add a social element describing how characters are related in some way other other than species or planet of residence.
                     So we took another dataset created by
                     <a href="http://evelinag.com/" target="other">Evelina Gabasova</a>
                     as described in her fascinating
@@ -116,25 +167,39 @@
                     yielded a set of directed connections by deducing which characters uttered which lines of dialog and to whom
                     they were speaking.  This gives us a sort of weak social network that at least tells us which characters have engaged
                     in a dialog.  It does not, however, give us stronger social connections such as team membership, marriage, parent/child relationships, etc.
-                    For example, there are no social links establishing that Luke is the son of Anakin Skywalker (or Darth Vader).
+                    For example, there are no social links establishing that Luke is the son of
+                    <a href="http://www.starwars.com/databank/anakin-skywalker" target="other">Anakin Skywalker</a> (or
+                    <a href="http://www.starwars.com/databank/darth-vader" target="other">Darth Vader</a>).
                     There is no reason why this information could not also be added to the graph, but we have not found a source
                     for this information (yet).
                 </p>
                 <p class="left-align light">
-                    To join these data sets up, we created a simple
+                    <img src="http://lumiere-a.akamaihd.net/v1/images/AT-AT_89d0105f.jpeg?region=263%2C0%2C780%2C781&width=160" class="float-picture-frame"/>
+                    To join these data sets up, we needed a way to correlate the SWAPI data with the script names
+                    used in the Star Wars social data.  So we created a simple
                     <a href="/json/character-resource-map.json" target="other">JSON mapping file</a>
                     which connected simple character names as found in the
                     <a href="https://github.com/evelinag/StarWars-social-network/tree/master/networks" target="other">Star Wars social data</a>
                     to the <a href="http://swapi.co" target="other">SWAPI</a> URIs
-                    that uniquely identify those entities.  Given this information, we where able to create relationships between
+                    that uniquely identify those entities.
+                </p>
+                <p class="left-align light">
+                    This was done manually because the number of characters is only a few dozen.  If there had been a larger
+                    number, we could have written some code to identify the correlations and produce the JSON mapping file automatically.
+                    Given this information, we where able to create relationships between
                     the characters created from the SWAPI data.  This gave us an enhanced graph with both structural
                     and social relationships represented.
                 </p>
+
+                <h5>A Picture Is Worth A Thousand Words</h5>
                 <p class="left-align light">
+                    <img src="https://s-media-cache-ak0.pinimg.com/564x/21/b0/9b/21b09b38d749e18c0e37044bfa634d5a.jpg" width="250" height="300" class="float-picture"/>
                     This graph was more interesting, but rather bland when represented visually.  Using
                     <a href="https://angular.io/" target="other">Angular 2</a> and
                     <a href="https://d3js.org/" target="other">D3.js</a> we built this demo webapp to visualize the Star Wars data.
-                    This is best done with a <i>force directed graph</i> which looks like bouncy bubbles connected by springy lines.
+                    This is best done with a
+                    <a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing">force directed graph</a>
+                    which looks like bouncy bubbles connected by springy bungee cords.
                     This works well, but is a bit plain when the nodes are just monochrome circles with text inside.  To add some
                     visual interest we turned to the free API at
                     <a href="https://www.themoviedb.org/" target="other">The Movie DB</a>, which is similar to IMDB but with
@@ -145,28 +210,49 @@
                 <p class="left-align light">
                     No problem, we just added another field to our
                     <a href="/json/character-resource-map.json" target="other">mapping JSON file</a>
-                    to indicate which actor(s) portrayed which characters.
-                    With this information we iterated the mapping JSON file and pulled in
+                    to indicate which actor(s) portrayed which characters.  To get this information we looked
+                    through The Movie DB listings for each of the Star Wars movies and extracted the unique IDs of
+                    actors in those movies.  This was also a manual process, which could have been automated if
+                    the extra work were justified.
+                </p>
+                <p class="left-align light">
+                    <img src="http://lumiere-a.akamaihd.net/v1/images/Coruscant_03db43b4.jpeg?region=336%2C0%2C864%2C864&width=160" class="float-left-picture-frame"/>
+                    With this information in place we iterated the mapping JSON file and pulled in
                     the detailed actor information from The Movie DB and consolidated it into a single
                     <a href="/json/moviedb-actors.json" target="other">actors JSON file</a>.
                     This is not a simple one-to-one mapping like the social data was.  A single character can be
-                    portrayed by multiple actors in the same film (David Prowse was in the Darth Vader suit, James Earl Jones
-                    was the voice).  Or played by different actors in different films (Obi-Wan Kenobi has been played by Sir Alec Guiness
-                    and Ewan McGregor in different films).
+                    portrayed by multiple actors in the same film
+                    (<a href="https://www.themoviedb.org/person/24342-david-prowse" target="other">David Prowse</a>
+                    was in the
+                    <a href="http://www.starwars.com/databank/darth-vader" target="other">Darth Vader</a> suit,
+                    <a href="https://www.themoviedb.org/person/15152-james-earl-jones" target="other">James Earl Jones</a>
+                    was the voice).  Or played by different actors in different films
+                    (<a href="http://www.starwars.com/databank/obi-wan-kenobi" target="other">Obi-Wan Kenobi</a>
+                    has been played by
+                    <a href="https://www.themoviedb.org/person/12248-alec-guinness" target="other">Sir Alec Guiness</a> and
+                    <a href="https://www.themoviedb.org/person/3061-ewan-mcgregor" target="other">Ewan McGregor</a> in different films).
                 </p>
                 <p class="left-align light">
                     To handle this, we also passed through the
                     <a href="/json/character-resource-map.json" target="other">mapping JSON file</a>
                     and used each actor's MovieDB identifier to pull in
-                    the detail of their movie credits.  Using this, we could not only create new Actor nodes and connect
+                    the detail of their movie credits.  Using this, not only could we create new Actor nodes and connect
                     a character to that actor, we could also indicate which movies a specific actor appeared in.  So, the character
                     Darth Vader is connected to both Alec Guinness and Ewan McGregor, but Guinness is only connected to the
-                    movies <i>A New Hope</i>, <i>The Empires Strike Back</i>, <i>Return of the Jedi</i>, and
-                    <i>The Force Awakens</i> (through the magic of archival footage).  McGregor is linked to
-                    <i>Attack of the Clones</i>, <i>The Phantom Menace</i>, <i>Revenge of the Sith</i>, and also
-                    <i>The Force Awakens</i>.
+                    movies
+                    <a href="https://www.themoviedb.org/movie/11-star-wars" target="other">A New Hope</a>,
+                    <a href="https://www.themoviedb.org/movie/1891-the-empire-strikes-back" target="other">The Empires Strike Back</a>,
+                    <a href="https://www.themoviedb.org/movie/1892-return-of-the-jedi" target="other">Return of the Jedi</a>, and
+                    <a href="https://www.themoviedb.org/movie/140607-star-wars-episode-vii-the-force-awakens" target="other">The Force Awakens</a> (through the magic of archival footage).  McGregor is linked to
+                    <a href="https://www.themoviedb.org/movie/1894-star-wars-episode-ii-attack-of-the-clones" target="other">Attack of the Clones</a>,
+                    <a href="https://www.themoviedb.org/movie/1893-star-wars-episode-i-the-phantom-menace" target="other">The Phantom Menace</a>,
+                    <a href="https://www.themoviedb.org/movie/1895-star-wars-episode-iii-revenge-of-the-sith" target="other">Revenge of the Sith</a>, and also
+                    <a href="https://www.themoviedb.org/movie/140607-star-wars-episode-vii-the-force-awakens" target="other">The Force Awakens</a>.
                 </p>
+
+                <h5>What I Really Want To Do Is Direct</h5>
                 <p class="left-align light">
+                    <img src="http://www.indiewire.com/wp-content/uploads/2015/11/george-lucas-star-wars.jpg?w=250" class="float-picture-frame"/>
                     We also did a bit of
                     <a href="/json/character-resource-map.json" target="other">extra mapping</a>
                     to pull in details about producers and directors from
@@ -176,8 +262,11 @@
                     <a href="json/resource-map.json" target="other">mappings for SWAPI to MovieDB ids</a> so we that we could
                     could fetch information about films and add it to the Film nodes created from the SWAPI data.
                     We also made sure to resolve
-                    co-references to the same person in multiple roles.  J. J. Abrams was both Director and Producer of
-                    <i>The Force Awakens</i> and George Lucas was Producer on some films and Director on others.
+                    co-references to the same person in multiple roles.
+                    <a href="https://www.themoviedb.org/person/15344-j-j-abrams" target="other">J. J. Abrams</a>
+                    was both Director and Producer of
+                    <a href="https://www.themoviedb.org/movie/140607-star-wars-episode-vii-the-force-awakens" target="other">The Force Awakens</a> and
+                    <a href="https://www.themoviedb.org/person/1-george-lucas" target="other">George Lucas</a> was Producer on some films and Director on others.
                 </p>
                 <p class="left-align light">
                     We now had nice pictures to render for actors thanks to links from The Movie DB data.  Which look
@@ -187,10 +276,39 @@
                     general, and Star Wars Characters in particular, but have not yet found anything we can integrate with.
                     In the meantime, we've applied a hack that copies the image link into the character from one of the
                     actors if it doesn't have one set already.  But this is unsatisfying because the photo of David Prowse does
-                    not look anything like Darth Vader, for example.  This is still a work in progress.
+                    not look anything like Darth Vader, for example.
                 </p>
+                <p class="center-align light">
+                    <img src="http://image.tmdb.org/t/p/w185/cJtmBVrjYwawh2cCiAfZkEjPeqc.jpg" class="framed-picture"/>
+                    <img src="http://lumiere-a.akamaihd.net/v1/images/Darth-Vader_6bda9114.jpeg?region=236%2C0%2C928%2C928&width=250" class="framed-picture"/>
+                    <img src="http://image.tmdb.org/t/p/w185//2ZuBf3ip2RXhkiQqGUjbUzAf4Nx.jpg" class="framed-picture"/>
+                </p>
+                <p class="left-align light">
+                    So in the meantime we've once again manually created a mapping to add image URLs to Character nodes.
+                    Our primary source of image links turned out to be the official <a href="http://starwars.com/databank">StarWars.com</a>
+                    (which is the logical conclusion of what a site like this could become).  Unfortunately it does not, as far
+                    as we could tell, offer a REST API that is queryable with software.  So we manually collected URLs of images
+                    and added them to <a href="json/resource-map.json">our data</a>.  This data is not complete since it is quite
+                    tedious to identify character image URLs, but most significant characters now have appropriate images.  And for those
+                    that are missing the actor image will be used.  Anything for which an image is not available will have its name
+                    displayed as text.
+                </p>
+                <p class="left-align light">
+                    <img src="http://lumiere-a.akamaihd.net/v1/images/databank_wookiee_01_169_e2d0ebd0.jpeg?region=0%2C0%2C1560%2C878&width=240" class="float-left-picture-frame"/>
+                    This is an Open Source Proof of Concept project.  You can find the
+                    <a href="https://github.com/overstory/sw-poc" target="_target">source on GitHub</a> if you want to take a look.  It's not the most elegant code we've
+                    ever written, it was just an exercise.  It may also seem a bit overly complex.  We intentionally did not
+                    allow direct queries from the browser to the Neo4J database.  We put an intermediary Java layer between them
+                    to maintain strict abstraction boundaries and act as a proxy for the business logic that would typically reside
+                    there.  In a real application each layer would be more
+                    sophisticated and include more robust separation of concerns and security.
+                </p>
+                <p class="left-align light">
+                    Have a play.  <a href="mailto:feedback@overstory.co.uk">Tell us what you think</a>.
+                </p>
+
                 <div class="row center" style="margin-top: 20px;">
-                    <a href="query" class="btn-large waves-effect waves-light teal lighten-1">Trust The Graph, luke</a>
+                    <a href="query" class="btn-large waves-effect waves-light teal lighten-1">Use The Force-Directed Graph, Luke</a>
                 </div>
             </div>
         </div>
@@ -206,5 +324,5 @@
             </div>
         </div>
     </div>
-    <div class="parallax"><img src="assets/images/starwars2.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src="assets/images/starwars2.jpg" alt="SW Conected graph"></div>
 </div>
