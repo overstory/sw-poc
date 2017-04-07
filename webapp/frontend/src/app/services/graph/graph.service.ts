@@ -6,7 +6,7 @@ import {Observable, Subject} from "rxjs";
 export class GraphService {
 	private defaultOptions: RequestOptions;
 	private settings = {
-		endpoint: 'http://localhost:5050/graph/query/id/'
+		endpoint: '/graph/query/id/'
 	};
 	private dataSource = new Subject<any>();
 	private REFERENCED_NODES: string = "referenced-nodes";

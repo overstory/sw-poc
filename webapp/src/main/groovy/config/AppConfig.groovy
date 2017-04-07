@@ -38,11 +38,11 @@ class AppConfig extends AbstractModule
 	final static String TX_SPLIT_PATTERN = '\\/\\/ TX-SPLIT -+\\n'
 
 
-	final String NEO_HOST = "192.168.99.100"
-	final int NEO_PORT = 7474
-	final String NEO_USER = 'neo4j'
-	final String NEO_PASSWD = 'admin'
-	final String NEO_TX_COMMIT_PATH = '/db/data/transaction/commit'
+	final static String NEO_HOST = getEnvVar ('NEO_HOST', '192.168.99.100')
+	final static int NEO_PORT = getEnvVarInt ('NEO_PORT', 7474)
+	final static String NEO_USER = getEnvVar ('NEO_USER', 'neo4j')
+	final static String NEO_PASSWD = getEnvVar ('NEO_PASSWD', 'admin')
+	final static String NEO_TX_COMMIT_PATH = getEnvVar ('NEO_TX_COMMIT_PATH', '/db/data/transaction/commit')
 
 	final Map<String,String> neoDataMap = [
 		'stage1': 'cypher/stage.cypher',
@@ -115,5 +115,17 @@ class AppConfig extends AbstractModule
 		{
 			new URI ("http://${hostName}:${port}${defaultPath}${path}")
 		}
+	}
+
+	private static String getEnvVar (String propName, String defaultValue)
+	{
+		System.getProperty (propName) ?: defaultValue
+	}
+
+	private static int getEnvVarInt (String propName, int defaultValue)
+	{
+		String val = getEnvVar (propName, null)
+
+		(val) ? Integer.parseInt (val) : defaultValue
 	}
 }

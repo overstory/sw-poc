@@ -34,31 +34,35 @@ ratpack
 
 	handlers
 	{
-		path ('swapi/download') { Context c ->
-			byMethod {
-				get { insert c.get (SwapiHandler) }
+		if (serverConfig.development) {
+			path ('swapi/download') { Context c ->
+				byMethod {
+					get { insert c.get (SwapiHandler) }
+				}
+			}
+
+			path ('moviedb/download') { Context c ->
+				byMethod {
+					get { insert c.get (MovieDbHandler) }
+				}
+			}
+
+			path ('neo/load') { Context c ->
+				byMethod {
+					get { insert c.get (NeoLoadHandler) }
+				}
 			}
 		}
+
 		path ('swapi/cached') { Context c ->
 			byMethod {
 				get { insert c.get (SwapiHandler) }
 			}
 		}
 
-		path ('moviedb/download') { Context c ->
-			byMethod {
-				get { insert c.get (MovieDbHandler) }
-			}
-		}
 		path ('moviedb/cached') { Context c ->
 			byMethod {
 				get { insert c.get (MovieDbHandler) }
-			}
-		}
-
-		path ('neo/load') { Context c ->
-			byMethod {
-				get { insert c.get (NeoLoadHandler) }
 			}
 		}
 
