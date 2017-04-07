@@ -1,6 +1,6 @@
 {
-  "name": "overstory-ld",
-  "version": "0.0.0",
+  "name": "overstory-ltd",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "start": "ng serve",
