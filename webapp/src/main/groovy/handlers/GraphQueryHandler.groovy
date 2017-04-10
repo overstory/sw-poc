@@ -10,6 +10,8 @@ import ratpack.handling.Context
 import ratpack.handling.Handler
 import ratpack.http.client.ReceivedResponse
 
+import java.nio.charset.Charset
+
 /**
  * Created by IntelliJ IDEA.
  * User: ron
@@ -46,11 +48,11 @@ class GraphQueryHandler implements Handler
 			context.render (t.toString())
 		} then { String json ->
 			if (json) {
-				context.response.contentType ('application/json')
+				context.response.contentType ('application/json;charset=utf-8')
 				context.response.status (200)
 				context.render (json)
 			} else {
-				context.response.contentType ('text/plain')
+				context.response.contentType ('text/plain;charset=utf-8')
 				context.response.status (404)
 				context.render ("Cannot find stored query with id: ${id}")
 			}
@@ -69,7 +71,9 @@ class GraphQueryHandler implements Handler
 
 		List<String> responseTypes = (queryResponseTypes [id]) ?: [ 'graph' ]
 
-		neo4JServer.runRequest (cypher, [:], responseTypes).map { ReceivedResponse resp ->
+		neo4JServer.runRequest (cypher, [:], responseTypes).map { List<ReceivedResponse> respList ->
+			ReceivedResponse resp = respList [0]
+
 			if (resp.statusCode != 200) {
 				throw new RuntimeException (resp.body.text)
 			}
@@ -78,10 +82,6 @@ class GraphQueryHandler implements Handler
 
 			formatter (resp.body.text)
 		}
-
-
-//		Promise.value (queryResults [id])
-
 	}
 
 	private Map<String,List<String>> queryResponseTypes = [
@@ -122,7 +122,6 @@ class GraphQueryHandler implements Handler
 
 			relationships.each { Map<String,Object> rel ->
 				if ( ! edgesSeen.contains (rel.id)) {
-					// ToDo: set arrowhead values according to directionality of relationship
 					Map<String,Object> arrowProps = [from: false, to: true]
 
 					edgeList << [id: rel.id, from: rel.startNode, to: rel.endNode, label: rel.type, arrows: arrowProps]

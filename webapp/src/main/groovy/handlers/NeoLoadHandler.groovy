@@ -57,7 +57,7 @@ class NeoLoadHandler implements Handler
 		List<ReceivedResponse> responses = []
 
 		scriptNames.each { String name ->
-			Map value = scripts [name]
+			Map<String,Object> value = scripts [name]
 
 			neo4JServer.runRequest (getResourceAsText (name), value).then { responseList ->
 				responses.addAll (responseList)

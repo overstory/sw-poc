@@ -76,8 +76,9 @@ class Neo4JServerImpl implements Neo4JServer
 	{
 		httpClient.post (hostDetails.uri()) {
 			it.connectTimeout (Duration.ofSeconds (hostDetails.readTimeout))
-			it.headers.set ("Content-Type", 'application/json')
+			it.headers.set ("Content-Type", 'application/json; charset=utf-8')
 			it.headers.set ("Accept", 'application/json')
+			it.headers.set ("Accept-Charset", 'utf-8')
 			it.basicAuth (hostDetails.user, hostDetails.pass)
 			it.body.text (body)
 			it.maxContentLength (50 * 1024 * 1024)
