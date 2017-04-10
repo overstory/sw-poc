@@ -20,7 +20,6 @@ import java.nio.charset.Charset
  */
 class GraphQueryHandler implements Handler
 {
-	private static final String PARAM_MAGIC = "@PARAM@"	// ToDo: do this better
 	private final Neo4JServer neo4JServer
 	private final String movieDbBaseUri
 
